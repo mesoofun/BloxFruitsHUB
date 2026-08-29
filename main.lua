@@ -9,20 +9,27 @@ if not player then
 end
 local LocalPlayer = player
 local SEA1_ID   = 2753915549
+local SEA1_ID_B = 85211729168715
 local SEA2_ID   = 4442272183
+local SEA2_ID_B = 79091703265657
 local SEA3_ID_A = 7449423635
 local SEA3_ID_B = 100117331123089
 local currentPlaceId = game.PlaceId
-local function isSea1() return currentPlaceId == SEA1_ID end
-local function isSea2() return currentPlaceId == SEA2_ID end
+
+
+local function isSea1() return currentPlaceId == SEA1_ID or currentPlaceId == SEA1_ID_B end
+local function isSea2() return currentPlaceId == SEA2_ID or currentPlaceId == SEA2_ID_B end
 local function isSea3() return currentPlaceId == SEA3_ID_A or currentPlaceId == SEA3_ID_B end
 local SEA_NAMES = {
-    [SEA1_ID] = "First Sea", [SEA2_ID] = "Second Sea",
+    [SEA1_ID] = "First Sea", [SEA1_ID_B] = "First Sea",
+    [SEA2_ID] = "Second Sea", [SEA2_ID_B] = "Second Sea",
     [SEA3_ID_A] = "Third Sea", [SEA3_ID_B] = "Third Sea",
 }
 pcall(function() setrobloxinput(true) end)
 _G.FE_Unloaded = false
-local Features = { master=true, esp=true, panel=true, fish=false, repair=false, aura=false }
+_G.FruitESP = _G.FruitESP or {}
+_G.BerryESP = _G.BerryESP or {}
+local Features = { master=true, esp=true, berryEsp=false, panel=true, fish=false, repair=false, aura=false }
 local function feEnabled(id)
     if not Features.master then return false end
     return Features[id] ~= false
@@ -275,54 +282,168 @@ end
 local function RepStop()
     RepState.Running=false; RepRelease()
 end
-local AuraConfig={MAX_DISTANCE=100, MIN_DISTANCE=1, SESSION_ID="32501259"}
-local AuraEnabled=false
-local AuraTargetCount=0
-local AuraFirstTargetName="None"
-local RegisterAttack, RegisterHit
-do
-    local Net=ReplicatedStorage:FindFirstChild("Modules")
-    if Net then Net=Net:FindFirstChild("Net") end
-    if Net then
-        RegisterAttack=Net:FindFirstChild("RE/RegisterAttack")
-        RegisterHit=Net:FindFirstChild("RE/RegisterHit")
-    end
-end
-local hudText=Drawing.new("Text")
-hudText.Size=18; hudText.Font=Drawing.Fonts.SystemBold or 2
-hudText.Color=Color3.fromRGB(255,255,255); hudText.Outline=true
-hudText.Position=Vector2.new(10,50); hudText.Visible=false; hudText.Text="Targets: 0 | OFF"
+local AuraConfig = {
+    MAX_DISTANCE = 100,
+    MIN_DISTANCE = 1,
+    SESSION_ID = "32501259",
+}
+AuraEnabled = false
+aura = {
+    enabled = false,
+    maxDist = 100,
+    minDist = 1,
+    sessionId = "32501259",
+    targetCount = 0,
+    firstName = "None",
+    regAtk = nil,
+    regHit = nil,
+}
+
+local AuraTargetCount = 0
+local AuraFirstTargetName = "None"
+
+local hudText = Drawing.new("Text")
+hudText.Size = 18
+pcall(function() hudText.Font = Drawing.Fonts.SystemBold end)
+hudText.Color = Color3.fromRGB(255, 255, 255)
+hudText.Outline = true
+hudText.Center = false
+hudText.Position = Vector2.new(10, 50)
+hudText.Visible = false
+hudText.Text = "Targets: 0 | OFF"
+
 local function updateHUD()
-    hudText.Text=string.format("Targets: %d (%s) | %s", AuraTargetCount, AuraFirstTargetName, AuraEnabled and "ON" or "OFF")
-    pcall(function() hudText.Visible=AuraEnabled end)
+    local on = aura.enabled == true
+    local ok = pcall(function()
+        hudText.Text = string.format("Targets: %d (%s) | %s", aura.targetCount or 0, tostring(aura.firstName or "None"), on and "ON" or "OFF")
+        hudText.Visible = on
+    end)
 end
-local function getTargetPart(enemy)
-    if not enemy or not enemy.Parent then return nil end
-    for _,name in ipairs({"LeftLowerLeg","Head","HumanoidRootPart"}) do
-        local p=enemy:FindFirstChild(name)
-        if p and p:IsA("BasePart") then return p end
+
+local _auraScanPrinted = false
+local _auraRemoteWarned = false
+
+local function aura_findRemote(patterns)
+    local rs = game:GetService("ReplicatedStorage")
+    local function matchName(n)
+        if not n or n == "" then return false end
+        local low = string.lower(n)
+        for _, p in ipairs(patterns) do
+            local pl = string.lower(p)
+            if n == p or low == pl or low:find(pl, 1, true) then
+                return true
+            end
+        end
+        return false
     end
-    for _,c in ipairs(enemy:GetChildren()) do
-        if c:IsA("BasePart") then return c end
+
+    local modules = rs:FindFirstChild("Modules")
+    local net = modules and modules:FindFirstChild("Net")
+    if net then
+        for _, c in ipairs(net:GetChildren()) do
+            if (c:IsA("RemoteEvent") or c:IsA("UnreliableRemoteEvent")) and matchName(c.Name) then
+                return c
+            end
+        end
+        for _, p in ipairs(patterns) do
+            local r = net:FindFirstChild(p)
+            if r and (r:IsA("RemoteEvent") or r:IsA("UnreliableRemoteEvent")) then
+                return r
+            end
+        end
+    end
+
+    for _, obj in ipairs(rs:GetDescendants()) do
+        if (obj:IsA("RemoteEvent") or obj:IsA("UnreliableRemoteEvent")) and matchName(obj.Name) then
+            return obj
+        end
     end
     return nil
 end
-local function getEnemiesInRange()
-    local character=LocalPlayer.Character; if not character then return {} end
-    local hrp=character:FindFirstChild("HumanoidRootPart"); if not hrp then return {} end
-    local folder=workspace:FindFirstChild("Enemies"); if not folder then return {} end
-    local results={}
-    for _,enemy in ipairs(folder:GetChildren()) do
+
+local function aura_dumpNetOnce()
+    if _auraScanPrinted then return end
+    _auraScanPrinted = true
+    local rs = game:GetService("ReplicatedStorage")
+    local modules = rs:FindFirstChild("Modules")
+    print("[M1 Aura] Modules =", modules and modules:GetFullName() or "nil")
+    if not modules then return end
+    local net = modules:FindFirstChild("Net")
+    print("[M1 Aura] Net =", net and net:GetFullName() or "nil")
+    if not net then
+        print("[M1 Aura] Modules children:")
+        for _, c in ipairs(modules:GetChildren()) do
+            print(" ", c.ClassName, ("name_len=%d"):format(#c.Name), c.Name)
+        end
+        return
+    end
+    print("[M1 Aura] Net children:")
+    for _, c in ipairs(net:GetChildren()) do
+        print(" ", c.ClassName, ("name_len=%d"):format(#c.Name), c.Name)
+    end
+end
+
+local function aura_ensureRemotes()
+    if aura.regAtk and aura.regHit and aura.regAtk.Parent and aura.regHit.Parent then
+        return true
+    end
+    local atk = aura_findRemote({
+        "RE/RegisterAttack",
+        "RegisterAttack",
+        "RE_RegisterAttack",
+    })
+    local hit = aura_findRemote({
+        "RE/RegisterHit",
+        "RegisterHit",
+        "RE_RegisterHit",
+    })
+    if atk and hit then
+        aura.regAtk = atk
+        aura.regHit = hit
+        print("[M1 Aura] remotes OK:", atk:GetFullName(), "|", hit:GetFullName())
+        return true
+    end
+    aura_dumpNetOnce()
+    return false
+end
+
+local function aura_getTargetPart(enemy)
+    if not enemy or not enemy.Parent then return nil end
+    local part = enemy:FindFirstChild("LeftLowerLeg")
+    if part and part:IsA("BasePart") then return part end
+    part = enemy:FindFirstChild("Head")
+    if part and part:IsA("BasePart") then return part end
+    part = enemy:FindFirstChild("HumanoidRootPart")
+    if part and part:IsA("BasePart") then return part end
+    for _, child in ipairs(enemy:GetChildren()) do
+        if child:IsA("BasePart") then return child end
+    end
+    return nil
+end
+
+local function aura_getEnemies()
+    local character = LocalPlayer.Character
+    if not character then return {} end
+    local hrp = character:FindFirstChild("HumanoidRootPart")
+    if not hrp then return {} end
+    local myPos = hrp.Position
+    local enemiesFolder = workspace:FindFirstChild("Enemies")
+    if not enemiesFolder then return {} end
+    local results = {}
+    local enemyList = enemiesFolder:GetChildren()
+    local maxD = tonumber(aura.maxDist) or 100
+    local minD = tonumber(aura.minDist) or 1
+    for _, enemy in ipairs(enemyList) do
         if enemy and enemy.Parent then
-            local hum=enemy:FindFirstChild("Humanoid")
-            if hum and hum.Health and hum.Health>0 then
-                local part=getTargetPart(enemy)
+            local humanoid = enemy:FindFirstChild("Humanoid")
+            if humanoid and humanoid.Health and humanoid.Health > 0 then
+                local part = aura_getTargetPart(enemy)
                 if part and part.Parent then
-                    local ok,pos=pcall(function() return part.Position end)
+                    local ok, pos = pcall(function() return part.Position end)
                     if ok and pos then
-                        local d=(pos-hrp.Position).Magnitude
-                        if d<=AuraConfig.MAX_DISTANCE and d>=AuraConfig.MIN_DISTANCE then
-                            table.insert(results,{enemy=enemy,part=part,dist=d})
+                        local dist = (pos - myPos).Magnitude
+                        if dist <= maxD and dist >= minD then
+                            table.insert(results, { enemy = enemy, part = part, dist = dist })
                         end
                     end
                 end
@@ -331,53 +452,63 @@ local function getEnemiesInRange()
     end
     return results
 end
-local function AttackMultiple(list)
-    if not AuraEnabled or not list or #list == 0 then return end
-    if not RegisterAttack or not RegisterHit then
-        local net = ReplicatedStorage:FindFirstChild("Modules")
-        if net then net = net:FindFirstChild("Net") end
-        if net then
-            RegisterAttack = net:FindFirstChild("RE/RegisterAttack")
-            RegisterHit = net:FindFirstChild("RE/RegisterHit")
-        end
-    end
-    if not RegisterAttack or not RegisterHit then return end
-    local hitTable, primaryPart = {}, nil
-    for _, e in ipairs(list) do
-        local enemy, part = e.enemy, e.part
-        if enemy and enemy.Parent and part and part.Parent then
-            table.insert(hitTable, { enemy, part })
-            if not primaryPart then primaryPart = part end
+
+local function aura_attack(enemyList)
+    if not aura.enabled or not enemyList or #enemyList == 0 then return end
+    if not aura_ensureRemotes() then return end
+    local hitTable = {}
+    local primaryPart = nil
+    for _, entry in ipairs(enemyList) do
+        if entry.enemy and entry.enemy.Parent and entry.part and entry.part.Parent then
+            table.insert(hitTable, { entry.enemy, entry.part })
+            if not primaryPart then primaryPart = entry.part end
         end
     end
     if #hitTable == 0 or not primaryPart then return end
-    pcall(function() RegisterAttack:FireServer(0.5) end)
+    pcall(function() aura.regAtk:FireServer(0.5) end)
     task.wait()
-    pcall(function()
-        RegisterHit:FireServer(primaryPart, hitTable, nil, AuraConfig.SESSION_ID)
-    end)
+    pcall(function() aura.regHit:FireServer(primaryPart, hitTable, nil, aura.sessionId) end)
 end
+
+task.spawn(function()
+    task.wait(2)
+    if aura_ensureRemotes() then return end
+    task.wait(3)
+    aura_ensureRemotes()
+end)
+
 task.spawn(function()
     while not _G.FE_Unloaded do
-        local enemies=getEnemiesInRange()
-        AuraTargetCount=#enemies
-        if AuraTargetCount>0 then
-            table.sort(enemies,function(a,b) return a.dist<b.dist end)
-            AuraFirstTargetName=enemies[1].enemy.Name or "Unknown"
-        else AuraFirstTargetName="None" end
-        updateHUD()
-        if AuraEnabled and AuraTargetCount>0 then
-            if type(remoteAttack) == "function" and type(S) == "table" then
-                local prev = S.remoteMode
-                remoteAttack()
+        local okLoop, err = pcall(function()
+            if aura.enabled then
+                local enemies = aura_getEnemies()
+                aura.targetCount = #enemies
+                AuraTargetCount = #enemies
+                if #enemies > 0 then
+                    table.sort(enemies, function(a, b) return a.dist < b.dist end)
+                    aura.firstName = (enemies[1].enemy and enemies[1].enemy.Name) or "Unknown"
+                else
+                    aura.firstName = "None"
+                end
+                AuraFirstTargetName = aura.firstName
+                if #enemies > 0 then
+                    aura_attack(enemies)
+                end
+                updateHUD()
+                task.wait(0.05)
             else
-                AttackMultiple(enemies)
+                updateHUD()
+                task.wait(0.15)
             end
+        end)
+        if not okLoop then
+            warn("[M1 Aura] loop error:", err)
+            task.wait(0.5)
         end
-        task.wait(0.05)
     end
     pcall(function() hudText:Remove() end)
 end)
+
 local FirstSeaIslands={
     {Name="Starter Island",Position=Vector3.new(1014.48,15.83,1462.93)},
     {Name="Jungle",Position=Vector3.new(-1419.21,-3.78,-76.86)},
@@ -386,7 +517,9 @@ local FirstSeaIslands={
     {Name="Frozen Village",Position=Vector3.new(1276.79,-13.78,-1472.86)},
     {Name="Marine Fortress",Position=Vector3.new(-4935.21,-13.78,4318.14)},
     {Name="Starter Marine",Position=Vector3.new(-2964.51,41.08,2122.72)},
-    {Name="Skylands",Position=Vector3.new(-5024.21,794.4,-2618.69)},
+    {Name="Sky",Position=Vector3.new(-5024.21,794.4,-2618.69)},
+    {Name="Upper Sky",Position=Vector3.new(-8013.88,5814.06,-1980.80)},
+    {Name="Middle Town",Position=Vector3.new(-709.62,10.08,1568.71)},
     {Name="Prison",Position=Vector3.new(5277.79,-13.78,743.14)},
     {Name="Colosseum",Position=Vector3.new(-1685.21,-13.78,-3200.86)},
     {Name="Magma Village",Position=Vector3.new(-5528.21,-13.78,8691.14)},
@@ -395,7 +528,12 @@ local FirstSeaIslands={
 }
 local SecondSeaIslands={
     {Name="Kingdom of Rose",Position=Vector3.new(-195.1,155.3,279.9)},
-    {Name="Green Zone",Position=Vector3.new(-2340.8,155.3,-3396.3)},
+    {Name="Cafe",Position=Vector3.new(-388.57,73.08,310.95)},
+    {Name="Mansion",Position=Vector3.new(-504.26,331.92,610.43)},
+    {Name="Docks 2",Position=Vector3.new(-9.32,39.34,2712.37)},
+    {Name="Docks 3",Position=Vector3.new(-2340.8,155.3,-3396.3)},
+    {Name="Docks 4",Position=Vector3.new(-5772.25,6.65,-5012.76)},
+    {Name="Colosseum",Position=Vector3.new(-1838.59,44.35,1614.46)},
     {Name="Graveyard",Position=Vector3.new(-5929.64,87.55,-1188.64)},
     {Name="Snow Mountain",Position=Vector3.new(856.2,50.3,-5278.3)},
     {Name="Hot and Cold",Position=Vector3.new(-5296.24,214.96,-5518.59)},
@@ -423,7 +561,7 @@ local ThirdSeaIslands={
     {Name="Chocolate Land",Position=Vector3.new(297.76,28.37,-12724.31)},
     {Name="Cake Land",Position=Vector3.new(-2022.3,34.17,-12030.98)},
 }
-local IslandsBySea={[SEA1_ID]=FirstSeaIslands,[SEA2_ID]=SecondSeaIslands,[SEA3_ID_A]=ThirdSeaIslands,[SEA3_ID_B]=ThirdSeaIslands}
+local IslandsBySea={[SEA1_ID]=FirstSeaIslands,[SEA1_ID_B]=FirstSeaIslands,[SEA2_ID]=SecondSeaIslands,[SEA2_ID_B]=SecondSeaIslands,[SEA3_ID_A]=ThirdSeaIslands,[SEA3_ID_B]=ThirdSeaIslands}
 local Islands=IslandsBySea[currentPlaceId]
 if not Islands then
     if isSea3() then Islands=ThirdSeaIslands
@@ -461,7 +599,7 @@ local function createText(text,size,color,center)
 end
 local panelPosX,panelPosY=50,400
 local panelTextSize=13
-local FRUIT_LINES,LIST_START_Y,LINE_STEP=10,48,18
+local FRUIT_LINES,BERRY_LINES,LIST_START_Y,LINE_STEP=10,8,48,18
 local panelShown=0
 local layoutPanel
 local seaLabel=SEA_NAMES[currentPlaceId]
@@ -469,25 +607,41 @@ local title=createText("SERVER STATUS"..(seaLabel and (" ["..seaLabel.."]") or "
 local dealer=createText("",13)
 local fruitLines={}
 for i=1,FRUIT_LINES do fruitLines[i]=createText("",13,Color3.fromRGB(80,255,100)) end
+local berryLines={}
+for i=1,BERRY_LINES do berryLines[i]=createText("",13,Color3.fromRGB(255,90,90)) end
 local distance=createText("",13,Color3.fromRGB(255,220,80))
 local count=createText("",13,Color3.fromRGB(180,200,255))
 if isSea3() then dealer.Visible=false end
 local function applyPanelSize()
     title.Size=panelTextSize+3; dealer.Size=panelTextSize
     for i=1,FRUIT_LINES do fruitLines[i].Size=panelTextSize end
+    for i=1,BERRY_LINES do berryLines[i].Size=panelTextSize end
     distance.Size=panelTextSize; count.Size=panelTextSize
 end
-layoutPanel=function(shown)
-    local x,y=panelPosX,panelPosY
-    title.Position=Vector2.new(x,y); dealer.Position=Vector2.new(x,y+24)
-    for i=1,FRUIT_LINES do
-        fruitLines[i].Position=Vector2.new(x,y+LIST_START_Y+(i-1)*LINE_STEP)
-    end
-    local gap=(shown>0) and 6 or 4
-    local distY=LIST_START_Y+shown*LINE_STEP+gap
-    distance.Position=Vector2.new(x,y+distY); count.Position=Vector2.new(x,y+distY+20)
+layoutPanel = function(shown, berryShown)
+    local x = tonumber(panelPosX) or 50
+    local y = tonumber(panelPosY) or 400
+    shown = tonumber(shown) or 0
+    berryShown = tonumber(berryShown) or 0
+    pcall(function()
+        if title then title.Position = Vector2.new(x, y) end
+        if dealer then dealer.Position = Vector2.new(x, y + 24) end
+        for i = 1, FRUIT_LINES do
+            local fl = fruitLines and fruitLines[i]
+            if fl then fl.Position = Vector2.new(x, y + LIST_START_Y + (i - 1) * LINE_STEP) end
+        end
+        local berryStart = LIST_START_Y + shown * LINE_STEP + ((shown > 0) and 4 or 0)
+        for i = 1, BERRY_LINES do
+            local bl = berryLines and berryLines[i]
+            if bl then bl.Position = Vector2.new(x, y + berryStart + (i - 1) * LINE_STEP) end
+        end
+        local gap = 6
+        local distY = berryStart + berryShown * LINE_STEP + gap
+        if distance then distance.Position = Vector2.new(x, y + distY) end
+        if count then count.Position = Vector2.new(x, y + distY + 20) end
+    end)
 end
-applyPanelSize(); layoutPanel(0)
+applyPanelSize(); layoutPanel(0, 0)
 local function isFruit(obj)
     if not obj:IsA("Tool") then return false end
     local h=obj:FindFirstChild("Handle")
@@ -499,62 +653,321 @@ local function getFruitName(obj)
     if n and n~="" and n~="Fruit" and n~="Handle" then return n end
     return "Fruit"
 end
-local function createESP(obj,name)
-    local handle=obj:FindFirstChild("Handle"); if not handle then return end
-    local text=Drawing.new("Text")
-    text.Text=name; text.Size=14; text.Color=Color3.fromRGB(0,255,120)
-    text.Center=true; text.Outline=true; text.Visible=false
-    _G.FruitESP[obj]={Text=text,Handle=handle,Name=name}
+local function createESP(obj, name)
+    local handle = obj:FindFirstChild("Handle")
+    if not handle then return end
+    local text = Drawing.new("Text")
+    text.Text = name
+    text.Size = 14
+    text.Color = Color3.fromRGB(0, 255, 120)
+    text.Center = true
+    text.Outline = true
+    text.Visible = false
+    _G.FruitESP[obj] = { Text = text, Handle = handle, Name = name }
 end
+
 local function removeESP(obj)
-    local data=_G.FruitESP[obj]
-    if data and data.Text then pcall(function() data.Text:Remove() end) end
-    _G.FruitESP[obj]=nil
+    local data = _G.FruitESP[obj]
+    if data and data.Text then
+        pcall(function() data.Text:Remove() end)
+    end
+    _G.FruitESP[obj] = nil
 end
+
 local function updateESP()
     if not feEnabled("esp") then
-        for _,data in pairs(_G.FruitESP) do if data.Text then data.Text.Visible=false end end
+        for _, data in pairs(_G.FruitESP) do
+            if data.Text then data.Text.Visible = false end
+        end
         return
     end
-    local root=player.Character and player.Character:FindFirstChild("HumanoidRootPart")
-    for obj,data in pairs(_G.FruitESP) do
+    local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+    for obj, data in pairs(_G.BerryESP or {}) do pcall(function() if data.Text then data.Text:Remove() end end) _G.BerryESP[obj]=nil end
+                for obj, data in pairs(_G.FruitESP) do
         if not obj or not obj.Parent or not data.Handle or not data.Handle.Parent then
-            removeESP(obj); continue
+            removeESP(obj)
+            continue
         end
-        local worldPos=data.Handle.Position+Vector3.new(0,3.5,0)
-        local ok,r1,r2=pcall(WorldToScreen,worldPos)
+        local worldPos = data.Handle.Position + Vector3.new(0, 3.5, 0)
+        local ok, r1, r2 = pcall(WorldToScreen, worldPos)
         if ok and r1 then
-            local x,y,onScreen
-            if type(r1)=="table" then x,y,onScreen=r1.X,r1.Y,r1.OnScreen
-            else x,y=r1.X,r1.Y; onScreen=r2 end
-            if onScreen==nil then onScreen=true end
+            local x, y, onScreen
+            if type(r1) == "table" then
+                x, y, onScreen = r1.X, r1.Y, r1.OnScreen
+            else
+                x, y = r1.X, r1.Y
+                onScreen = r2
+            end
+            if onScreen == nil then onScreen = true end
             if onScreen and x and y then
-                local distText=""
-                if root then distText=" ("..math.floor((root.Position-data.Handle.Position).Magnitude/10).."m)" end
-                data.Text.Text=tostring(data.Name or "Fruit")..distText
-                data.Text.Position=Vector2.new(x,y); data.Text.Visible=true
-            else data.Text.Visible=false end
-        else data.Text.Visible=false end
+                local distText = ""
+                if root then
+                    distText = " (" .. math.floor((root.Position - data.Handle.Position).Magnitude / 10) .. "m)"
+                end
+                data.Text.Text = tostring(data.Name or "Fruit") .. distText
+                data.Text.Position = Vector2.new(x, y)
+                data.Text.Visible = true
+            else
+                data.Text.Visible = false
+            end
+        else
+            data.Text.Visible = false
+        end
     end
 end
+
 local fruitCache={}
 local function refreshFruits()
-    local found,current={},{}
-    for _,obj in ipairs(Workspace:GetChildren()) do
+    local found, current = {}, {}
+    for _, obj in ipairs(Workspace:GetChildren()) do
         if isFruit(obj) then
-            local handle=obj:FindFirstChild("Handle")
+            local handle = obj:FindFirstChild("Handle")
             if handle then
-                local name=getFruitName(obj)
-                local island=getIslandName(handle.Position)
-                found[#found+1]={Object=obj,Position=handle.Position,Name=name,Island=island}
-                current[obj]=true
-                if _G.FruitESP[obj] then _G.FruitESP[obj].Name=name else createESP(obj,name) end
+                local name = getFruitName(obj)
+                local island = getIslandName(handle.Position)
+                found[#found + 1] = { Object = obj, Position = handle.Position, Name = name, Island = island }
+                current[obj] = true
+                if _G.FruitESP[obj] then
+                    _G.FruitESP[obj].Name = name
+                    _G.FruitESP[obj].Handle = handle
+                else
+                    createESP(obj, name)
+                end
             end
         end
     end
-    for obj in pairs(_G.FruitESP) do if not current[obj] then removeESP(obj) end end
-    fruitCache=found
+    for obj in pairs(_G.FruitESP) do
+        if not current[obj] then removeESP(obj) end
+    end
+    fruitCache = found
 end
+
+local BERRIES = {
+    { name = "Green Toad Berry",   sphere = "Sphere.011" },
+    { name = "Yellow Star Berry",  sphere = "Sphere.022" },
+    { name = "Orange Berry",       sphere = "Sphere.007" },
+    { name = "Red Cherry Berry",   sphere = "Sphere.005" },
+    { name = "Purple Jelly Berry", sphere = "Sphere.004" },
+    { name = "Pink Pig Berry",     sphere = "Sphere.008" },
+    { name = "Blue Icicle Berry",  sphere = "Sphere.018" },
+    { name = "White Cloud Berry",  sphere = "Sphere.035" },
+}
+local sphereToBerry = {}
+for _, b in ipairs(BERRIES) do sphereToBerry[b.sphere] = b.name end
+
+local BERRY_FULLSCAN_SEC = 12
+local BERRY_ESP_MAX = 50
+local _berryLastFullScan = 0
+local _berryEspTick = 0
+local _berryHooks = {}
+local berryCache = {}
+
+local function berryGetPos(obj)
+    if not obj then return nil end
+    if obj:IsA("BasePart") then return obj.Position end
+    if obj:IsA("Model") then
+        if obj.PrimaryPart then return obj.PrimaryPart.Position end
+        for _, c in ipairs(obj:GetChildren()) do
+            if c:IsA("BasePart") then return c.Position end
+        end
+    end
+    local p = obj.Parent
+    if p and p:IsA("BasePart") then return p.Position end
+    return nil
+end
+
+local function createBerryESP(obj, name)
+    if _G.BerryESP[obj] then
+        _G.BerryESP[obj].Name = name
+        return
+    end
+    if not feEnabled("berryEsp") then return end
+    local n = 0
+    for _ in pairs(_G.BerryESP) do n = n + 1 end
+    if n >= BERRY_ESP_MAX then return end
+    local text = Drawing.new("Text")
+    text.Text = name
+    text.Size = 14
+    text.Color = Color3.fromRGB(255, 70, 70)
+    text.Center = true
+    text.Outline = true
+    text.Visible = false
+    _G.BerryESP[obj] = { Text = text, Name = name, Obj = obj }
+end
+
+local function removeBerryESP(obj)
+    local data = _G.BerryESP[obj]
+    if data and data.Text then pcall(function() data.Text:Remove() end) end
+    _G.BerryESP[obj] = nil
+end
+
+local function rebuildBerryCache()
+    local found = {}
+    for obj, data in pairs(_G.BerryESP) do
+        if obj and obj.Parent then
+            local pos = berryGetPos(obj)
+            if pos then
+                found[#found + 1] = {
+                    Object = obj,
+                    Position = pos,
+                    Name = data.Name or sphereToBerry[obj.Name] or "Berry",
+                    Island = getIslandName(pos),
+                }
+            end
+        else
+            removeBerryESP(obj)
+        end
+    end
+    berryCache = found
+end
+
+local function clearAllBerryESP()
+    for obj in pairs(_G.BerryESP) do removeBerryESP(obj) end
+    berryCache = {}
+end
+
+local function tryRegisterBerry(obj)
+    if not obj then return end
+    local bname = sphereToBerry[obj.Name]
+    if not bname then return end
+    if not (obj:IsA("BasePart") or obj:IsA("MeshPart") or obj:IsA("Part") or obj:IsA("UnionOperation")) then
+        -- still allow if named sphere under bush
+        if not obj:IsA("Model") and not obj:IsA("Folder") then
+            if typeof(obj) ~= "Instance" then return end
+        end
+    end
+    createBerryESP(obj, bname)
+end
+
+local function berryFullScan()
+    _berryLastFullScan = os.clock()
+    local current = {}
+    for _, obj in ipairs(Workspace:GetDescendants()) do
+        local bname = sphereToBerry[obj.Name]
+        if bname then
+            current[obj] = true
+            createBerryESP(obj, bname)
+        end
+    end
+    for obj in pairs(_G.BerryESP) do
+        if not current[obj] then removeBerryESP(obj) end
+    end
+    rebuildBerryCache()
+end
+
+local function berryUnhook()
+    for _, c in ipairs(_berryHooks) do
+        pcall(function() c:Disconnect() end)
+    end
+    _berryHooks = {}
+end
+
+local function berryHook()
+    berryUnhook()
+    table.insert(_berryHooks, Workspace.DescendantAdded:Connect(function(obj)
+        if not feEnabled("berryEsp") then return end
+        if sphereToBerry[obj.Name] then
+            tryRegisterBerry(obj)
+            rebuildBerryCache()
+        end
+    end))
+    table.insert(_berryHooks, Workspace.DescendantRemoving:Connect(function(obj)
+        if _G.BerryESP[obj] then
+            removeBerryESP(obj)
+            rebuildBerryCache()
+        end
+    end))
+end
+
+local function refreshBerries(force)
+    if not feEnabled("berryEsp") then
+        berryUnhook()
+        if next(_G.BerryESP) then clearAllBerryESP() end
+        return
+    end
+    if #_berryHooks == 0 then
+        berryHook()
+    end
+    local now = os.clock()
+    if force or _berryLastFullScan == 0 or (now - _berryLastFullScan) >= BERRY_FULLSCAN_SEC then
+        berryFullScan()
+    else
+        rebuildBerryCache()
+    end
+end
+
+local function updateBerryESP()
+    if not feEnabled("berryEsp") then
+        for _, data in pairs(_G.BerryESP) do
+            if data.Text then data.Text.Visible = false end
+        end
+        return
+    end
+    _berryEspTick = _berryEspTick + 1
+    if _berryEspTick % 3 ~= 0 then return end
+
+    local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+    for obj, data in pairs(_G.BerryESP) do
+        if not obj or not obj.Parent then
+            removeBerryESP(obj)
+        else
+            local pos = berryGetPos(obj)
+            if not pos then
+                if data.Text then data.Text.Visible = false end
+            else
+                local ok, r1, r2 = pcall(WorldToScreen, pos + Vector3.new(0, 2.5, 0))
+                if ok and r1 then
+                    local x, y, onScreen
+                    if type(r1) == "table" then
+                        x, y, onScreen = r1.X, r1.Y, r1.OnScreen
+                    else
+                        x, y = r1.X, r1.Y
+                        onScreen = r2
+                    end
+                    if onScreen == nil then onScreen = true end
+                    if onScreen and x and y then
+                        local distText = ""
+                        if root then
+                            distText = " (" .. math.floor((root.Position - pos).Magnitude / 10) .. "m)"
+                        end
+                        data.Text.Text = tostring(data.Name or "Berry") .. distText
+                        data.Text.Position = Vector2.new(x, y)
+                        data.Text.Color = Color3.fromRGB(255, 70, 70)
+                        data.Text.Visible = true
+                    else
+                        data.Text.Visible = false
+                    end
+                else
+                    data.Text.Visible = false
+                end
+            end
+        end
+    end
+end
+
+local function teleportNearestBerry()
+    local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+    if not root then return end
+    refreshBerries(true)
+    local best, bestDist = nil, math.huge
+    for _, item in ipairs(berryCache) do
+        if item.Position then
+            local d = (root.Position - item.Position).Magnitude
+            if d < bestDist then bestDist = d; best = item end
+        end
+    end
+    if not best or not best.Position then
+        print("[Berry] none found")
+        return
+    end
+    local dest = best.Position + Vector3.new(0, 5, 0)
+    for _ = 1, 3 do
+        root.CFrame = CFrame.new(dest)
+        task.wait(0.08)
+    end
+    print("[Berry] TP ->", best.Name, math.floor(bestDist), "studs")
+end
+
 local dealerObject=nil
 local function refreshDealer()
     if isSea3() then dealerObject=nil; return end
@@ -566,13 +979,19 @@ local function refreshDealer()
         end
     end
 end
-refreshFruits(); refreshDealer()
+refreshFruits()
+        pcall(refreshBerries); refreshDealer()
 task.spawn(function()
-    while not _G.FE_Unloaded do refreshFruits(); refreshDealer(); task.wait(0.35) end
+    while not _G.FE_Unloaded do refreshFruits()
+        pcall(refreshBerries); refreshDealer(); task.wait(0.35) end
 end)
-local espConn=RunService.RenderStepped:Connect(updateESP)
+local espConn = RunService.Heartbeat:Connect(function()
+    updateESP()
+    updateBerryESP()
+end)
 task.spawn(function()
     while not _G.FE_Unloaded do
+      local okPanel,_errPanel=pcall(function()
         local root=player.Character and player.Character:FindFirstChild("HumanoidRootPart")
         if isSea2() then
             if dealerObject and dealerObject.Parent then
@@ -618,8 +1037,42 @@ task.spawn(function()
         for _,d in pairs(_G.FruitStatusDrawings) do
             if d==dealer then d.Visible=show and isSea2() else d.Visible=show end
         end
-        layoutPanel(panelShown)
-        task.wait(0.07)
+        
+        local berryShown = 0
+        if feEnabled("berryEsp") then
+            local bnames = {}
+            for _, item in ipairs(berryCache) do
+                bnames[#bnames+1] = item.Name .. " (" .. item.Island .. ")"
+            end
+            berryShown = math.min(#bnames, BERRY_LINES)
+            for i = 1, BERRY_LINES do
+                if i <= berryShown then
+                    berryLines[i].Text = ((i == 1) and "Berries: " or "- ") .. bnames[i]
+                    berryLines[i].Color = Color3.fromRGB(255, 90, 90)
+                    berryLines[i].Visible = true
+                else
+                    berryLines[i].Text = ""
+                end
+            end
+            if #bnames == 0 then
+                berryLines[1].Text = "Berries: NONE"
+                berryLines[1].Color = Color3.fromRGB(255, 90, 90)
+                berryLines[1].Visible = true
+                berryShown = 1
+            elseif #bnames > BERRY_LINES then
+                berryLines[BERRY_LINES].Text = berryLines[BERRY_LINES].Text .. " ..."
+            end
+        else
+            for i = 1, BERRY_LINES do
+                berryLines[i].Text = ""
+                berryLines[i].Visible = false
+            end
+        end
+
+        layoutPanel(panelShown, berryShown)
+      end)
+      if not okPanel then task.wait(0.2) end
+        task.wait(0.35)
     end
 end)
 _pvpAuraEnabled = false
@@ -1545,7 +1998,7 @@ function afl_setQuest()
         local btn=dialogue:FindFirstChild(name)
         if not btn then return nil end
         local p=btn.AbsolutePosition; local s=btn.AbsoluteSize
-        return Vector2.new(p.X+s.X/2, p.Y+s.Y/1.25)
+        if not p or not s then return nil end; return Vector2.new(p.X+s.X/2, p.Y+s.Y/1.25)
     end
     local opt1=getBtnCenter("Option1"); local opt2=getBtnCenter("Option2")
     if quest.questButton==1 and opt1 then
@@ -1584,7 +2037,7 @@ function afl_farmNpcs()
         if not ok or not dialogue then return end
         local btn=dialogue:FindFirstChild("Option3"); if not btn then return end
         local p=btn.AbsolutePosition; local s=btn.AbsoluteSize
-        local v=Vector2.new(p.X+s.X/2, p.Y+s.Y/1.25)
+        if not p or not s then return end; local v=Vector2.new(p.X+s.X/2, p.Y+s.Y/1.25)
         afl_jitterClick(v.X,v.Y); mouse1press(); mouse1release()
     end
     if AFL.islandPositions[AFL.npcToFarm] and AFL.waitPositions[AFL.npcToFarm] then
@@ -2052,7 +2505,7 @@ task.spawn(function()
     end
 end)
 do
-    local aura = {
+    aura = aura or {
         enabled       = false,
         maxDist       = 100,
         minDist       = 1,
@@ -2141,7 +2594,7 @@ do
     end)
     task.spawn(function()
         while true do
-            if aura.enabled then
+            if false and aura.enabled then
                 if aura_ensureRemotes() then
                     local enemies = aura_getEnemies()
                     aura.targetCount = #enemies
@@ -2246,11 +2699,34 @@ pcall(function()
     end
 end)
 task.spawn(function()
+    local t0 = os.clock()
+    while not workspace.CurrentCamera and os.clock() - t0 < 15 do
+        task.wait(0.1)
+    end
     local okLib, Lib = pcall(function()
-        return loadstring(game:HttpGet("https://raw.githubusercontent.com/neaxusxgod-png/INS-ui/main/uilib.min.lua"))() or INSUI
+        local src = game:HttpGet("https://raw.githubusercontent.com/neaxusxgod-png/INS-ui/main/uilib.min.lua")
+        src = src:gsub(
+            "Camera = workspace%.CurrentCamera",
+            "Camera = workspace.CurrentCamera\n" ..
+            "local function INS_SafeViewport()\n" ..
+            "  local c = workspace.CurrentCamera\n" ..
+            "  if c then Camera = c end\n" ..
+            "  c = Camera\n" ..
+            "  if c then\n" ..
+            "    local ok, vs = pcall(function() return c.ViewportSize end)\n" ..
+            "    if ok and vs then return vs end\n" ..
+            "  end\n" ..
+            "  return Vector2.new(1920, 1080)\n" ..
+            "end",
+            1
+        )
+        src = src:gsub("Camera%.ViewportSize", "INS_SafeViewport()")
+        local fn, err = loadstring(src)
+        if not fn then error(err or "INS-ui compile failed") end
+        return fn() or INSUI
     end)
     if not okLib or type(Lib) ~= "table" then
-        warn("[Hub] INS UI not loaded")
+        warn("[Hub] INS UI not loaded", Lib)
         return
     end
     LibRef = Lib
@@ -2263,8 +2739,8 @@ task.spawn(function()
     end)
     local win = Lib:CreateWindow({
         title = "BF Hub",
-        subtitle = "auto",
-        size = Vector2.new(720, 520),
+        subtitle = "Blox Fruits",
+        size = Vector2.new(920, 620),
         menuKey = "f1",
         checkboxStyle = true,
         opacity = 0.97,
@@ -2287,11 +2763,28 @@ task.spawn(function()
     H.master = tip(espSec:Toggle("Enabled", true, function(on) Features.master = on end, "master switch for overlays"), "master switch for overlays")
     espSec:Divider("Toggles")
     H.esp = tip(espSec:Toggle("Fruit ESP", true, function(on) Features.esp = on end, "labels above fruits"), "labels above fruits")
+    H.berryEsp = tip(espSec:Toggle("Berry ESP", false, function(on)
+        Features.berryEsp = on
+        if not on then
+            berryUnhook()
+            clearAllBerryESP()
+        else
+            task.spawn(function()
+                berryHook()
+                refreshBerries(true)
+            end)
+        end
+    end, "berry spheres on bushes (red)"), "berry spheres on bushes (red)")
+    pcall(function()
+        tip(espSec:Button("TP nearest Berry", function()
+            teleportNearestBerry()
+        end), "teleport to closest berry")
+    end)
     H.panel = tip(espSec:Toggle("Status Panel", true, function(on) Features.panel = on end, "server status overlay"), "server status overlay")
     local panelTab = win:Tab("Panel", "map")
     local posSec = panelTab:Section("Position", "Left")
-    tip(posSec:Slider("Panel X", 50, 50, 0, 3000, "", function(v) panelPosX = v; layoutPanel(panelShown) end), "horizontal position of status panel")
-    tip(posSec:Slider("Panel Y", 400, 20, 0, 1500, "", function(v) panelPosY = v; layoutPanel(panelShown) end), "vertical position of status panel")
+    tip(posSec:Slider("Panel X", 50, 50, 0, 3000, "", function(v) panelPosX = v; layoutPanel(panelShown, 0) end), "horizontal position of status panel")
+    tip(posSec:Slider("Panel Y", 400, 20, 0, 1500, "", function(v) panelPosY = v; layoutPanel(panelShown, 0) end), "vertical position of status panel")
     local styleSec = panelTab:Section("Style", "Right")
     tip(styleSec:Slider("Text size", 13, 1, 10, 22, "", function(v) panelTextSize = v; applyPanelSize() end), "status panel text size")
     Lib:Category("FARMING")
@@ -2341,7 +2834,7 @@ task.spawn(function()
     tip(offSec:Slider("Offset Y", 23, 1, -100, 100, "", function(v) setMyth("customOffsetY", v) end), "Y offset from enemy position")
     tip(offSec:Slider("Offset Z", 0, 1, -100, 100, "", function(v) setMyth("customOffsetZ", v) end), "Z offset from enemy position")
     Lib:Category("COMBAT")
-    local combatTab = win:Tab("Combat", "swords")
+    local combatTab = win:Tab("Combat", "crosshair")
     local combatSec = combatTab:Section("Combat", "Left")
     tip(combatSec:Toggle("Big Hitbox", false, function(v) setMyth("bigHitbox", v) end, "Enlarge enemy hitboxes while farming"), "Enlarge enemy hitboxes while farming")
     tip(combatSec:Toggle("Pull Enemies", false, function(v) setMyth("pullEnemies", v) end, "Pull nearby enemies toward you"), "Pull nearby enemies toward you")
@@ -2360,17 +2853,26 @@ task.spawn(function()
     H.aura = tip(m1Sec:Toggle("M1 Aura", false, function(on)
         Features.aura = on
         AuraEnabled = on
-        if type(S) == "table" and on then
+        aura.enabled = on == true
+        if on then
+            local ok = aura_ensureRemotes()
+            print("[M1 Aura] ON | remotes:", ok, ok and aura.regAtk and aura.regAtk:GetFullName() or "?")
+        else
+            print("[M1 Aura] OFF")
         end
         updateHUD()
-        print("[M1 Aura]", on and "ON" or "OFF", "remotes:", RegisterAttack ~= nil, RegisterHit ~= nil)
-    end, "Fires RegisterAttack/RegisterHit on nearby NPCs"), "Fires RegisterAttack/RegisterHit on nearby NPCs")
+    end, "unavailable on Matcha"), "unavailable on Matcha")
     K.aura = m1Sec:Keybind("Aura key", nil, function() end)
-    tip(m1Sec:Slider("M1 Range", AuraConfig.MAX_DISTANCE, 5, 10, 500, "studs", function(v)
+    tip(m1Sec:Slider("M1 Range", 100, 5, 10, 500, "studs", function(v)
         AuraConfig.MAX_DISTANCE = v
+        aura.maxDist = v
     end), "Max distance to hit NPCs")
+
+    pcall(function()
+        if m1Sec.Label then m1Sec:Label("  unavailable on Matcha") end
+    end)
     Lib:Category("SEA")
-    local seaTab = win:Tab("Sea", "waves")
+    local seaTab = win:Tab("Sea", "globe")
     local seaSec = seaTab:Section("Boat", "Left")
     tip(seaSec:Toggle("Boat Fly", false, function(v) setMyth("boatFlyEnabled", v) end, "Fly the boat with WASD / X / Shift"), "Fly the boat with WASD / X / Shift")
     tip(seaSec:Slider("Fly Speed", 5, 1, 1, 50, "", function(v) setMyth("boatFlySpeed", v) end), "Boat fly speed")
@@ -2421,7 +2923,7 @@ task.spawn(function()
     tip(pvpSec:Toggle("Use ModelHitbox", false, function(v) _pvpAuraAltPart = v end, "Toggle between Head and ModelHitbox hit part"), "Toggle between Head and ModelHitbox hit part")
     tip(pvpSec:Slider("PvP Range", 100, 10, 10, 300, "studs", function(v) _pvpAuraMaxDist = v end), "Max distance to target players")
     Lib:Category("AUTOMATION")
-    local fishTab = win:Tab("Fish", "fish")
+    local fishTab = win:Tab("Fish", "zap")
     local fishSec = fishTab:Section("Auto Fish", "Left")
     H.fish = tip(fishSec:Toggle("Auto Fish", false, function(on)
         Features.fish = on
@@ -2432,7 +2934,7 @@ task.spawn(function()
     tip(fishTune:Slider("Cast power", FishConfig.CastTarget * 100, 1, 50, 100, "%", function(v) FishConfig.CastTarget = v / 100 end), "Release cast when bar reaches this fill")
     tip(fishTune:Slider("Reel dead zone", FishConfig.DeadZone * 100, 1, 0, 200, "%", function(v) FishConfig.DeadZone = v / 100 end), "Hold/release threshold vs fish/treasure")
     tip(fishTune:Slider("Bite timeout", FishConfig.BiteTimeout, 1, 5, 60, "s", function(v) FishConfig.BiteTimeout = v end), "Reset if no bite within this time")
-    local repairTab = win:Tab("Repair", "wrench")
+    local repairTab = win:Tab("Repair", "cog")
     local repairSec = repairTab:Section("Auto Repair", "Left")
     H.repair = tip(repairSec:Toggle("Auto Repair", false, function(on)
         Features.repair = on
@@ -2476,6 +2978,7 @@ task.spawn(function()
                 end
                 _pvpAuraEnabled = false
                 if espConn then pcall(function() espConn:Disconnect() end) end
+                pcall(berryUnhook)
                 for _, d in pairs(_G.FruitStatusDrawings) do pcall(function() d:Remove() end) end
                 _G.FruitStatusDrawings = {}
                 for obj, data in pairs(_G.FruitESP) do
@@ -2530,7 +3033,11 @@ task.spawn(function()
                 local key = getBindKey(K.aura)
                 local down = isDown(key)
                 if down and not lastDown.aura then
-                    toggleFeature("aura", function(on) AuraEnabled = on; updateHUD() end)
+                    toggleFeature("aura", function(on)
+                        AuraEnabled = on
+                        aura.enabled = on == true
+                        updateHUD()
+                    end)
                 end
                 lastDown.aura = down
             end
@@ -2582,5 +3089,6 @@ task.spawn(function()
             end
         end)
     end)
-    Lib:Notify("BF Hub", "Dropdowns fixed | tooltips | M1 Aura only", 4, "success")
+    pcall(function() Lib:Notify("BF Hub", "Loaded", 3, "success") end)
 end)
+print("[BF Hub] main.lua ready — dropdowns + tooltips + M1 aura fix")

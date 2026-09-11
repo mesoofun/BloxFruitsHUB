@@ -1,2 +1,5391 @@
--- Obfuscated with Matcha Obfuscator
-local _0x0,_0x1,_0x2,_0x3,_0x4,_0x5,_0x6,_0x7,_0x8,_0x9,_0xa,_0xb,_0xc,_0xd,_0xe,_0xf,_0x10,_0x11,_0x19,_0x1a,_0x58c,_0x1c,_0x58d,_0x591,_0x1e,_0x593,_0x596,_0x597,_0x20,_0x22,_0x598,_0x27,_0x599,_0x2b,_0x2c,_0x2d,_0x59a,_0x2e,_0x2f,_0x30,_0x31,_0x33,_0x36,_0x38,_0x39,_0x3a,_0x3b,_0x3c,_0x3d,_0x3e,_0x40,_0x41,_0x4a,_0x4e,_0x55,_0x56,_0x5a,_0x5e,_0x61,_0x62,_0x63,_0x64,_0x68,_0x5a0,_0x6d,_0x6e,_0x6f,_0x70,_0x71,_0x72,_0x5a3,_0x73,_0x74,_0x75,_0x5a5,_0x5a8,_0x5a9,_0x76,_0x77,_0x78,_0x79,_0x83,_0x5aa,_0x84,_0x87,_0x8a,_0x96,_0x5ac,_0x9f,_0xa0,_0xa1,_0xa2,_0xa3,_0xa6,_0xab,_0xb0,_0xb1,_0xb2,_0xb3,_0xb4,_0xb5,_0xb6,_0xb7,_0xb8,_0xb9,_0xba,_0xbb,_0xbc,_0x5b3,_0xbd,_0xbe,_0xbf,_0xc0,_0x5b6,_0xc9,_0x5b7,_0xcb,_0xcc,_0xce,_0xd0,_0x5b8,_0xd6,_0xd7,_0xda,_0xdb,_0xdc,_0xdd,_0x5b9,_0xde,_0xdf,_0xe0,_0xe1,_0xe2,_0xe3,_0xe4,_0xe5,_0xe6,_0xe7,_0xe9,_0xec,_0xed,_0xee,_0x5bd,_0xf1,_0xf2,_0xf7,_0xf8,_0xfa,_0x5c3,_0x5c4,_0x5c6,_0x5c8,_0x137,_0x138,_0x139,_0x13a,_0x13b,_0x13c,_0x13d,_0x5ca,_0x5cb,_0x5cc,_0x5cd,_0x5d0,_0x15d,_0x5d2,_0x5d5,_0x5d6,_0x188,_0x189,_0x18a,_0x18b,_0x18c,_0x18d,_0x18e,_0x18f,_0x5da,_0x190,_0x191,_0x192,_0x193,_0x195,_0x196,_0x197,_0x199,_0x5de,_0x19a,_0x1a7,_0x1a8,_0x1a9,_0x1b2,_0x1b3,_0x1b7,_0x1b8,_0x1ba,_0x1bb,_0x1bc,_0x1c7,_0x1c8,_0x1dd,_0x1df,_0x1e3,_0x1e5,_0x5e7,_0x1eb,_0x1ec,_0x5e8,_0x1ee,_0x1f6,_0x1fc,_0x1fd,_0x209,_0x20a,_0x20e,_0x5ec,_0x5ed,_0x5ef,_0x222,_0x223,_0x5f0,_0x224,_0x225,_0x5f2,_0x226,_0x234,_0x23f,_0x240,_0x241,_0x242,_0x243,_0x5f7,_0x244,_0x246,_0x248,_0x24a,_0x5f8,_0x24d,_0x24f,_0x5fa,_0x250,_0x257,_0x5fb,_0x262,_0x264,_0x5fd,_0x5fe;local _0x677=3;while true do if _0x677 == 1662 then if false then local _0x5be=nil end;_0x677=1667 elseif _0x677 == 1877 then islandNames={};_0x677=1884 elseif _0x677 == 2423 then if 1 > 2 then local _0x5d7=nil end;_0x677=2432 elseif _0x677 == 36 then do local _0x588=306 end;_0x677=47 elseif _0x677 == 513 then _0x1e.delete=Enum.KeyCode.Delete;_0x677=523 elseif _0x677 == 1597 then _0xe9=function() local _0xd9,_0x14,_0xea,_0xeb;local _0x628=1;while true do if _0x628 == 53 then _0xe5();_0x628=72 elseif _0x628 == 45 then for _0x57 in pairs(_G.BerryESP) do if 1 > 2 then local _0x396=nil end;if not _0xd9[_0x57] then if false then local _0x394=nil end;_0xe4(_0x57);local _0x395=math.random() * 0 end end;_0x628=53 elseif _0x628 == 9 then _0xd9={};_0x628=15 elseif _0x628 == 31 then _0xeb=1 - 1;_0x628=38 elseif _0x628 == 22 then if not _0x14 or type(_0xea) ~= __0x678d(1) then do local _0x390=982 end;return end;_0x628=31 elseif _0x628 == 38 then for _0x4b,_0x57 in ipairs(_0xea) do local _0xe8=_0xdb[_0x57.Name];if 1 > 2 then local _0x392=nil end;if _0xe8 then _0xd9[_0x57]=true;_0xe3(_0x57,_0xe8);if false then local _0x391=nil end end;_0xeb=_0xeb + (2 - 1);if _0xeb % (166 * 9 + 6) == 1 - 1 then task.wait() end;if false then local _0x393=nil end end;_0x628=45 elseif _0x628 == 15 then _0x14,_0xea=pcall(function() return _0x1:GetDescendants() end);_0x628=22 elseif _0x628 == 1 then _0xde=os.clock();_0x628=9 else break end end end;_0x677=1606 elseif _0x677 == 1569 then if false then local _0x5bb=nil end;_0x677=1579 elseif _0x677 == 1298 then _0xbb=_0xab("",12 + 1);_0x677=1304 elseif _0x677 == 3168 then task.spawn(function() while not _G.FE_Unloaded do if S.autoMastery then local _0x8c=_0x1bc();if _0x8c then local _0xf6=AFL.pos and AFL.pos.chocolate1 or Vector3.new(237.92,24.8,-12201.14);tweenTo(_0x8c,_0xf6,S.MASTERY_SPEED or S.FARM_SPEED,function() return S.autoMastery end);local _0x220=_0x1bb(__0x678d(2)) or _0x1bb(__0x678d(3));if _0x220 then local _0x105=_0x6.Character;local _0x129=_0x105 and _0x105:FindFirstChildOfClass(__0x678d(4));if _0x129 and _0x220.Parent ~= _0x105 then pcall(function() _0x129:EquipTool(_0x220) end) end;task.wait(0.15);_0x1b8(33 + 57) end;_0x8c=_0x1bc();if _0x8c then farmAttack(_0x8c,function() return S.autoMastery end,nil) end end;task.wait(0.2) else task.wait(0.3) end end end);_0x677=3172 elseif _0x677 == 262 then _0x1c.tab=1 + 8;_0x677=269 elseif _0x677 == 746 then _0x5e=function() local _0x5f=false;while _0x39.Running do task.wait(0.04);if false then local _0x310=nil end;if not _0x39.CastComplete then if _0x40() then local _0x60=_0x41();local _0x2fb=math.random() * 0;_0x3c();if _0x60 >= _0x38.CastTarget then if false then local _0x2f9=nil end;_0x3d();task.wait(0.2);_0x39.CastComplete=true;_0x39.FishDetected=false;_0x39.ReelingStarted=false;_0x39.LastCastTime=os.clock();_0x5f=false;if 1 > 2 then local _0x2fa=nil end;print(__0x678d(5)) end else if false then local _0x2fc=nil end;_0x3d();if 1 > 2 then local _0x2fd=nil end;task.wait(0.2);if 1 > 2 then local _0x2fe=nil end;_0x3b();if 1 > 2 then local _0x2ff=nil end;task.wait(0.3) end;continue end;if _0x39.CastComplete and not _0x39.FishDetected then if os.clock() - _0x39.LastCastTime > _0x38.BiteTimeout then _0x3e(__0x678d(6));continue end;do local _0x305=951 end;if _0x4a() then print(__0x678d(7));do local _0x300=604 end;_0x39.FishDetected=true;do local _0x301=451 end;_0x39.BiteClickTime=os.clock();if 1 > 2 then local _0x302=nil end;_0x3b();task.wait(0.14);_0x3b();task.wait(0.14);if 1 > 2 then local _0x303=nil end;_0x3b();local _0x304=(13 + 0) * 1 end;do local _0x306=221 end;continue end;if _0x39.FishDetected then if _0x55() then do local _0x30d=933 end;_0x5f=true;local _0x4f=_0x4e();if _0x4f then do local _0x30a=940 end;if not _0x39.ReelingStarted then _0x39.ReelingStarted=true;do local _0x307=681 end;print(__0x678d(8)) end;local _0x30b=(29 + 0) * 1;if _0x5a(_0x4f) then local _0x308=(65 + 0) * 1;_0x3c() else _0x3d();if 1 > 2 then local _0x309=nil end end;local _0x30c=(51 + 0) * 1 end else if _0x5f then _0x39.FishCaught=_0x39.FishCaught + (2 - 1);_0x3d();print(__0x678d(9),_0x39.FishCaught);local _0x30e=math.random() * 0;_0x39.CastComplete=false;_0x39.FishDetected=false;_0x39.ReelingStarted=false;_0x5f=false;task.wait(0.5) elseif os.clock() - _0x39.BiteClickTime > 1 + 2 then local _0x30f=math.random() * 0;_0x3e(__0x678d(10)) end end end end end;_0x677=750 elseif _0x677 == 873 then _0x5a3=(29 + 0) * 1;_0x677=876 elseif _0x677 == 3294 then if 1 > 2 then local _0x5f4=nil end;_0x677=3302 elseif _0x677 == 1758 then do local _0x5c0=449 end;_0x677=1769 elseif _0x677 == 2630 then _0x19a=function(_0x120,_0x42) local _0x13,_0x4b2,_0x19b,_0x2a,_0x19c,_0x19d,_0x19e,_0x19f,_0x1a0,_0x1a1,_0x1a2,_0x1a3,_0x1a4,_0x4b4,_0x1a6;local _0x64a=2;while true do if _0x64a == 92 then _0x4b4=math.random() * 0;_0x64a=103 elseif _0x64a == 43 then _0x19c,_0x19d,_0x19e=_0x2a.X / (3 + 14 - 15),_0x2a.Y / (1 + 1),_0x2a.Z / (1 + 12 - 11);_0x64a=54 elseif _0x64a == 82 then do local _0x4b3=474 end;_0x64a=87 elseif _0x64a == 87 then if not _0x1a4 or #_0x120 < 3 + 1 then _0x199(_0x120);return end;_0x64a=92 elseif _0x64a == 10 then _0x13=_0x1.CurrentCamera;_0x64a=16 elseif _0x64a == 103 then _0x1a6={Vector2.new(minX,minY),Vector2.new(maxX,minY),Vector2.new(maxX,maxY),Vector2.new(minX,maxY)};_0x64a=110 elseif _0x64a == 23 then if not _0x13 then _0x199(_0x120);return end;_0x64a=30 elseif _0x64a == 110 then do local _0x4b5=273 end;_0x64a=115 elseif _0x64a == 72 then for _0x1d=2 - 1,2 + 6 do local _0x4af=(12 + 0) * 1;local _0x1a5,_0x198=_0x197(_0x19f[_0x1d]);if false then local _0x4b0=nil end;if _0x198 and _0x1a5 then do local _0x4ac=22 end;_0x1a4=true;if _0x1a5.X < _0x1a0 then _0x1a0=_0x1a5.X;if false then local _0x4a8=nil end end;if _0x1a5.Y < _0x1a1 then _0x1a1=_0x1a5.Y;if 1 > 2 then local _0x4a9=nil end end;if _0x1a5.X > _0x1a2 then local _0x4aa=math.random() * 0;_0x1a2=_0x1a5.X end;do local _0x4ad=533 end;if _0x1a5.Y > _0x1a3 then do local _0x4ab=554 end;_0x1a3=_0x1a5.Y end;if 1 > 2 then local _0x4ae=nil end end end;_0x64a=82 elseif _0x64a == 30 then _0x4b2=(11 + 0) * 1;_0x64a=36 elseif _0x64a == 16 then if false then local _0x4b1=nil end;_0x64a=23 elseif _0x64a == 2 then if not _0x120 or not _0x42 or not _0x42.Parent then _0x199(_0x120);return end;_0x64a=10 elseif _0x64a == 54 then _0x19f={cf * Vector3.new(-hx,-hy,-hz),cf * Vector3.new(hx,-hy,-hz),cf * Vector3.new(hx,-hy,hz),cf * Vector3.new(-hx,-hy,hz),cf * Vector3.new(-hx,hy,-hz),cf * Vector3.new(hx,hy,-hz),cf * Vector3.new(hx,hy,hz),cf * Vector3.new(-hx,hy,hz)};_0x64a=58 elseif _0x64a == 115 then for _0x1d=2 - 1,1 * 3 + 1 do local _0x9d,_0x9e=_0x1a6[_0x1d],_0x1a6[_0x1d == 10 + 8 - 14 and 2 - 1 or _0x1d + (2 - 1)];_0x120[_0x1d].From=_0x9d;_0x120[_0x1d].To=_0x9e;_0x120[_0x1d].Visible=true end;_0x64a=137 elseif _0x64a == 36 then _0x19b,_0x2a=_0x42.CFrame,_0x42.Size;_0x64a=43 elseif _0x64a == 58 then _0x1a0,_0x1a1,_0x1a2,_0x1a3=math.huge,math.huge,-math.huge,-math.huge;_0x64a=67 elseif _0x64a == 67 then _0x1a4=false;_0x64a=72 else break end end end;_0x677=2633 elseif _0x677 == 2391 then _0x5d6=math.random() * 0;_0x677=2395 elseif _0x677 == 1230 then do local _0x5b2=867 end;_0x677=1237 elseif _0x677 == 688 then _0x40=function() local _0x1f=_0x6.Character;return _0x1f and _0x1f:FindFirstChild(__0x678d(11)) ~= nil end;_0x677=694 elseif _0x677 == 565 then _0x27=function(_0x28) local _0x14,_0x15,_0x29,_0x21,_0x2d7,_0x2d8;local _0x604=2;while true do if _0x604 == 16 then if 1 > 2 then local _0x2d6=nil end;_0x604=23 elseif _0x604 == 51 then _0x21=_0x20(_0x29);_0x604=60 elseif _0x604 == 45 then if type(_0x15) == __0x678d(12) then do local _0x2d1=922 end;_0x29=_0x15.Key or _0x15.key or _0x15[2 - 1] or _0x15.Value or _0x15.value or _0x15.Name or _0x15.Enum or _0x15.UserInputType;if 1 > 2 then local _0x2d2=nil end end;_0x604=51 elseif _0x604 == 64 then if _0x21 == nil and _0x29 ~= nil then local _0x2a=string.lower(tostring(_0x29));if _0x2a:find(__0x678d(13),2 - 1,true) or _0x2a:find(__0x678d(14),2 - 1,true) or _0x2a:find(__0x678d(15),2 - 1,true) then local _0x2d3=(4 + 0) * 1;pcall(function() if _0x28.Set then _0x28:Set(nil) end end);if false then local _0x2d4=nil end end;if 1 > 2 then local _0x2d5=nil end end;_0x604=72 elseif _0x604 == 60 then _0x2d7=math.random() * 0;_0x604=64 elseif _0x604 == 72 then _0x2d8=(96 + 0) * 1;_0x604=79 elseif _0x604 == 2 then if not _0x28 then return nil end;_0x604=8 elseif _0x604 == 30 then if type(_0x15) == __0x678d(16) and _0x15 == 1 - 1 then return nil end;_0x604=37 elseif _0x604 == 79 then return _0x21 elseif _0x604 == 23 then if not _0x14 or _0x15 == nil or _0x15 == false then return nil end;_0x604=30 elseif _0x604 == 37 then _0x29=_0x15;_0x604=45 elseif _0x604 == 8 then _0x14,_0x15=pcall(function() return _0x28:Get() end);_0x604=16 else break end end end;_0x677=570 elseif _0x677 == 3454 then if 1 > 2 then local _0x5fc=nil end;_0x677=3459 elseif _0x677 == 257 then _0x1c.space=2 + 73 - 43;_0x677=262 elseif _0x677 == 3259 then function refreshBoatSeats() local _0x22c,_0x1f1,_0x1e7,_0x140,_0x22d,_0x22e,_0x22f,_0x230,_0x231,_0x55d,_0x232,_0x233;local _0x66b=5;while true do if _0x66b == 87 then for _0x4b,_0x99 in ipairs(_0x22c) do local _0x558=math.random() * 0;_0x22e[_0x99.name]=(_0x22e[_0x99.name] or 1 - 1) + (2 - 1);local _0x123=_0x99.name;if _0x22d[_0x99.name] > 2 - 1 then _0x123=_0x123 .. __0x678d(17) .. tostring(_0x22e[_0x99.name]) end;table.insert(_0x22f,_0x123);_0x230[_0x123]=_0x99.seat;if _0x99.seat == S.selectedBoatSeat then _0x231=_0x123 end end;_0x66b=95 elseif _0x66b == 66 then _0x22f={};_0x66b=73 elseif _0x66b == 141 then if false then local _0x55e=nil end;_0x66b=151 elseif _0x66b == 95 then if #_0x22f == 1 - 1 then _0x22f={__0x678d(18)};_0x230={} end;_0x66b=102 elseif _0x66b == 108 then _0x55d=math.random() * 0;_0x66b=115 elseif _0x66b == 102 then _0x223=_0x230;_0x66b=108 elseif _0x66b == 155 then if _0x231 ~= S.selectedBoatSeatLabel or _0x233 ~= S.selectedBoatSeat then S.selectedBoatSeatLabel=_0x231;S.selectedBoatSeat=_0x233;pcall(function() if _0x225 and _0x225.Set and _0x231 then _0x225:Set({selectedLabel}) end end) end;_0x66b=164 elseif _0x66b == 130 then if not _0x231 and S.selectedBoatSeatLabel and _0x230[S.selectedBoatSeatLabel] then _0x231=S.selectedBoatSeatLabel end;_0x66b=137 elseif _0x66b == 81 then _0x231=nil;_0x66b=87 elseif _0x66b == 43 then _0x22d={};_0x66b=53 elseif _0x66b == 11 then _0x1f1=_0x1:FindFirstChild(__0x678d(19));_0x66b=17 elseif _0x66b == 164 then return _0x222 elseif _0x66b == 26 then if false then local _0x55c=nil end;_0x66b=33 elseif _0x66b == 33 then if _0x1e7 and _0x140 then for _0x4b,_0x117 in pairs(_0x140) do local _0x107=_0x226(_0x117);if _0x107 then local _0x1b1,_0xcd=pcall(function() return _0x117.Name end);_0xcd=_0x1b1 and type(_0xcd) == __0x678d(20) and _0xcd ~= "" and _0xcd or __0x678d(21);local _0x1db,_0x1dc=pcall(function() return _0x107.Address end);local _0x23=_0x1db and _0x1dc and _0x1dc ~= 1 - 1 and tostring(_0x1dc) or tostring(_0x107);table.insert(_0x22c,{name=_0xcd,seat=_0x107,key=_0x23}) end;if 1 > 2 then local _0x557=nil end end end;_0x66b=40 elseif _0x66b == 17 then _0x1e7,_0x140=pcall(function() return _0x1f1 and _0x1f1:GetChildren() end);_0x66b=26 elseif _0x66b == 151 then _0x233=_0x230[_0x231];_0x66b=155 elseif _0x66b == 59 then _0x22e={};_0x66b=66 elseif _0x66b == 53 then for _0x4b,_0x99 in ipairs(_0x22c) do _0x22d[_0x99.name]=(_0x22d[_0x99.name] or 1 - 1) + (2 - 1) end;_0x66b=59 elseif _0x66b == 123 then if _0x232 ~= _0x224 then for _0x205=#_0x222,2 - 1,-(2 - 1) do _0x222[_0x205]=nil;if 1 > 2 then local _0x559=nil end end;if false then local _0x55a=nil end;for _0x4b,_0x123 in ipairs(_0x22f) do table.insert(_0x222,_0x123) end;_0x224=_0x232;pcall(function() if _0x225 and _0x225.UpdateChoices then _0x225:UpdateChoices(_0x222) end end) end;_0x66b=130 elseif _0x66b == 137 then if not _0x231 then _0x231=_0x22f[2 - 1];local _0x55b=(59 + 0) * 1 end;_0x66b=141 elseif _0x66b == 115 then _0x232=table.concat(_0x22f,__0x678d(22));_0x66b=123 elseif _0x66b == 73 then _0x230={};_0x66b=81 elseif _0x66b == 40 then table.sort(_0x22c,function(_0x9d,_0x9e) if _0x9d.name == _0x9e.name then return _0x9d.key < _0x9e.key end;return _0x9d.name < _0x9e.name end);_0x66b=43 elseif _0x66b == 5 then _0x22c={};_0x66b=11 else break end end end;_0x677=3263 elseif _0x677 == 1872 then for _0x4b,_0x25 in pairs(dangerLevels) do table.insert(dangerLevelNames,_0x25.name) end;_0x677=1877 elseif _0x677 == 3438 then _0x5fb=(20 + 0) * 1;_0x677=3445 elseif _0x677 == 1541 then _0xe1={};_0x677=1550 elseif _0x677 == 1737 then _pvpAuraMaxDist=52 + 73 - 25;_0x677=1747 elseif _0x677 == 3250 then _0x226=function(_0x117) local _0x554,_0x555,_0x227,_0x228,_0x229,_0xea;local _0x66a=5;while true do if _0x66a == 44 then _0x229,_0xea=pcall(function() return _0x117:GetDescendants() end);_0x66a=51 elseif _0x66a == 51 then if _0x229 and _0xea then for _0x4b,_0x1b0 in pairs(_0xea) do local _0x22a,_0x22b=pcall(function() return _0x1b0.ClassName end);if _0x22a and _0x22b == __0x678d(23) then return _0x1b0 end end end;_0x66a=59 elseif _0x66a == 18 then _0x555=math.random() * 0;_0x66a=26 elseif _0x66a == 5 then _0x554=math.random() * 0;_0x66a=9 elseif _0x66a == 30 then if false then local _0x556=nil end;_0x66a=36 elseif _0x66a == 36 then if _0x227 and _0x228 then return _0x228 end;_0x66a=44 elseif _0x66a == 26 then _0x227,_0x228=pcall(function() return _0x117:FindFirstChildOfClass(__0x678d(24)) end);_0x66a=30 elseif _0x66a == 59 then return nil elseif _0x66a == 9 then if not _0x117 then return nil end;_0x66a=18 else break end end end;_0x677=3259 elseif _0x677 == 2608 then _0x197=function(_0x94) local _0x13,_0x4a6,_0x14,_0x15,_0x198;local _0x649=1;while true do if _0x649 == 1 then _0x13=_0x1.CurrentCamera;_0x649=11 elseif _0x649 == 18 then _0x4a6=math.random() * 0;_0x649=26 elseif _0x649 == 30 then if not _0x14 or not _0x15 then return nil,false end;_0x649=38 elseif _0x649 == 38 then return Vector2.new(_0x15.X,_0x15.Y),_0x198 and _0x15.Z > 1 - 1 elseif _0x649 == 26 then _0x14,_0x15,_0x198=pcall(function() local _0x17,_0x16=_0x13:WorldToViewportPoint(_0x94);return _0x17,_0x16 end);_0x649=30 elseif _0x649 == 11 then if not _0x13 or not _0x94 then return nil,false end;_0x649=18 else break end end end;_0x677=2612 elseif _0x677 == 1384 then _0xb8=function(_0xc1,_0xc2) local _0x58=tonumber(_0xb0) or 44 + 6;local _0xc3=tonumber(_0xb1) or 214 + 195 - 9;_0xc1=tonumber(_0xc1) or 1 - 1;_0xc2=tonumber(_0xc2) or 1 - 1;pcall(function() if _0xba then _0xba.Position=Vector2.new(_0x58,_0xc3) end;if _0xbb then _0xbb.Position=Vector2.new(_0x58,_0xc3 + (6 * 4 + 0)) end;for _0x1d=2 - 1,_0xb3 do local _0xc4=_0xbc and _0xbc[_0x1d];if _0xc4 then _0xc4.Position=Vector2.new(_0x58,_0xc3 + _0xb5 + (_0x1d - (2 - 1)) * _0xb6) end end;local _0xc5=_0xb5 + _0xc1 * _0xb6 + (_0xc1 > 1 - 1 and 4 + 0 or 1 - 1);for _0x1d=2 - 1,_0xb4 do local _0xc6=_0xbd and _0xbd[_0x1d];if _0xc6 then _0xc6.Position=Vector2.new(_0x58,_0xc3 + _0xc5 + (_0x1d - (2 - 1)) * _0xb6) end end;local _0xc7=3 * 2 + 0;local _0xc8=_0xc5 + _0xc2 * _0xb6 + _0xc7;if _0xbe then _0xbe.Position=Vector2.new(_0x58,_0xc3 + _0xc8) end;if _0xbf then _0xbf.Position=Vector2.new(_0x58,_0xc3 + _0xc8 + (10 * 2 + 0)) end end) end;_0x677=1387 elseif _0x677 == 1431 then _0xcc=function(_0x57,_0xcd) local _0x361,_0x28,_0xac,_0x363;local _0x61f=5;while true do if _0x61f == 12 then _0x28=_0x57:FindFirstChild(__0x678d(25));_0x61f=16 elseif _0x61f == 24 then _0xac=Drawing.new(__0x678d(26));_0x61f=33 elseif _0x61f == 65 then _0x363=math.random() * 0;_0x61f=74 elseif _0x61f == 16 then if not _0x28 then local _0x360=(66 + 0) * 1;return end;_0x61f=24 elseif _0x61f == 74 then _0xac.Outline=true;_0x61f=79 elseif _0x61f == 33 then _0xac.Text=_0xcd;_0x61f=39 elseif _0x61f == 60 then _0xac.Center=true;_0x61f=65 elseif _0x61f == 79 then _0xac.Visible=false;_0x61f=89 elseif _0x61f == 95 then _G.FruitESP[_0x57]={Text=_0xac,Handle=_0x28,Name=_0xcd};_0x61f=112 elseif _0x61f == 89 then if 1 > 2 then local _0x364=nil end;_0x61f=95 elseif _0x61f == 52 then if 1 > 2 then local _0x362=nil end;_0x61f=60 elseif _0x61f == 5 then _0x361=(3 + 0) * 1;_0x61f=12 elseif _0x61f == 44 then _0xac.Color=Color3.fromRGB(1 - 1,153 + 102,24 + 99 - 3);_0x61f=52 elseif _0x61f == 39 then _0xac.Size=2 * 6 + 2;_0x61f=44 else break end end end;_0x677=1440 elseif _0x677 == 3106 then function showBossStatus() local _0x1ac,_0x9c,_0x219,_0x218,_0x551;local _0x669=4;while true do if _0x669 == 4 then if 1 > 2 then local _0x54e=nil end;_0x669=10 elseif _0x669 == 65 then notify(_0x218,__0x678d(27),6 + 42 - 40);_0x669=83 elseif _0x669 == 10 then _0x1ac=_0x3;_0x669=15 elseif _0x669 == 15 then if 1 > 2 then local _0x54f=nil end;_0x669=25 elseif _0x669 == 51 then _0x551=math.random() * 0;_0x669=59 elseif _0x669 == 40 then _0x219=function(_0xcd,_0x21a) return _0x9c and (_0x9c:FindFirstChild(_0xcd) or _0x21a and _0x9c:FindFirstChild(_0x21a)) or _0x1ac:FindFirstChild(_0xcd) or _0x21a and _0x1ac:FindFirstChild(_0x21a) end;_0x669=44 elseif _0x669 == 25 then _0x9c=_0x1:FindFirstChild(__0x678d(28));_0x669=33 elseif _0x669 == 33 then if false then local _0x550=nil end;_0x669=40 elseif _0x669 == 44 then _0x218=__0x678d(29) .. (_0x219(__0x678d(30),__0x678d(31)) and __0x678d(32) or __0x678d(33)) .. __0x678d(34) .. (_0x219(__0x678d(35)) and __0x678d(36) or __0x678d(37)) .. __0x678d(38) .. (_0x219(__0x678d(39)) and __0x678d(40) or __0x678d(41));_0x669=51 elseif _0x669 == 59 then print(__0x678d(42) .. _0x218);_0x669=65 else break end end end;_0x677=3113 elseif _0x677 == 1311 then for _0x1d=2 - 1,_0xb3 do do local _0x359=224 end;_0xbc[_0x1d]=_0xab("",17 + 28 - 32,Color3.fromRGB(70 + 10,25 * 10 + 5,34 + 66)) end;_0x677=1320 elseif _0x677 == 3398 then _0x24d=function() local _0x105,_0x129,_0x249;local _0x672=3;while true do if _0x672 == 81 then _0x24a(_0x249 == __0x678d(43) and 2 - 1 or 3 + 0);_0x672=88 elseif _0x672 == 59 then if 1 > 2 then local _0x573=nil end;_0x672=67 elseif _0x672 == 44 then if not _0x129 or _0x129.Health <= 1 - 1 then return end;_0x672=50 elseif _0x672 == 37 then _0x129=_0x105:FindFirstChild(__0x678d(44));_0x672=44 elseif _0x672 == 12 then if not S.dungeonAutoEquip then return end;_0x672=15 elseif _0x672 == 30 then if not _0x105 then if 1 > 2 then local _0x570=nil end;return end;_0x672=37 elseif _0x672 == 71 then do local _0x574=259 end;_0x672=81 elseif _0x672 == 15 then _0x105=_0x6.Character;_0x672=22 elseif _0x672 == 50 then _0x249=S.dungeonWeapon or __0x678d(45);_0x672=59 elseif _0x672 == 22 then if false then local _0x572=nil end;_0x672=30 elseif _0x672 == 88 then task.delay(0.15,function() if not _0x6.Character then return end;local _0x24e=_0x6.Character;for _0x4b,_0x1f in ipairs(_0x24e:GetChildren()) do if _0x1f.ClassName == __0x678d(46) and _0x248(_0x1f,_0x249) then return end end;local _0x131=_0x6:FindFirstChild(__0x678d(47));if _0x131 then for _0x4b,_0xf5 in ipairs(_0x131:GetChildren()) do if _0xf5.ClassName == __0x678d(48) and _0x248(_0xf5,_0x249) then _0xf5.Parent=_0x24e;break end end end end);_0x672=111 elseif _0x672 == 3 then if false then local _0x571=nil end;_0x672=12 elseif _0x672 == 67 then for _0x4b,_0x1f in ipairs(_0x105:GetChildren()) do if _0x1f.ClassName == __0x678d(49) and _0x248(_0x1f,_0x249) then return end end;_0x672=71 else break end end end;_0x677=3404 elseif _0x677 == 11 then _0x1=game:GetService(__0x678d(50));_0x677=17 elseif _0x677 == 3336 then _0x242=function() return S.dungeonEnabled == true and not _G.FE_Unloaded end;_0x677=3342 elseif _0x677 == 2623 then _0x5de=math.random() * 0;_0x677=2630 elseif _0x677 == 3531 then task.spawn(function() local _0x115=os.clock();while not workspace.CurrentCamera and os.clock() - _0x115 < 3 + 12 do task.wait(0.1) end;local _0x277,_0x278=pcall(function() local _0x279=game:HttpGet(__0x678d(51));_0x279=_0x279:gsub(__0x678d(52),__0x678d(53) .. __0x678d(54) .. __0x678d(55) .. __0x678d(56) .. __0x678d(57) .. __0x678d(58) .. __0x678d(59) .. __0x678d(60) .. __0x678d(61) .. __0x678d(62) .. __0x678d(63),2 - 1);_0x279=_0x279:gsub(__0x678d(64),__0x678d(65));local _0x27a,_0x9b=loadstring(_0x279);if not _0x27a then error(_0x9b or __0x678d(66)) end;return _0x27a() or INSUI end);if not _0x277 or type(_0x278) ~= __0x678d(67) then warn(__0x678d(68),_0x278);return end;_0x30=_0x278;pcall(function() if _0x278.SetKeybindOverlay then _0x278:SetKeybindOverlay(false) end;if _0x278.SetMenuKey then _0x278:SetMenuKey(__0x678d(69)) end end);pcall(function() if _0x278.SetMenuKey then _0x278:SetMenuKey(__0x678d(70)) end end);local _0x27b=_0x278:CreateWindow({title=__0x678d(71),subtitle=__0x678d(72),size=Vector2.new(240 * 4 + 0,443 + 217),menuKey=__0x678d(73),checkboxStyle=true,opacity=0.97,keybindOverlay=false,autoSave=true,configName=__0x678d(74),configFolder=__0x678d(75)});_0x2f=_0x27b;_0x2e=true;local function _0x27c(_0x28,_0xac) if _0x28 and _0xac then pcall(function() _0x28:Tooltip(_0xac) end) end;return _0x28 end;_0x278:Category(__0x678d(76));local _0x27d=_0x27b:Tab(__0x678d(77),__0x678d(78));local _0x27e=_0x27d:Section(__0x678d(79),__0x678d(80));_0x2c.master=_0x27c(_0x27e:Toggle(__0x678d(81),true,function(_0x16) _0x19.master=_0x16 end,__0x678d(82)),__0x678d(83));_0x27e:Divider(__0x678d(84));_0x2c.esp=_0x27c(_0x27e:Toggle(__0x678d(85),true,function(_0x16) _0x19.esp=_0x16 end,__0x678d(86)),__0x678d(87));_0x2c.berryEsp=_0x27c(_0x27e:Toggle(__0x678d(88),false,function(_0x16) _0x19.berryEsp=_0x16;if not _0x16 then _0xe6() else task.spawn(function() _0xee(true) end) end end,__0x678d(89)),__0x678d(90));_0x27c(_0x27e:Toggle(__0x678d(91),false,function(_0x15) _0x36(__0x678d(92),_0x15);if _0x15 then pcall(buildFlowerEsp) else pcall(clearFlowerEsp) end end,__0x678d(93)),__0x678d(94));_0x27c(_0x27e:Toggle(__0x678d(95),false,function(_0x15) _0x36(__0x678d(96),_0x15);if _0x15 then pcall(buildChestEspLabels) else pcall(clearChestEspLabels) end end,__0x678d(97)),__0x678d(98));_0x27c(_0x27e:Toggle(__0x678d(99),false,function(_0x15) _0x36(__0x678d(100),_0x15);if _0x15 then pcall(buildBoatEsp) else pcall(clearBoatEsp) end end,__0x678d(101)),__0x678d(102));_0x27c(_0x27e:Toggle(__0x678d(103),false,function(_0x15) _0x36(__0x678d(104),_0x15);if not _0x15 then pcall(clearMirageEsp) end end,__0x678d(105)),__0x678d(106));_0x2c.panel=_0x27c(_0x27e:Toggle(__0x678d(107),true,function(_0x16) _0x19.panel=_0x16 end,__0x678d(108)),__0x678d(109));local _0x27f=_0x27b:Tab(__0x678d(110),__0x678d(111));local _0x280=_0x27f:Section(__0x678d(112),__0x678d(113));_0x27c(_0x280:Slider(__0x678d(114),30 + 20,3 + 65 - 18,1 - 1,1948 + 1081 - 29,"",function(_0x15) _0xb0=_0x15;_0xb8(_0xb7,1 - 1) end),__0x678d(115));_0x27c(_0x280:Slider(__0x678d(116),100 * 4 + 0,5 * 4 + 0,1 - 1,213 + 1308 - 21,"",function(_0x15) _0xb1=_0x15;_0xb8(_0xb7,1 - 1) end),__0x678d(117));local _0x281=_0x27f:Section(__0x678d(118),__0x678d(119));_0x27c(_0x281:Slider(__0x678d(120),3 * 4 + 1,2 - 1,20 + 11 - 21,7 * 3 + 1,"",function(_0x15) _0xb2=_0x15;_0xc0() end),__0x678d(121));_0x278:Category(__0x678d(122));local _0x282=_0x27b:Tab(__0x678d(123),__0x678d(124));local _0x283=_0x282:Section(__0x678d(125),__0x678d(126));_0x27c(_0x283:Toggle(__0x678d(127),false,function(_0x15) _0x36(__0x678d(128),_0x15) end,__0x678d(129)),__0x678d(130));_0x27c(_0x283:Toggle(__0x678d(131),false,function(_0x15) _0x36(__0x678d(132),_0x15) end,__0x678d(133)),__0x678d(134));_0x27c(_0x283:Toggle(__0x678d(135),false,function(_0x15) _0x36(__0x678d(136),_0x15);if type(S) == __0x678d(137) and _0x15 then S.chestIndex=2 - 1 end end,__0x678d(138)),__0x678d(139));_0x27c(_0x283:Toggle(__0x678d(140),false,function(_0x15) _0x36(__0x678d(141),_0x15) end,__0x678d(142)),__0x678d(143));_0x27c(_0x283:Toggle(__0x678d(144),false,function(_0x15) _0x36(__0x678d(145),_0x15) end,__0x678d(146)),__0x678d(147));local _0x284=_0x282:Section(__0x678d(148),__0x678d(149));_0x27c(_0x284:Toggle(__0x678d(150),false,function(_0x15) _0x36(__0x678d(151),_0x15) end,__0x678d(152)),__0x678d(153));local _0x285={};if type(islandNames) == __0x678d(154) and #islandNames > 1 - 1 then for _0x4b,_0x4d in ipairs(islandNames) do _0x285[#_0x285 + (2 - 1)]=_0x4d end elseif type(islandList) == __0x678d(155) then for _0x4b,_0x104 in pairs(islandList) do _0x285[#_0x285 + (2 - 1)]=_0x104.name end end;if #_0x285 == 1 - 1 then _0x285={__0x678d(156),__0x678d(157),__0x678d(158),__0x678d(159),__0x678d(160),__0x678d(161),__0x678d(162),__0x678d(163),__0x678d(164),__0x678d(165),__0x678d(166),__0x678d(167),__0x678d(168),__0x678d(169),__0x678d(170),__0x678d(171),__0x678d(172)} end;local _0x286=_0x285[2 - 1];local _0x287=_0x284:Dropdown(__0x678d(173),{defaultIsle},_0x285,false,function(_0x15) local _0xcd=_0x15;if type(_0x15) == __0x678d(174) then _0xcd=_0x15[2 - 1] or _0x15.Value or tostring(_0x15) end;_0xcd=tostring(_0xcd);if type(islandList) ~= __0x678d(175) then return end;for _0x1d,_0x104 in pairs(islandList) do if _0x104.name == _0xcd then _0x36(__0x678d(176),_0x1d);break end end end);_0x27c(_0x287,__0x678d(177));pcall(function() if _0x287 and _0x287.UpdateChoices then _0x287:UpdateChoices(_0x285) end;if _0x287 and _0x287.Set then _0x287:Set({defaultIsle}) end end);_0x27c(_0x284:Toggle(__0x678d(178),false,function(_0x15) _0x36(__0x678d(179),_0x15) end,__0x678d(180)),__0x678d(181));local _0x288=_0x282:Section(__0x678d(182),__0x678d(183));_0x27c(_0x288:Toggle(__0x678d(184),false,function(_0x15) _0x36(__0x678d(185),_0x15) end,__0x678d(186)),__0x678d(187));_0x27c(_0x288:Slider(__0x678d(188),1 - 1,2 - 1,-(66 + 34),9 + 91,"",function(_0x15) _0x36(__0x678d(189),_0x15) end),__0x678d(190));_0x27c(_0x288:Slider(__0x678d(191),14 + 9,2 - 1,-(16 * 6 + 4),12 + 88,"",function(_0x15) _0x36(__0x678d(192),_0x15) end),__0x678d(193));_0x27c(_0x288:Slider(__0x678d(194),1 - 1,2 - 1,-(41 + 59),25 * 4 + 0,"",function(_0x15) _0x36(__0x678d(195),_0x15) end),__0x678d(196));local _0x289=_0x282:Section(__0x678d(197),__0x678d(198));_0x27c(_0x289:Toggle(__0x678d(199),false,function(_0x15) _0x36(__0x678d(200),_0x15) end,__0x678d(201)),__0x678d(202));_0x27c(_0x289:Toggle(__0x678d(203),false,function(_0x15) _0x36(__0x678d(204),_0x15) end,__0x678d(205)),__0x678d(206));local _0x28a=_0x289:Dropdown(__0x678d(207),{S.materialTarget or MATERIAL_NAMES[2 - 1]},_0x18b,false,function(_0x15) local _0xcd=_0x15;if type(_0x15) == __0x678d(208) then _0xcd=_0x15[2 - 1] or _0x15.Value or tostring(_0x15) end;_0x36(__0x678d(209),tostring(_0xcd)) end);_0x27c(_0x28a,__0x678d(210));_0x27c(_0x289:Toggle(__0x678d(211),false,function(_0x15) _0x36(__0x678d(212),_0x15) end,__0x678d(213)),__0x678d(214));local _0x28b=_0x190();local _0x28c=S.bossTarget;local _0x28d=false;for _0x4b,_0x4d in ipairs(_0x28b) do if _0x4d == _0x28c then _0x28d=true;break end end;if not _0x28d then _0x28c=_0x28b[2 - 1] or _0x18f[2 - 1];_0x36(__0x678d(215),_0x28c) end;local _0x28e=_0x289:Dropdown(__0x678d(216),{defaultBoss},_0x28b,false,function(_0x15) local _0xcd=_0x15;if type(_0x15) == __0x678d(217) then _0xcd=_0x15[2 - 1] or _0x15.Value or tostring(_0x15) end;_0x36(__0x678d(218),tostring(_0xcd)) end);_0x27c(_0x28e,__0x678d(219));_0x27c(_0x289:Toggle(__0x678d(220),false,function(_0x15) _0x36(__0x678d(221),_0x15) end,__0x678d(222)),__0x678d(223));local _0x28f=_0x289:Dropdown(__0x678d(224),{S.seaEventTarget or SEA_EVENT_NAMES[2 - 1]},_0x191,false,function(_0x15) local _0xcd=_0x15;if type(_0x15) == __0x678d(225) then _0xcd=_0x15[2 - 1] or _0x15.Value or tostring(_0x15) end;_0x36(__0x678d(226),tostring(_0xcd)) end);_0x27c(_0x28f,__0x678d(227));local _0x290=_0x282:Section(__0x678d(228),__0x678d(229));_0x27c(_0x290:Toggle(__0x678d(230),false,function(_0x15) _0x36(__0x678d(231),_0x15) end,__0x678d(232)),__0x678d(233));_0x27c(_0x290:Toggle(__0x678d(234),false,function(_0x15) _0x36(__0x678d(235),_0x15) end,__0x678d(236)),__0x678d(237));_0x27c(_0x290:Toggle(__0x678d(238),false,function(_0x15) _0x36(__0x678d(239),_0x15) end,__0x678d(240)),__0x678d(241));_0x27c(_0x290:Toggle(__0x678d(242),false,function(_0x15) _0x36(__0x678d(243),_0x15) end,__0x678d(244)),__0x678d(245));_0x27c(_0x290:Toggle(__0x678d(246),false,function(_0x15) _0x36(__0x678d(247),_0x15) end,__0x678d(248)),__0x678d(249));_0x27c(_0x290:Slider(__0x678d(250),S.statAmount or 9 + 1,2 - 1,2 - 1,34 + 43 - 27,"",function(_0x15) _0x36(__0x678d(251),_0x15) end),__0x678d(252));_0x27c(_0x290:Toggle(__0x678d(253),false,function(_0x15) _0x36(__0x678d(254),_0x15) end,__0x678d(255)),__0x678d(256));_0x27c(_0x290:Toggle(__0x678d(257),true,function(_0x15) _0x36(__0x678d(258),_0x15 and __0x678d(259) or __0x678d(260)) end,__0x678d(261)),__0x678d(262));local _0x291=_0x282:Section(__0x678d(263),__0x678d(264));_0x27c(_0x291:Slider(__0x678d(265),S.FARM_SPEED or 83 * 3 + 1,2 * 4 + 2,16 * 3 + 2,142 * 7 + 6,"",function(_0x15) _0x36(__0x678d(266),_0x15);if type(AFL) == __0x678d(267) then AFL.tweenSpeed=_0x15 end end),__0x678d(268));_0x27c(_0x291:Slider(__0x678d(269),S.CHEST_SPEED or 77 * 4 + 2,3 + 25 - 18,6 + 73 - 29,740 + 262 - 2,"",function(_0x15) _0x36(__0x678d(270),_0x15) end),__0x678d(271));_0x27c(_0x291:Slider(__0x678d(272),S.FRUIT_SPEED or 158 + 52,7 + 3,10 + 40,945 + 55,"",function(_0x15) _0x36(__0x678d(273),_0x15) end),__0x678d(274));_0x27c(_0x291:Slider(__0x678d(275),S.NPC_TWEEN_SPEED or 35 * 7 + 5,8 + 2,36 + 44 - 30,184 + 829 - 13,"",function(_0x15) _0x36(__0x678d(276),_0x15) end),__0x678d(277));_0x27c(_0x291:Slider(__0x678d(278),S.RAID_SPEED or 32 + 168,2 + 50 - 42,5 * 10 + 0,849 + 151,"",function(_0x15) _0x36(__0x678d(279),_0x15) end),__0x678d(280));_0x27c(_0x291:Slider(__0x678d(281),S.MASTERY_SPEED or 110 + 186 - 46,2 * 4 + 2,13 + 42 - 5,154 + 846,"",function(_0x15) _0x36(__0x678d(282),_0x15) end),__0x678d(283));_0x278:Category(__0x678d(284));local _0x292=_0x27b:Tab(__0x678d(285),__0x678d(286));local _0x293=_0x292:Section(__0x678d(287),__0x678d(288));_0x27c(_0x293:Toggle(__0x678d(289),false,function(_0x15) _0x36(__0x678d(290),_0x15) end,__0x678d(291)),__0x678d(292));_0x27c(_0x293:Toggle(__0x678d(293),false,function(_0x15) _0x36(__0x678d(294),_0x15) end,__0x678d(295)),__0x678d(296));_0x27c(_0x293:Toggle(__0x678d(297),false,function(_0x15) _0x36(__0x678d(298),_0x15) end,__0x678d(299)),__0x678d(300));_0x27c(_0x293:Toggle(__0x678d(301),false,function(_0x15) _0x36(__0x678d(302),_0x15) end,__0x678d(303)),__0x678d(304));_0x27c(_0x293:Toggle(__0x678d(305),false,function(_0x15) _0x36(__0x678d(306),_0x15) end,__0x678d(307)),__0x678d(308));_0x27c(_0x293:Toggle(__0x678d(309),false,function(_0x15) _0x36(__0x678d(310),_0x15) end,__0x678d(311)),__0x678d(312));_0x27c(_0x293:Toggle(__0x678d(313),false,function(_0x15) _0x36(__0x678d(314),_0x15) end,__0x678d(315)),__0x678d(316));_0x27c(_0x293:Toggle(__0x678d(317),false,function(_0x15) _0x36(__0x678d(318),_0x15) end,__0x678d(319)),__0x678d(320));_0x27c(_0x293:Toggle(__0x678d(321),false,function(_0x15) _0x36(__0x678d(322),_0x15) end,__0x678d(323)),__0x678d(324));_0x27c(_0x293:Toggle(__0x678d(325),false,function(_0x15) _0x36(__0x678d(326),_0x15) end,__0x678d(327)),__0x678d(328));_0x27c(_0x293:Toggle(__0x678d(329),false,function(_0x15) _0x36(__0x678d(330),_0x15) end,__0x678d(331)),__0x678d(332));local _0x294=_0x292:Section(__0x678d(333),__0x678d(334));_0x27c(_0x294:Toggle(__0x678d(335),false,function(_0x15) _0x36(__0x678d(336),_0x15) end,__0x678d(337)),__0x678d(338));_0x27c(_0x294:Toggle(__0x678d(339),false,function(_0x15) _0x36(__0x678d(340),_0x15) end,__0x678d(341)),__0x678d(342));_0x27c(_0x294:Toggle(__0x678d(343),false,function(_0x15) _0x36(__0x678d(344),_0x15) end,__0x678d(345)),__0x678d(346));local _0x295=_0x292:Section(__0x678d(347),__0x678d(348));_0x27c(_0x295:Toggle(__0x678d(349),false,function(_0x15) _0x36(__0x678d(350),_0x15) end,__0x678d(351)),__0x678d(352));_0x27c(_0x295:Slider(__0x678d(353),1 - 1,2 - 1,-(50 * 2 + 0),10 * 10 + 0,"",function(_0x15) _0x36(__0x678d(354),_0x15) end),__0x678d(355));_0x27c(_0x295:Slider(__0x678d(356),-(3 + 7),2 - 1,-(52 + 65 - 17),20 * 5 + 0,"",function(_0x15) _0x36(__0x678d(357),_0x15) end),__0x678d(358));_0x27c(_0x295:Slider(__0x678d(359),1 - 1,2 - 1,-(14 * 7 + 2),49 + 51,"",function(_0x15) _0x36(__0x678d(360),_0x15) end),__0x678d(361));local _0x296=_0x292:Section(__0x678d(362),__0x678d(363));_0x2c.aura=_0x27c(_0x296:Toggle(__0x678d(364),false,function(_0x16) _0x19.aura=_0x16;AuraEnabled=_0x16;aura.enabled=_0x16 == true;if _0x16 then local _0x14=_0x84();print(__0x678d(365),_0x14,_0x14 and aura.regAtk and aura.regAtk:GetFullName() or __0x678d(366)) else print(__0x678d(367)) end;_0x76() end,__0x678d(368)),__0x678d(369));_0x2b.aura=_0x296:Keybind(__0x678d(370),nil,function()  end);_0x27c(_0x296:Slider(__0x678d(371),35 + 77 - 12,2 + 3,2 + 10 - 2,253 + 247,__0x678d(372),function(_0x15) _0x72.MAX_DISTANCE=_0x15;aura.maxDist=_0x15 end),__0x678d(373));pcall(function() if _0x296.Label then _0x296:Label(__0x678d(374)) end end);local _0x297=_0x27b:Tab(__0x678d(375),__0x678d(376));local _0x298=_0x297:Section(__0x678d(377),__0x678d(378));_0x27c(_0x298:Toggle(__0x678d(379),false,function(_0x15) _0x36(__0x678d(380),_0x15) end,__0x678d(381)),__0x678d(382));_0x27c(_0x298:Toggle(__0x678d(383),false,function(_0x15) _0x36(__0x678d(384),_0x15) end,__0x678d(385)),__0x678d(386));_0x27c(_0x298:Toggle(__0x678d(387),false,function(_0x15) _0x36(__0x678d(388),_0x15) end,__0x678d(389)),__0x678d(390));_0x27c(_0x298:Toggle(__0x678d(391),false,function(_0x15) _0x36(__0x678d(392),_0x15) end,__0x678d(393)),__0x678d(394));_0x27c(_0x298:Toggle(__0x678d(395),false,function(_0x15) _0x36(__0x678d(396),_0x15) end,__0x678d(397)),__0x678d(398));_0x27c(_0x298:Toggle(__0x678d(399),false,function(_0x15) _0x36(__0x678d(400),_0x15) end,__0x678d(401)),__0x678d(402));_0x27c(_0x298:Toggle(__0x678d(403),false,function(_0x15) _0x36(__0x678d(404),_0x15) end,__0x678d(405)),__0x678d(406));_0x27c(_0x298:Toggle(__0x678d(407),false,function(_0x15) _0x36(__0x678d(408),_0x15) end,__0x678d(409)),__0x678d(410));local _0x299=_0x297:Section(__0x678d(411),__0x678d(412));local _0x29a={__0x678d(413),__0x678d(414),__0x678d(415),__0x678d(416),__0x678d(417),__0x678d(418),__0x678d(419),__0x678d(420)};local _0x29b={speed=nil,delay=nil,duration=nil};local function _0x29c() local _0x23=S.glitchTune or __0x678d(421);return S.glitchSettings[_0x23] or S.glitchSettings.sanguine end;local function _0x29d() local _0x29e=_0x29c();if not _0x29e then return end;pcall(function() if _0x29b.speed and _0x29b.speed.Set then _0x29b.speed:Set(_0x29e.speed or 458 + 42) end;if _0x29b.delay and _0x29b.delay.Set then _0x29b.delay:Set(math.floor((_0x29e.delay or 0.1) * (25 * 4 + 0) + 0.5)) end;if _0x29b.duration and _0x29b.duration.Set then _0x29b.duration:Set(math.floor((_0x29e.duration or 0.3) * (42 + 58) + 0.5)) end end) end;local _0x29f=_0x299:Dropdown(__0x678d(422),{S.glitchTune or __0x678d(423)},_0x29a,false,function(_0x15) local _0xcd=_0x15;if type(_0x15) == __0x678d(424) then _0xcd=_0x15[2 - 1] or _0x15.Value or tostring(_0x15) end;_0x36(__0x678d(425),tostring(_0xcd));_0x29d() end);_0x27c(_0x29f,__0x678d(426));_0x29b.speed=_0x299:Slider(__0x678d(427),S.glitchSettings[S.glitchTune or __0x678d(428)] or {}.speed or 136 + 364,5 * 2 + 0,73 + 27,166 * 9 + 6,"",function(_0x15) local _0x29e=_0x29c();if _0x29e then _0x29e.speed=_0x15 end end);_0x27c(_0x29b.speed,__0x678d(429));_0x29b.delay=_0x299:Slider(__0x678d(430),math.floor((S.glitchSettings[S.glitchTune or __0x678d(431)] or {}.delay or 0.1) * (20 * 5 + 0) + 0.5),2 - 1,1 - 1,5 * 9 + 5,__0x678d(432),function(_0x15) local _0x29e=_0x29c();if _0x29e then _0x29e.delay=_0x15 / (50 * 2 + 0) end end);_0x27c(_0x29b.delay,__0x678d(433));_0x29b.duration=_0x299:Slider(__0x678d(434),math.floor((S.glitchSettings[S.glitchTune or __0x678d(435)] or {}.duration or 0.3) * (50 * 2 + 0) + 0.5),2 - 1,5 + 0,33 * 3 + 1,__0x678d(436),function(_0x15) local _0x29e=_0x29c();if _0x29e then _0x29e.duration=_0x15 / (90 + 10) end end);_0x27c(_0x29b.duration,__0x678d(437));_0x278:Category(__0x678d(438));local _0x2a0=_0x27b:Tab(__0x678d(439),__0x678d(440));local _0x2a1=_0x2a0:Section(__0x678d(441),__0x678d(442));_0x27c(_0x2a1:Toggle(__0x678d(443),false,function(_0x15) _0x36(__0x678d(444),_0x15) end,__0x678d(445)),__0x678d(446));_0x27c(_0x2a1:Slider(__0x678d(447),1 * 4 + 1,2 - 1,2 - 1,19 + 31,"",function(_0x15) _0x36(__0x678d(448),_0x15) end),__0x678d(449));local _0x2a2={};if type(dangerLevelNames) == __0x678d(450) and #dangerLevelNames > 1 - 1 then for _0x4b,_0x4d in ipairs(dangerLevelNames) do _0x2a2[#_0x2a2 + (2 - 1)]=_0x4d end elseif type(dangerLevels) == __0x678d(451) then for _0x4b,_0x25 in pairs(dangerLevels) do _0x2a2[#_0x2a2 + (2 - 1)]=_0x25.name end end;if #_0x2a2 == 1 - 1 then _0x2a2={__0x678d(452),__0x678d(453),__0x678d(454),__0x678d(455),__0x678d(456),__0x678d(457)} end;local _0x2a3=_0x2a2[2 - 1];local _0x2a4=_0x2a1:Dropdown(__0x678d(458),{defaultDanger},_0x2a2,false,function(_0x15) local _0xcd=_0x15;if type(_0x15) == __0x678d(459) then _0xcd=_0x15[2 - 1] or _0x15.Value or tostring(_0x15) end;_0xcd=tostring(_0xcd);if type(dangerLevels) ~= __0x678d(460) then return end;for _0x4b,_0x25 in pairs(dangerLevels) do if _0x25.name == _0xcd then _0x36(__0x678d(461),false);task.wait(0.05);task.spawn(function() if type(boatTweenTo) == __0x678d(462) then boatTweenTo(_0x25.pos) end end);break end end end);_0x27c(_0x2a4,__0x678d(463));pcall(function() if _0x2a4 and _0x2a4.UpdateChoices then _0x2a4:UpdateChoices(_0x2a2) end;if _0x2a4 and _0x2a4.Set then _0x2a4:Set({defaultDanger}) end end);_0x27c(_0x2a1:Button(__0x678d(464),function() _0x36(__0x678d(465),false) end),__0x678d(466));local _0x2a5=_0x2a0:Section(__0x678d(467),__0x678d(468));_0x27c(_0x2a5:Toggle(__0x678d(469),false,function(_0x15) _0x36(__0x678d(470),_0x15);if _0x15 then pcall(refreshBoatSeats) end;notify(_0x15 and __0x678d(471) or __0x678d(472),__0x678d(473),2 + 0) end,__0x678d(474)),__0x678d(475));pcall(refreshBoatSeats);local _0x2a6=_0x222 or {__0x678d(476)};local _0x2a7=_0x2a5:Dropdown(__0x678d(477),{seatOpts[2 - 1]},_0x2a6,false,function(_0x15) local _0xcd=_0x15;if type(_0x15) == __0x678d(478) then _0xcd=_0x15[2 - 1] or _0x15.Value or tostring(_0x15) end;_0xcd=tostring(_0xcd);S.selectedBoatSeatLabel=_0xcd;S.selectedBoatSeat=_0x223[_0xcd] end);_0x225=_0x2a7;_0x27c(_0x2a7,__0x678d(479));_0x27c(_0x2a5:Button(__0x678d(480),function() _0x224="";local _0xfd=refreshBoatSeats() or _0x222;notify(__0x678d(481) .. tostring(#_0xfd),__0x678d(482),2 + 0) end),__0x678d(483));local _0x2a8=_0x2a0:Section(__0x678d(484),__0x678d(485));_0x27c(_0x2a8:Toggle(__0x678d(486),false,function(_0x15) _0x36(__0x678d(487),_0x15) end,__0x678d(488)),__0x678d(489));_0x27c(_0x2a8:Toggle(__0x678d(490),false,function(_0x15) _0x36(__0x678d(491),_0x15) end,__0x678d(492)),__0x678d(493));_0x27c(_0x2a8:Toggle(__0x678d(494),false,function(_0x15) _0x36(__0x678d(495),_0x15) end,__0x678d(496)),__0x678d(497));local _0x2a9=_0x2a0:Section(__0x678d(498),__0x678d(499));_0x27c(_0x2a9:Button(__0x678d(500),function() task.spawn(showEventStatus) end),__0x678d(501));_0x27c(_0x2a9:Button(__0x678d(502),function() task.spawn(showBossStatus) end),__0x678d(503));_0x278:Category(__0x678d(504));local _0x2aa=_0x27b:Tab(__0x678d(505),__0x678d(506));local _0x2ab=_0x2aa:Section(__0x678d(507),__0x678d(508));_0x27c(_0x2ab:Toggle(__0x678d(509),false,function(_0x15) _0x36(__0x678d(510),_0x15) end,__0x678d(511)),__0x678d(512));_0x27c(_0x2ab:Toggle(__0x678d(513),false,function(_0x15) _0x36(__0x678d(514),_0x15) end,__0x678d(515)),__0x678d(516));_0x27c(_0x2ab:Toggle(__0x678d(517),false,function(_0x15) _pvpAuraEnabled=_0x15 end,__0x678d(518)),__0x678d(519));_0x27c(_0x2ab:Toggle(__0x678d(520),false,function(_0x15) _0x36(__0x678d(521),_0x15) end,__0x678d(522)),__0x678d(523));_0x27c(_0x2ab:Toggle(__0x678d(524),false,function(_0x15) _pvpAuraAltPart=_0x15 end,__0x678d(525)),__0x678d(526));_0x27c(_0x2ab:Slider(__0x678d(527),12 * 8 + 4,9 + 1,1 * 6 + 4,315 + 12 - 27,__0x678d(528),function(_0x15) _pvpAuraMaxDist=_0x15 end),__0x678d(529));_0x278:Category(__0x678d(530));local _0x2ac=_0x27b:Tab(__0x678d(531),__0x678d(532));local _0x2ad=_0x2ac:Section(__0x678d(533),__0x678d(534));_0x2c.fish=_0x27c(_0x2ad:Toggle(__0x678d(535),false,function(_0x16) _0x19.fish=_0x16;if _0x16 then _0x61() else _0x62() end end,__0x678d(536)),__0x678d(537));_0x2b.fish=_0x2ad:Keybind(__0x678d(538),nil,function()  end);local _0x2ae=_0x2ac:Section(__0x678d(539),__0x678d(540));_0x27c(_0x2ae:Slider(__0x678d(541),_0x38.CastTarget * (14 + 86),2 - 1,25 * 2 + 0,6 + 101 - 7,__0x678d(542),function(_0x15) _0x38.CastTarget=_0x15 / (41 + 59) end),__0x678d(543));_0x27c(_0x2ae:Slider(__0x678d(544),_0x38.DeadZone * (23 + 77),2 - 1,1 - 1,40 * 5 + 0,__0x678d(545),function(_0x15) _0x38.DeadZone=_0x15 / (11 * 9 + 1) end),__0x678d(546));_0x27c(_0x2ae:Slider(__0x678d(547),_0x38.BiteTimeout,2 - 1,33 + 12 - 40,12 * 5 + 0,__0x678d(548),function(_0x15) _0x38.BiteTimeout=_0x15 end),__0x678d(549));local _0x2af=_0x27b:Tab(__0x678d(550),__0x678d(551));local _0x2b0=_0x2af:Section(__0x678d(552),__0x678d(553));_0x2c.repair=_0x27c(_0x2b0:Toggle(__0x678d(554),false,function(_0x16) _0x19.repair=_0x16;if _0x16 then _0x70() else _0x71() end end,__0x678d(555)),__0x678d(556));_0x2b.repair=_0x2b0:Keybind(__0x678d(557),nil,function()  end);_0x27b:AddSettingsTab(__0x678d(558));pcall(function() local _0x2b1=_0x27b:SettingsSection(__0x678d(559),__0x678d(560));if _0x2b1 then _0x2b.menu=_0x2b1:Keybind(__0x678d(561),__0x678d(562),function()  end) end end);if not _0x2b.menu then local _0x2b2=_0x27b:Tab(__0x678d(563),__0x678d(564));local _0x2b3=_0x2b2:Section(__0x678d(565),__0x678d(566));_0x2b.menu=_0x2b3:Keybind(__0x678d(567),__0x678d(568),function()  end) end;pcall(function() if _0x2b.menu and _0x2b.menu.Set then _0x2b.menu:Set(__0x678d(569)) end end);if _0x2f and _0x2f.SetMenuKey then pcall(function() _0x2f:SetMenuKey(__0x678d(570)) end) end;if _0x30 and _0x30.SetMenuKey then pcall(function() _0x30:SetMenuKey(__0x678d(571)) end) end;local _0x2b4=_0x27b:Tab(__0x678d(572),__0x678d(573));local _0x2b5=_0x2b4:Section(__0x678d(574),__0x678d(575));_0x27c(_0x2b5:Toggle(__0x678d(576),false,function(_0x15) _0x36(__0x678d(577),_0x15);if not _0x15 then _0x36(__0x678d(578),false);_0x23f.target=nil end end,__0x678d(579)),__0x678d(580));_0x27c(_0x2b5:Toggle(__0x678d(581),false,function(_0x15) _0x36(__0x678d(582),_0x15);if not _0x15 then _0x23f.target=nil end end,__0x678d(583)),__0x678d(584));_0x27c(_0x2b5:Toggle(__0x678d(585),true,function(_0x15) _0x36(__0x678d(586),_0x15) end,__0x678d(587)),__0x678d(588));_0x27c(_0x2b5:Toggle(__0x678d(589),true,function(_0x15) _0x36(__0x678d(590),_0x15) end,__0x678d(591)),__0x678d(592));_0x27c(_0x2b5:Toggle(__0x678d(593),true,function(_0x15) _0x36(__0x678d(594),_0x15) end,__0x678d(595)),__0x678d(596));_0x27c(_0x2b5:Toggle(__0x678d(597),false,function(_0x15) _0x36(__0x678d(598),_0x15) end,__0x678d(599)),__0x678d(600));local _0x2b6=_0x2b4:Section(__0x678d(601),__0x678d(602));_0x27c(_0x2b6:Toggle(__0x678d(603),true,function(_0x15) _0x36(__0x678d(604),_0x15) end,__0x678d(605)),__0x678d(606));_0x27c(_0x2b6:Toggle(__0x678d(607),true,function(_0x15) _0x36(__0x678d(608),_0x15) end,__0x678d(609)),__0x678d(610));_0x27c(_0x2b6:Toggle(__0x678d(611),true,function(_0x15) _0x36(__0x678d(612),_0x15) end,__0x678d(613)),__0x678d(614));_0x27c(_0x2b6:Toggle(__0x678d(615),true,function(_0x15) _0x36(__0x678d(616),_0x15 and __0x678d(617) or __0x678d(618)) end,__0x678d(619)),__0x678d(620));_0x27c(_0x2b6:Slider(__0x678d(621),30 * 2 + 0,2 + 3,10 * 2 + 0,1 + 119,__0x678d(622),function(_0x15) _0x36(__0x678d(623),_0x15) end),__0x678d(624));_0x27c(_0x2b6:Slider(__0x678d(625),109 + 141,4 + 83 - 37,11 * 9 + 1,397 + 353,"",function(_0x15) _0x36(__0x678d(626),_0x15) end),__0x678d(627));_0x27c(_0x2b6:Slider(__0x678d(628),1 + 11,2 - 1,1 * 4 + 1,21 + 9,__0x678d(629),function(_0x15) _0x36(__0x678d(630),_0x15) end),__0x678d(631));_0x27c(_0x2b6:Slider(__0x678d(632),19 + 52 - 21,5 + 0,45 + 5 - 40,67 + 53,"",function(_0x15) _0x36(__0x678d(633),_0x15) end),__0x678d(634));local _0x2b7=_0x27b:Tab(__0x678d(635),__0x678d(636)):Section(__0x678d(637),__0x678d(638));_0x2b7:Button(__0x678d(639),function() _0x278:Dialog({title=__0x678d(640),text=__0x678d(641),confirm=__0x678d(642),onConfirm=function() _G.FE_Unloaded=true;_0x62();_0x71();AuraEnabled=false;pcall(_0x264);if type(S) == __0x678d(643) then for _0x21,_0x15 in pairs(S) do if type(_0x15) == __0x678d(644) then S[_0x21]=false end end end;_pvpAuraEnabled=false;if _0xfa then pcall(function() _0xfa:Disconnect() end) end;pcall(_0xec);for _0x4b,_0x25 in pairs(_G.FruitStatusDrawings) do pcall(function() _0x25:Remove() end) end;_G.FruitStatusDrawings={};for _0x57,_0xcf in pairs(_G.FruitESP) do pcall(function() _0xcf.Text:Remove() end);_G.FruitESP[_0x57]=nil end;pcall(clearChestEspLabels);pcall(clearBoatEsp);pcall(clearFlowerEsp);pcall(clearMirageEsp);pcall(clearBerryEspLabels);pcall(clearChamBoxes);pcall(clearEspLabels);pcall(mouse1release);pcall(function() _0x278:Destroy() end) end}) end):SetRisk();task.spawn(function() while not _G.FE_Unloaded do do local _0x23=_0x27(_0x2b.menu);if not _0x23 then _0x23=__0x678d(645) end;local _0x2b8=_0x22(_0x23) or _0x22(__0x678d(646));if _0x23 ~= __0x678d(647) then _0x2b8=_0x22(_0x23) end;if _0x2b8 and not _0x2d.menu then _0x2e=not _0x2e;pcall(function() if _0x2f and _0x2f.SetOpen then _0x2f:SetOpen(_0x2e) elseif _0x30 and _0x30.SetOpen then _0x30:SetOpen(_0x2e) elseif _0x2f and _0x2f.SetVisible then _0x2f:SetVisible(_0x2e) end end) end;_0x2d.menu=_0x2b8 end;do local _0x23=_0x27(_0x2b.fish);local _0x2b8=_0x23 ~= nil and _0x22(_0x23);if _0x2b8 and not _0x2d.fish then _0x33(__0x678d(648),function(_0x16) if _0x16 then _0x61() else _0x62() end end) end;_0x2d.fish=_0x2b8 end;do local _0x23=_0x27(_0x2b.repair);local _0x2b8=_0x23 ~= nil and _0x22(_0x23);if _0x2b8 and not _0x2d.repair then _0x33(__0x678d(649),function(_0x16) if _0x16 then _0x70() else _0x71() end end) end;_0x2d.repair=_0x2b8 end;do local _0x23=_0x27(_0x2b.aura);local _0x2b8=_0x23 ~= nil and _0x22(_0x23);if _0x2b8 and not _0x2d.aura then _0x33(__0x678d(650),function(_0x16) AuraEnabled=_0x16;aura.enabled=_0x16 == true;_0x76() end) end;_0x2d.aura=_0x2b8 end;task.wait(0.03) end end);pcall(function() if _0x278.SetKeybindOverlay then _0x278:SetKeybindOverlay(false) end;if _0x278.SetMenuKey then _0x278:SetMenuKey(__0x678d(651)) end;if _0x2f and _0x2f.SetMenuKey then _0x2f:SetMenuKey(__0x678d(652)) end end);pcall(function() local _0x2b9=false;_0x4.InputBegan:Connect(function(_0x2ba,_0x2bb) if _0x2ba.KeyCode ~= Enum.KeyCode.F1 then return end;if _0x2b9 then return end;_0x2b9=true;_0x2e=not _0x2e;pcall(function() if _0x2f then if _0x2f.SetOpen then _0x2f:SetOpen(_0x2e) elseif _0x2f.Toggle then _0x2f:Toggle() end end;if _0x30 and _0x30.SetOpen then _0x30:SetOpen(_0x2e) end end) end);_0x4.InputEnded:Connect(function(_0x2ba) if _0x2ba.KeyCode == Enum.KeyCode.F1 then _0x2b9=false end end) end);pcall(function() task.spawn(function() local _0x2bc=false;while not _G.FE_Unloaded do local _0x2b8=false;pcall(function() _0x2b8=iskeypressed(122 + 27 - 37) end);if not _0x2b8 then pcall(function() _0x2b8=_0x4:IsKeyDown(Enum.KeyCode.F1) end) end;if _0x2b8 and not _0x2bc then _0x2e=not _0x2e;pcall(function() if _0x2f and _0x2f.SetOpen then _0x2f:SetOpen(_0x2e) end end) end;_0x2bc=_0x2b8;task.wait(0.03) end end) end);pcall(function() _0x278:Notify(__0x678d(653),__0x678d(654),1 + 13 - 11,__0x678d(655)) end) end);_0x677=3540 elseif _0x677 == 2796 then task.spawn(function() local _0x1cf=false;local _0x1d0=false;local _0x1d1=nil;local _0x1d2=nil;local _0x1ca=false;while not _G.FE_Unloaded do local _0x1d3=false;pcall(function() _0x1d3=iskeypressed(13 * 6 + 3) end);local _0x1d4=_0x1c8();local _0xf0=os.clock();if S.soulGuitarM1 then if _0x1d3 and not _0x1cf then _0x1d1=_0xf0 end;if _0x1d4 and not _0x1d0 then _0x1d2=_0xf0 end;if not _0x1ca and _0x1d1 and _0x1d2 and math.abs(_0x1d1 - _0x1d2) <= 0.5 then _0x1d1=nil;_0x1d2=nil;_0x1ca=true;task.spawn(function() local _0x105=_0x6 and _0x6.Character or nil;local _0x1d5=_0x105 and (_0x105:FindFirstChild(__0x678d(656)) or _0x105:FindFirstChild(__0x678d(657)));if _0x1d5 then runVelocityBoost(S.glitchSettings.soulGuitar,function() return S.soulGuitarM1 end,true) end;_0x1ca=false end) end else _0x1d1=nil;_0x1d2=nil end;_0x1cf=_0x1d3;_0x1d0=_0x1d4;task.wait() end end);_0x677=2803 elseif _0x677 == 2922 then _0x1e3=function(_0x1e0,_0x12b) local _0x1e4;local _0x65b=4;while true do if _0x65b == 19 then return _0x1df(_0x1e0,_0x1e4) elseif _0x65b == 4 then _0x1e4={};_0x65b=10 elseif _0x65b == 10 then if _0x12b then if 1 > 2 then local _0x4e7=nil end;local _0x14,_0x140=pcall(function() return _0x12b:GetChildren() end);if _0x14 and _0x140 then for _0x4b,_0x89 in pairs(_0x140) do _0x1e4[#_0x1e4 + (2 - 1)]=_0x1dd(_0x89) end;table.sort(_0x1e4) end end;_0x65b=19 else break end end end;_0x677=2929 elseif _0x677 == 1495 then _0xdc=1 * 8 + 4;_0x677=1499 elseif _0x677 == 828 then _0x6e=function() if _0x63.IsHolding then local _0x31f=math.random() * 0;_0x63.IsHolding=false;local _0x320=math.random() * 0;pcall(mouse1release) end;if false then local _0x321=nil end end;_0x677=836 elseif _0x677 == 836 then _0x6f=function() local _0x611=3;while true do if _0x611 == 19 then _0x6e();_0x611=26 elseif _0x611 == 3 then print(__0x678d(658));_0x611=11 elseif _0x611 == 26 then print(__0x678d(659));_0x611=48 elseif _0x611 == 11 then while _0x63.Running do local _0x69=_0x64();local _0x324=(51 + 0) * 1;if _0x69 then _0x6d();local _0x322=math.random() * 0;if _0x68(_0x69) then _0x6e();print(__0x678d(660));task.wait(0.35) end else if 1 > 2 then local _0x323=nil end;_0x6e() end;task.wait(0.02) end;_0x611=19 else break end end end;_0x677=841 elseif _0x677 == 2300 then task.spawn(function() while true do task.wait();if S.freezeEnemies then local _0x12b=game.Workspace:FindFirstChild(__0x678d(661));if _0x12b then for _0x4b,_0x128 in pairs(_0x12b:GetChildren()) do if _0x128:IsA(__0x678d(662)) and not S.frozenEnemies[_0x128] then local _0x8c=_0x128:FindFirstChild(__0x678d(663));if _0x8c then S.frozenEnemies[_0x128]=_0x8c.Position end end end end;for _0x128,_0x161 in pairs(S.frozenEnemies) do if _0x128 and _0x128.Parent then local _0x8c=_0x128:FindFirstChild(__0x678d(664));if _0x8c then _0x8c.Position=_0x161;_0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end else S.frozenEnemies[_0x128]=nil end end end end end);_0x677=2305 elseif _0x677 == 3161 then task.spawn(function() while not _G.FE_Unloaded do if S.autoMirageGear then local _0x21d=findMirageModel();local _0x8c=_0x1bc();if _0x8c and _0x21d then local _0xf3,_0x21e=nil,1 - 1;for _0x4b,_0x7e in ipairs(_0x21d:GetDescendants()) do if (_0x7e:IsA(__0x678d(665)) or _0x7e:IsA(__0x678d(666))) and _0x7e.Transparency < 0.4 then local _0x21f=_0x7e.Size.X * _0x7e.Size.Y * _0x7e.Size.Z;if _0x21f > 5 + 4 - 7 and _0x21f < 57 * 7 + 1 and _0x21f > _0x21e then _0x21e=_0x21f;_0xf3=_0x7e end end end;if _0xf3 then tweenTo(_0x8c,Vector3.new(_0xf3.Position.X,_0xf3.Position.Y + (36 + 4 - 36),_0xf3.Position.Z),S.FRUIT_SPEED,function() return S.autoMirageGear end) end end;task.wait(0.8) else task.wait(0.3) end end end);_0x677=3168 elseif _0x677 == 1832 then _0x5c3=(7 + 0) * 1;_0x677=1835 elseif _0x677 == 1678 then _0xd7();_0x677=1685 elseif _0x677 == 2886 then function getSafeFruitPosition(_0x1d9) local _0x1aa,_0x1ab,_0x1da,_0x94;local _0x657=3;while true do if _0x657 == 33 then _0x1da,_0x94=pcall(function() return _0x1d9.Position end);_0x657=36 elseif _0x657 == 36 then if _0x1da and _0x94 and _0x94.X and _0x94.Y and _0x94.Z then return _0x94 end;_0x657=43 elseif _0x657 == 23 then if not _0x1aa or not _0x1ab then if 1 > 2 then local _0x4dc=nil end;return nil end;_0x657=33 elseif _0x657 == 10 then if not _0x1d9 then return nil end;_0x657=19 elseif _0x657 == 43 then return nil elseif _0x657 == 3 then if false then local _0x4dd=nil end;_0x657=10 elseif _0x657 == 19 then _0x1aa,_0x1ab=pcall(function() return _0x1d9.Parent end);_0x657=23 else break end end end;_0x677=2895 elseif _0x677 == 1219 then for _0x4b,_0x25 in pairs(_G.FruitESP) do pcall(function() _0x25.Text:Remove() end) end;_0x677=1230 elseif _0x677 == 3467 then task.spawn(function() while not _G.FE_Unloaded do if _0x242() and S.dungeonFloat then local _0x105=_0x6.Character;local _0x265=_0x105 and _0x105:FindFirstChild(__0x678d(667));if _0x265 then local _0x8d=_0x265.Position;local _0x12b=_0x1:FindFirstChild(__0x678d(668));local _0x266,_0x267=nil,nil;if _0x12b then if S.dungeonDestroyObj then local _0xf3=math.huge;for _0x4b,_0x21b in ipairs(_0x12b:GetChildren()) do if _0x244(_0x21b) then local _0x42=_0x21b:FindFirstChild(__0x678d(669)) or _0x21b:FindFirstChildWhichIsA(__0x678d(670));if _0x42 then local _0x25=_0x8d - _0x42.Position.Magnitude;if _0x25 < _0xf3 then _0xf3=_0x25;_0x266=_0x21b end end end end end;if not _0x266 then local _0xf3=S.dungeonLocalRadius or 706 + 94;for _0x4b,_0x21b in ipairs(_0x12b:GetChildren()) do if _0x246(_0x21b) then local _0x42=_0x21b:FindFirstChild(__0x678d(671)) or _0x21b:FindFirstChild(__0x678d(672)) or _0x21b:FindFirstChildWhichIsA(__0x678d(673));if _0x42 then local _0x25=_0x8d - _0x42.Position.Magnitude;if _0x25 < _0xf3 then _0xf3=_0x25;_0x267=_0x21b end end end end end end;if _0x266 then _0x23f.target=_0x266;_0x23f.targetingObjective=true elseif _0x267 then _0x23f.target=_0x267;_0x23f.targetingObjective=false else _0x23f.target=nil;_0x23f.targetingObjective=false end;if not _0x23f.target and S.dungeonAutoDoor then _0x23f.doorWaypoint,_0x23f.doorStatus=_0x257(_0x8d) else _0x23f.doorWaypoint=nil end end elseif not S.dungeonFloat then _0x23f.target=nil end;task.wait(0.12) end end);_0x677=3476 elseif _0x677 == 450 then _0x1e.tab=Enum.KeyCode.Tab;_0x677=460 elseif _0x677 == 1692 then _0xf8();_0x677=1696 elseif _0x677 == 2759 then task.spawn(function() local _0x1cc=false;local _0x1ca=false;while not _G.FE_Unloaded do local _0x1cd=false;pcall(function() _0x1cd=iskeypressed(45 * 2 + 0) end);if S.dragonTalonZ and _0x1cd and not _0x1cc then _0x1cc=true;if not _0x1ca then _0x1ca=true;task.spawn(function() if _0x1c7(__0x678d(674)) then runVelocityBoost(S.glitchSettings.dragonTalon,function() return S.dragonTalonZ end) end;_0x1ca=false end) end elseif not _0x1cd then _0x1cc=false end;task.wait() end end);_0x677=2770 elseif _0x677 == 2167 then function afl_getLevels() local _0x14,_0x14c,_0x14d;local _0x63e=2;while true do if _0x63e == 29 then if false then local _0x42f=nil end;_0x63e=36 elseif _0x63e == 54 then for _0x1d=#_0x14d,2 - 1,-(2 - 1) do local _0x42e=math.random() * 0;if AFL.questData[_0x14d[_0x1d][3 + 0]] then AFL.npcToFarm=_0x14d[_0x1d][34 + 13 - 44];return end end;_0x63e=74 elseif _0x63e == 15 then if not _0x14 or not _0x14c then return end;_0x63e=26 elseif _0x63e == 26 then _0x14d=AFL.levelFarmTable[AFL.currentSea];_0x63e=29 elseif _0x63e == 8 then _0x14,_0x14c=pcall(function() return _0x6.Data.Level.Value end);_0x63e=15 elseif _0x63e == 36 then if not _0x14d then return end;_0x63e=45 elseif _0x63e == 2 then if not AFL.autofarmByLevel then return end;_0x63e=8 elseif _0x63e == 45 then for _0x4b,_0xcf in ipairs(_0x14d) do if _0x14c >= _0xcf[2 - 1] and _0x14c < _0xcf[2 + 0] and AFL.questData[_0xcf[1 * 2 + 1]] then if 1 > 2 then local _0x42d=nil end;AFL.npcToFarm=_0xcf[3 + 0];return end end;_0x63e=54 else break end end end;_0x677=2173 elseif _0x677 == 2101 then task.spawn(function() while true do if S.autoNpcFarm then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(675));if _0x8c then local _0xa9=islandList[S.selectedIsland];local _0xaa=_0xa9.pos;notify(__0x678d(676) .. _0xa9.name,__0x678d(677),1 + 1);tweenTo(_0x8c,Vector3.new(_0xaa.X,_0xaa.Y,_0xaa.Z),S.NPC_TWEEN_SPEED,function() return S.autoNpcFarm end);task.wait(0.5);local _0x148=_0x6.Character;if _0x148 then for _0x4b,_0x42 in pairs(_0x148:GetChildren()) do if _0x42:IsA(__0x678d(678)) then _0x42.CanCollide=false end end end;while S.autoNpcFarm do local _0x149=_0x6.Character and _0x6.Character:FindFirstChild(__0x678d(679));if not _0x149 then task.wait(0.1);break end;farmAttack(_0x149,function() return S.autoNpcFarm end,nil);task.wait(0.1) end end;task.wait(0.1) else task.wait(0.1) end end end);_0x677=2111 elseif _0x677 == 2671 then do local _0x5e0=363 end;_0x677=2675 elseif _0x677 == 820 then do local _0x5a1=731 end;_0x677=828 elseif _0x677 == 949 then do local _0x5a7=410 end;_0x677=953 elseif _0x677 == 1685 then pcall(_0xee);_0x677=1692 elseif _0x677 == 1163 then if not _0xa3 then if _0x10() then _0xa3=_0xa1 elseif _0xf() then _0xa3=_0xa0 elseif _0xe() then _0xa3=_0x9f else _0xa3={};for _0x4b,_0xa4 in pairs(_0xa2) do for _0x4b,_0xa5 in ipairs(_0xa4) do table.insert(_0xa3,_0xa5) end end;local _0x351=(10 + 0) * 1 end end;_0x677=1174 elseif _0x677 == 2907 then do local _0x5e6=699 end;_0x677=2916 elseif _0x677 == 3489 then task.spawn(function() local _0x1e4={11 * 8 + 2,17 * 5 + 3,6 * 10 + 7,28 * 3 + 2};while not _G.FE_Unloaded do if _0x242() and S.dungeonFloat and S.dungeonUseMoves and _0x23f.targetingObjective and _0x23f.target then local _0x144=_0x23f.target:FindFirstChild(__0x678d(680)) or _0x23f.target:FindFirstChildWhichIsA(__0x678d(681));if _0x144 then pcall(function() local _0x13=_0x1.CurrentCamera;if _0x13 then _0x13.CFrame=CFrame.lookAt(_0x13.CFrame.Position,_0x144.Position) end end);for _0x4b,_0x1b9 in ipairs(_0x1e4) do if not _0x23f.targetingObjective then break end;pcall(function() if keyclick then keyclick(_0x1b9) end end);task.wait(0.2) end end end;task.wait(0.3) end end);_0x677=3496 elseif _0x677 == 3210 then _0x223={};_0x677=3215 elseif _0x677 == 2524 then for _0x4b,_0x4d in ipairs(_0x18e) do _0x18f[#_0x18f + (2 - 1)]=_0x4d end;_0x677=2529 elseif _0x677 == 2720 then _0x1bc=function() local _0x105=_0x6.Character;return _0x105 and _0x105:FindFirstChild(__0x678d(682)) end;_0x677=2728 elseif _0x677 == 3385 then _0x24a=function(_0x24b) local _0x24c;local _0x671=5;while true do if _0x671 == 5 then _0x24c=36 + 45 - 33 + _0x24b;_0x671=12 elseif _0x671 == 12 then pcall(function() if keyclick then keyclick(_0x24c) elseif keypress and keyrelease then keypress(_0x24c);task.wait(0.04);keyrelease(_0x24c) end end);_0x671=15 elseif _0x671 == 15 then if false then local _0x56f=nil end;_0x671=40 else break end end end;_0x677=3389 elseif _0x677 == 1052 then _0x84=function() local _0x339,_0x33a,_0x85,_0x33b,_0x86,_0x33d;local _0x616=5;while true do if _0x616 == 58 then _0x33d=(85 + 0) * 1;_0x616=68 elseif _0x616 == 68 then _0x83();_0x616=72 elseif _0x616 == 72 then do local _0x33e=793 end;_0x616=81 elseif _0x616 == 40 then _0x86=_0x79({__0x678d(683),__0x678d(684),__0x678d(685)});_0x616=46 elseif _0x616 == 11 then if aura.regAtk and aura.regHit and aura.regAtk.Parent and aura.regHit.Parent then return true end;_0x616=18 elseif _0x616 == 46 then if false then local _0x33c=nil end;_0x616=51 elseif _0x616 == 18 then _0x33a=(61 + 0) * 1;_0x616=26 elseif _0x616 == 51 then if _0x85 and _0x86 then do local _0x338=399 end;aura.regAtk=_0x85;aura.regHit=_0x86;print(__0x678d(686),_0x85:GetFullName(),__0x678d(687),_0x86:GetFullName());return true end;_0x616=58 elseif _0x616 == 26 then _0x85=_0x79({__0x678d(688),__0x678d(689),__0x678d(690)});_0x616=29 elseif _0x616 == 29 then _0x33b=(63 + 0) * 1;_0x616=40 elseif _0x616 == 5 then _0x339=(49 + 0) * 1;_0x616=11 elseif _0x616 == 81 then return false else break end end end;_0x677=1062 elseif _0x677 == 667 then _0x3c=function() local _0x2dd;local _0x606=4;while true do if _0x606 == 8 then if not _0x39.IsHolding then _0x39.IsHolding=true;local _0x2db=math.random() * 0;pcall(mouse1press) end;_0x606=16 elseif _0x606 == 4 then do local _0x2dc=701 end;_0x606=8 elseif _0x606 == 16 then _0x2dd=math.random() * 0;_0x606=41 else break end end end;_0x677=676 elseif _0x677 == 1082 then _0x96=function(_0x90) local _0x97,_0x98;local _0x619=4;while true do if _0x619 == 43 then if #_0x97 == 1 - 1 or not _0x98 then return end;_0x619=54 elseif _0x619 == 30 then _0x98=nil;_0x619=39 elseif _0x619 == 57 then pcall(function() aura.regAtk:FireServer(0.5) end);_0x619=68 elseif _0x619 == 18 then if 1 > 2 then local _0x34f=nil end;_0x619=26 elseif _0x619 == 12 then if not _0x84() then return end;_0x619=18 elseif _0x619 == 26 then _0x97={};_0x619=30 elseif _0x619 == 54 then if false then local _0x350=nil end;_0x619=57 elseif _0x619 == 4 then if not aura.enabled or not _0x90 or #_0x90 == 1 - 1 then if 1 > 2 then local _0x34c=nil end;return end;_0x619=12 elseif _0x619 == 68 then task.wait();_0x619=72 elseif _0x619 == 39 then for _0x4b,_0x99 in ipairs(_0x90) do do local _0x34e=341 end;if _0x99.enemy and _0x99.enemy.Parent and _0x99.part and _0x99.part.Parent then table.insert(_0x97,{entry.enemy,entry.part});do local _0x34d=361 end;if not _0x98 then _0x98=_0x99.part end end end;_0x619=43 elseif _0x619 == 72 then pcall(function() aura.regHit:FireServer(_0x98,_0x97,nil,aura.sessionId) end);_0x619=89 else break end end end;_0x677=1087 elseif _0x677 == 1192 then for _0x4b,_0x25 in pairs(_G.FruitStatusDrawings) do do local _0x354=777 end;pcall(function() _0x25:Remove() end) end;_0x677=1198 elseif _0x677 == 1198 then _G.FruitStatusDrawings={};_0x677=1209 elseif _0x677 == 390 then _0x1c.insert=21 + 36 - 12;_0x677=393 elseif _0x677 == 1278 then _0xb8=nil;_0x677=1284 elseif _0x677 == 535 then _0x597=(44 + 0) * 1;_0x677=542 elseif _0x677 == 3097 then _0x5ed=math.random() * 0;_0x677=3106 elseif _0x677 == 1752 then _0x0=game:GetService(__0x678d(691));_0x677=1758 elseif _0x677 == 1475 then _0xda={{name=__0x678d(692),sphere=__0x678d(693)},{name=__0x678d(694),sphere=__0x678d(695)},{name=__0x678d(696),sphere=__0x678d(697)},{name=__0x678d(698),sphere=__0x678d(699)},{name=__0x678d(700),sphere=__0x678d(701)},{name=__0x678d(702),sphere=__0x678d(703)},{name=__0x678d(704),sphere=__0x678d(705)},{name=__0x678d(706),sphere=__0x678d(707)}};_0x677=1481 elseif _0x677 == 361 then _0x1c.down=5 + 35;_0x677=368 elseif _0x677 == 2376 then task.spawn(function() while true do if S.skyPull then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(708));if _0x8c then pcall(function() _0x8c.CFrame=CFrame.new(_0x8c.Position.X,4 + 99 - 3,_0x8c.Position.Z);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end) end;task.wait(0.1) else task.wait(0.2) end end end);_0x677=2385 elseif _0x677 == 614 then _0x31=function(_0x1b,_0x32) _0x19[_0x1b]=_0x32;if _0x2c[_0x1b] then pcall(function() _0x2c[_0x1b]:Set(_0x32) end) end end;_0x677=617 elseif _0x677 == 1143 then _0xa1={{Name=__0x678d(709),Position=Vector3.new(-5436.61,815.64,-2701.66)},{Name=__0x678d(710),Position=Vector3.new(-12547.71,290.14,-7487.07)},{Name=__0x678d(711),Position=Vector3.new(-10159.20,331.83,-8338.58)},{Name=__0x678d(712),Position=Vector3.new(-12851.91,844.43,-10732.79)},{Name=__0x678d(713),Position=Vector3.new(-12003.31,331.79,-9196.02)},{Name=__0x678d(714),Position=Vector3.new(-610.37,57.83,6436.34)},{Name=__0x678d(715),Position=Vector3.new(5275.71,1005.42,404.14)},{Name=__0x678d(716),Position=Vector3.new(6473.16,52.34,-1231.78)},{Name=__0x678d(717),Position=Vector3.new(3036.29,815.64,-7149.86)},{Name=__0x678d(718),Position=Vector3.new(-12164.61,-548.86,-8454.87)},{Name=__0x678d(719),Position=Vector3.new(-9530.61,-132.86,5763.14)},{Name=__0x678d(720),Position=Vector3.new(-16641.51,213.31,435.38)},{Name=__0x678d(721),Position=Vector3.new(-819.38,62.26,-10967.28)},{Name=__0x678d(722),Position=Vector3.new(-2105.53,34.49,-10195.51)},{Name=__0x678d(723),Position=Vector3.new(297.76,28.37,-12724.31)},{Name=__0x678d(724),Position=Vector3.new(-2022.3,34.17,-12030.98)}};_0x677=1153 elseif _0x677 == 1613 then _0xed=function() _0xec() end;_0x677=1620 elseif _0x677 == 2021 then _0x139=nil;_0x677=2026 elseif _0x677 == 2074 then task.spawn(function() while true do if S.autoFruits then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(725));if _0x8c then local _0x145,_0xf4=nil,math.huge;for _0x4b,_0x57 in pairs(game.Workspace:GetChildren()) do local _0x146=_0x57:FindFirstChild(__0x678d(726));if _0x146 then local _0x147=_0x146:FindFirstChild(__0x678d(727));if _0x147 and _0x147:IsA(__0x678d(728)) then local _0x108=_0x147.Position.X - _0x8c.Position.X;local _0x109=_0x147.Position.Y - _0x8c.Position.Y;local _0x10a=_0x147.Position.Z - _0x8c.Position.Z;local _0x95=math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a);if _0x95 < _0xf4 then _0xf4=_0x95;_0x145=_0x147 end end end end;if _0x145 then notify(__0x678d(729),__0x678d(730),2 - 1);tweenTo(_0x8c,Vector3.new(_0x145.Position.X,_0x145.Position.Y + (17 + 29 - 43),_0x145.Position.Z),S.FRUIT_SPEED,function() return S.autoFruits end) end end;task.wait(2 - 1) else task.wait(0.1) end end end);_0x677=2082 elseif _0x677 == 291 then _0x1c.shift=2 * 7 + 2;_0x677=298 elseif _0x677 == 2916 then _0x1df=function(_0x1e0,_0xd9) local _0x4e2,_0x1e1,_0x1e2;local _0x65a=2;while true do if _0x65a == 9 then S._espTrackSnapshots=S._espTrackSnapshots or {};_0x65a=19 elseif _0x65a == 33 then _0x1e2=false;_0x65a=38 elseif _0x65a == 44 then if type(_0x1e1) ~= __0x678d(731) or #_0x1e1 ~= #_0xd9 then _0x1e2=true else for _0x1d=2 - 1,#_0xd9 do local _0x4e1=math.random() * 0;if _0x1e1[_0x1d] ~= _0xd9[_0x1d] then _0x1e2=true;break end end end;_0x65a=53 elseif _0x65a == 26 then if false then local _0x4e3=nil end;_0x65a=33 elseif _0x65a == 57 then S._espTrackSnapshots[_0x1e0]=_0xd9;_0x65a=64 elseif _0x65a == 2 then _0x4e2=math.random() * 0;_0x65a=9 elseif _0x65a == 38 then if false then local _0x4e4=nil end;_0x65a=44 elseif _0x65a == 53 then if 1 > 2 then local _0x4e5=nil end;_0x65a=57 elseif _0x65a == 75 then return _0x1e2 elseif _0x65a == 64 then do local _0x4e6=206 end;_0x65a=75 elseif _0x65a == 19 then _0x1e1=S._espTrackSnapshots[_0x1e0];_0x65a=26 else break end end end;_0x677=2922 elseif _0x677 == 2418 then pcall(function() if type(islandList) == __0x678d(732) and (not islandNames or #islandNames == 1 - 1) then islandNames={};for _0x4b,_0x104 in pairs(islandList) do table.insert(islandNames,_0x104.name) end end end);_0x677=2423 elseif _0x677 == 716 then _0x55=function() do local _0x2f0=640 end;return _0x3a:FindFirstChild(__0x678d(733)) ~= nil end;_0x677=726 elseif _0x677 == 2704 then _0x1ba=function(_0xcd) local _0x105,_0xaf;local _0x64e=4;while true do if _0x64e == 26 then if false then local _0x4bf=nil end;_0x64e=30 elseif _0x64e == 39 then if 1 > 2 then local _0x4c0=nil end;_0x64e=45 elseif _0x64e == 18 then if not _0x105 then do local _0x4bd=182 end;return false end;_0x64e=26 elseif _0x64e == 30 then _0xaf=_0x105:FindFirstChildOfClass(__0x678d(734));_0x64e=39 elseif _0x64e == 45 then if not _0xaf then return false end;_0x64e=52 elseif _0x64e == 12 then _0x105=_0x6.Character;_0x64e=18 elseif _0x64e == 4 then do local _0x4be=185 end;_0x64e=12 elseif _0x64e == 52 then if _0xaf.Name == _0xcd then return true end;_0x64e=59 elseif _0x64e == 59 then return string.find(_0xaf.Name,_0xcd,2 - 1,true) ~= nil else break end end end;_0x677=2713 elseif _0x677 == 942 then pcall(function() _0x75.Font=Drawing.Fonts.SystemBold end);_0x677=949 elseif _0x677 == 401 then _0x1c.delete=5 * 9 + 1;_0x677=409 elseif _0x677 == 1657 then _0xf7=nil;_0x677=1662 elseif _0x677 == 2776 then task.spawn(function() local _0x1ce=false;local _0x1ca=false;while not _G.FE_Unloaded do local _0x1cd=false;pcall(function() _0x1cd=iskeypressed(11 * 8 + 0) end);if S.tushitaX and _0x1cd and not _0x1ce then _0x1ce=true;if not _0x1ca then _0x1ca=true;task.spawn(function() if _0x1c7(__0x678d(735)) then runVelocityBoost(S.glitchSettings.tushita,function() return S.tushitaX end) end;_0x1ca=false end) end elseif not _0x1cd then _0x1ce=false end;task.wait() end end);_0x677=2784 elseif _0x677 == 298 then _0x1c.lctrl=16 * 10 + 2;_0x677=304 elseif _0x677 == 2082 then task.spawn(function() while true do if S.autoFarmNearest then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(736));if _0x8c then if S.remoteMode then local _0x12b=game.Workspace:FindFirstChild(__0x678d(737));if _0x12b then local _0xfe,_0xf4=nil,math.huge;for _0x4b,_0x128 in pairs(_0x12b:GetChildren()) do if _0x128:IsA(__0x678d(738)) and isAlive(_0x128) then local _0xd1=_0x128:FindFirstChild(__0x678d(739)) or _0x128:FindFirstChildOfClass(__0x678d(740));if _0xd1 then local _0x108=_0xd1.Position.X - _0x8c.Position.X;local _0x109=_0xd1.Position.Y - _0x8c.Position.Y;local _0x10a=_0xd1.Position.Z - _0x8c.Position.Z;local _0x25=math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a);if _0x25 < _0xf4 then _0xf4=_0x25;_0xfe=_0x128 end end end end;if _0xfe then while S.autoFarmNearest and S.remoteMode and isAlive(_0xfe) do local _0x132=_0xfe:FindFirstChild(__0x678d(741)) or _0xfe:FindFirstChildOfClass(__0x678d(742));if not _0x132 then break end;_0x8c.Position=Vector3.new(_0x132.Position.X,_0x132.Position.Y + (4 + 26),_0x132.Position.Z);_0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1);remoteAttack();task.wait(0.05) end end end else farmAttack(_0x8c,function() return S.autoFarmNearest and not S.remoteMode end,nil) end end;task.wait(0.1) else task.wait(0.1) end end end);_0x677=2090 elseif _0x677 == 1989 then function isAlive(_0x128) local _0x3e7,_0x129,_0x3e9,_0x3ea;local _0x636=5;while true do if _0x636 == 51 then return true elseif _0x636 == 30 then _0x3e9=(20 + 0) * 1;_0x636=36 elseif _0x636 == 36 then if _0x129 and _0x129.Health <= 1 - 1 then return false end;_0x636=43 elseif _0x636 == 5 then _0x3e7=(29 + 0) * 1;_0x636=12 elseif _0x636 == 43 then _0x3ea=math.random() * 0;_0x636=51 elseif _0x636 == 12 then if not _0x128 or not _0x128.Parent then return false end;_0x636=16 elseif _0x636 == 16 then if 1 > 2 then local _0x3e8=nil end;_0x636=23 elseif _0x636 == 23 then _0x129=_0x128:FindFirstChildOfClass(__0x678d(743));_0x636=30 else break end end end;_0x677=1998 elseif _0x677 == 1215 then if false then local _0x5b1=nil end;_0x677=1219 elseif _0x677 == 1998 then function farmAttack(_0x8c,_0x125,_0x12a) local _0x12b,_0xfe,_0xf4,_0x12f,_0x130;local _0x638=2;while true do if _0x638 == 71 then _0x130=function() local _0x131,_0x3f1,_0x105;local _0x637=2;while true do if _0x637 == 15 then if _0x131 then local _0x3ef=(69 + 0) * 1;for _0x4b,_0x1d in pairs(_0x131:GetChildren()) do if false then local _0x3ee=nil end;if _0x1d.Name == __0x678d(744) then return true end end end;_0x637=26 elseif _0x637 == 30 then if false then local _0x3f2=nil end;_0x637=39 elseif _0x637 == 2 then _0x131=_0x6:FindFirstChild(__0x678d(745));_0x637=10 elseif _0x637 == 39 then if _0x105 then local _0x3f0=(7 + 0) * 1;for _0x4b,_0x1d in pairs(_0x105:GetChildren()) do if _0x1d.Name == __0x678d(746) then return true end end end;_0x637=44 elseif _0x637 == 52 then return false elseif _0x637 == 10 then _0x3f1=(50 + 0) * 1;_0x637=15 elseif _0x637 == 26 then _0x105=_0x6.Character;_0x637=30 elseif _0x637 == 44 then if false then local _0x3f3=nil end;_0x637=52 else break end end end;_0x638=78 elseif _0x638 == 17 then _0xfe,_0xf4=nil,math.huge;_0x638=22 elseif _0x638 == 78 then while _0x125() and isAlive(_0xfe) do local _0x132=_0xfe:FindFirstChild(__0x678d(747)) or _0xfe:FindFirstChildOfClass(__0x678d(748));local _0x3fa=math.random() * 0;if _0x132 then local _0x133=_0x130() and 14 + 14 - 13 or 1 - 1;local _0x134=S.customOffset and S.customOffsetX or _0x133;local _0x135=S.customOffset and S.customOffsetY or 4 + 21 - 2;if false then local _0x3f4=nil end;local _0x136=S.customOffset and S.customOffsetZ or 1 - 1;if false then local _0x3f5=nil end;_0x8c.Position=Vector3.new(_0x132.Position.X + _0x134,_0x132.Position.Y + _0x135,_0x132.Position.Z + _0x136);_0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);if 1 > 2 then local _0x3f6=nil end;_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end;local _0xf0=os.clock();if _0xf0 - _0x12f >= 0.06 then local _0x3f7=math.random() * 0;mouse1click();local _0x3f8=math.random() * 0;_0x12f=_0xf0;local _0x3f9=math.random() * 0 end;task.wait() end;_0x638=103 elseif _0x638 == 36 then if not _0xfe then return end;_0x638=46 elseif _0x638 == 22 then do local _0x3fb=339 end;_0x638=29 elseif _0x638 == 12 then if not _0x12b then local _0x3eb=(16 + 0) * 1;return end;_0x638=17 elseif _0x638 == 61 then task.spawn(function() while _0x125() and isAlive(_0xfe) do if not S.remoteMode then local _0x12e=_0xfe:FindFirstChild(__0x678d(749));if _0x12e then _0x12e.Size=Vector3.new(7 + 56 - 13,6 * 8 + 2,5 * 9 + 5) end end;task.wait() end end);_0x638=66 elseif _0x638 == 66 then _0x12f=1 - 1;_0x638=71 elseif _0x638 == 53 then task.spawn(function() while _0x125() and isAlive(_0xfe) do local _0x12c=_0xfe:FindFirstChild(__0x678d(750));local _0x12d=_0xfe:FindFirstChild(__0x678d(751));if _0x12c then _0x12c.CanCollide=false end;if _0x12d then _0x12d.CanCollide=false end;task.wait() end end);_0x638=61 elseif _0x638 == 46 then if 1 > 2 then local _0x3fc=nil end;_0x638=53 elseif _0x638 == 2 then _0x12b=game.Workspace:FindFirstChild(__0x678d(752));_0x638=12 elseif _0x638 == 29 then for _0x4b,_0x128 in pairs(_0x12b:GetChildren()) do if _0x128:IsA(__0x678d(753)) and isAlive(_0x128) then if not _0x12a or _0x128.Name == _0x12a then local _0x3ed=(100 + 0) * 1;local _0xd1=_0x128:FindFirstChild(__0x678d(754)) or _0x128:FindFirstChildOfClass(__0x678d(755));if _0xd1 then local _0x108=_0xd1.Position.X - _0x8c.Position.X;if false then local _0x3ec=nil end;local _0x109=_0xd1.Position.Y - _0x8c.Position.Y;local _0x10a=_0xd1.Position.Z - _0x8c.Position.Z;local _0x25=math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a);if _0x25 < _0xf4 and _0x25 <= 555 * 9 + 5 then _0xf4=_0x25;_0xfe=_0x128 end end end end end;_0x638=36 else break end end end;_0x677=2005 elseif _0x677 == 3288 then task.spawn(function() while not _G.FE_Unloaded do if S.autoBoatSeat then local _0x107=S.selectedBoatSeat;local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(756)) or nil;local _0x93=_0x105 and _0x105:FindFirstChildOfClass(__0x678d(757)) or nil;local _0x23b,_0x23c,_0x23a=pcall(function() return _0x107 and _0x107.Parent,_0x107 and _0x107.Position end);if _0x107 and _0x105 and _0x8c and _0x93 and _0x23b and _0x23c and _0x23a and not _0x234(_0x107,_0x105,_0x93,_0x8c) then pcall(function() _0x8c.Position=Vector3.new(_0x23a.X,_0x23a.Y + (5 + 31 - 34),_0x23a.Z);_0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end) end end;task.wait() end end);_0x677=3294 elseif _0x677 == 275 then _0x1c.lshift=34 + 176 - 50;_0x677=283 elseif _0x677 == 3263 then _0x234=function(_0x107,_0x105,_0x93,_0x8c) local _0x235,_0x236,_0x237,_0x238,_0x239,_0x23a,_0x214,_0x108,_0x109,_0x10a;local _0x66c=3;while true do if _0x66c == 30 then _0x237,_0x238=pcall(function() return _0x93 and _0x93.SeatPart end);_0x66c=39 elseif _0x66c == 79 then _0x109=_0x23a.Y - _0x214.Y;_0x66c=87 elseif _0x66c == 8 then _0x235,_0x236=pcall(function() return _0x107.Occupant end);_0x66c=16 elseif _0x66c == 39 then do local _0x562=95 end;_0x66c=47 elseif _0x66c == 59 then _0x239,_0x23a,_0x214=pcall(function() return _0x107.Position,_0x8c.Position end);_0x66c=66 elseif _0x66c == 66 then if not _0x239 or not _0x23a or not _0x214 then return false end;_0x66c=72 elseif _0x66c == 16 then if _0x235 and _0x236 then if _0x236 == _0x93 then return true end;local _0x1aa,_0x1ab=pcall(function() return _0x236.Parent end);return _0x1aa and _0x1ab == _0x105 end;_0x66c=22 elseif _0x66c == 72 then _0x108=_0x23a.X - _0x214.X;_0x66c=79 elseif _0x66c == 22 then if false then local _0x561=nil end;_0x66c=30 elseif _0x66c == 96 then return _0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a <= 11 + 51 - 37 elseif _0x66c == 3 then do local _0x560=740 end;_0x66c=8 elseif _0x66c == 54 then if _0x235 or _0x237 then if 1 > 2 then local _0x55f=nil end;return false end;_0x66c=59 elseif _0x66c == 47 then if _0x237 and _0x238 then return _0x238 == _0x107 end;_0x66c=54 elseif _0x66c == 87 then _0x10a=_0x23a.Z - _0x214.Z;_0x66c=96 else break end end end;_0x677=3274 elseif _0x677 == 2592 then if 1 > 2 then local _0x5dd=nil end;_0x677=2599 elseif _0x677 == 3126 then task.spawn(function() while not _G.FE_Unloaded do if S.autoHaki then local _0x105=_0x6.Character;if _0x105 and not _0x105:FindFirstChild(__0x678d(758)) then _0x1b3(__0x678d(759)) end end;if S.autoRaceAbility then local _0x21b=_0x1b2();if _0x21b then pcall(function() _0x21b:FireServer(__0x678d(760)) end) end end;task.wait(0.5) end end);_0x677=3133 elseif _0x677 == 121 then _0xe=function() return _0xd == _0x7 or _0xd == _0x8 end;_0x677=127 elseif _0x677 == 1486 then for _0x4b,_0x9e in ipairs(_0xda) do _0xdb[_0x9e.sphere]=_0x9e.name end;_0x677=1495 elseif _0x677 == 2649 then _0x1a8=nil;_0x677=2656 elseif _0x677 == 3133 then if false then local _0x5ee=nil end;_0x677=3139 elseif _0x677 == 494 then if false then local _0x595=nil end;_0x677=500 elseif _0x677 == 891 then do local _0x5a4=391 end;_0x677=898 elseif _0x677 == 597 then _0x2e=true;_0x677=606 elseif _0x677 == 2846 then function clearBerryEspLabels() local _0x654=4;while true do if _0x654 == 16 then S.berryEspLabels={};_0x654=37 elseif _0x654 == 11 then for _0x4b,_0x99 in pairs(S.berryEspLabels) do do local _0x4d2=827 end;if _0x99 and _0x99.label then _0x99.label.Visible=false;local _0x4d1=math.random() * 0 end end;_0x654=16 elseif _0x654 == 4 then do local _0x4d3=197 end;_0x654=11 else break end end end;_0x677=2852 elseif _0x677 == 2612 then _0x199=function(_0x120) if not _0x120 then local _0x4a7=math.random() * 0;return end;for _0x4b,_0x121 in pairs(_0x120) do _0x121.Visible=false end end;_0x677=2623 elseif _0x677 == 2312 then task.spawn(function() while true do task.wait(0.5);if S.teleportEmber then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(761));if _0x8c then for _0x4b,_0x57 in pairs(game.Workspace:GetChildren()) do if _0x57.Name == __0x678d(762) and _0x57:IsA(__0x678d(763)) then local _0x42=_0x57:FindFirstChild(__0x678d(764));if _0x42 and _0x42:IsA(__0x678d(765)) then _0x8c.Position=Vector3.new(_0x42.Position.X,_0x42.Position.Y + (10 + 34 - 41),_0x42.Position.Z);_0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1);task.wait(0.5) end end end end end end end);_0x677=2319 elseif _0x677 == 150 then _0x11={[_0x7]=__0x678d(766),[_0x8]=__0x678d(767),[_0x9]=__0x678d(768),[_0xa]=__0x678d(769),[_0xb]=__0x678d(770),[_0xc]=__0x678d(771)};_0x677=156 elseif _0x677 == 3113 then function checkEventIslands() if false then local _0x552=nil end;showEventStatus() end;_0x677=3116 elseif _0x677 == 2213 then task.spawn(function() while true do local _0x12b=game.Workspace:FindFirstChild(__0x678d(772));if _0x12b then for _0x4b,_0x128 in pairs(_0x12b:GetChildren()) do if _0x128:IsA(__0x678d(773)) then local _0x12c=_0x128:FindFirstChild(__0x678d(774));local _0x12d=_0x128:FindFirstChild(__0x678d(775));if _0x12c then _0x12c.CanCollide=false end;if _0x12d then _0x12d.CanCollide=false end end end end;task.wait(0.5) end end);_0x677=2222 elseif _0x677 == 1410 then _0xc9=function(_0x57) local _0xca,_0x35f;local _0x61d=4;while true do if _0x61d == 23 then return _0xca and _0xca:IsA(__0x678d(776)) elseif _0x61d == 8 then _0xca=_0x57:FindFirstChild(__0x678d(777));_0x61d=16 elseif _0x61d == 16 then _0x35f=math.random() * 0;_0x61d=23 elseif _0x61d == 4 then if not _0x57:IsA(__0x678d(778)) then return false end;_0x61d=8 else break end end end;_0x677=1417 elseif _0x677 == 1730 then _pvpAuraAltPart=false;_0x677=1737 elseif _0x677 == 1867 then dangerLevelNames={};_0x677=1872 elseif _0x677 == 570 then _0x599=(84 + 0) * 1;_0x677=576 elseif _0x677 == 2090 then task.spawn(function() while true do if S.autoTpFruit then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(779));if _0x8c then local _0x145,_0xf4=nil,math.huge;for _0x4b,_0x57 in pairs(game.Workspace:GetChildren()) do local _0x146=_0x57:FindFirstChild(__0x678d(780));if _0x146 then local _0x147=_0x146:FindFirstChild(__0x678d(781));if _0x147 and _0x147:IsA(__0x678d(782)) then local _0x108=_0x147.Position.X - _0x8c.Position.X;local _0x109=_0x147.Position.Y - _0x8c.Position.Y;local _0x10a=_0x147.Position.Z - _0x8c.Position.Z;local _0x95=math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a);if _0x95 < _0xf4 then _0xf4=_0x95;_0x145=_0x147 end end end end;if _0x145 then _0x8c.Position=Vector3.new(_0x145.Position.X,_0x145.Position.Y + (1 * 3 + 0),_0x145.Position.Z);_0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end end;task.wait(0.1) else task.wait(0.1) end end end);_0x677=2094 elseif _0x677 == 2460 then _0x18b={__0x678d(783),__0x678d(784),__0x678d(785),__0x678d(786),__0x678d(787),__0x678d(788),__0x678d(789),__0x678d(790),__0x678d(791),__0x678d(792),__0x678d(793),__0x678d(794),__0x678d(795)};_0x677=2466 elseif _0x677 == 3188 then _0x5ef=math.random() * 0;_0x677=3196 elseif _0x677 == 3389 then _0x5f8=(75 + 0) * 1;_0x677=3398 elseif _0x677 == 425 then do local _0x592=243 end;_0x677=430 elseif _0x677 == 3076 then task.spawn(function() while not _G.FE_Unloaded do task.wait(2 - 1);if S.flowerEsp and _0x1e5() then buildFlowerEsp() end end end);_0x677=3084 elseif _0x677 == 437 then _0x1e.space=Enum.KeyCode.Space;_0x677=445 elseif _0x677 == 1062 then if 1 > 2 then local _0x5ab=nil end;_0x677=1065 elseif _0x677 == 470 then _0x1e.up=Enum.KeyCode.Up;_0x677=477 elseif _0x677 == 2987 then _0x1f6=function(_0x1f7,_0x1f8) return tostring(_0x1f7) .. __0x678d(796) .. _0x1dd(_0x1f8) end;_0x677=2990 elseif _0x677 == 1011 then _0x76=function() local _0x16=aura.enabled == true;local _0x14=pcall(function() _0x75.Text=string.format(__0x678d(797),aura.targetCount or 1 - 1,tostring(aura.firstName or __0x678d(798)),_0x16 and __0x678d(799) or __0x678d(800));_0x75.Visible=_0x16 end) end;_0x677=1019 elseif _0x677 == 323 then _0x1c.alt=6 * 3 + 0;_0x677=334 elseif _0x677 == 1100 then task.spawn(function() while not _G.FE_Unloaded do local _0x9a,_0x9b=pcall(function() if aura.enabled then local _0x9c=_0x8a();aura.targetCount=#_0x9c;_0x73=#_0x9c;if #_0x9c > 1 - 1 then table.sort(_0x9c,function(_0x9d,_0x9e) return _0x9d.dist < _0x9e.dist end);aura.firstName=_0x9c[2 - 1].enemy and _0x9c[2 - 1].enemy.Name or __0x678d(801) else aura.firstName=__0x678d(802) end;_0x74=aura.firstName;if #_0x9c > 1 - 1 then _0x96(_0x9c) end;_0x76();task.wait(0.2) else _0x76();task.wait(0.25) end end);if not _0x9a then warn(__0x678d(803),_0x9b);task.wait(0.5) end end;pcall(function() _0x75:Remove() end) end);_0x677=1109 elseif _0x677 == 445 then _0x593=math.random() * 0;_0x677=450 elseif _0x677 == 25 then if 1 > 2 then local _0x587=nil end;_0x677=31 elseif _0x677 == 1179 then _0xa6=function(_0x94) local _0xa7,_0xa8,_0x7e;local _0x61a=3;while true do if _0x61a == 3 then if not _0x94 or not _0xa3 or #_0xa3 == 1 - 1 then local _0x352=(33 + 0) * 1;return __0x678d(804) end;_0x61a=9 elseif _0x61a == 9 then _0xa7,_0xa8=__0x678d(805),math.huge;_0x61a=15 elseif _0x61a == 37 then return _0xa7 elseif _0x61a == 25 then for _0x4b,_0xa9 in ipairs(_0xa3) do local _0xaa=Vector3.new(_0xa9.Position.X,1 - 1,_0xa9.Position.Z);local _0x353=math.random() * 0;local _0x25=_0x7e - _0xaa.Magnitude;if _0x25 < _0xa8 then _0xa8=_0x25;_0xa7=_0xa9.Name end end;_0x61a=29 elseif _0x61a == 29 then if _0xa8 > 13818 + 11232 - 50 then return __0x678d(806) end;_0x61a=37 elseif _0x61a == 15 then _0x7e=Vector3.new(_0x94.X,1 - 1,_0x94.Z);_0x61a=25 else break end end end;_0x677=1184 elseif _0x677 == 2005 then _0x137=__0x678d(807);_0x677=2010 elseif _0x677 == 3091 then function showEventStatus() local _0x20c,_0x162,_0x20f,_0x54d,_0x216,_0x217,_0x163,_0x218;local _0x668=1;while true do if _0x668 == 57 then _0x163=_0x162 and _0x162:FindFirstChild(__0x678d(808));_0x668=64 elseif _0x668 == 71 then print(__0x678d(809) .. _0x218);_0x668=82 elseif _0x668 == 82 then notify(_0x218,__0x678d(810),5 + 3);_0x668=103 elseif _0x668 == 12 then if 1 > 2 then local _0x54c=nil end;_0x668=16 elseif _0x668 == 22 then _0x162=_0x1:FindFirstChild(__0x678d(811));_0x668=32 elseif _0x668 == 32 then _0x20f=_0x20c and _0x20c:FindFirstChild(__0x678d(812));_0x668=37 elseif _0x668 == 37 then _0x54d=math.random() * 0;_0x668=43 elseif _0x668 == 43 then _0x216=_0x20c and _0x20c:FindFirstChild(__0x678d(813));_0x668=52 elseif _0x668 == 1 then _0x20c=nil;_0x668=12 elseif _0x668 == 16 then pcall(function() local _0x20b=_0x1:FindFirstChild(__0x678d(814));_0x20c=_0x20b and _0x20b:FindFirstChild(__0x678d(815)) or nil end);_0x668=22 elseif _0x668 == 52 then _0x217=_0x20c and _0x20c:FindFirstChild(__0x678d(816));_0x668=57 elseif _0x668 == 64 then _0x218=__0x678d(817) .. (_0x20f and __0x678d(818) or __0x678d(819)) .. __0x678d(820) .. (_0x163 and __0x678d(821) or __0x678d(822)) .. __0x678d(823) .. (_0x216 and __0x678d(824) or __0x678d(825)) .. __0x678d(826) .. (_0x217 and __0x678d(827) or __0x678d(828));_0x668=71 else break end end end;_0x677=3097 elseif _0x677 == 1451 then _0x5b8=math.random() * 0;_0x677=1461 elseif _0x677 == 1114 then _0x9f={{Name=__0x678d(829),Position=Vector3.new(1014.48,15.83,1462.93)},{Name=__0x678d(830),Position=Vector3.new(-1419.21,-3.78,-76.86)},{Name=__0x678d(831),Position=Vector3.new(-1133.21,-3.78,4176.14)},{Name=__0x678d(832),Position=Vector3.new(1193.79,-13.78,4430.14)},{Name=__0x678d(833),Position=Vector3.new(1276.79,-13.78,-1472.86)},{Name=__0x678d(834),Position=Vector3.new(-4935.21,-13.78,4318.14)},{Name=__0x678d(835),Position=Vector3.new(-2964.51,41.08,2122.72)},{Name=__0x678d(836),Position=Vector3.new(-5024.21,794.4,-2618.69)},{Name=__0x678d(837),Position=Vector3.new(-8013.88,5814.06,-1980.80)},{Name=__0x678d(838),Position=Vector3.new(-709.62,10.08,1568.71)},{Name=__0x678d(839),Position=Vector3.new(5277.79,-13.78,743.14)},{Name=__0x678d(840),Position=Vector3.new(-1685.21,-13.78,-3200.86)},{Name=__0x678d(841),Position=Vector3.new(-5528.21,-13.78,8691.14)},{Name=__0x678d(842),Position=Vector3.new(61379.79,-13.78,1473.14)},{Name=__0x678d(843),Position=Vector3.new(5717.79,-13.78,4356.14)}};_0x677=1124 elseif _0x677 == 1747 then function notify(_0x102,_0xba,_0x103) local _0x3b5;local _0x62d=1;while true do if _0x62d == 1 then print(__0x678d(844) .. tostring(_0xba or __0x678d(845)) .. __0x678d(846) .. tostring(_0x102));_0x62d=12 elseif _0x62d == 12 then _0x3b5=(100 + 0) * 1;_0x62d=16 elseif _0x62d == 16 then pcall(function() if _0x30 and _0x30.Notify then _0x30:Notify(tostring(_0xba or __0x678d(847)),tostring(_0x102),_0x103 or 3 + 0,__0x678d(848)) end end);_0x62d=38 else break end end end;_0x677=1752 elseif _0x677 == 2367 then task.spawn(function() while true do if S.voidPull then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(849));if _0x8c then pcall(function() _0x8c.CFrame=CFrame.new(_0x8c.Position.X,4949 + 76 - 25,_0x8c.Position.Z);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end) end;task.wait(0.1) else task.wait(0.2) end end end);_0x677=2376 elseif _0x677 == 1387 then _0xc0();_0x677=1398 elseif _0x677 == 1033 then _0x79=function(_0x7a) local _0x32f,_0x7b,_0x7c,_0x80,_0x81;local _0x614=3;while true do if _0x614 == 59 then if _0x81 then for _0x4b,_0x1f in ipairs(_0x81:GetChildren()) do if (_0x1f:IsA(__0x678d(850)) or _0x1f:IsA(__0x678d(851))) and _0x7c(_0x1f.Name) then local _0x32b=(67 + 0) * 1;return _0x1f end end;for _0x4b,_0x7e in ipairs(_0x7a) do local _0x82=_0x81:FindFirstChild(_0x7e);if _0x82 and (_0x82:IsA(__0x678d(852)) or _0x82:IsA(__0x678d(853))) then if false then local _0x32c=nil end;return _0x82 end;local _0x32d=math.random() * 0 end end;_0x614=68 elseif _0x614 == 51 then if false then local _0x332=nil end;_0x614=59 elseif _0x614 == 31 then _0x80=_0x7b:FindFirstChild(__0x678d(854));_0x614=36 elseif _0x614 == 75 then return nil elseif _0x614 == 47 then _0x81=_0x80 and _0x80:FindFirstChild(__0x678d(855));_0x614=51 elseif _0x614 == 36 then if 1 > 2 then local _0x331=nil end;_0x614=47 elseif _0x614 == 12 then _0x7b=game:GetService(__0x678d(856));_0x614=18 elseif _0x614 == 18 then _0x7c=function(_0x4d) local _0x329,_0x7d;local _0x613=5;while true do if _0x613 == 26 then _0x7d=string.lower(_0x4d);_0x613=32 elseif _0x613 == 38 then do local _0x32a=683 end;_0x613=44 elseif _0x613 == 44 then return false elseif _0x613 == 5 then if 1 > 2 then local _0x328=nil end;_0x613=10 elseif _0x613 == 32 then for _0x4b,_0x7e in ipairs(_0x7a) do local _0x7f=string.lower(_0x7e);if _0x4d == _0x7e or _0x7d == _0x7f or _0x7d:find(_0x7f,2 - 1,true) then return true end;local _0x327=math.random() * 0 end;_0x613=38 elseif _0x613 == 10 then if not _0x4d or _0x4d == "" then if 1 > 2 then local _0x326=nil end;return false end;_0x613=19 elseif _0x613 == 19 then _0x329=(43 + 0) * 1;_0x613=26 else break end end end;_0x614=26 elseif _0x614 == 68 then for _0x4b,_0x57 in ipairs(_0x7b:GetDescendants()) do if (_0x57:IsA(__0x678d(857)) or _0x57:IsA(__0x678d(858))) and _0x7c(_0x57.Name) then if false then local _0x32e=nil end;return _0x57 end end;_0x614=75 elseif _0x614 == 3 then _0x32f=(96 + 0) * 1;_0x614=12 elseif _0x614 == 26 then if false then local _0x330=nil end;_0x614=31 else break end end end;_0x677=1037 elseif _0x677 == 1241 then _0xab=function(_0xac,_0x47,_0xad,_0xae) local _0xaf,_0x357;local _0x61b=2;while true do if _0x61b == 46 then _0xaf.Outline=true;_0x61b=50 elseif _0x61b == 85 then return _0xaf elseif _0x61b == 50 then if 1 > 2 then local _0x356=nil end;_0x61b=58 elseif _0x61b == 23 then _0xaf.Color=_0xad or Color3.fromRGB(225 + 30,25 * 10 + 5,188 + 67);_0x61b=32 elseif _0x61b == 78 then if false then local _0x358=nil end;_0x61b=85 elseif _0x61b == 2 then _0xaf=Drawing.new(__0x678d(859));_0x61b=12 elseif _0x61b == 65 then _0x357=(35 + 0) * 1;_0x61b=71 elseif _0x61b == 12 then _0xaf.Text=_0xac or "";_0x61b=18 elseif _0x61b == 36 then if 1 > 2 then local _0x355=nil end;_0x61b=46 elseif _0x61b == 32 then _0xaf.Center=_0xae or false;_0x61b=36 elseif _0x61b == 18 then _0xaf.Size=_0x47 or 3 + 12;_0x61b=23 elseif _0x61b == 58 then _0xaf.Visible=true;_0x61b=65 elseif _0x61b == 71 then table.insert(_G.FruitStatusDrawings,_0xaf);_0x61b=78 else break end end end;_0x677=1250 elseif _0x677 == 1716 then task.spawn(function() while not _G.FE_Unloaded do local _0xfb,_0xfc=pcall(function() local _0xd1=_0x5.Character and _0x5.Character:FindFirstChild(__0x678d(860));if _0xf() then if _0xf7 and _0xf7.Parent then _0xbb.Text=__0x678d(861);_0xbb.Color=Color3.fromRGB(10 + 70,113 + 142,58 + 59 - 17) else _0xbb.Text=__0x678d(862);_0xbb.Color=Color3.fromRGB(183 + 89 - 17,45 * 2 + 0,27 + 68 - 5) end;_0xbb.Visible=true else _0xbb.Visible=false;_0xbb.Text="" end;_0xbf.Text=__0x678d(863) .. #_0xd6;if #_0xd6 > 1 - 1 then local _0xfd={};local _0xfe,_0xff=nil,math.huge;for _0x4b,_0xf5 in ipairs(_0xd6) do table.insert(_0xfd,_0xf5.Name .. __0x678d(864) .. _0xf5.Island .. __0x678d(865));if _0xd1 and _0xf5.Object and _0xf5.Object.Parent then local _0x28=_0xf5.Object:FindFirstChild(__0x678d(866));if _0x28 then local _0x25=_0xd1.Position - _0x28.Position.Magnitude;if _0x25 < _0xff then _0xff=_0x25;_0xfe=_0xf5 end end end end;local _0xc1=math.min(#_0xfd,_0xb3);for _0x1d=2 - 1,_0xb3 do if _0x1d <= _0xc1 then _0xbc[_0x1d].Text=(_0x1d == 2 - 1 and __0x678d(867) or __0x678d(868)) .. _0xfd[_0x1d];_0xbc[_0x1d].Color=Color3.fromRGB(8 + 72,145 + 134 - 24,136 + 9 - 45) else _0xbc[_0x1d].Text="" end end;if #_0xfd > _0xb3 then _0xbc[_0xb3].Text=_0xbc[_0xb3].Text .. __0x678d(869) end;_0xb7=_0xc1;if _0xfe then _0xbe.Text=__0x678d(870) .. _0xfe.Name .. __0x678d(871) .. _0xfe.Island .. __0x678d(872) .. math.floor(_0xff / (1 + 13 - 4)) .. __0x678d(873);_0xbe.Color=Color3.fromRGB(190 + 90 - 25,142 + 120 - 42,8 * 10 + 0) else _0xbe.Text=__0x678d(874) end else for _0x1d=2 - 1,_0xb3 do _0xbc[_0x1d].Text="" end;_0xbc[2 - 1].Text=__0x678d(875);_0xbc[2 - 1].Color=Color3.fromRGB(274 + 5 - 24,71 + 19,34 + 58 - 2);_0xb7=2 - 1;_0xbe.Text=__0x678d(876);_0xbe.Color=Color3.fromRGB(119 + 86 - 25,18 * 10 + 0,58 + 122) end;local _0x100=_0x1a(__0x678d(877));for _0x4b,_0x25 in pairs(_G.FruitStatusDrawings) do if _0x25 == _0xbb then _0x25.Visible=_0x100 and _0xf() else _0x25.Visible=_0x100 end end;local _0xc2=1 - 1;if _0x1a(__0x678d(878)) then local _0x101={};for _0x4b,_0xf5 in ipairs(_0xe1) do _0x101[#_0x101 + (2 - 1)]=_0xf5.Name .. __0x678d(879) .. _0xf5.Island .. __0x678d(880) end;_0xc2=math.min(#_0x101,_0xb4);for _0x1d=2 - 1,_0xb4 do if _0x1d <= _0xc2 then _0xbd[_0x1d].Text=(_0x1d == 2 - 1 and __0x678d(881) or __0x678d(882)) .. _0x101[_0x1d];_0xbd[_0x1d].Color=Color3.fromRGB(178 + 77,54 + 53 - 17,86 + 4);_0xbd[_0x1d].Visible=true else _0xbd[_0x1d].Text="" end end;if #_0x101 == 1 - 1 then _0xbd[2 - 1].Text=__0x678d(883);_0xbd[2 - 1].Color=Color3.fromRGB(25 * 10 + 5,11 * 8 + 2,30 * 3 + 0);_0xbd[2 - 1].Visible=true;_0xc2=2 - 1 elseif #_0x101 > _0xb4 then _0xbd[_0xb4].Text=_0xbd[_0xb4].Text .. __0x678d(884) end else for _0x1d=2 - 1,_0xb4 do _0xbd[_0x1d].Text="";_0xbd[_0x1d].Visible=false end end;_0xb8(_0xb7,_0xc2) end);if not _0xfb then task.wait(0.2) end;task.wait(0.35) end end);_0x677=1724 elseif _0x677 == 1591 then _0xe7=function(_0x57) local _0xe8,_0x38f;local _0x627=2;while true do if _0x627 == 17 then _0xe8=_0xdb[_0x57.Name];_0x627=24 elseif _0x627 == 31 then _0x38f=(40 + 0) * 1;_0x627=38 elseif _0x627 == 2 then if not _0x57 then return end;_0x627=9 elseif _0x627 == 46 then _0xe3(_0x57,_0xe8);_0x627=64 elseif _0x627 == 24 then if not _0xe8 then return end;_0x627=31 elseif _0x627 == 38 then if not (_0x57:IsA(__0x678d(885)) or _0x57:IsA(__0x678d(886)) or _0x57:IsA(__0x678d(887)) or _0x57:IsA(__0x678d(888))) then local _0x38c=(38 + 0) * 1;if not _0x57:IsA(__0x678d(889)) and not _0x57:IsA(__0x678d(890)) then if typeof(_0x57) ~= __0x678d(891) then local _0x38b=math.random() * 0;return end end;do local _0x38d=533 end end;_0x627=46 elseif _0x627 == 9 then do local _0x38e=33 end;_0x627=17 else break end end end;_0x677=1597 elseif _0x677 == 3005 then _0x1fc={{2 - 1,2 + 0},{1 + 1,2 + 2},{39 + 7 - 42,1 + 2},{1 * 2 + 1,2 - 1},{3 + 2,6 + 0},{2 + 4,7 + 1},{2 * 4 + 0,1 * 6 + 1},{1 * 7 + 0,1 + 4},{2 - 1,5 + 12 - 12},{1 + 1,2 + 4},{1 + 2,1 + 6},{1 + 3,2 + 6}};_0x677=3011 elseif _0x677 == 576 then _0x2b,_0x2c={},{};_0x677=585 elseif _0x677 == 1404 then _0x5b6=math.random() * 0;_0x677=1410 elseif _0x677 == 1348 then if 1 > 2 then local _0x5b4=nil end;_0x677=1355 elseif _0x677 == 1250 then _0xb0,_0xb1=17 + 33,12 + 388;_0x677=1258 elseif _0x677 == 2754 then if false then local _0x5e2=nil end;_0x677=2759 elseif _0x677 == 2319 then if false then local _0x5d4=nil end;_0x677=2327 elseif _0x677 == 898 then _0x73=1 - 1;_0x677=905 elseif _0x677 == 1263 then _0xb3,_0xb4,_0xb5,_0xb6=2 + 8,6 + 2,25 + 42 - 19,25 + 10 - 17;_0x677=1268 elseif _0x677 == 2508 then if false then local _0x5d9=nil end;_0x677=2517 elseif _0x677 == 626 then _0x36=function(_0x37,_0x32) if type(S) == __0x678d(892) then S[_0x37]=_0x32;if false then local _0x2da=nil end end end;_0x677=635 elseif _0x677 == 2173 then function afl_setQuest() local _0x14e,_0x439,_0x14,_0x14f,_0x150,_0x152,_0x43a,_0x153;local _0x640=3;while true do if _0x640 == 89 then _0x152=_0x150(__0x678d(893));_0x640=93 elseif _0x640 == 24 then if not _0x14e then if 1 > 2 then local _0x431=nil end;return end;_0x640=33 elseif _0x640 == 79 then _0x150=function(_0xcd) local _0x151,_0x7e,_0x2a;local _0x63f=5;while true do if _0x63f == 23 then do local _0x432=575 end;_0x63f=30 elseif _0x63f == 15 then _0x7e=_0x151.AbsolutePosition;_0x63f=23 elseif _0x63f == 30 then _0x2a=_0x151.AbsoluteSize;_0x63f=40 elseif _0x63f == 47 then return Vector2.new(_0x7e.X + _0x2a.X / (37 + 10 - 45),_0x7e.Y + _0x2a.Y / 1.25) elseif _0x63f == 5 then _0x151=_0x14f:FindFirstChild(_0xcd);_0x63f=10 elseif _0x63f == 10 then if not _0x151 then return nil end;_0x63f=15 elseif _0x63f == 40 then if not _0x7e or not _0x2a then return nil end;_0x63f=47 else break end end end;_0x640=89 elseif _0x640 == 60 then wait(1.1);_0x640=64 elseif _0x640 == 124 then wait(0.5);_0x640=130 elseif _0x640 == 10 then _0x14e=AFL.questData and AFL.questData[AFL.npcToFarm];_0x640=15 elseif _0x640 == 102 then _0x153=_0x150(__0x678d(894));_0x640=107 elseif _0x640 == 93 then _0x43a=math.random() * 0;_0x640=102 elseif _0x640 == 43 then mouse1press();_0x640=52 elseif _0x640 == 36 then _0x439=(82 + 0) * 1;_0x640=43 elseif _0x640 == 107 then if _0x14e.questButton == 2 - 1 and _0x152 then if false then local _0x433=nil end;afl_jitterClick(_0x152.X,_0x152.Y);mouse1press();local _0x434=(53 + 0) * 1;mouse1release() elseif _0x153 then do local _0x435=0 end;afl_jitterClick(_0x153.X,_0x153.Y);if false then local _0x436=nil end;mouse1press();mouse1release() end;_0x640=114 elseif _0x640 == 3 then if not AFL.enableGetQuest then if 1 > 2 then local _0x430=nil end;return end;_0x640=10 elseif _0x640 == 130 then if _0x152 then if 1 > 2 then local _0x437=nil end;afl_jitterClick(_0x152.X,_0x152.Y);mouse1press();mouse1release() end;_0x640=144 elseif _0x640 == 64 then _0x14,_0x14f=pcall(function() return _0x6.PlayerGui.Main.Dialogue end);_0x640=72 elseif _0x640 == 114 then do local _0x43b=711 end;_0x640=124 elseif _0x640 == 33 then wait(0.5);_0x640=36 elseif _0x640 == 52 then mouse1release();_0x640=60 elseif _0x640 == 72 then if not _0x14 or not _0x14f then return end;_0x640=79 elseif _0x640 == 15 then do local _0x438=117 end;_0x640=24 else break end end end;_0x677=2182 elseif _0x677 == 2244 then _0x15d=function(_0x37,_0x15e) task.spawn(function() while true do if _0x37() then local _0x105=_0x6.Character;local _0x15f=_0x105 and _0x105:FindFirstChild(__0x678d(895));if _0x15f then local _0x160=_0x15e(_0x15f);local _0x12b=_0x1:FindFirstChild(__0x678d(896));if _0x12b then for _0x4b,_0x128 in ipairs(_0x12b:GetChildren()) do if _0x128:IsA(__0x678d(897)) then local _0x8c=_0x128:FindFirstChild(__0x678d(898));if _0x8c then pcall(function() _0x8c.CanCollide=false;_0x8c.CFrame=CFrame.new(_0x160) end) end end end end end;task.wait(0.05) else task.wait(0.15) end end end) end;_0x677=2251 elseif _0x677 == 617 then _0x33=function(_0x1b,_0x34) local _0x35;local _0x605=5;while true do if _0x605 == 10 then do local _0x2d9=388 end;_0x605=17 elseif _0x605 == 5 then _0x35=not _0x19[_0x1b];_0x605=10 elseif _0x605 == 17 then _0x31(_0x1b,_0x35);_0x605=24 elseif _0x605 == 24 then if _0x34 then _0x34(_0x35) end;_0x605=48 else break end end end;_0x677=626 elseif _0x677 == 1426 then _0xcb=function(_0x57) local _0x4d;local _0x61e=4;while true do if _0x61e == 9 then _0x4d=_0x57.Name;_0x61e=19 elseif _0x61e == 4 then if not _0x57 then return __0x678d(899) end;_0x61e=9 elseif _0x61e == 19 then if _0x4d and _0x4d ~= "" and _0x4d ~= __0x678d(900) and _0x4d ~= __0x678d(901) then return _0x4d end;_0x61e=23 elseif _0x61e == 23 then return __0x678d(902) else break end end end;_0x677=1431 elseif _0x677 == 1037 then _0x83=function() local _0x336,_0x7b,_0x80,_0x81;local _0x615=3;while true do if _0x615 == 9 then _0x77=true;_0x615=18 elseif _0x615 == 87 then for _0x4b,_0x1f in ipairs(_0x81:GetChildren()) do if 1 > 2 then local _0x335=nil end;print(__0x678d(903),_0x1f.ClassName,__0x678d(904):format(#_0x1f.Name),_0x1f.Name) end;_0x615=111 elseif _0x615 == 68 then print(__0x678d(905),_0x81 and _0x81:GetFullName() or __0x678d(906));_0x615=74 elseif _0x615 == 57 then _0x81=_0x80:FindFirstChild(__0x678d(907));_0x615=68 elseif _0x615 == 82 then print(__0x678d(908));_0x615=87 elseif _0x615 == 50 then if not _0x80 then do local _0x333=994 end;return end;_0x615=57 elseif _0x615 == 3 then if _0x77 then return end;_0x615=9 elseif _0x615 == 18 then _0x336=math.random() * 0;_0x615=22 elseif _0x615 == 74 then if not _0x81 then print(__0x678d(909));do local _0x334=421 end;for _0x4b,_0x1f in ipairs(_0x80:GetChildren()) do print(__0x678d(910),_0x1f.ClassName,__0x678d(911):format(#_0x1f.Name),_0x1f.Name) end;return end;_0x615=82 elseif _0x615 == 31 then do local _0x337=689 end;_0x615=37 elseif _0x615 == 22 then _0x7b=game:GetService(__0x678d(912));_0x615=31 elseif _0x615 == 45 then print(__0x678d(913),_0x80 and _0x80:GetFullName() or __0x678d(914));_0x615=50 elseif _0x615 == 37 then _0x80=_0x7b:FindFirstChild(__0x678d(915));_0x615=45 else break end end end;_0x677=1047 elseif _0x677 == 2818 then task.spawn(function() local _0x1d7=false;while not _G.FE_Unloaded do local _0x1d8=false;pcall(function() _0x1d8=iskeypressed(76 + 8 - 2) end);if S.rToX and _0x1d8 and not _0x1d7 then _0x1d7=true;if _0x1c7(__0x678d(916)) then task.spawn(function() pcall(function() setrobloxinput(true);keyrelease(44 * 2 + 0);task.wait(0.02);keypress(11 * 8 + 0);task.wait(0.08);keyrelease(22 * 4 + 0) end) end) end elseif not _0x1d8 then _0x1d7=false end;task.wait() end end);_0x677=2823 elseif _0x677 == 1804 then do local _0x5c2=369 end;_0x677=1809 elseif _0x677 == 1642 then _0xf1=function() local _0xd1,_0x3aa;local _0x62a=2;while true do if _0x62a == 38 then for _0x57,_0xcf in pairs(_G.BerryESP) do local _0x3a9=(93 + 0) * 1;if not _0x57 or not _0x57.Parent then if false then local _0x39d=nil end;_0xe4(_0x57) else local _0x94=_0xe2(_0x57);if not _0x94 then if _0xcf.Text then _0xcf.Text.Visible=false end else local _0x14,_0xd2,_0xd3=pcall(WorldToScreen,_0x94 + Vector3.new(1 - 1,2.5,1 - 1));local _0x3a7=math.random() * 0;if _0x14 and _0xd2 then local _0x58,_0xc3,_0xd4;if type(_0xd2) == __0x678d(917) then if false then local _0x39e=nil end;_0x58,_0xc3,_0xd4=_0xd2.X,_0xd2.Y,_0xd2.OnScreen else _0x58,_0xc3=_0xd2.X,_0xd2.Y;_0xd4=_0xd3;do local _0x39f=595 end end;if _0xd4 == nil then if 1 > 2 then local _0x3a0=nil end;_0xd4=true;if 1 > 2 then local _0x3a1=nil end end;if _0xd4 and _0x58 and _0xc3 then local _0xd5="";if 1 > 2 then local _0x3a3=nil end;if _0xd1 then if false then local _0x3a2=nil end;_0xd5=__0x678d(918) .. math.floor(_0xd1.Position - _0x94.Magnitude / (20 + 2 - 12)) .. __0x678d(919) end;_0xcf.Text.Text=tostring(_0xcf.Name or __0x678d(920)) .. _0xd5;local _0x3a4=math.random() * 0;_0xcf.Text.Position=Vector2.new(_0x58,_0xc3);_0xcf.Text.Color=Color3.fromRGB(122 + 133,6 + 95 - 31,11 * 6 + 4);_0xcf.Text.Visible=true;local _0x3a5=math.random() * 0 else _0xcf.Text.Visible=false end else _0xcf.Text.Visible=false;local _0x3a6=math.random() * 0 end end;local _0x3a8=(80 + 0) * 1 end end;_0x62a=55 elseif _0x62a == 30 then _0x3aa=math.random() * 0;_0x62a=38 elseif _0x62a == 8 then _0xdf=_0xdf + (2 - 1);_0x62a=17 elseif _0x62a == 2 then if not _0x1a(__0x678d(921)) then for _0x4b,_0xcf in pairs(_G.BerryESP) do local _0x39c=math.random() * 0;if _0xcf.Text then do local _0x39b=292 end;_0xcf.Text.Visible=false end end;return end;_0x62a=8 elseif _0x62a == 17 then if _0xdf % (1 + 2) ~= 1 - 1 then return end;_0x62a=22 elseif _0x62a == 22 then _0xd1=_0x5.Character and _0x5.Character:FindFirstChild(__0x678d(922));_0x62a=30 else break end end end;_0x677=1649 elseif _0x677 == 2067 then task.spawn(function() local _0x13e=1 - 1;while true do if S.autoFarming then local _0x13f=game.Workspace:FindFirstChild(__0x678d(923));if _0x13f then local _0x140=_0x13f:GetChildren();local _0x141={};for _0x4b,_0x128 in ipairs(_0x140) do local _0xcd=tostring(_0x128.Name or "");local _0x142=19 * 5 + 4;local _0x143=S.chestPriority or {__0x678d(924),__0x678d(925),__0x678d(926)};local _0x7d=string.lower(_0xcd);for _0x1d,_0x7e in ipairs(_0x143) do if _0x7d:find(string.lower(_0x7e),2 - 1,true) then _0x142=_0x1d;break end end;_0x141[#_0x141 + (2 - 1)]={model=_0x128,rank=_0x142} end;table.sort(_0x141,function(_0x9d,_0x9e) return _0x9d.rank < _0x9e.rank end);local _0xbf=#_0x141;if _0xbf ~= _0x13e then S.chestIndex=2 - 1;_0x13e=_0xbf end;if _0xbf > 1 - 1 then if S.chestIndex > _0xbf then S.chestIndex=2 - 1 end;local _0x99=_0x141[S.chestIndex];local _0x128=_0x99 and _0x99.model;if _0x128 then local _0x144=_0x128:FindFirstChild(__0x678d(927)) or _0x128:FindFirstChildWhichIsA(__0x678d(928));if _0x144 then notify(__0x678d(929) .. _0x128.Name .. __0x678d(930),__0x678d(931),36 + 2 - 36);local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(932));if _0x8c then tweenTo(_0x8c,Vector3.new(_0x144.Position.X,_0x144.Position.Y + (2 + 16 - 15),_0x144.Position.Z),S.CHEST_SPEED,function() return S.autoFarming end) end;S.chestIndex=S.chestIndex + (2 - 1) else S.chestIndex=S.chestIndex + (2 - 1) end end end else _0x13e=1 - 1 end;task.wait(0.5) else task.wait(0.1) end end end);_0x677=2074 elseif _0x677 == 606 then _0x2f,_0x30=nil,nil;_0x677=614 elseif _0x677 == 304 then _0x1c.rctrl=23 * 7 + 2;_0x677=310 elseif _0x677 == 3476 then task.spawn(function() task.wait(2 - 1);if not _0x2.RenderStepped then return end;_0x23f.renderConn=_0x2.RenderStepped:Connect(function(_0x268) if _G.FE_Unloaded then pcall(function() if _0x23f.renderConn then _0x23f.renderConn:Disconnect() end end);return end;if not _0x242() or not S.dungeonFloat then return end;local _0x105=_0x6.Character;local _0x265=_0x105 and _0x105:FindFirstChild(__0x678d(933));local _0x269=_0x105 and _0x105:FindFirstChild(__0x678d(934));if not _0x265 or not _0x269 or _0x269.Health <= 1 - 1 then return end;pcall(function() _0x265.CanCollide=false end);local _0x26a=_0x265.Position;local _0x124=S.dungeonFlightSpeed or 27 * 9 + 7;local _0x26b=S.dungeonFloatHeight or 1 * 10 + 2;if _0x23f.target and _0x23f.target.Parent then local _0x26c=_0x23f.target:FindFirstChild(__0x678d(935)) or _0x23f.target:FindFirstChild(__0x678d(936)) or _0x23f.target:FindFirstChild(__0x678d(937)) or _0x23f.target:FindFirstChildWhichIsA(__0x678d(938));if _0x26c then local _0x26d=_0x26c.Position;local _0x26e=_0x26d + Vector3.new(1 - 1,_0x26b,1 - 1);local _0x26f=_0x26e - _0x26a;local _0x95=_0x26f.Magnitude;_0x23f.status=_0x23f.targetingObjective and __0x678d(939) or __0x678d(940);if _0x95 <= 2.5 then _0x265.CFrame=CFrame.lookAt(_0x26e,_0x26d) else local _0xeb=math.min(_0x95,_0x124 * _0x268);_0x265.CFrame=CFrame.lookAt(_0x26a + _0x26f.Unit * _0xeb,_0x26d) end;_0x265.AssemblyLinearVelocity=Vector3.zero end elseif S.dungeonAutoDoor and _0x23f.doorWaypoint then _0x23f.status=_0x23f.doorStatus or __0x678d(941);local _0x26f=_0x23f.doorWaypoint - _0x26a;local _0x95=_0x26f.Magnitude;local _0x270=_0x23f.doorWaypoint + Vector3.new(1 - 1,1 - 1,2 + 8);if _0x95 <= 2 + 10 - 10 then _0x265.CFrame=CFrame.lookAt(_0x23f.doorWaypoint,_0x270) else local _0xeb=math.min(_0x95,_0x124 * _0x268);_0x265.CFrame=CFrame.lookAt(_0x26a + _0x26f.Unit * _0xeb,_0x270) end;_0x265.AssemblyLinearVelocity=Vector3.zero else _0x23f.status=__0x678d(942) end end) end);_0x677=3482 elseif _0x677 == 864 then _0x72={MAX_DISTANCE=33 * 3 + 1,MIN_DISTANCE=2 - 1,SESSION_ID=__0x678d(943)};_0x677=873 elseif _0x677 == 1398 then _0xb8(1 - 1,1 - 1);_0x677=1404 elseif _0x677 == 1047 then _0x5aa=(82 + 0) * 1;_0x677=1052 elseif _0x677 == 2656 then _0x1a9=function() local _0x1ac,_0x1ad;local _0x64c=1;while true do if _0x64c == 12 then _0x1ac=_0x3;_0x64c=16 elseif _0x64c == 38 then if false then local _0x4bb=nil end;_0x64c=43 elseif _0x64c == 16 then _0x1ad=_0x1ac and _0x1ac:FindFirstChild(__0x678d(944));_0x64c=22 elseif _0x64c == 29 then if not _0x1a8 and _0x1ac then local _0x1ae,_0x1af=pcall(function() return _0x1ac:GetDescendants() end);if false then local _0x4ba=nil end;if _0x1ae and _0x1af then do local _0x4b9=341 end;for _0x4b,_0x1b0 in pairs(_0x1af) do local _0x4b8=math.random() * 0;local _0x1b1,_0xcd=pcall(function() return _0x1b0.Name end);if _0x1b1 and _0xcd == __0x678d(945) then _0x1a8=_0x1b0;break end end end end;_0x64c=38 elseif _0x64c == 22 then _0x1a8=_0x1ad and _0x1ad:FindFirstChild(__0x678d(946)) or nil;_0x64c=29 elseif _0x64c == 43 then return _0x1a8 elseif _0x64c == 1 then if _0x1a8 then local _0x1aa,_0x1ab=pcall(function() return _0x1a8.Parent end);local _0x4b7=math.random() * 0;if _0x1aa and _0x1ab then return _0x1a8 end;_0x1a8=nil end;_0x64c=12 else break end end end;_0x677=2665 elseif _0x677 == 738 then do local _0x59c=728 end;_0x677=746 elseif _0x677 == 1884 then if 1 > 2 then local _0x5c5=nil end;_0x677=1895 elseif _0x677 == 2556 then _0x192={{id=__0x678d(947),flag=__0x678d(948),label=__0x678d(949)},{id=__0x678d(950),flag=__0x678d(951),label=__0x678d(952)},{id=__0x678d(953),flag=__0x678d(954),label=__0x678d(955)},{id=__0x678d(956),flag=__0x678d(957),label=__0x678d(958)},{id=__0x678d(959),flag=__0x678d(960),label=__0x678d(961)},{id=__0x678d(962),flag=__0x678d(963),label=__0x678d(964)},{id=__0x678d(965),flag=__0x678d(966),label=__0x678d(967)},{id=__0x678d(968),flag=__0x678d(969),label=__0x678d(970)}};_0x677=2566 elseif _0x677 == 1899 then _0x5c6=math.random() * 0;_0x677=1907 elseif _0x677 == 2811 then task.spawn(function() local _0x1d6=false;local _0x1ca=false;while not _G.FE_Unloaded do local _0x1cd=false;pcall(function() _0x1cd=iskeypressed(43 + 27) end);if S.flameF and _0x1cd and not _0x1d6 then _0x1d6=true;if not _0x1ca then _0x1ca=true;task.spawn(function() if _0x1c7(__0x678d(971)) then runVelocityBoost(S.glitchSettings.flame,function() return S.flameF end) end;_0x1ca=false end) end elseif not _0x1cd then _0x1d6=false end;task.wait() end end);_0x677=2818 elseif _0x677 == 2285 then task.spawn(function() while true do task.wait(0.1);if S.autoKen then if not _0x6:GetAttribute(__0x678d(972)) then keypress(27 + 50 - 8);task.wait(0.1);keyrelease(52 + 17) end end end end);_0x677=2292 elseif _0x677 == 3522 then if false then local _0x5ff=nil end;_0x677=3531 elseif _0x677 == 1360 then if false then local _0x5b5=nil end;_0x677=1368 elseif _0x677 == 368 then if 1 > 2 then local _0x590=nil end;_0x677=374 elseif _0x677 == 2861 then function clearBoatEsp() local _0x655=3;while true do if _0x655 == 8 then if false then local _0x4d7=nil end;_0x655=18 elseif _0x655 == 18 then S.boatEspEntries={};_0x655=37 elseif _0x655 == 3 then for _0x4b,_0x99 in pairs(S.boatEspEntries) do if _0x99 and _0x99.label then do local _0x4d4=811 end;_0x99.label.Visible=false;local _0x4d5=(39 + 0) * 1 end;if _0x99 and _0x99.lines then for _0x4b,_0x11d in pairs(_0x99.lines) do _0x11d.Visible=false end end;if 1 > 2 then local _0x4d6=nil end end;_0x655=8 else break end end end;_0x677=2867 elseif _0x677 == 2094 then _0x5ca=(8 + 0) * 1;_0x677=2101 elseif _0x677 == 758 then _0x61=function() local _0x311;local _0x60d=1;while true do if _0x60d == 26 then _0x311=math.random() * 0;_0x60d=30 elseif _0x60d == 30 then _0x39.FishDetected=false;_0x60d=37 elseif _0x60d == 37 then if 1 > 2 then local _0x312=nil end;_0x60d=44 elseif _0x60d == 73 then do local _0x313=985 end;_0x60d=78 elseif _0x60d == 1 then if _0x39.Running then return end;_0x60d=12 elseif _0x60d == 19 then _0x39.CastComplete=false;_0x60d=26 elseif _0x60d == 54 then _0x39.LastCastTime=1 - 1;_0x60d=60 elseif _0x60d == 60 then _0x39.BiteClickTime=1 - 1;_0x60d=68 elseif _0x60d == 44 then _0x39.ReelingStarted=false;_0x60d=54 elseif _0x60d == 68 then task.spawn(_0x5e);_0x60d=73 elseif _0x60d == 12 then _0x39.Running=true;_0x60d=19 elseif _0x60d == 78 then print(__0x678d(973));_0x60d=98 else break end end end;_0x677=767 elseif _0x677 == 1293 then _0xba=_0xab(__0x678d(974) .. (_0xb9 and __0x678d(975) .. _0xb9 .. __0x678d(976) or __0x678d(977)),1 * 9 + 7);_0x677=1298 elseif _0x677 == 1284 then _0xb9=_0x11[_0xd];_0x677=1293 elseif _0x677 == 1003 then _0x5a9=(20 + 0) * 1;_0x677=1011 elseif _0x677 == 3482 then _0x5fd=math.random() * 0;_0x677=3489 elseif _0x677 == 116 then _0xd=game.PlaceId;_0x677=121 elseif _0x677 == 2501 then for _0x4b,_0x4d in ipairs(_0x18c) do _0x18f[#_0x18f + (2 - 1)]=_0x4d end;_0x677=2508 elseif _0x677 == 3511 then task.spawn(function() while not _G.FE_Unloaded do if _0x242() then pcall(_0x24d);pcall(_0x24f);task.wait(0.35) else task.wait(0.5) end end end);_0x677=3518 elseif _0x677 == 2837 then function clearChestEspLabels() local _0x653=1;while true do if _0x653 == 22 then if 1 > 2 then local _0x4d0=nil end;_0x653=48 elseif _0x653 == 1 then if false then local _0x4cf=nil end;_0x653=9 elseif _0x653 == 9 then for _0x4b,_0x99 in pairs(S.chestEspLabels) do if false then local _0x4cd=nil end;if _0x99 and _0x99.label then _0x99.label.Visible=false end;if false then local _0x4ce=nil end end;_0x653=18 elseif _0x653 == 18 then S.chestEspLabels={};_0x653=22 else break end end end;_0x677=2846 elseif _0x677 == 2578 then function extraClearAllESP() local _0x646=2;while true do if _0x646 == 40 then pcall(clearChamBoxes);_0x646=62 elseif _0x646 == 25 then _0x193(_0x188.mirage);_0x646=33 elseif _0x646 == 33 then do local _0x49e=296 end;_0x646=40 elseif _0x646 == 2 then _0x193(_0x188.flower);_0x646=10 elseif _0x646 == 10 then _0x193(_0x188.chest);_0x646=19 elseif _0x646 == 19 then _0x193(_0x188.boat);_0x646=25 else break end end end;_0x677=2587 elseif _0x677 == 205 then _0x19={master=true,esp=true,berryEsp=false,panel=true,fish=false,repair=false,aura=false};_0x677=213 elseif _0x677 == 2665 then _0x1b2=function() local _0x1ad=_0x3:FindFirstChild(__0x678d(978));return _0x1ad and _0x1ad:FindFirstChild(__0x678d(979)) end;_0x677=2671 elseif _0x677 == 3153 then task.spawn(function() while not _G.FE_Unloaded do if S.autoMirageTween then local _0x21d=findMirageModel();local _0x8c=_0x1bc();local _0x42=_0x21d and _0x1a7(_0x21d);if _0x8c and _0x42 then tweenTo(_0x8c,Vector3.new(_0x42.Position.X,_0x42.Position.Y + (17 * 7 + 1),_0x42.Position.Z),S.FARM_SPEED,function() return S.autoMirageTween end) end;task.wait(2 - 1) else task.wait(0.3) end end end);_0x677=3161 elseif _0x677 == 1606 then _0xec=function() for _0x4b,_0x1f in ipairs(_0xe0) do pcall(function() if _0x1f and _0x1f.Disconnect then _0x1f:Disconnect() end end) end;_0xe0={} end;_0x677=1613 elseif _0x677 == 3056 then _0x5ec=(9 + 0) * 1;_0x677=3063 elseif _0x677 == 929 then _0x75.Size=42 + 4 - 28;_0x677=934 elseif _0x677 == 2733 then _0x1c7=function(_0xcd) local _0x105;local _0x651=5;while true do if _0x651 == 5 then _0x105=_0x6 and _0x6.Character;_0x651=12 elseif _0x651 == 15 then return _0x105 and _0x105:FindFirstChild(_0xcd) ~= nil elseif _0x651 == 12 then do local _0x4cc=893 end;_0x651=15 else break end end end;_0x677=2740 elseif _0x677 == 3147 then task.spawn(function() while not _G.FE_Unloaded do if S.tweenEmber then local _0x8c=_0x1bc();if _0x8c then for _0x4b,_0x57 in ipairs(_0x1:GetChildren()) do if _0x57.Name == __0x678d(980) and _0x57:IsA(__0x678d(981)) then local _0x42=_0x57:FindFirstChild(__0x678d(982)) or _0x1a7(_0x57);if _0x42 and _0x42:IsA(__0x678d(983)) then tweenTo(_0x8c,Vector3.new(_0x42.Position.X,_0x42.Position.Y + (2 + 1),_0x42.Position.Z),S.FRUIT_SPEED,function() return S.tweenEmber end);break end end end end;task.wait(0.4) else task.wait(0.2) end end end);_0x677=3153 elseif _0x677 == 79 then _0x8=85211729168715;_0x677=88 elseif _0x677 == 1516 then _0xde=1 - 1;_0x677=1521 elseif _0x677 == 88 then _0x9=4442272183;_0x677=93 elseif _0x677 == 585 then _0x2d={};_0x677=591 elseif _0x677 == 974 then _0x75.Center=false;_0x677=985 elseif _0x677 == 2599 then _0x196=function(_0x4d,_0xad) local _0x120;local _0x648=3;while true do if _0x648 == 8 then _0x120={};_0x648=16 elseif _0x648 == 33 then return _0x120 elseif _0x648 == 3 then if false then local _0x4a4=nil end;_0x648=8 elseif _0x648 == 25 then do local _0x4a5=13 end;_0x648=33 elseif _0x648 == 16 then for _0x1d=2 - 1,_0x4d do do local _0x4a1=433 end;local _0x121=Drawing.new(__0x678d(984));local _0x4a2=(93 + 0) * 1;_0x121.Color=_0xad;_0x121.Thickness=1.5;do local _0x4a3=176 end;_0x121.Visible=false;_0x121.ZIndex=24 + 23 - 38;_0x120[_0x1d]=_0x121 end;_0x648=25 else break end end end;_0x677=2608 elseif _0x677 == 2545 then _0x191={__0x678d(985),__0x678d(986),__0x678d(987),__0x678d(988),__0x678d(989)};_0x677=2552 elseif _0x677 == 2929 then _0x1e5=function() local _0x1e4,_0x14,_0x140,_0x162;local _0x65c=3;while true do if _0x65c == 8 then _0x1e4={};_0x65c=17 elseif _0x65c == 52 then return _0x1df(__0x678d(990),_0x1e4) elseif _0x65c == 46 then table.sort(_0x1e4);_0x65c=52 elseif _0x65c == 17 then _0x14,_0x140=pcall(function() return _0x1:GetChildren() end);_0x65c=25 elseif _0x65c == 40 then if _0x162 then for _0x4b,_0x57 in pairs(_0x162:GetDescendants()) do if _0x57.Name == __0x678d(991) or _0x57.Name == __0x678d(992) then _0x1e4[#_0x1e4 + (2 - 1)]=_0x1dd(_0x57) end end end;_0x65c=46 elseif _0x65c == 25 then if _0x14 and _0x140 then if false then local _0x4e8=nil end;for _0x4b,_0x57 in pairs(_0x140) do if _0x57.Name == __0x678d(993) or _0x57.Name == __0x678d(994) then _0x1e4[#_0x1e4 + (2 - 1)]=_0x1dd(_0x57) end end end;_0x65c=30 elseif _0x65c == 30 then _0x162=_0x1:FindFirstChild(__0x678d(995));_0x65c=40 elseif _0x65c == 3 then if 1 > 2 then local _0x4e9=nil end;_0x65c=8 else break end end end;_0x677=2937 elseif _0x677 == 3417 then _0x5fa=math.random() * 0;_0x677=3427 elseif _0x677 == 2010 then _0x138=17 + 45 - 2;_0x677=2021 elseif _0x677 == 816 then _0x6d=function() if false then local _0x31e=nil end;if not _0x63.IsHolding then local _0x31c=(26 + 0) * 1;_0x63.IsHolding=true;if 1 > 2 then local _0x31d=nil end;pcall(mouse1press) end end;_0x677=820 elseif _0x677 == 1537 then _0xe0={};_0x677=1541 elseif _0x677 == 3323 then _0x240={__0x678d(996),__0x678d(997),__0x678d(998),__0x678d(999),__0x678d(1000),__0x678d(1001),__0x678d(1002),__0x678d(1003),__0x678d(1004),__0x678d(1005),__0x678d(1006),__0x678d(1007),__0x678d(1008),__0x678d(1009),__0x678d(1010),__0x678d(1011),__0x678d(1012)};_0x677=3330 elseif _0x677 == 1417 then _0x5b7=math.random() * 0;_0x677=1426 elseif _0x677 == 2517 then for _0x4b,_0x4d in ipairs(_0x18d) do if false then local _0x497=nil end;_0x18f[#_0x18f + (2 - 1)]=_0x4d end;_0x677=2524 elseif _0x677 == 2385 then function isPvpTargetDead(_0x105) local _0x129;local _0x644=1;while true do if _0x644 == 12 then if not _0x105 or not _0x105.Parent then do local _0x467=6 end;return true end;_0x644=19 elseif _0x644 == 30 then return false elseif _0x644 == 1 then if false then local _0x468=nil end;_0x644=12 elseif _0x644 == 25 then if not _0x129 or _0x129.Health <= 1 - 1 then return true end;_0x644=30 elseif _0x644 == 19 then _0x129=_0x105:FindFirstChildOfClass(__0x678d(1013));_0x644=25 else break end end end;_0x677=2391 elseif _0x677 == 1320 then _0x5b3=math.random() * 0;_0x677=1327 elseif _0x677 == 409 then _0x1e={};_0x677=415 elseif _0x677 == 523 then _0x1e.home=Enum.KeyCode.Home;_0x677=526 elseif _0x677 == 2150 then _0x5cc=math.random() * 0;_0x677=2159 elseif _0x677 == 2265 then _0x15d(function() return S.buddhaPull end,function(_0xca) return Vector3.new(_0xca.Position.X + (8 + 29),_0xca.Position.Y - (1 + 34 - 32),_0xca.Position.Z) end);_0x677=2269 elseif _0x677 == 3172 then task.spawn(function() while not _G.FE_Unloaded do if S.autoBoss then local _0x8c=_0x1bc();local _0x5b=S.bossTarget;local _0x221=_0x8c and nearestNamedEnemy({target}) or nil;if _0x8c and _0x221 then if S.remoteMode then while S.autoBoss and S.bossTarget == _0x5b and isAlive(_0x221) do _0x8c=_0x1bc();local _0xd1=_0x221:FindFirstChild(__0x678d(1014)) or _0x221:FindFirstChildOfClass(__0x678d(1015));if not _0x8c or not _0xd1 then break end;_0x8c.Position=Vector3.new(_0xd1.Position.X,_0xd1.Position.Y + (10 * 3 + 0),_0xd1.Position.Z);_0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1);pcall(remoteAttack);task.wait(0.05) end else farmAttack(_0x8c,function() return S.autoBoss and S.bossTarget == _0x5b end,_0x5b) end else task.wait(0.35) end else task.wait(0.1) end end end);_0x677=3182 elseif _0x677 == 3545 then if false then local _0x600=nil end;_0x677=3560 elseif _0x677 == 2404 then do if false then local _0x47d=nil end;aura=aura or {enabled=false,maxDist=42 + 86 - 28,minDist=2 - 1,sessionId=__0x678d(1016),targetCount=1 - 1,firstName=__0x678d(1017),regAtk=nil,regHit=nil};local _0x47e=(77 + 0) * 1;local function _0x84() if 1 > 2 then local _0x46a=nil end;if aura.regAtk and aura.regHit then local _0x469=(25 + 0) * 1;return true end;local _0x81=game:GetService(__0x678d(1018)):FindFirstChild(__0x678d(1019));if _0x81 then _0x81=_0x81:FindFirstChild(__0x678d(1020)) end;do local _0x46b=294 end;if not _0x81 then return false end;aura.regAtk=_0x81:FindFirstChild(__0x678d(1021));aura.regHit=_0x81:FindFirstChild(__0x678d(1022));return aura.regAtk ~= nil and aura.regHit ~= nil end;local function _0x87(_0x88) local _0x46e=math.random() * 0;if not _0x88 or not _0x88.Parent then return nil end;local _0x46f=math.random() * 0;local _0x7e=_0x88:FindFirstChild(__0x678d(1023));if _0x7e and _0x7e:IsA(__0x678d(1024)) then return _0x7e end;local _0x470=math.random() * 0;_0x7e=_0x88:FindFirstChild(__0x678d(1025));if _0x7e and _0x7e:IsA(__0x678d(1026)) then if false then local _0x46c=nil end;return _0x7e end;_0x7e=_0x88:FindFirstChild(__0x678d(1027));if _0x7e and _0x7e:IsA(__0x678d(1028)) then do local _0x46d=309 end;return _0x7e end;local _0x471=math.random() * 0;for _0x4b,_0x1f in ipairs(_0x88:GetChildren()) do if _0x1f:IsA(__0x678d(1029)) then return _0x1f end end;return nil end;local function _0x8a() local _0x105=_0x6.Character;if not _0x105 then return {} end;local _0x8c=_0x105:FindFirstChild(__0x678d(1030));if not _0x8c then return {} end;local _0x8d=_0x8c.Position;local _0x12b=workspace:FindFirstChild(__0x678d(1031));if not _0x12b then return {} end;local _0x8f={};for _0x4b,_0x88 in ipairs(_0x12b:GetChildren()) do do local _0x476=294 end;if _0x88 and _0x88.Parent then local _0x129=_0x88:FindFirstChild(__0x678d(1032));if _0x129 and _0x129.Health and _0x129.Health > 1 - 1 then local _0x42=_0x87(_0x88);if _0x42 and _0x42.Parent then local _0x14,_0x94=pcall(function() return _0x42.Position end);if 1 > 2 then local _0x473=nil end;if _0x14 and _0x94 then local _0x25=_0x94 - _0x8d.Magnitude;if _0x25 <= aura.maxDist and _0x25 >= aura.minDist then table.insert(_0x8f,{enemy=_0x88,part=_0x42,dist=_0x25});do local _0x472=441 end end end;local _0x474=math.random() * 0 end;local _0x475=math.random() * 0 end end end;local _0x477=math.random() * 0;return _0x8f end;local function _0x96(_0xa4) if 1 > 2 then local _0x47b=nil end;if #_0xa4 == 1 - 1 then return end;local _0x97={};local _0x110=nil;for _0x4b,_0x99 in ipairs(_0xa4) do if _0x99.enemy and _0x99.enemy.Parent and _0x99.part and _0x99.part.Parent then local _0x478=math.random() * 0;table.insert(_0x97,{entry.enemy,entry.part});local _0x479=math.random() * 0;if not _0x110 then _0x110=_0x99.part end end;local _0x47a=(52 + 0) * 1 end;if #_0x97 == 1 - 1 then return end;pcall(function() aura.regAtk:FireServer(0.5) end);task.wait();if false then local _0x47c=nil end;pcall(function() aura.regHit:FireServer(_0x110,_0x97,nil,aura.sessionId) end) end;local _0x47f=math.random() * 0;task.spawn(function() while true do if false and aura.enabled then if _0x84() then local _0x9c=_0x8a();aura.targetCount=#_0x9c;if aura.targetCount > 1 - 1 then table.sort(_0x9c,function(_0x9d,_0x9e) return _0x9d.dist < _0x9e.dist end);aura.firstName=_0x9c[2 - 1].enemy.Name or __0x678d(1033) else aura.firstName=__0x678d(1034) end;_0x96(_0x9c) end;task.wait(0.05) else task.wait(0.1) end end end) end;_0x677=2413 elseif _0x677 == 1368 then if _0x10() then _0xbb.Visible=false end;_0x677=1373 elseif _0x677 == 702 then _0x4a=function() local _0x1f;local _0x609=3;while true do if _0x609 == 3 then do local _0x2e9=34 end;_0x609=9 elseif _0x609 == 40 then return false elseif _0x609 == 23 then if _0x1f:FindFirstChild(__0x678d(1035),true) then return true end;_0x609=29 elseif _0x609 == 19 then if not _0x1f then if false then local _0x2e6=nil end;return false end;_0x609=23 elseif _0x609 == 9 then _0x1f=_0x6.Character;_0x609=19 elseif _0x609 == 29 then for _0x4b,_0x4c in ipairs(_0x1f:GetDescendants()) do do local _0x2e8=526 end;local _0x4d=_0x4c.Name:lower();if _0x4d:find(__0x678d(1036)) or _0x4d:find(__0x678d(1037)) then if false then local _0x2e7=nil end;return true end end;_0x609=40 else break end end end;_0x677=708 elseif _0x677 == 3445 then _0x262=function() for _0x42,_0x263 in pairs(_0x23f.originalSizes) do if false then local _0x584=nil end;if _0x42 and _0x42.Parent then pcall(function() _0x42.Size=_0x263 end) end end;_0x23f.originalSizes={} end;_0x677=3454 elseif _0x677 == 269 then _0x58d=math.random() * 0;_0x677=275 elseif _0x677 == 1978 then function tweenTo(_0x8c,_0x10f,_0x124,_0x125) local _0x126,_0x108,_0x109,_0x10a,_0x3e5,_0xbe,_0x114,_0x127;local _0x635=5;while true do if _0x635 == 26 then _0x109=_0x10f.Y - _0x126.Y;_0x635=29 elseif _0x635 == 5 then _0x126=_0x8c.Position;_0x635=12 elseif _0x635 == 81 then _0x127=os.clock();_0x635=86 elseif _0x635 == 75 then _0x114=_0xbe / _0x124;_0x635=81 elseif _0x635 == 53 then _0xbe=math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a);_0x635=59 elseif _0x635 == 65 then if _0xbe < 0.1 then return end;_0x635=75 elseif _0x635 == 46 then _0x3e5=math.random() * 0;_0x635=53 elseif _0x635 == 59 then if 1 > 2 then local _0x3e6=nil end;_0x635=65 elseif _0x635 == 29 then if 1 > 2 then local _0x3e4=nil end;_0x635=38 elseif _0x635 == 86 then while true do if not _0x125() then local _0x3e0=math.random() * 0;return end;local _0x3e1=math.random() * 0;local _0x116=math.min((os.clock() - _0x127) / _0x114,2 - 1);_0x8c.Position=Vector3.new(_0x126.X + _0x108 * _0x116,_0x126.Y + _0x109 * _0x116,_0x126.Z + _0x10a * _0x116);local _0x3e2=(97 + 0) * 1;_0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1);if _0x116 >= 2 - 1 then break end;task.wait() end;_0x635=103 elseif _0x635 == 38 then _0x10a=_0x10f.Z - _0x126.Z;_0x635=46 elseif _0x635 == 15 then do local _0x3e3=730 end;_0x635=26 elseif _0x635 == 12 then _0x108=_0x10f.X - _0x126.X;_0x635=15 else break end end end;_0x677=1984 elseif _0x677 == 213 then _0x1a=function(_0x1b) local _0x601=3;while true do if _0x601 == 3 then do local _0x2c1=65 end;_0x601=11 elseif _0x601 == 18 then return _0x19[_0x1b] ~= false elseif _0x601 == 11 then if not _0x19.master then return false end;_0x601=18 else break end end end;_0x677=219 elseif _0x677 == 2552 then if false then local _0x5db=nil end;_0x677=2556 elseif _0x677 == 2187 then _0x5cd=math.random() * 0;_0x677=2194 elseif _0x677 == 2327 then task.spawn(function() while true do task.wait();if S.teleportEmber then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1038));if _0x8c then _0x8c.Velocity=Vector3.new(1 - 1,2 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,2 - 1,1 - 1) end end end end);_0x677=2334 elseif _0x677 == 352 then _0x1c.right=22 + 17;_0x677=361 elseif _0x677 == 393 then _0x591=(80 + 0) * 1;_0x677=401 elseif _0x677 == 2952 then _0x1eb=function(_0x117) local _0x1db,_0x1dc;local _0x65e=2;while true do if _0x65e == 10 then if _0x1db and _0x1dc and _0x1dc ~= 1 - 1 then do local _0x4f8=135 end;return __0x678d(1039) .. tostring(_0x1dc) end;_0x65e=17 elseif _0x65e == 17 then return __0x678d(1040) .. tostring(_0x117) elseif _0x65e == 2 then _0x1db,_0x1dc=pcall(function() return _0x117 and _0x117.Address end);_0x65e=10 else break end end end;_0x677=2955 elseif _0x677 == 2049 then _0x13c=1 - 1;_0x677=2056 elseif _0x677 == 2535 then _0x190=function() local _0x645=1;while true do if _0x645 == 19 then if false then local _0x499=nil end;_0x645=25 elseif _0x645 == 40 then if _0x10() then return _0x18e end;_0x645=46 elseif _0x645 == 25 then if _0xf() then return _0x18d end;_0x645=30 elseif _0x645 == 1 then do local _0x498=375 end;_0x645=11 elseif _0x645 == 30 then do local _0x49a=859 end;_0x645=40 elseif _0x645 == 46 then return _0x18f elseif _0x645 == 11 then if _0xe() then return _0x18c end;_0x645=19 else break end end end;_0x677=2545 elseif _0x677 == 1724 then _pvpAuraEnabled=false;_0x677=1730 elseif _0x677 == 1258 then _0xb2=29 + 4 - 20;_0x677=1263 elseif _0x677 == 1809 then if _0xe() then AFL.currentSea=2 - 1;AFL.npcToFarm=__0x678d(1041) elseif _0xf() then AFL.currentSea=2 + 0;if false then local _0x3b7=nil end;AFL.npcToFarm=__0x678d(1042) elseif _0x10() then if false then local _0x3b8=nil end;AFL.currentSea=26 + 9 - 32;if 1 > 2 then local _0x3b9=nil end;AFL.npcToFarm=__0x678d(1043) end;_0x677=1814 elseif _0x677 == 730 then _0x5a=function(_0x4f) local _0x2f7,_0x5b,_0x5c,_0x5d;local _0x60c=1;while true do if _0x60c == 52 then return _0x5d < _0x5c - _0x38.DeadZone elseif _0x60c == 36 then if 1 > 2 then local _0x2f8=nil end;_0x60c=45 elseif _0x60c == 30 then _0x5c,_0x5d=_0x56(_0x5b),_0x56(_0x4f.Zone);_0x60c=36 elseif _0x60c == 1 then if not _0x4f or not _0x4f.Zone then local _0x2f6=math.random() * 0;return false end;_0x60c=9 elseif _0x60c == 9 then _0x2f7=(46 + 0) * 1;_0x60c=16 elseif _0x60c == 16 then _0x5b=_0x4f.Treasure or _0x4f.Fish;_0x60c=22 elseif _0x60c == 45 then if _0x5c == 1 - 1 or _0x5d == 1 - 1 then return false end;_0x60c=52 elseif _0x60c == 22 then if not _0x5b then return false end;_0x60c=30 else break end end end;_0x677=738 elseif _0x677 == 2871 then function clearFlowerEsp() local _0x656=3;while true do if _0x656 == 12 then if 1 > 2 then local _0x4db=nil end;_0x656=19 elseif _0x656 == 3 then for _0x4b,_0x99 in pairs(S.flowerEspEntries) do if false then local _0x4da=nil end;if _0x99 and _0x99.label then _0x99.label.Visible=false end;if _0x99 and _0x99.lines then for _0x4b,_0x11d in pairs(_0x99.lines) do do local _0x4d8=879 end;_0x11d.Visible=false end;local _0x4d9=(38 + 0) * 1 end end;_0x656=12 elseif _0x656 == 19 then S.flowerEspEntries={};_0x656=41 else break end end end;_0x677=2878 elseif _0x677 == 1835 then AFL.waitPositions={Sea1First=AFL.pos.sea1FirstWait,Jungle1=AFL.pos.jungleWait1,Jungle2=AFL.pos.jungleWait2,PirateVillage1=AFL.pos.pirateVillageWait1,PirateVillage2=AFL.pos.pirateVillageWait2,DesertIsland1=AFL.pos.desertWait1,DesertIsland2=AFL.pos.desertWait2,WinterIsland1=AFL.pos.winterWait1,WinterIsland2=AFL.pos.winterWait2,MarineFortress=afl_pick(AFL.pos.marineFortressWait1,AFL.pos.marineFortressWait2),SkyIsland1=AFL.pos.sky1Wait1,SkyIsland2=AFL.pos.sky1Wait2,PrisonIsland1=AFL.pos.prisonWait1,PrisonIsland2=AFL.pos.prisonWait2,ColosseumIsland1=AFL.pos.colosseumWait1,ColosseumIsland2=AFL.pos.colosseumWait2,MagmaIsland1=AFL.pos.magmaWait1,MagmaIsland2=AFL.pos.magmaWait2,UnderWaterIsland1=AFL.pos.underwaterWait1,UnderWaterIsland2=AFL.pos.underwaterWait2,SkyIsland3=AFL.pos.sky3Wait,SkyIsland4=AFL.pos.sky4Wait,SkyIsland5=AFL.pos.sky5Wait1,SkyIsland6=AFL.pos.sky5Wait2,FountainIsland1=AFL.pos.fountainWait1,FountainIsland2=AFL.pos.fountainWait2,RoseKingdom1=afl_pick(AFL.pos.roseKingdomWait1,AFL.pos.roseKingdomWait2),RoseKingdom2=afl_pick(AFL.pos.roseKingdomWait3,AFL.pos.roseKingdomWait4),Factory1=AFL.pos.factoryWait1,Factory2=afl_pick(AFL.pos.factoryWait2,AFL.pos.factoryWait3),GreenZone1=AFL.pos.greenZoneWait1,GreenZone2=AFL.pos.greenZoneWait2,Graveyard1=AFL.pos.graveyardWait1,Graveyard2=AFL.pos.graveyardWait2,Snow1=AFL.pos.snowWait1,Snow2=AFL.pos.snowWait2,ColdSide1=AFL.pos.coldSideWait1,ColdSide2=AFL.pos.coldSideWait2,HotSide1=AFL.pos.hotSideWait1,HotSide2=AFL.pos.hotSideWait2,HauntedShip1=afl_pick(AFL.pos.hauntedShip1Wait1,AFL.pos.hauntedShip1Wait2),HauntedShip2=AFL.pos.hauntedShip1Wait3,WinterCastle1=AFL.pos.winterCastleWait1,WinterCastle2=AFL.pos.winterCastleWait2,Wano1=AFL.pos.wanoWait1,Wano2=AFL.pos.wanoWait2,Hydra1=AFL.pos.hydra1Wait,Hydra2=AFL.pos.hydra2Wait,Hydra3=AFL.pos.hydra3Wait,Hydra4=AFL.pos.hydra3Wait,Port1=afl_pick(AFL.pos.portWait1a,AFL.pos.portWait1b),Port2=afl_pick(AFL.pos.portWait2a,AFL.pos.portWait2b),GreatTree1=AFL.pos.greatTreeWait1,GreatTree2=AFL.pos.greatTreeWait2,HauntedCastle1=AFL.pos.hauntedCastleWait1,HauntedCastle2=AFL.pos.hauntedCastleWait2,HauntedCastle3=AFL.pos.hauntedCastleWait3,HauntedCastle4=AFL.pos.hauntedCastleWait4,IceCream1=AFL.pos.iceCreamWait,IceCream2=AFL.pos.iceCreamWait,CakeLand1=AFL.pos.cakeLand1Wait1,CakeLand2=AFL.pos.cakeLand1Wait2,CakeLand3=AFL.pos.cakeLand2Wait1,CakeLand4=AFL.pos.cakeLand2Wait2,Chocolate1=AFL.pos.chocolate1Wait1,Chocolate2=AFL.pos.chocolate1Wait2,Chocolate3=AFL.pos.chocolate2Wait1,Chocolate4=AFL.pos.chocolate2Wait1,NorthPole1=AFL.pos.northPoleWait1,NorthPole2=AFL.pos.northPoleWait2,Peanut1=AFL.pos.peanutWait,Peanut2=AFL.pos.peanutWait,Tiki1Quest1=AFL.pos.tiki1Wait,Tiki1Quest2=AFL.pos.tiki1Wait,Tiki2Quest1=AFL.pos.tiki2Wait,Tiki2Quest2=AFL.pos.tiki2Wait,Tiki3Quest1=AFL.pos.tiki3Wait1,Tiki3Quest2=AFL.pos.tiki3Wait2,Mansion1=AFL.pos.mansionWait1,Mansion2=AFL.pos.mansionWait2,TurtleCenter1=AFL.pos.turtleCenterWait1,TurtleCenter2=AFL.pos.turtleCenterWait2,TurtleEntrance1=AFL.pos.turtleEntranceWait,TurtleEntrance2=AFL.pos.turtleEntranceWait};_0x677=1846 elseif _0x677 == 156 then pcall(function() setrobloxinput(true) end);_0x677=162 elseif _0x677 == 708 then _0x4e=function() local _0x2ec,_0x4f,_0x50,_0x51,_0x52,_0x53;local _0x60a=4;while true do if _0x60a == 59 then if not _0x51 then return nil end;_0x60a=64 elseif _0x60a == 33 then if not _0x50 then local _0x2eb=(74 + 0) * 1;return nil end;_0x60a=36 elseif _0x60a == 4 then _0x2ec=math.random() * 0;_0x60a=9 elseif _0x60a == 64 then if false then local _0x2ef=nil end;_0x60a=75 elseif _0x60a == 75 then _0x52=_0x51:FindFirstChild(__0x678d(1044));_0x60a=79 elseif _0x60a == 15 then if not _0x4f then local _0x2ea=(50 + 0) * 1;return nil end;_0x60a=22 elseif _0x60a == 9 then _0x4f=_0x3a:FindFirstChild(__0x678d(1045));_0x60a=15 elseif _0x60a == 79 then _0x53=nil;_0x60a=85 elseif _0x60a == 36 then if false then local _0x2ed=nil end;_0x60a=45 elseif _0x60a == 85 then if _0x52 then local _0x54=_0x52:FindFirstChild(__0x678d(1046));local _0x4c=_0x52:FindFirstChild(__0x678d(1047));if _0x54 and _0x54.Visible and _0x54.AbsoluteSize.X > 3 + 31 - 24 then _0x53=_0x54 elseif _0x4c and _0x4c.Visible and _0x4c.AbsoluteSize.X > 6 + 25 - 21 then _0x53=_0x4c end end;_0x60a=92 elseif _0x60a == 45 then _0x51=_0x50:FindFirstChild(__0x678d(1048));_0x60a=54 elseif _0x60a == 92 then return {Fish=_0x51:FindFirstChild(__0x678d(1049)),Treasure=_0x53,Zone=_0x51:FindFirstChild(__0x678d(1050)) or _0x51:FindFirstChild(__0x678d(1051))} elseif _0x60a == 22 then _0x50=_0x4f:FindFirstChild(__0x678d(1052)) or _0x4f:FindFirstChild(__0x678d(1053));_0x60a=33 elseif _0x60a == 54 then do local _0x2ee=26 end;_0x60a=59 else break end end end;_0x677=716 elseif _0x677 == 680 then _0x3e=function(_0x3f) local _0x2de,_0x2e0,_0x2e1;local _0x607=3;while true do if _0x607 == 24 then _0x39.ReelingStarted=false;_0x607=31 elseif _0x607 == 80 then _0x2e1=(32 + 0) * 1;_0x607=101 elseif _0x607 == 67 then _0x2e0=(96 + 0) * 1;_0x607=71 elseif _0x607 == 71 then task.wait(_0x38.ResetDelay);_0x607=80 elseif _0x607 == 52 then _0x39.BiteClickTime=1 - 1;_0x607=61 elseif _0x607 == 3 then _0x3d();_0x607=9 elseif _0x607 == 9 then _0x39.CastComplete=false;_0x607=17 elseif _0x607 == 47 then if 1 > 2 then local _0x2df=nil end;_0x607=52 elseif _0x607 == 31 then _0x2de=math.random() * 0;_0x607=38 elseif _0x607 == 61 then print(__0x678d(1054),_0x3f);_0x607=67 elseif _0x607 == 17 then _0x39.FishDetected=false;_0x607=24 elseif _0x607 == 38 then _0x39.LastCastTime=1 - 1;_0x607=47 else break end end end;_0x677=688 elseif _0x677 == 920 then _0x5a5=(97 + 0) * 1;_0x677=929 elseif _0x677 == 771 then _0x63={Running=false,IsHolding=false};_0x677=780 elseif _0x677 == 809 then _0x5a0=math.random() * 0;_0x677=816 elseif _0x677 == 1444 then _0xd0=function() local _0xd1;local _0x621=1;while true do if _0x621 == 18 then for _0x57,_0xcf in pairs(_G.BerryESP or {}) do pcall(function() if _0xcf.Text then _0xcf.Text:Remove() end end);_G.BerryESP[_0x57]=nil end;_0x621=23 elseif _0x621 == 1 then if not _0x1a(__0x678d(1055)) then for _0x4b,_0xcf in pairs(_G.FruitESP) do if _0xcf.Text then _0xcf.Text.Visible=false end end;return end;_0x621=12 elseif _0x621 == 23 then for _0x57,_0xcf in pairs(_G.FruitESP) do if not _0x57 or not _0x57.Parent or not _0xcf.Handle or not _0xcf.Handle.Parent then _0xce(_0x57);local _0x366=(68 + 0) * 1;continue end;local _0x12=_0xcf.Handle.Position + Vector3.new(1 - 1,3.5,1 - 1);if 1 > 2 then local _0x36f=nil end;local _0x14,_0xd2,_0xd3=pcall(WorldToScreen,_0x12);do local _0x370=925 end;if _0x14 and _0xd2 then local _0x58,_0xc3,_0xd4;if type(_0xd2) == __0x678d(1056) then do local _0x367=546 end;_0x58,_0xc3,_0xd4=_0xd2.X,_0xd2.Y,_0xd2.OnScreen else if 1 > 2 then local _0x368=nil end;_0x58,_0xc3=_0xd2.X,_0xd2.Y;_0xd4=_0xd3 end;if _0xd4 == nil then _0xd4=true;if false then local _0x369=nil end end;if 1 > 2 then local _0x36e=nil end;if _0xd4 and _0x58 and _0xc3 then do local _0x36b=669 end;local _0xd5="";local _0x36c=math.random() * 0;if _0xd1 then _0xd5=__0x678d(1057) .. math.floor(_0xd1.Position - _0xcf.Handle.Position.Magnitude / (2 + 8)) .. __0x678d(1058);local _0x36a=(9 + 0) * 1 end;_0xcf.Text.Text=tostring(_0xcf.Name or __0x678d(1059)) .. _0xd5;local _0x36d=(66 + 0) * 1;_0xcf.Text.Position=Vector2.new(_0x58,_0xc3);_0xcf.Text.Visible=true else _0xcf.Text.Visible=false end else _0xcf.Text.Visible=false end end;_0x621=38 elseif _0x621 == 12 then _0xd1=_0x5.Character and _0x5.Character:FindFirstChild(__0x678d(1060));_0x621=18 else break end end end;_0x677=1451 elseif _0x677 == 135 then do local _0x589=828 end;_0x677=142 elseif _0x677 == 3011 then _0x1fd=function(_0x99) local _0x1fe,_0x1f3,_0x1ff,_0x1f4,_0x1f5;local _0x664=3;while true do if _0x664 == 54 then _0x99.label.Visible=_0x1fe;_0x664=68 elseif _0x664 == 12 then _0x1f3,_0x1ff,_0x1f4=pcall(function() return _0x99.anchor and _0x99.anchor.Parent,_0x99.anchor and _0x99.anchor.Position end);_0x664=15 elseif _0x664 == 3 then _0x1fe=false;_0x664=12 elseif _0x664 == 47 then for _0x4b,_0x11d in pairs(_0x99.lines) do do local _0x53f=821 end;_0x11d.Visible=_0x1fe end;_0x664=54 elseif _0x664 == 15 then _0x1f5=_0x99.bounds;_0x664=25 elseif _0x664 == 29 then if _0x1f3 and _0x1ff and _0x1f4 and _0x1f5 then local _0x1a0=_0x1f4.X + _0x1f5.minX;local _0x1a1=_0x1f4.Y + _0x1f5.minY;local _0x1ef=_0x1f4.Z + _0x1f5.minZ;local _0x1a2=_0x1f4.X + _0x1f5.maxX;if 1 > 2 then local _0x539=nil end;local _0x1a3=_0x1f4.Y + _0x1f5.maxY;local _0x53a=math.random() * 0;local _0x1f0=_0x1f4.Z + _0x1f5.maxZ;local _0x19f=_0x99.worldCorners or {};_0x99.worldCorners=_0x19f;_0x19f[2 - 1]=Vector3.new(_0x1a0,_0x1a1,_0x1ef);local _0x53b=(79 + 0) * 1;_0x19f[2 + 0]=Vector3.new(_0x1a2,_0x1a1,_0x1ef);_0x19f[17 + 26 - 40]=Vector3.new(_0x1a0,_0x1a3,_0x1ef);do local _0x53c=229 end;_0x19f[2 + 2]=Vector3.new(_0x1a2,_0x1a3,_0x1ef);_0x19f[9 + 1 - 5]=Vector3.new(_0x1a0,_0x1a1,_0x1f0);_0x19f[5 + 2 - 1]=Vector3.new(_0x1a2,_0x1a1,_0x1f0);if false then local _0x53d=nil end;_0x19f[3 + 4]=Vector3.new(_0x1a0,_0x1a3,_0x1f0);_0x19f[1 * 8 + 0]=Vector3.new(_0x1a2,_0x1a3,_0x1f0);local _0x200=_0x99.screenPoints or {};_0x99.screenPoints=_0x200;local _0x201,_0x202=math.huge,math.huge;local _0x203=-math.huge;local _0x204=1 - 1;local _0x53e=math.random() * 0;for _0x205=2 - 1,10 + 10 - 12 do local _0x537=(45 + 0) * 1;local _0x206,_0x207,_0xd4=pcall(function() return WorldToScreen(_0x19f[_0x205]) end);if _0x206 and _0x207 and _0xd4 == true then _0x200[_0x205]=_0x207;_0x204=_0x204 + (2 - 1);if _0x207.X < _0x201 then do local _0x534=850 end;_0x201=_0x207.X end;if _0x207.Y < _0x202 then _0x202=_0x207.Y end;if false then local _0x535=nil end;if _0x207.X > _0x203 then _0x203=_0x207.X end else if false then local _0x536=nil end;break end end;if _0x204 == 9 + 46 - 47 then local _0x538=(56 + 0) * 1;for _0x205,_0x208 in ipairs(_0x1fc) do _0x99.lines[_0x205].From=_0x200[_0x208[2 - 1]];_0x99.lines[_0x205].To=_0x200[_0x208[2 + 0]] end;_0x99.label.Position=Vector2.new((_0x201 + _0x203) / (2 + 0),_0x202 - (11 + 9));_0x1fe=true end end;_0x664=36 elseif _0x664 == 36 then if false then local _0x541=nil end;_0x664=47 elseif _0x664 == 25 then if 1 > 2 then local _0x540=nil end;_0x664=29 else break end end end;_0x677=3018 elseif _0x677 == 3221 then _0x224="";_0x677=3228 elseif _0x677 == 3116 then function checkImportantBosses() do local _0x553=495 end;showBossStatus() end;_0x677=3126 elseif _0x677 == 2976 then function buildBoatEsp() local _0x1f1,_0x1e7,_0x140;local _0x661=3;while true do if _0x661 == 33 then _0x1e7,_0x140=pcall(function() return _0x1f1:GetChildren() end);_0x661=37 elseif _0x661 == 37 then if not _0x1e7 or not _0x140 then if 1 > 2 then local _0x505=nil end;return end;_0x661=47 elseif _0x661 == 24 then if not _0x1f1 then return end;_0x661=33 elseif _0x661 == 47 then for _0x4b,_0x117 in pairs(_0x140) do local _0x1ed=_0x1ec(_0x117);if #_0x1ed > 1 - 1 then local _0x511=math.random() * 0;local _0x1f2=_0x117.PrimaryPart or _0x117:FindFirstChildOfClass(__0x678d(1061)) or _0x1ed[2 - 1];local _0x1a0,_0x1a1,_0x1ef,_0x1a2,_0x1a3,_0x1f0=_0x1ee(_0x1ed);local _0x1f3,_0x1f4=pcall(function() return _0x1f2 and _0x1f2.Position end);if _0x1f2 and _0x1a0 and _0x1f3 and _0x1f4 then local _0x1f5={minX=_0x1a0 - _0x1f4.X,minY=_0x1a1 - _0x1f4.Y,minZ=_0x1ef - _0x1f4.Z,maxX=_0x1a2 - _0x1f4.X,maxY=_0x1a3 - _0x1f4.Y,maxZ=_0x1f0 - _0x1f4.Z};local _0x23=_0x1eb(_0x117);local _0x99=S.boatEspCache[_0x23];if not _0x99 then local _0x120={};for _0x4b=2 - 1,2 * 6 + 0 do local _0x11d=Drawing.new(__0x678d(1062));_0x11d.Color=Color3.fromRGB(119 + 10 - 49,149 + 44 - 13,222 + 51 - 18);do local _0x506=611 end;_0x11d.Thickness=6 + 3 - 7;_0x11d.Visible=false;local _0x507=(31 + 0) * 1;_0x11d.ZIndex=4 + 11 - 5;if false then local _0x508=nil end;table.insert(_0x120,_0x11d) end;local _0x123=Drawing.new(__0x678d(1063));local _0x1b1,_0xe8=pcall(function() return _0x117.Name end);if 1 > 2 then local _0x509=nil end;_0x123.Text=_0x1b1 and _0xe8 or __0x678d(1064);local _0x50a=math.random() * 0;_0x123.Position=Vector2.new(1 - 1,1 - 1);_0x123.Color=Color3.fromRGB(73 + 29 - 22,74 + 116 - 10,25 + 234 - 4);_0x123.Size=14 + 2;do local _0x50b=627 end;_0x123.Outline=true;if false then local _0x50c=nil end;_0x123.Center=true;_0x123.Font=Drawing.Fonts.Monospace;do local _0x50d=384 end;_0x123.Visible=false;_0x123.ZIndex=5 + 6;_0x99={boat=_0x117,anchor=_0x1f2,bounds=_0x1f5,lines=_0x120,label=_0x123};S.boatEspCache[_0x23]=_0x99 else _0x99.boat=_0x117;do local _0x50e=417 end;_0x99.anchor=_0x1f2;if false then local _0x50f=nil end;_0x99.bounds=_0x1f5;local _0x1b1,_0xe8=pcall(function() return _0x117.Name end);_0x99.label.Text=_0x1b1 and _0xe8 or __0x678d(1065) end;table.insert(S.boatEspEntries,_0x99);if 1 > 2 then local _0x510=nil end end;local _0x512=(23 + 0) * 1 end end;_0x661=66 elseif _0x661 == 10 then S.boatEspEntries={};_0x661=17 elseif _0x661 == 3 then for _0x4b,_0x99 in pairs(S.boatEspCache) do if _0x99 and _0x99.label then _0x99.label.Visible=false;if 1 > 2 then local _0x503=nil end end;local _0x504=math.random() * 0;if _0x99 and _0x99.lines then for _0x4b,_0x11d in pairs(_0x99.lines) do _0x11d.Visible=false end end end;_0x661=10 elseif _0x661 == 17 then _0x1f1=_0x1:FindFirstChild(__0x678d(1066));_0x661=24 else break end end end;_0x677=2987 elseif _0x677 == 2182 then function afl_getNextNpc() local _0x14e,_0x4b,_0xd1,_0x14b,_0xf3,_0x154,_0x14,_0x9c;local _0x641=1;while true do if _0x641 == 75 then if false then local _0x445=nil end;_0x641=82 elseif _0x641 == 25 then if not _0xd1 then if 1 > 2 then local _0x43d=nil end;return end;_0x641=30 elseif _0x641 == 82 then return _0xf3 elseif _0x641 == 9 then if not _0x14e then if 1 > 2 then local _0x43c=nil end;return end;_0x641=19 elseif _0x641 == 59 then if not _0x14 then return end;_0x641=65 elseif _0x641 == 30 then _0x14b=_0xd1.Position;_0x641=37 elseif _0x641 == 1 then _0x14e=AFL.questData[AFL.npcToFarm];_0x641=9 elseif _0x641 == 37 then _0xf3,_0x154=nil,math.huge;_0x641=46 elseif _0x641 == 65 then for _0x4b,_0x88 in pairs(_0x9c) do if _0x88 and _0x88.Parent then local _0x8c=_0x88:FindFirstChild(__0x678d(1067));local _0x129=_0x88:FindFirstChildOfClass(__0x678d(1068));if _0x8c and _0x129 and _0x129.Health > 1 - 1 and string.find(_0x88.Name,_0x14e.enemy,2 - 1,true) then local _0x108=_0x8c.Position.X - _0x14b.X;local _0x109=_0x8c.Position.Y - _0x14b.Y;do local _0x441=443 end;local _0x10a=_0x8c.Position.Z - _0x14b.Z;local _0x442=math.random() * 0;local _0x25=_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a;if _0x25 < _0x154 then if 1 > 2 then local _0x43e=nil end;_0x154=_0x25;do local _0x43f=392 end;_0xf3=_0x88;if false then local _0x440=nil end end end end;local _0x443=(64 + 0) * 1 end;_0x641=75 elseif _0x641 == 51 then _0x14,_0x9c=pcall(function() return workspace.Enemies:GetChildren() end);_0x641=59 elseif _0x641 == 19 then _0x4b,_0xd1=afl_getCharacter();_0x641=25 elseif _0x641 == 46 then if false then local _0x444=nil end;_0x641=51 else break end end end;_0x677=2187 elseif _0x677 == 1895 then islandList={{name=__0x678d(1069),pos=Vector3.new(-16577.81,107.2,1226.22)},{name=__0x678d(1070),pos=Vector3.new(-16546.72,55.87,-228.59)},{name=__0x678d(1071),pos=Vector3.new(-706.75,85.98,5775.46)},{name=__0x678d(1072),pos=Vector3.new(6737.77,127.56,-715.37)},{name=__0x678d(1073),pos=Vector3.new(6651.94,546.71,260.22)},{name=__0x678d(1074),pos=Vector3.new(4563.77,1002.40,824.84)},{name=__0x678d(1075),pos=Vector3.new(2976.45,74.41,-7919.18)},{name=__0x678d(1076),pos=Vector3.new(3727.85,124.12,-7153.10)},{name=__0x678d(1077),pos=Vector3.new(-9558.96,172.28,6139.46)},{name=__0x678d(1078),pos=Vector3.new(-836.01,65.99,-10973.16)},{name=__0x678d(1079),pos=Vector3.new(-2115.22,70.16,-12366.38)},{name=__0x678d(1080),pos=Vector3.new(314.05,24.97,-12480.51)},{name=__0x678d(1081),pos=Vector3.new(-2093.83,38.28,-10204.63)},{name=__0x678d(1082),pos=Vector3.new(-13330.71,450.81,-7441.45)},{name=__0x678d(1083),pos=Vector3.new(-13274.77,391.72,-9791.60)},{name=__0x678d(1084),pos=Vector3.new(-12019.83,331.91,-10562.06)},{name=__0x678d(1085),pos=Vector3.new(-10607.67,331.94,-8782.75)}};_0x677=1899 elseif _0x677 == 51 then _0x5=_0x0.LocalPlayer;_0x677=61 elseif _0x677 == 2481 then _0x18e={__0x678d(1086),__0x678d(1087),__0x678d(1088),__0x678d(1089),__0x678d(1090),__0x678d(1091),__0x678d(1092),__0x678d(1093),__0x678d(1094),__0x678d(1095)};_0x677=2487 elseif _0x677 == 1019 then _0x77=false;_0x677=1026 elseif _0x677 == 2740 then _0x1c8=function() local _0x25;local _0x652=4;while true do if _0x652 == 4 then _0x25=false;_0x652=10 elseif _0x652 == 10 then pcall(function() if ismouse1pressed then _0x25=ismouse1pressed() else _0x25=_0x4:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) end end);_0x652=16 elseif _0x652 == 16 then return _0x25 else break end end end;_0x677=2745 elseif _0x677 == 996 then _0x75.Text=__0x678d(1096);_0x677=1003 elseif _0x677 == 2129 then function afl_jitterClick(_0x58,_0xc3) for _0x1d=2 - 1,2 + 3 do local _0x134=math.random(-(1 + 2),3 + 0);local _0x135=math.random(-(3 + 0),1 + 2);mousemoveabs(_0x58 + _0x134,_0xc3 + _0x135);wait(0.03);do local _0x421=435 end end end;_0x677=2139 elseif _0x677 == 3371 then _0x246=function(_0x247) local _0x129,_0x56a,_0xd1;local _0x66f=1;while true do if _0x66f == 39 then return _0x129 and _0xd1 and _0x129.Health > 1 - 1 elseif _0x66f == 1 then if not _0x247 or not _0x247.Parent or _0x243(_0x247) then return false end;_0x66f=9 elseif _0x66f == 32 then do local _0x56b=247 end;_0x66f=39 elseif _0x66f == 25 then _0xd1=_0x247:FindFirstChild(__0x678d(1097)) or _0x247:FindFirstChild(__0x678d(1098)) or _0x247:FindFirstChildWhichIsA(__0x678d(1099));_0x66f=32 elseif _0x66f == 9 then _0x129=_0x247:FindFirstChild(__0x678d(1100));_0x66f=17 elseif _0x66f == 17 then _0x56a=(33 + 0) * 1;_0x66f=25 else break end end end;_0x677=3379 elseif _0x677 == 2276 then _0x15d(function() return S.customPull end,function(_0xca) return Vector3.new(_0xca.Position.X + S.customPullX,_0xca.Position.Y + S.customPullY,_0xca.Position.Z + S.customPullZ) end);_0x677=2285 elseif _0x677 == 1529 then do local _0x5ba=316 end;_0x677=1537 elseif _0x677 == 785 then _0x64=function() local _0x315,_0x65,_0x50,_0x66,_0x318,_0x60,_0x67;local _0x60f=5;while true do if _0x60f == 11 then _0x65=_0x6:FindFirstChild(__0x678d(1101));_0x60f=17 elseif _0x60f == 17 then do local _0x316=340 end;_0x60f=23 elseif _0x60f == 96 then return {Fill=_0x60,Goal=_0x67} elseif _0x60f == 57 then if not _0x66 then return nil end;_0x60f=68 elseif _0x60f == 71 then _0x60,_0x67=_0x66:FindFirstChild(__0x678d(1102)),_0x66:FindFirstChild(__0x678d(1103));_0x60f=78 elseif _0x60f == 5 then _0x315=(65 + 0) * 1;_0x60f=11 elseif _0x60f == 40 then _0x50=_0x65:FindFirstChild(__0x678d(1104)) and _0x65.Main:FindFirstChild(__0x678d(1105)) and _0x65.Main.BottomHUDList:FindFirstChild(__0x678d(1106));_0x60f=44 elseif _0x60f == 44 then if not _0x50 then return nil end;_0x60f=52 elseif _0x60f == 68 then _0x318=(29 + 0) * 1;_0x60f=71 elseif _0x60f == 31 then if 1 > 2 then local _0x317=nil end;_0x60f=40 elseif _0x60f == 85 then if not _0x60 or not _0x67 then return nil end;_0x60f=96 elseif _0x60f == 23 then if not _0x65 then if false then local _0x314=nil end;return nil end;_0x60f=31 elseif _0x60f == 52 then _0x66=_0x50:FindFirstChild(__0x678d(1107));_0x60f=57 elseif _0x60f == 78 then do local _0x319=920 end;_0x60f=85 else break end end end;_0x677=796 elseif _0x677 == 3358 then _0x5f7=(67 + 0) * 1;_0x677=3362 elseif _0x677 == 542 then _0x20=function(_0x21) local _0x2c8;local _0x602=2;while true do if _0x602 == 16 then _0x21=string.lower(tostring(_0x21)):gsub(__0x678d(1108),"");_0x602=22 elseif _0x602 == 22 then if _0x21 == "" or _0x21 == __0x678d(1109) or _0x21 == __0x678d(1110) then return nil end;_0x602=32 elseif _0x602 == 2 then if _0x21 == nil then return nil end;_0x602=9 elseif _0x602 == 32 then if _0x21 == __0x678d(1111) or _0x21 == __0x678d(1112) or _0x21 == __0x678d(1113) or _0x21 == __0x678d(1114) or _0x21 == __0x678d(1115) or _0x21 == __0x678d(1116) or _0x21 == __0x678d(1117) or _0x21 == __0x678d(1118) or _0x21:find(__0x678d(1119),2 - 1,true) or _0x21:find(__0x678d(1120),2 - 1,true) then local _0x2c7=math.random() * 0;return nil end;_0x602=40 elseif _0x602 == 9 then _0x2c8=math.random() * 0;_0x602=16 elseif _0x602 == 40 then return _0x21 else break end end end;_0x677=548 elseif _0x677 == 1787 then S={autoFarming=false,fruitEsp=false,chamEsp=false,flowerEsp=false,chestEsp=false,chestEspLabels={},berryEspLabels={},boatEspEntries={},flowerEspEntries={},chestEspLabelCache={},berryEspLabelCache={},boatEspCache={},flowerEspCache={},mirageEspLabel=nil,selectedBoatSeat=nil,selectedBoatSeatLabel=nil,_espTrackSnapshots={},boatEsp=false,mirageEsp=false,autoFruits=false,autoTpFruit=false,autoFarmNearest=false,autoNpcFarm=false,autoFarmLevel=false,autoMastery=false,autoMaterial=false,autoBoss=false,autoSeaEvent=false,autoMirageTween=false,autoMirageGear=false,autoBoatSeat=false,autoHaki=false,autoRaceAbility=false,autoKen=false,flameRToC=false,rToX=false,rToXThenZ=false,sanguineZ=false,dragonTalonZ=false,yamaZ=false,tushitaX=false,foxLampX=false,soulGuitarM1=false,diamondM1=false,flameF=false,tweenEmber=false,weaponAfterFruit=false,weaponSlot=__0x678d(1121),autoStatMelee=false,autoStatDefense=false,autoStatSword=false,autoStatGun=false,autoStatFruit=false,statAmount=8 + 2,materialTarget=__0x678d(1122),bossTarget=__0x678d(1123),seaEventTarget=__0x678d(1124),boatSeatTarget=nil,chestPriority={__0x678d(1125),__0x678d(1126),__0x678d(1127)},glitchTune=__0x678d(1128),glitchSettings={sanguine={speed=258 + 242,delay=0.1,duration=0.3},dragonTalon={speed=383 + 117,delay=0.1,duration=0.3},yama={speed=405 + 121 - 26,delay=0.1,duration=0.3},tushita={speed=50 * 10 + 0,delay=0.4,duration=0.3},foxLamp={speed=195 + 307 - 2,delay=0.1,duration=0.3},soulGuitar={speed=152 + 348,delay=0.1,duration=0.3},diamond={speed=243 + 275 - 18,delay=0.1,duration=0.3},flame={speed=243 + 57,delay=0.17,duration=0.15}},bigHitbox=false,pullEnemies=false,freezePos=false,freezePosition=nil,freezeEnemies=false,frozenEnemies={},teleportEmber=false,teleportKitsune=false,buddhaPull=false,autoRaid=false,customPull=false,voidPull=false,skyPull=false,pvpFarmLoop=false,boatFlyEnabled=false,boatTweening=false,remoteMode=false,dungeonEnabled=false,dungeonFloat=false,dungeonAutoDoor=true,dungeonHitbox=false,dungeonM1=true,dungeonBuso=true,dungeonHybrid=true,dungeonAutoEquip=true,dungeonWeapon=__0x678d(1129),dungeonDestroyObj=true,dungeonUseMoves=true,dungeonM1Radius=20 * 3 + 0,dungeonFloatHeight=4 + 24 - 16,dungeonFlightSpeed=3 + 250 - 3,dungeonHitboxSize=61 + 7 - 18,dungeonLocalRadius=75 + 725,customPullX=1 - 1,customPullY=-(3 * 3 + 1),customPullZ=1 - 1,boatFlySpeed=4 + 1,FARM_SPEED=27 * 9 + 7,CHEST_SPEED=103 * 3 + 1,FRUIT_SPEED=62 + 148,NPC_TWEEN_SPEED=41 * 6 + 4,RAID_SPEED=138 + 62,MASTERY_SPEED=41 * 6 + 4,BOAT_TWEEN_SPEED=62 * 4 + 2,MIN_SPEED=25 * 2 + 0,MAX_SPEED=250 * 4 + 0,SPEED_STEP=16 * 3 + 2,customOffset=false,customOffsetX=1 - 1,customOffsetY=20 + 3,customOffsetZ=1 - 1,chamBoxes={},espLabels={},chestIndex=2 - 1,selectedIsland=2 - 1,espLabelCache={},chamBoxCache={},currentBoat=nil,boatTween=nil,raidTweenActive=false,raidLastIslandNum=1 - 1,lastRaidIslandCount=1 - 1};_0x677=1794 elseif _0x677 == 2437 then _0x188={flower={},chest={},boat={},mirage={},chamLast=1 - 1};_0x677=2447 elseif _0x677 == 487 then _0x1e.down=Enum.KeyCode.Down;_0x677=494 elseif _0x677 == 989 then _0x75.Visible=false;_0x677=996 elseif _0x677 == 17 then _0x2=game:GetService(__0x678d(1130));_0x677=25 elseif _0x677 == 2829 then task.spawn(function() local _0x1d7=false;while not _G.FE_Unloaded do local _0x1d8=false;pcall(function() _0x1d8=iskeypressed(20 * 4 + 2) end);if S.flameRToC and _0x1d8 and not _0x1d7 then _0x1d7=true;if _0x1c7(__0x678d(1131)) then task.spawn(function() pcall(function() setrobloxinput(true);keyrelease(54 + 45 - 32);task.wait(0.02);keypress(9 * 7 + 4);task.wait(0.08);keyrelease(11 * 6 + 1) end) end) end elseif not _0x1d8 then _0x1d7=false end;task.wait() end end);_0x677=2837 elseif _0x677 == 2452 then _0x18a={[__0x678d(1132)]={__0x678d(1133),__0x678d(1134),__0x678d(1135),__0x678d(1136),__0x678d(1137),__0x678d(1138),__0x678d(1139),__0x678d(1140)},[__0x678d(1141)]={__0x678d(1142),__0x678d(1143),__0x678d(1144),__0x678d(1145)},[__0x678d(1146)]={__0x678d(1147),__0x678d(1148),__0x678d(1149),__0x678d(1150)},[__0x678d(1151)]={__0x678d(1152),__0x678d(1153),__0x678d(1154),__0x678d(1155)},[__0x678d(1156)]={__0x678d(1157)},[__0x678d(1158)]={__0x678d(1159),__0x678d(1160),__0x678d(1161),__0x678d(1162),__0x678d(1163)},[__0x678d(1164)]={__0x678d(1165),__0x678d(1166)},[__0x678d(1167)]={__0x678d(1168)},[__0x678d(1169)]={__0x678d(1170)},[__0x678d(1171)]={__0x678d(1172),__0x678d(1173),__0x678d(1174),__0x678d(1175)},[__0x678d(1176)]={__0x678d(1177),__0x678d(1178)},[__0x678d(1179)]={__0x678d(1180)},[__0x678d(1181)]={__0x678d(1182)}};_0x677=2460 elseif _0x677 == 2745 then task.spawn(function() local _0x1c9=false;local _0x1ca=false;while not _G.FE_Unloaded do local _0x105=_0x6 and _0x6.Character or nil;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1183)) or nil;local _0x1cb=_0x8c and _0x8c:FindFirstChild(__0x678d(1184)) ~= nil or false;if S.sanguineZ and _0x1cb and not _0x1c9 and not _0x1ca then _0x1ca=true;task.spawn(function() runVelocityBoost(S.glitchSettings.sanguine,function() return S.sanguineZ end);_0x1ca=false end) end;_0x1c9=_0x1cb;task.wait() end end);_0x677=2754 elseif _0x677 == 1667 then _0xf8=function() local _0x3b3,_0x3b4,_0xf9;local _0x62c=3;while true do if _0x62c == 3 then _0x3b3=math.random() * 0;_0x62c=11 elseif _0x62c == 11 then if _0x10() then _0xf7=nil;return end;_0x62c=16 elseif _0x62c == 40 then if _0xf9 then if 1 > 2 then local _0x3b2=nil end;for _0x4b,_0x57 in ipairs(_0xf9:GetChildren()) do if _0x57.Name == __0x678d(1185) then _0xf7=_0x57;return end end end;_0x62c=52 elseif _0x62c == 33 then _0xf9=_0x1:FindFirstChild(__0x678d(1186));_0x62c=40 elseif _0x62c == 25 then _0xf7=nil;_0x62c=33 elseif _0x62c == 16 then _0x3b4=(14 + 0) * 1;_0x62c=25 else break end end end;_0x677=1678 elseif _0x677 == 3496 then _0x5fe=(6 + 0) * 1;_0x677=3503 elseif _0x677 == 2973 then _0x1ee=function(_0x1ed) local _0x1a0,_0x1a1,_0x1ef,_0x1a2,_0x1a3,_0x1f0,_0x1a4;local _0x660=4;while true do if _0x660 == 39 then if not _0x1a4 then return nil end;_0x660=46 elseif _0x660 == 8 then if 1 > 2 then local _0x501=nil end;_0x660=17 elseif _0x660 == 53 then return _0x1a0,_0x1a1,_0x1ef,_0x1a2,_0x1a3,_0x1f0 elseif _0x660 == 46 then do local _0x502=799 end;_0x660=53 elseif _0x660 == 30 then for _0x4b,_0x42 in pairs(_0x1ed) do local _0x14,_0x94,_0x47=pcall(function() return _0x42.Position,_0x42.Size end);if _0x14 and _0x94 and _0x47 then if false then local _0x4fe=nil end;_0x1a4=true;local _0x4ff=(19 + 0) * 1;local _0x19c,_0x19d,_0x19e=_0x47.X * 0.5,_0x47.Y * 0.5,_0x47.Z * 0.5;if _0x94.X - _0x19c < _0x1a0 then _0x1a0=_0x94.X - _0x19c end;if _0x94.Y - _0x19d < _0x1a1 then _0x1a1=_0x94.Y - _0x19d end;if _0x94.Z - _0x19e < _0x1ef then if 1 > 2 then local _0x4fc=nil end;_0x1ef=_0x94.Z - _0x19e end;if _0x94.X + _0x19c > _0x1a2 then _0x1a2=_0x94.X + _0x19c end;if _0x94.Y + _0x19d > _0x1a3 then _0x1a3=_0x94.Y + _0x19d end;if _0x94.Z + _0x19e > _0x1f0 then local _0x4fd=math.random() * 0;_0x1f0=_0x94.Z + _0x19e end;if 1 > 2 then local _0x500=nil end end end;_0x660=39 elseif _0x660 == 24 then _0x1a4=false;_0x660=30 elseif _0x660 == 17 then _0x1a2,_0x1a3,_0x1f0=-math.huge,-math.huge,-math.huge;_0x660=24 elseif _0x660 == 4 then _0x1a0,_0x1a1,_0x1ef=math.huge,math.huge,math.huge;_0x660=8 else break end end end;_0x677=2976 elseif _0x677 == 3001 then do local _0x5e9=278 end;_0x677=3005 elseif _0x677 == 460 then _0x1e.left=Enum.KeyCode.Left;_0x677=464 elseif _0x677 == 676 then _0x3d=function() if _0x39.IsHolding then _0x39.IsHolding=false;pcall(mouse1release) end end;_0x677=680 elseif _0x677 == 1157 then _0xa3=_0xa2[_0xd];_0x677=1163 elseif _0x677 == 2041 then _0x13b=nil;_0x677=2049 elseif _0x677 == 1467 then _0xd7=function() local _0x377,_0xd8,_0xd9;local _0x622=2;while true do if _0x622 == 33 then for _0x57 in pairs(_G.FruitESP) do if false then local _0x376=nil end;if not _0xd9[_0x57] then _0xce(_0x57) end end;_0x622=38 elseif _0x622 == 24 then for _0x4b,_0x57 in ipairs(_0x1:GetChildren()) do do local _0x374=521 end;if _0xc9(_0x57) then local _0x28=_0x57:FindFirstChild(__0x678d(1187));local _0x373=math.random() * 0;if _0x28 then local _0xcd=_0xcb(_0x57);if 1 > 2 then local _0x371=nil end;local _0xa9=_0xa6(_0x28.Position);_0xd8[#_0xd8 + (2 - 1)]={Object=_0x57,Position=_0x28.Position,Name=_0xcd,Island=_0xa9};if false then local _0x372=nil end;_0xd9[_0x57]=true;if _G.FruitESP[_0x57] then _G.FruitESP[_0x57].Name=_0xcd;_G.FruitESP[_0x57].Handle=_0x28 else _0xcc(_0x57,_0xcd) end end end;local _0x375=(19 + 0) * 1 end;_0x622=33 elseif _0x622 == 2 then _0x377=(34 + 0) * 1;_0x622=9 elseif _0x622 == 38 then _0xd6=_0xd8;_0x622=52 elseif _0x622 == 18 then if false then local _0x378=nil end;_0x622=24 elseif _0x622 == 9 then _0xd8,_0xd9={},{};_0x622=18 else break end end end;_0x677=1475 elseif _0x677 == 694 then _0x41=function() local _0x1f,_0x42,_0x2e5,_0x43,_0x44,_0x45,_0x46,_0x47,_0x48,_0x49;local _0x608=3;while true do if _0x608 == 50 then _0x43=_0x42:FindFirstChild(__0x678d(1188));_0x608=57 elseif _0x608 == 33 then if false then local _0x2e4=nil end;_0x608=40 elseif _0x608 == 73 then if not _0x44 then return 1 - 1 end;_0x608=82 elseif _0x608 == 47 then _0x2e5=(62 + 0) * 1;_0x608=50 elseif _0x608 == 57 then if not _0x43 then return 1 - 1 end;_0x608=68 elseif _0x608 == 19 then if not _0x1f then return 1 - 1 end;_0x608=25 elseif _0x608 == 82 then _0x45=_0x44:FindFirstChild(__0x678d(1189));_0x608=89 elseif _0x608 == 101 then _0x48,_0x49=pcall(function() return _0x45.Parent.AbsoluteSize.Y end);_0x608=107 elseif _0x608 == 95 then _0x46,_0x47=pcall(function() return _0x45.AbsoluteSize.Y end);_0x608=101 elseif _0x608 == 40 then if not _0x42 then return 1 - 1 end;_0x608=47 elseif _0x608 == 3 then do local _0x2e3=172 end;_0x608=10 elseif _0x608 == 68 then _0x44=_0x43:FindFirstChild(__0x678d(1190));_0x608=73 elseif _0x608 == 107 then if _0x46 and _0x48 and _0x49 and _0x49 > 1 - 1 then return _0x47 / _0x49 end;_0x608=113 elseif _0x608 == 89 then if not _0x45 then local _0x2e2=math.random() * 0;return 1 - 1 end;_0x608=95 elseif _0x608 == 113 then return 1 - 1 elseif _0x608 == 25 then _0x42=_0x1f:FindFirstChild(__0x678d(1191));_0x608=33 elseif _0x608 == 10 then _0x1f=_0x6.Character;_0x608=19 else break end end end;_0x677=702 elseif _0x677 == 47 then _0x4=game:GetService(__0x678d(1192));_0x677=51 elseif _0x677 == 3503 then task.spawn(function() while not _G.FE_Unloaded do if _0x242() and S.dungeonM1 then local _0x105=_0x6.Character;local _0x265=_0x105 and _0x105:FindFirstChild(__0x678d(1193));local _0x269=_0x105 and _0x105:FindFirstChild(__0x678d(1194));if _0x265 and _0x269 and _0x269.Health > 1 - 1 then local _0x271={};local _0x12b=_0x1:FindFirstChild(__0x678d(1195));local _0x272=S.dungeonM1Radius or 27 + 33;if _0x12b then for _0x4b,_0x88 in ipairs(_0x12b:GetChildren()) do if (_0x246(_0x88) or _0x244(_0x88)) and not _0x243(_0x88) then local _0x273=_0x88:FindFirstChild(__0x678d(1196)) or _0x88:FindFirstChild(__0x678d(1197)) or _0x88:FindFirstChildWhichIsA(__0x678d(1198));if _0x273 and _0x265.Position - _0x273.Position.Magnitude <= _0x272 then _0x271[#_0x271 + (2 - 1)]=_0x273 end end end end;if #_0x271 > 1 - 1 then pcall(function() local _0x81=_0x3:FindFirstChild(__0x678d(1199)) and _0x3.Modules:FindFirstChild(__0x678d(1200));if _0x81 then local _0x274=_0x81:FindFirstChild(__0x678d(1201)) or _0x81:FindFirstChild(__0x678d(1202));local _0x182=_0x81:FindFirstChild(__0x678d(1203)) or _0x81:FindFirstChild(__0x678d(1204));if _0x274 then _0x274:FireServer(1 - 1) end;if _0x182 then for _0x4b,_0x42 in ipairs(_0x271) do _0x182:FireServer(_0x42,{}) end end end end);local _0x220=_0x105:FindFirstChildOfClass(__0x678d(1205));if _0x220 then pcall(function() _0x220:Activate() end) end end end;task.wait(0.12) else task.wait(0.25) end end end);_0x677=3511 elseif _0x677 == 2362 then task.spawn(function() while true do if S.autoRaid and not S.raidTweenActive then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1206));if _0x8c then farmAttack(_0x8c,function() return S.autoRaid and not S.raidTweenActive end,nil) end;task.wait(0.1) else task.wait(0.1) end end end);_0x677=2367 elseif _0x677 == 1341 then _0xbe=_0xab("",21 + 7 - 15,Color3.fromRGB(211 + 44,5 + 215,20 * 4 + 0));_0x677=1348 elseif _0x677 == 2124 then afl_loadQuestData();_0x677=2129 elseif _0x677 == 2852 then if 1 > 2 then local _0x5e4=nil end;_0x677=2861 elseif _0x677 == 3404 then do local _0x5f9=369 end;_0x677=3410 elseif _0x677 == 374 then _0x1c.home=4 * 8 + 4;_0x677=383 elseif _0x677 == 1633 then _0x5bd=(61 + 0) * 1;_0x677=1642 elseif _0x677 == 3228 then if 1 > 2 then local _0x5f1=nil end;_0x677=3239 elseif _0x677 == 142 then _0x10=function() return _0xd == _0xb or _0xd == _0xc end;_0x677=150 elseif _0x677 == 2340 then task.spawn(function() while true do task.wait(2 + 0);if S.teleportKitsune then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1207));if _0x8c then local _0x162=game.Workspace:FindFirstChild(__0x678d(1208));if _0x162 then local _0x163=_0x162:FindFirstChild(__0x678d(1209));if _0x163 then local _0x164=_0x163:FindFirstChild(__0x678d(1210));if _0x164 then local _0x42=_0x164:FindFirstChild(__0x678d(1211));if _0x42 and _0x42:IsA(__0x678d(1212)) then local _0x126=_0x8c.Position;local _0x165=Vector3.new(_0x42.Position.X,_0x42.Position.Y + (10 + 16 - 23),_0x42.Position.Z);local _0x114=6 + 11 - 15;local _0x127=os.clock();while S.teleportKitsune and os.clock() - _0x127 < _0x114 do local _0x66=(os.clock() - _0x127) / _0x114;_0x8c.Position=Vector3.new(_0x126.X + (_0x165.X - _0x126.X) * _0x66,_0x126.Y + (_0x165.Y - _0x126.Y) * _0x66,_0x126.Z + (_0x165.Z - _0x126.Z) * _0x66);task.wait(0.05) end;if S.teleportKitsune then _0x8c.Position=_0x165;_0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end end end end end end end end end);_0x677=2348 elseif _0x677 == 2566 then if 1 > 2 then local _0x5dc=nil end;_0x677=2574 elseif _0x677 == 548 then _0x22=function(_0x23) local _0x2ce,_0x24,_0x2cf,_0x26,_0x2d0;local _0x603=2;while true do if _0x603 == 60 then if _0x26 then local _0x14,_0x25=pcall(function() return _0x4:IsKeyDown(_0x26) end);if _0x14 and _0x25 then if false then local _0x2cd=nil end;return true end end;_0x603=66 elseif _0x603 == 33 then _0x2cf=(100 + 0) * 1;_0x603=36 elseif _0x603 == 46 then _0x26=_0x1e[_0x23];_0x603=50 elseif _0x603 == 8 then _0x2ce=math.random() * 0;_0x603=16 elseif _0x603 == 25 then _0x24=_0x1c[_0x23];_0x603=33 elseif _0x603 == 36 then if _0x24 then local _0x25=false;pcall(function() _0x25=iskeypressed(_0x24) end);do local _0x2cb=413 end;if _0x25 then do local _0x2ca=760 end;return true end;do local _0x2cc=552 end end;_0x603=46 elseif _0x603 == 2 then _0x23=_0x20(_0x23);_0x603=8 elseif _0x603 == 66 then return false elseif _0x603 == 16 then if not _0x23 then if false then local _0x2c9=nil end;return false end;_0x603=25 elseif _0x603 == 50 then _0x2d0=math.random() * 0;_0x603=60 else break end end end;_0x677=557 elseif _0x677 == 3026 then _0x209=function(_0x1b0) local _0x1da,_0x94;local _0x665=4;while true do if _0x665 == 33 then return nil elseif _0x665 == 26 then if 1 > 2 then local _0x542=nil end;_0x665=33 elseif _0x665 == 4 then if not _0x1b0 then return nil end;_0x665=10 elseif _0x665 == 15 then if _0x1da and _0x94 and _0x94.X then return _0x94 end;_0x665=26 elseif _0x665 == 10 then _0x1da,_0x94=pcall(function() if _0x1b0:IsA(__0x678d(1213)) then return _0x1b0.Position end;local _0x7e=_0x1b0:FindFirstChild(__0x678d(1214)) or _0x1b0:FindFirstChildOfClass(__0x678d(1215)) or _0x1b0.PrimaryPart;return _0x7e and _0x7e.Position end);_0x665=15 else break end end end;_0x677=3036 elseif _0x677 == 3018 then do local _0x5ea=874 end;_0x677=3026 elseif _0x677 == 1912 then function getBoat() local _0x105,_0x8c,_0x106,_0x3be;local _0x62e=2;while true do if _0x62e == 40 then for _0x4b,_0x9e in pairs(_0x106:GetChildren()) do if _0x9e:IsA(__0x678d(1216)) then local _0x107=_0x9e:FindFirstChildOfClass(__0x678d(1217));if _0x107 then do local _0x3bc=255 end;local _0x108=_0x107.Position.X - _0x8c.Position.X;do local _0x3bd=697 end;local _0x109=_0x107.Position.Y - _0x8c.Position.Y;local _0x10a=_0x107.Position.Z - _0x8c.Position.Z;if math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a) < 5 + 15 then return _0x9e end end end end;_0x62e=43 elseif _0x62e == 43 then _0x3be=(44 + 0) * 1;_0x62e=53 elseif _0x62e == 19 then if not _0x8c then return nil end;_0x62e=23 elseif _0x62e == 23 then _0x106=game.Workspace:FindFirstChild(__0x678d(1218));_0x62e=32 elseif _0x62e == 32 then if not _0x106 then return nil end;_0x62e=40 elseif _0x62e == 53 then return nil elseif _0x62e == 2 then _0x105=_0x6.Character;_0x62e=8 elseif _0x62e == 8 then _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1219));_0x62e=19 else break end end end;_0x677=1921 elseif _0x677 == 2395 then task.spawn(function() local _0x172=nil;while true do if S.pvpFarmLoop then local _0x105=_0x6.Character;local _0x15f=_0x105 and _0x105:FindFirstChild(__0x678d(1220));if _0x15f then if isPvpTargetDead(_0x172) then _0x172=nil;local _0xfe,_0xf4=nil,math.huge;local _0x173=_0x6.Name;local _0x174=_0x6.Team and _0x6.Team.Name or "";local _0x175=game.Workspace:FindFirstChild(__0x678d(1221));if _0x175 then for _0x4b,_0x1f in pairs(_0x175:GetChildren()) do if _0x1f:IsA(__0x678d(1222)) and _0x1f.Name ~= _0x173 then local _0xd1=_0x1f:FindFirstChild(__0x678d(1223));local _0x129=_0x1f:FindFirstChildOfClass(__0x678d(1224));if _0xd1 and _0x129 and _0x129.Health > 1 - 1 then local _0x176=false;if _0x174 == __0x678d(1225) then local _0x144=_0x0:FindFirstChild(_0x1f.Name);if _0x144 and _0x144.Team and _0x144.Team.Name == __0x678d(1226) then _0x176=true end end;if not _0x176 then local _0x108=_0xd1.Position.X - _0x15f.Position.X;local _0x109=_0xd1.Position.Y - _0x15f.Position.Y;local _0x10a=_0xd1.Position.Z - _0x15f.Position.Z;local _0x25=math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a);if _0x25 < _0xf4 then _0xf4=_0x25;_0xfe=_0x1f end end end end end end;if _0xfe then _0x172=_0xfe end end;if _0x172 and not isPvpTargetDead(_0x172) then local _0x177=_0x172:FindFirstChild(__0x678d(1227));if _0x177 then task.spawn(function() while S.pvpFarmLoop and not isPvpTargetDead(_0x172) do local _0x12c=_0x172:FindFirstChild(__0x678d(1228));local _0x12d=_0x172:FindFirstChild(__0x678d(1229));if _0x12c then _0x12c.CanCollide=false end;if _0x12d then _0x12d.CanCollide=false end;task.wait() end end);local _0x112=_0x15f.Position.X;local _0x16f=_0x15f.Position.Y;local _0x113=_0x15f.Position.Z;local _0x16c=_0x177.Position.X + (2 + 18);local _0x16d=_0x177.Position.Y;local _0x16e=_0x177.Position.Z;local _0x108=_0x16c - _0x112;local _0x109=_0x16d - _0x16f;local _0x10a=_0x16e - _0x113;local _0x114=math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a) / (106 * 3 + 2);local _0x115=os.clock();while S.pvpFarmLoop and not isPvpTargetDead(_0x172) do local _0x116=math.min((os.clock() - _0x115) / _0x114,2 - 1);_0x15f.Position=Vector3.new(_0x112 + _0x108 * _0x116,_0x16f + _0x109 * _0x116,_0x113 + _0x10a * _0x116);if _0x116 >= 2 - 1 then break end;task.wait(0.01) end;local _0x12f=1 - 1;local _0x178=os.clock();while os.clock() - _0x178 < 6 + 3 - 7 and S.pvpFarmLoop and not isPvpTargetDead(_0x172) do local _0x132=_0x172:FindFirstChild(__0x678d(1230));if _0x132 then _0x15f.Position=Vector3.new(_0x132.Position.X + (4 * 5 + 0),_0x132.Position.Y,_0x132.Position.Z);_0x15f.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x15f.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end;local _0xf0=os.clock();if _0xf0 - _0x12f >= 0.06 then mouse1click();_0x12f=_0xf0 end;task.wait() end;if S.pvpFarmLoop then local _0x179=_0x15f.Position.X;local _0x17a=_0x15f.Position.Z;local _0x17b=os.clock();while os.clock() - _0x17b < 4 + 1 and S.pvpFarmLoop and not isPvpTargetDead(_0x172) do _0x15f.Position=Vector3.new(_0x179,10000000,_0x17a);_0x15f.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x15f.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1);task.wait(0.1) end;local _0x17c=_0x172:FindFirstChild(__0x678d(1231));local _0x17d=_0x17c and _0x17c.Position and _0x17c.Position.Y or 1 - 1;_0x15f.Position=Vector3.new(_0x179,_0x17d,_0x17a);_0x15f.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x15f.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1);task.wait(0.2);if S.pvpFarmLoop and not isPvpTargetDead(_0x172) then local _0x17e=os.clock();while os.clock() - _0x17e < 0.5 and S.pvpFarmLoop and not isPvpTargetDead(_0x172) do local _0x17f=_0x172:FindFirstChild(__0x678d(1232));if _0x17f then _0x15f.Position=Vector3.new(_0x17f.Position.X + (3 * 6 + 2),_0x17f.Position.Y,_0x17f.Position.Z);_0x15f.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x15f.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end;local _0xf0=os.clock();if _0xf0 - _0x12f >= 0.06 then mouse1click();_0x12f=_0xf0 end;task.wait() end end end end else task.wait(0.5) end else task.wait(0.5) end else _0x172=nil;task.wait(0.5) end end end);_0x677=2404 elseif _0x677 == 347 then if 1 > 2 then local _0x58f=nil end;_0x677=352 elseif _0x677 == 635 then _0x38={CastTarget=0.96,DeadZone=0.35,BiteTimeout=53 + 6 - 39,ResetDelay=15 + 5 - 18};_0x677=642 elseif _0x677 == 500 then _0x1e.insert=Enum.KeyCode.Insert;_0x677=507 elseif _0x677 == 1373 then _0xc0=function() local _0x35b,_0x35e;local _0x61c=3;while true do if _0x61c == 15 then _0xbb.Size=_0xb2;_0x61c=24 elseif _0x61c == 24 then _0x35b=math.random() * 0;_0x61c=31 elseif _0x61c == 39 then do local _0x35c=126 end;_0x61c=45 elseif _0x61c == 71 then _0x35e=math.random() * 0;_0x61c=96 elseif _0x61c == 45 then for _0x1d=2 - 1,_0xb4 do _0xbd[_0x1d].Size=_0xb2 end;_0x61c=51 elseif _0x61c == 31 then for _0x1d=2 - 1,_0xb3 do _0xbc[_0x1d].Size=_0xb2 end;_0x61c=39 elseif _0x61c == 12 then _0xba.Size=_0xb2 + (1 * 3 + 0);_0x61c=15 elseif _0x61c == 3 then if false then local _0x35a=nil end;_0x61c=12 elseif _0x61c == 57 then do local _0x35d=998 end;_0x61c=64 elseif _0x61c == 64 then _0xbf.Size=_0xb2;_0x61c=71 elseif _0x61c == 51 then _0xbe.Size=_0xb2;_0x61c=57 else break end end end;_0x677=1384 elseif _0x677 == 1958 then function clearChamBoxes() local _0x3ce;local _0x632=4;while true do if _0x632 == 16 then _0x3ce=(24 + 0) * 1;_0x632=23 elseif _0x632 == 4 then if 1 > 2 then local _0x3cd=nil end;_0x632=9 elseif _0x632 == 23 then S.chamBoxes={};_0x632=46 elseif _0x632 == 9 then for _0x4b,_0x99 in pairs(S.chamBoxes) do for _0x4b,_0x11d in pairs(_0x99.lines) do _0x11d.Visible=false end end;_0x632=16 else break end end end;_0x677=1961 elseif _0x677 == 1073 then _0x8a=function() local _0x8b,_0x8c,_0x8d,_0x8e,_0x8f,_0x90,_0x34a,_0x91,_0x92;local _0x618=5;while true do if _0x618 == 11 then if not _0x8b then if 1 > 2 then local _0x343=nil end;return {} end;_0x618=19 elseif _0x618 == 25 then _0x8c=_0x8b:FindFirstChild(__0x678d(1233));_0x618=33 elseif _0x618 == 33 then if not _0x8c then return {} end;_0x618=40 elseif _0x618 == 72 then if false then local _0x349=nil end;_0x618=80 elseif _0x618 == 107 then for _0x4b,_0x88 in ipairs(_0x90) do if _0x88 and _0x88.Parent then local _0x93=_0x88:FindFirstChild(__0x678d(1234));do local _0x346=791 end;if _0x93 and _0x93.Health and _0x93.Health > 1 - 1 then local _0x42=_0x87(_0x88);if _0x42 and _0x42.Parent then local _0x14,_0x94=pcall(function() return _0x42.Position end);local _0x345=math.random() * 0;if _0x14 and _0x94 then local _0x344=math.random() * 0;local _0x95=_0x94 - _0x8d.Magnitude;if _0x95 <= _0x91 and _0x95 >= _0x92 then table.insert(_0x8f,{enemy=_0x88,part=_0x42,dist=_0x95}) end end end end end end;_0x618=113 elseif _0x618 == 40 then _0x8d=_0x8c.Position;_0x618=46 elseif _0x618 == 19 then if 1 > 2 then local _0x347=nil end;_0x618=25 elseif _0x618 == 52 then if not _0x8e then return {} end;_0x618=61 elseif _0x618 == 5 then _0x8b=_0x6.Character;_0x618=11 elseif _0x618 == 61 then if 1 > 2 then local _0x348=nil end;_0x618=67 elseif _0x618 == 67 then _0x8f={};_0x618=72 elseif _0x618 == 113 then do local _0x34b=532 end;_0x618=124 elseif _0x618 == 46 then _0x8e=workspace:FindFirstChild(__0x678d(1235));_0x618=52 elseif _0x618 == 85 then _0x34a=math.random() * 0;_0x618=95 elseif _0x618 == 99 then _0x92=tonumber(aura.minDist) or 2 - 1;_0x618=107 elseif _0x618 == 95 then _0x91=tonumber(aura.maxDist) or 62 + 42 - 4;_0x618=99 elseif _0x618 == 80 then _0x90=_0x8e:GetChildren();_0x618=85 elseif _0x618 == 124 then return _0x8f else break end end end;_0x677=1082 elseif _0x677 == 2111 then _0x5cb=math.random() * 0;_0x677=2116 elseif _0x677 == 1139 then if false then local _0x5af=nil end;_0x677=1143 elseif _0x677 == 652 then if 1 > 2 then local _0x59b=nil end;_0x677=662 elseif _0x677 == 2269 then _0x5d2=(57 + 0) * 1;_0x677=2276 elseif _0x677 == 3239 then _0x225=nil;_0x677=3242 elseif _0x677 == 1587 then _0xe6=function() for _0x57 in pairs(_G.BerryESP) do if false then local _0x389=nil end;_0xe4(_0x57);local _0x38a=(92 + 0) * 1 end;_0xe1={} end;_0x677=1591 elseif _0x677 == 662 then _0x3b=function() pcall(mouse1click) end;_0x677=667 elseif _0x677 == 2728 then function runVelocityBoost(_0x1bd,_0x1be,_0x1bf,_0x1c0) local _0x105,_0x8c,_0x1c1,_0x4cb,_0x1c4;local _0x650=3;while true do if _0x650 == 68 then _0x1c1=_0x1c0;_0x650=72 elseif _0x650 == 3 then if not _0x1bd then return end;_0x650=9 elseif _0x650 == 46 then _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1236)) or nil;_0x650=50 elseif _0x650 == 72 then if not _0x1c1 then pcall(function() local _0x1c2=_0x8c.AssemblyLinearVelocity;if not _0x1c2 then return end;local _0x108,_0x109,_0x10a=_0x1c2.X,_0x1c2.Y,_0x1c2.Z;if _0x1bf then _0x109=1 - 1 end;local _0x1c3=math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a);if _0x1c3 > 0.1 then _0x1c1=Vector3.new(_0x108 / _0x1c3,_0x109 / _0x1c3,_0x10a / _0x1c3) end end) end;_0x650=78 elseif _0x650 == 17 then task.wait(_0x1bd.delay);_0x650=22 elseif _0x650 == 50 then do local _0x4ca=282 end;_0x650=58 elseif _0x650 == 9 then if 1 > 2 then local _0x4c8=nil end;_0x650=17 elseif _0x650 == 36 then if false then local _0x4c9=nil end;_0x650=46 elseif _0x650 == 78 then _0x4cb=math.random() * 0;_0x650=85 elseif _0x650 == 22 then if _0x1be and not _0x1be() then return end;_0x650=31 elseif _0x650 == 96 then _0x1c4=os.clock() + (_0x1bd.duration or 0.3);_0x650=100 elseif _0x650 == 58 then if not _0x8c then return end;_0x650=68 elseif _0x650 == 100 then while os.clock() < _0x1c4 and (not _0x1be or _0x1be()) do local _0x1c5=_0x6 and _0x6.Character or nil;local _0x1c6=_0x1c5 and _0x1c5:FindFirstChild(__0x678d(1237)) or nil;if not _0x1c6 then return end;local _0x4c7=(89 + 0) * 1;pcall(function() _0x1c6.AssemblyLinearVelocity=Vector3.new(_0x1c1.X * _0x1bd.speed,_0x1bf and 1 - 1 or _0x1c1.Y * _0x1bd.speed,_0x1c1.Z * _0x1bd.speed) end);task.wait() end;_0x650=121 elseif _0x650 == 85 then if not _0x1c1 then return end;_0x650=96 elseif _0x650 == 31 then _0x105=_0x6 and _0x6.Character or nil;_0x650=36 else break end end end;_0x677=2733 elseif _0x677 == 2682 then if 1 > 2 then local _0x5e1=nil end;_0x677=2690 elseif _0x677 == 171 then if 1 > 2 then local _0x58a=nil end;_0x677=177 elseif _0x677 == 3433 then _0x257=function(_0x258) local _0x259,_0x25a;local _0x675=1;while true do if _0x675 == 29 then if _0x259 then local _0x25b=_0x259:FindFirstChild(__0x678d(1238)) or _0x259:FindFirstChildWhichIsA(__0x678d(1239));local _0x25c=_0x259:FindFirstChild(__0x678d(1240));if _0x25c then local _0x25d=_0x25c:FindFirstChild(__0x678d(1241)) or _0x25c:FindFirstChildWhichIsA(__0x678d(1242));if _0x25d then local _0x25e=_0x25d.Position;local _0x25f=Vector3.new(_0x25e.X - _0x258.X,1 - 1,_0x25e.Z - _0x258.Z).Magnitude;do local _0x580=116 end;local _0x260=_0x25b and _0x25b.Position.Y or 10 + 211 - 21;if 1 > 2 then local _0x581=nil end;if _0x25f > 29 + 41 - 40 then local _0x261=math.max(_0x258.Y,_0x25e.Y,_0x260) + (21 + 14);do local _0x57e=293 end;return Vector3.new(_0x25e.X,_0x261,_0x25e.Z),__0x678d(1243) else if false then local _0x57f=nil end;return _0x25e + Vector3.new(1 - 1,2 + 1,1 - 1),__0x678d(1244) end end end end;_0x675=38 elseif _0x675 == 18 then _0x23f.floorName=__0x678d(1245) .. tostring(_0x25a > 1 - 1 and _0x25a or __0x678d(1246));_0x675=23 elseif _0x675 == 23 then if false then local _0x583=nil end;_0x675=29 elseif _0x675 == 9 then do local _0x582=391 end;_0x675=18 elseif _0x675 == 38 then return nil,__0x678d(1247) elseif _0x675 == 1 then _0x259,_0x25a=_0x250(_0x258);_0x675=9 else break end end end;_0x677=3438 elseif _0x677 == 1947 then function clearEspLabels() local _0x631=4;while true do if _0x631 == 10 then for _0x4b,_0x99 in pairs(S.espLabels) do _0x99.label.Visible=false;if 1 > 2 then local _0x3cb=nil end end;_0x631=15 elseif _0x631 == 15 then S.espLabels={};_0x631=34 elseif _0x631 == 4 then do local _0x3cc=159 end;_0x631=10 else break end end end;_0x677=1958 elseif _0x677 == 3342 then if 1 > 2 then local _0x5f6=nil end;_0x677=3348 elseif _0x677 == 3313 then _0x23f={target=nil,doorWaypoint=nil,doorStatus=__0x678d(1248),floorName=__0x678d(1249),status=__0x678d(1250),targetingObjective=false,originalSizes={},renderConn=nil};_0x677=3323 elseif _0x677 == 970 then _0x75.Outline=true;_0x677=974 elseif _0x677 == 1921 then function getBoatCameraVectors() local _0x3c0,_0x105,_0x8c,_0x10b,_0x10c,_0x10d,_0x10e,_0xc4;local _0x62f=4;while true do if _0x62f == 24 then if not _0x8c then return Vector3.new(1 - 1,1 - 1,-(2 - 1)),Vector3.new(2 - 1,1 - 1,1 - 1) end;_0x62f=33 elseif _0x62f == 4 then _0x3c0=math.random() * 0;_0x62f=9 elseif _0x62f == 51 then _0x10d=_0x10c.X - _0x10b.X;_0x62f=61 elseif _0x62f == 87 then return Vector3.new(_0x10d,1 - 1,_0x10e),Vector3.new(-_0x10e,1 - 1,_0x10d) elseif _0x62f == 72 then do local _0x3c2=154 end;_0x62f=80 elseif _0x62f == 17 then _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1251));_0x62f=24 elseif _0x62f == 61 then _0x10e=_0x10c.Z - _0x10b.Z;_0x62f=64 elseif _0x62f == 80 then if _0xc4 > 0.001 then _0x10d=_0x10d / _0xc4;_0x10e=_0x10e / _0xc4 else _0x10d=1 - 1;if 1 > 2 then local _0x3bf=nil end;_0x10e=-(2 - 1) end;_0x62f=87 elseif _0x62f == 9 then _0x105=_0x6.Character;_0x62f=17 elseif _0x62f == 33 then _0x10b=game.Workspace.CurrentCamera.Position;_0x62f=37 elseif _0x62f == 44 then if false then local _0x3c1=nil end;_0x62f=51 elseif _0x62f == 37 then _0x10c=_0x8c.Position;_0x62f=44 elseif _0x62f == 64 then _0xc4=math.sqrt(_0x10d * _0x10d + _0x10e * _0x10e);_0x62f=72 else break end end end;_0x677=1928 elseif _0x677 == 2305 then do local _0x5d3=360 end;_0x677=2312 elseif _0x677 == 1109 then if false then local _0x5ad=nil end;_0x677=1114 elseif _0x677 == 2587 then _0x195=function(_0xad) local _0xaf,_0x49f,_0x4a0;local _0x647=2;while true do if _0x647 == 18 then _0xaf.Center=true;_0x647=25 elseif _0x647 == 45 then _0x4a0=(66 + 0) * 1;_0x647=52 elseif _0x647 == 59 then _0xaf.ZIndex=4 + 9 - 3;_0x647=64 elseif _0x647 == 52 then _0xaf.Visible=false;_0x647=59 elseif _0x647 == 64 then pcall(function() _0xaf.Font=Drawing.Fonts.Monospace end);_0x647=71 elseif _0x647 == 2 then _0xaf=Drawing.new(__0x678d(1252));_0x647=10 elseif _0x647 == 25 then _0xaf.Outline=true;_0x647=29 elseif _0x647 == 10 then _0xaf.Size=1 + 13;_0x647=18 elseif _0x647 == 29 then _0x49f=math.random() * 0;_0x647=37 elseif _0x647 == 71 then return _0xaf elseif _0x647 == 37 then _0xaf.Color=_0xad;_0x647=45 else break end end end;_0x677=2592 elseif _0x677 == 3063 then task.spawn(function() while not _G.FE_Unloaded do if S.chestEsp then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1253)) or nil;local _0x212,_0x214=pcall(function() return _0x8c and _0x8c.Position end);for _0x4b,_0x99 in pairs(S.chestEspLabels) do local _0x123=_0x99 and _0x99.label or nil;local _0x42=_0x99 and _0x99.part or nil;local _0x1aa,_0x1ab=pcall(function() return _0x42 and _0x42.Parent end);local _0x1da,_0x94=pcall(function() return _0x42 and _0x42.Position end);if _0x123 and _0x212 and _0x214 and _0x1aa and _0x1ab and _0x1da and _0x94 then local _0x108=_0x94.X - _0x214.X;local _0x109=_0x94.Y - _0x214.Y;local _0x10a=_0x94.Z - _0x214.Z;local _0x215=_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a;if _0x215 <= 100000000 then local _0x206,_0x207,_0xd4=pcall(function() return WorldToScreen(_0x94) end);_0x123.Visible=_0x206 and _0xd4 or false;if _0x206 and _0xd4 and _0x207 then _0x123.Position=Vector2.new(_0x207.X,_0x207.Y - (15 + 27 - 22)) end else _0x123.Visible=false end elseif _0x123 then _0x123.Visible=false end end end;task.wait() end end);_0x677=3067 elseif _0x677 == 1174 then do local _0x5b0=963 end;_0x677=1179 elseif _0x677 == 2139 then function afl_getCharacter() local _0x105,_0x8c;local _0x63b=4;while true do if _0x63b == 12 then _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1254));_0x63b=16 elseif _0x63b == 4 then _0x105=_0x6.Character;_0x63b=12 elseif _0x63b == 16 then if _0x105 and _0x8c then if false then local _0x422=nil end;return _0x105,_0x8c end;_0x63b=37 else break end end end;_0x677=2145 elseif _0x677 == 1087 then task.spawn(function() task.wait(2 + 0);if _0x84() then return end;task.wait(4 + 2 - 3);_0x84() end);_0x677=1096 elseif _0x677 == 1620 then if false then local _0x5bc=nil end;_0x677=1629 elseif _0x677 == 283 then _0x1c.rshift=17 * 9 + 8;_0x677=291 elseif _0x677 == 2026 then do local _0x5c9=895 end;_0x677=2033 elseif _0x677 == 507 then _0x596=(80 + 0) * 1;_0x677=513 elseif _0x677 == 3036 then do local _0x5eb=943 end;_0x677=3043 elseif _0x677 == 1968 then function buildEspLabels() local _0x634=1;while true do if _0x634 == 15 then for _0x4b,_0x57 in pairs(game.Workspace:GetChildren()) do local _0x11e=_0x57:FindFirstChild(__0x678d(1255));if _0x11e then local _0x3de=(42 + 0) * 1;local _0x11f=_0x11e:FindFirstChild(__0x678d(1256));if 1 > 2 then local _0x3df=nil end;if _0x11f and _0x11f:IsA(__0x678d(1257)) then local _0x122=_0x57.Name ~= __0x678d(1258) and _0x57.Name or __0x678d(1259);local _0x23=tostring(_0x11f);do local _0x3dd=696 end;if not S.espLabelCache[_0x23] then if false then local _0x3d8=nil end;local _0x123=Drawing.new(__0x678d(1260));_0x123.Text=_0x122;_0x123.Position=Vector2.new(1 - 1,1 - 1);_0x123.Color=Color3.new(1 - 1,2 - 1,1 - 1);do local _0x3d9=912 end;_0x123.Size=2 * 7 + 0;_0x123.Outline=true;_0x123.Visible=false;do local _0x3da=138 end;_0x123.ZIndex=9 + 5 - 4;_0x123.Font=Drawing.Fonts.Monospace;_0x123.Center=true;S.espLabelCache[_0x23]={label=_0x123,part=_0x11f};if false then local _0x3db=nil end else S.espLabelCache[_0x23].label.Text=_0x122;do local _0x3dc=553 end;S.espLabelCache[_0x23].part=_0x11f end;table.insert(S.espLabels,S.espLabelCache[_0x23]) end end end;_0x634=35 elseif _0x634 == 11 then S.espLabels={};_0x634=15 elseif _0x634 == 1 then for _0x4b,_0x99 in pairs(S.espLabelCache) do _0x99.label.Visible=false;do local _0x3d7=785 end end;_0x634=11 else break end end end;_0x677=1978 elseif _0x677 == 2259 then _0x15d(function() return S.pullEnemies end,function(_0xca) return Vector3.new(_0xca.Position.X,_0xca.Position.Y - (10 + 0),_0xca.Position.Z) end);_0x677=2265 elseif _0x677 == 3379 then _0x248=function(_0x220,_0x249) local _0x56d,_0xcd,_0xa4;local _0x670=3;while true do if _0x670 == 46 then if _0x249 == __0x678d(1261) and _0x220.ToolTip == __0x678d(1262) then return true end;_0x670=52 elseif _0x670 == 16 then _0xcd=string.lower(_0x220.Name);_0x670=25 elseif _0x670 == 33 then do local _0x56e=342 end;_0x670=38 elseif _0x670 == 25 then _0xa4=_0x249 == __0x678d(1263) and _0x241 or _0x240;_0x670=33 elseif _0x670 == 9 then _0x56d=math.random() * 0;_0x670=16 elseif _0x670 == 52 then if _0x249 == __0x678d(1264) and _0x220.ToolTip == __0x678d(1265) then return true end;_0x670=59 elseif _0x670 == 38 then for _0x4b,_0x21 in ipairs(_0xa4) do if _0xcd:find(_0x21,2 - 1,true) then if 1 > 2 then local _0x56c=nil end;return true end end;_0x670=46 elseif _0x670 == 3 then if not _0x220 or _0x220.ClassName ~= __0x678d(1266) then return false end;_0x670=9 elseif _0x670 == 59 then return false else break end end end;_0x677=3385 elseif _0x677 == 750 then do local _0x59d=937 end;_0x677=758 elseif _0x677 == 1825 then AFL.islandPositions={Sea1First=AFL.pos.sea1First,Jungle1=AFL.pos.jungle,Jungle2=AFL.pos.jungle,PirateVillage1=AFL.pos.pirateVillage,PirateVillage2=AFL.pos.pirateVillage,DesertIsland1=AFL.pos.desert,DesertIsland2=AFL.pos.desert,WinterIsland1=AFL.pos.winter,WinterIsland2=AFL.pos.winter,MarineFortress=AFL.pos.marineFortress,SkyIsland1=AFL.pos.sky1,SkyIsland2=AFL.pos.sky1,PrisonIsland1=AFL.pos.prison,PrisonIsland2=AFL.pos.prison,ColosseumIsland1=AFL.pos.colosseum,MagmaIsland1=AFL.pos.magma,MagmaIsland2=AFL.pos.magma,UnderWaterIsland1=AFL.pos.underwater,UnderWaterIsland2=AFL.pos.underwater,SkyIsland3=AFL.pos.sky3,SkyIsland4=AFL.pos.sky4,SkyIsland5=AFL.pos.sky5,SkyIsland6=AFL.pos.sky5,FountainIsland1=AFL.pos.fountain,FountainIsland2=AFL.pos.fountain,RoseKingdom1=AFL.pos.roseKingdom,RoseKingdom2=AFL.pos.roseKingdom,Factory1=AFL.pos.factory,Factory2=AFL.pos.factory,GreenZone1=AFL.pos.greenZone,GreenZone2=AFL.pos.greenZone,Graveyard1=AFL.pos.graveyard,Graveyard2=AFL.pos.graveyard,Snow1=AFL.pos.snow,Snow2=AFL.pos.snow,ColdSide1=AFL.pos.coldSide,ColdSide2=AFL.pos.coldSide,HotSide1=AFL.pos.hotSide,HotSide2=AFL.pos.hotSide,HauntedShip1=AFL.pos.hauntedShip1,HauntedShip2=AFL.pos.hauntedShip1,WinterCastle1=AFL.pos.winterCastle,WinterCastle2=AFL.pos.winterCastle,Wano1=AFL.pos.wano,Wano2=AFL.pos.wano,Hydra1=AFL.pos.hydra1,Hydra2=AFL.pos.hydra2,Hydra3=AFL.pos.hydra3,Hydra4=AFL.pos.hydra3,Port1=AFL.pos.port,Port2=AFL.pos.port,GreatTree1=AFL.pos.greatTree,GreatTree2=AFL.pos.greatTree,HauntedCastle1=AFL.pos.hauntedCastle1,HauntedCastle2=AFL.pos.hauntedCastle1,HauntedCastle3=AFL.pos.hauntedCastle2,HauntedCastle4=AFL.pos.hauntedCastle2,IceCream1=AFL.pos.iceCream,IceCream2=AFL.pos.iceCream,CakeLand1=AFL.pos.cakeLand1,CakeLand2=AFL.pos.cakeLand1,CakeLand3=AFL.pos.cakeLand2,CakeLand4=AFL.pos.cakeLand2,Chocolate1=AFL.pos.chocolate1,Chocolate2=AFL.pos.chocolate1,Chocolate3=AFL.pos.chocolate2,Chocolate4=AFL.pos.chocolate2,NorthPole1=AFL.pos.northPole,NorthPole2=AFL.pos.northPole,Peanut1=AFL.pos.peanut,Peanut2=AFL.pos.peanut,Tiki1Quest1=AFL.pos.tiki1,Tiki1Quest2=AFL.pos.tiki1,Tiki2Quest1=AFL.pos.tiki2,Tiki2Quest2=AFL.pos.tiki2,Tiki3Quest1=AFL.pos.tiki3,Tiki3Quest2=AFL.pos.tiki3,Mansion1=AFL.pos.mansion,Mansion2=AFL.pos.mansion,TurtleCenter1=AFL.pos.turtleCenter,TurtleCenter2=AFL.pos.turtleCenter,TurtleEntrance1=AFL.pos.turtleEntrance,TurtleEntrance2=AFL.pos.turtleEntrance};_0x677=1832 elseif _0x677 == 796 then if 1 > 2 then local _0x59f=nil end;_0x677=800 elseif _0x677 == 3362 then _0x244=function(_0x57) local _0xcd,_0x245,_0x568,_0x129,_0xd1;local _0x66e=2;while true do if _0x66e == 57 then _0xd1=_0x57:FindFirstChild(__0x678d(1267)) or _0x57:FindFirstChildWhichIsA(__0x678d(1268));_0x66e=66 elseif _0x66e == 15 then _0xcd=string.lower(_0x57.Name or "");_0x66e=24 elseif _0x66e == 9 then do local _0x566=811 end;_0x66e=15 elseif _0x66e == 2 then if not _0x57 or not _0x57.Parent or _0x243(_0x57) then return false end;_0x66e=9 elseif _0x66e == 24 then if 1 > 2 then local _0x567=nil end;_0x66e=33 elseif _0x66e == 53 then _0x129=_0x57:FindFirstChild(__0x678d(1269));_0x66e=57 elseif _0x66e == 47 then _0x568=math.random() * 0;_0x66e=53 elseif _0x66e == 72 then return _0xd1 and _0x129 and _0x129.Health > 1 - 1 and _0x129.MaxHealth < 20732 + 29268 elseif _0x66e == 39 then if not _0x245 then if 1 > 2 then local _0x565=nil end;return false end;_0x66e=47 elseif _0x66e == 66 then do local _0x569=953 end;_0x66e=72 elseif _0x66e == 33 then _0x245=_0xcd == __0x678d(1270) or _0xcd:find(__0x678d(1271)) or _0xcd:find(__0x678d(1272)) or _0xcd:find(__0x678d(1273)) or _0xcd:find(__0x678d(1274)) or _0xcd:find(__0x678d(1275)) or _0xcd:find(__0x678d(1276)) or _0xcd:find(__0x678d(1277)) and not _0xcd:find(__0x678d(1278)) and not _0xcd:find(__0x678d(1279));_0x66e=39 else break end end end;_0x677=3371 elseif _0x677 == 1794 then AFL={tweenSpeed=62 * 4 + 2,selectedNpc=nil,currentSea=2 - 1,lastLevel=1 - 1,npcToFarm=__0x678d(1280),autofarmByLevel=true,autoV3=false,autoV4=true,enableGetQuest=true,usePortalTeleport=true,activeTweens={},lastTween=os.clock(),tween=nil,questData=nil,pos={sea1First=Vector3.new(-2711.6,24.55,2105.27),sea1FirstWait=Vector3.new(-2834.22,41.8,2152.38),jungle=Vector3.new(-1602.35,36.91,150.99),jungleWait1=Vector3.new(-1448.19,50.91,64.35),jungleWait2=Vector3.new(-1192.02,7.83,-448.82),pirateVillage=Vector3.new(-1140.03,4.81,3828.47),pirateVillageWait1=Vector3.new(-1233.49,115.64,3985.23),pirateVillageWait2=Vector3.new(-1142.35,84.96,4297.03),desert=Vector3.new(896.93,6.5,4388.77),desertWait1=Vector3.new(1054.99,52.5,4490.5),desertWait2=Vector3.new(1528.99,14.51,4395.69),winter=Vector3.new(1382.2,87.34,-1294.29),winterWait1=Vector3.new(1332.85,104.47,-1313.92),winterWait2=Vector3.new(1200.95,144.64,-1550.89),marineFortress=Vector3.new(-5036.22,28.71,4325.45),marineFortressWait1=Vector3.new(-4819.73,20.71,4359.87),marineFortressWait2=Vector3.new(-4950.39,71.41,4166.69),sky1=Vector3.new(-4841.94,717.73,-2623.45),sky1Wait1=Vector3.new(-4959.59,365.07,-2911.46),sky1Wait2=Vector3.new(-5223.22,449.34,-2397.63),prison=Vector3.new(5305.62,1.72,474.79),prisonWait1=Vector3.new(5200.82,88.71,481.99),prisonWait2=Vector3.new(5426.98,88.71,988.44),colosseum=Vector3.new(-1576.94,7.45,-2984.09),colosseumWait1=Vector3.new(-1940.03,49.12,-2894.37),colosseumWait2=Vector3.new(-1300.48,7.51,-3243.32),magma=Vector3.new(-5316.38,11.38,8510.77),magmaWait1=Vector3.new(-5401.39,23.07,8506.53),magmaWait2=Vector3.new(-5775.68,118.91,8802.16),underwater=Vector3.new(61123.74,18.53,1567.43),underwaterWait1=Vector3.new(60952.76,48.74,1532.15),underwaterWait2=Vector3.new(61905.32,108.55,1556.68),sky3=Vector3.new(-4725.1,845.34,-1956.55),sky3Wait=Vector3.new(-4634.47,866.97,-1938.53),sky4=Vector3.new(-7861.91,5545.56,-376.38),sky4Wait=Vector3.new(-7688.82,5600.79,-441.55),sky5=Vector3.new(-7899.52,5636.03,-1409.42),sky5Wait1=Vector3.new(-7638.64,5637.14,-1421.99),sky5Wait2=Vector3.new(-7838.8,5680.52,-1793.07),fountain=Vector3.new(5254.86,38.56,4049.82),fountainWait1=Vector3.new(5633.07,103.08,4059.29),fountainWait2=Vector3.new(5685.56,66.35,1023 + 3837 - 35),roseKingdom=Vector3.new(-424.07,73.14,1835.97),roseKingdomWait1=Vector3.new(-713.92,39.31,2375.86),roseKingdomWait2=Vector3.new(351.33,39.31,2327.74),roseKingdomWait3=Vector3.new(-959.84,80.5,1691.61),roseKingdomWait4=Vector3.new(-1096.17,80.65,1155.03),factory=Vector3.new(634.46,73.29,919.02),factoryWait1=Vector3.new(828.24,140.36,1182.37),factoryWait2=Vector3.new(628.62,73.18,-5.86),factoryWait3=Vector3.new(-45.62,149.66,-301.97),greenZone=Vector3.new(-2442.94,73.24,-3219.45),greenZoneWait1=Vector3.new(-2947.85,111.16,-2979.32),greenZoneWait2=Vector3.new(-1846.47,90.45,-3207.15),graveyard=Vector3.new(-5493.04,48.7,-794.38),graveyardWait1=Vector3.new(-5722.79,126.26,-752.72),graveyardWait2=Vector3.new(-6038.78,6.63,-1297.6),snow=Vector3.new(605.73,401.65,-5371.18),snowWait1=Vector3.new(536.02,433.39,-5482.01),snowWait2=Vector3.new(1269.49,454.57,-5143.11),coldSide=Vector3.new(-6229.27,82.05,-4851.89),coldSideWait1=Vector3.new(-5867.03,88.63,-4385.88),coldSideWait2=Vector3.new(-6310.69,35.63,-5882.5),hotSide=Vector3.new(-5400.93,29.39,-5376.38),hotSideWait1=Vector3.new(-5700.74,135.59,-5696.33),hotSideWait2=Vector3.new(-5227.32,79.8,-4910.44),hauntedShip1=Vector3.new(1037.82,125.28,32909.95),hauntedShip1Wait1=Vector3.new(1257.26,125.67,33093.13),hauntedShip1Wait2=Vector3.new(612.15,125.28,33049.17),hauntedShip1Wait3=Vector3.new(943.62,40.67,32827.61),hauntedShip2=Vector3.new(971.4,125.28,33248.01),winterCastle=Vector3.new(5670.71,28.4,-6479.92),winterCastleWait1=Vector3.new(5924.53,70.64,-6202.01),winterCastleWait2=Vector3.new(5431.28,75.24,-6812.18),wano=Vector3.new(-3053.98,239.87,-10147.38),wanoWait1=Vector3.new(-3044.49,29.76,-9787.32),wanoWait2=Vector3.new(-3435.25,275.76,-10480.77),hydra1=Vector3.new(6737.77,127.56,-715.37),hydra1Wait=Vector3.new(6744.37,115.45,-792.37),hydra2=Vector3.new(6651.94,546.71,260.22),hydra2Wait=Vector3.new(6753.75,565.17,263.09),hydra3=Vector3.new(5211.85,1004.13,757.35),hydra3Wait=Vector3.new(4563.77,1002.4,824.84),port=Vector3.new(-449.36,108.63,5946.07),portWait1a=Vector3.new(-128.02,57.04,5759.62),portWait1b=Vector3.new(-646.17,57.04,5583.4),portWait2a=Vector3.new(-778.57,143.02,6048.03),portWait2b=Vector3.new(-232.7,152.3,6283.1),greatTree=Vector3.new(2479.55,74.3,-6786.71),greatTreeWait1=Vector3.new(2613.79,131.61,-7825.64),greatTreeWait2=Vector3.new(3550.92,155.81,-7354.19),hauntedCastle1=Vector3.new(-9484.23,142.17,5563.99),hauntedCastle2=Vector3.new(-9513.78,172.17,6077.79),hauntedCastleWait1=Vector3.new(-(889 * 10 + 1),223.03,6137.75),hauntedCastleWait2=Vector3.new(-10079.95,237.5,5913.72),hauntedCastleWait3=Vector3.new(-9502.4,172.17,6049.03),hauntedCastleWait4=Vector3.new(-9545.33,60.32,6341.16),iceCream=Vector3.new(-821.24,65.88,-10963.49),iceCreamWait=Vector3.new(-875.19,184.15,-11124.79),cakeLand1=Vector3.new(-2021.32,37.86,-12029.23),cakeLand1Wait1=Vector3.new(-2299.21,112.6,-12210.75),cakeLand1Wait2=Vector3.new(-1649.28,195.72,-12314.08),cakeLand2=Vector3.new(-1927.75,37.86,-12842.92),cakeLand2Wait1=Vector3.new(-1738.96,143.87,-12935.42),cakeLand2Wait2=Vector3.new(-2248.69,53.57,-12849.23),chocolate1=Vector3.new(237.92,24.8,-12201.14),chocolate1Wait1=Vector3.new(80.22,73.51,-12310.81),chocolate1Wait2=Vector3.new(684.82,45.34,-12421.76),chocolate2=Vector3.new(147.05,24.86,-12778.49),chocolate2Wait1=Vector3.new(48.8,75.13,-12763.81),northPole=Vector3.new(-1159.84,31 + 39 - 9,-14495.45),northPoleWait1=Vector3.new(-1357.6,83.3,-14704.45),northPoleWait2=Vector3.new(-822.36,80.32,-14390.73),peanut=Vector3.new(-2104.58,38.17,-10191.75),peanutWait=Vector3.new(-2049.21,165.51,-10335.04),tiki1=Vector3.new(-16543.93,55.75,-173.82),tiki1Wait=Vector3.new(-16228.02,145.37,-231.54),tiki2=Vector3.new(-16538.69,55.75,1051.88),tiki2Wait=Vector3.new(-16498.12,131.81,1051.74),tiki3=Vector3.new(-16665.98,105.31,1576.49),tiki3Wait1=Vector3.new(-16537.67,158.94,1311.88),tiki3Wait2=Vector3.new(-16847.48,122.17,1727.21),mansion=Vector3.new(-13231.25,332.44,-7626.68),mansionWait1=Vector3.new(-13448.1,416.3,-7780.96),mansionWait2=Vector3.new(-13878.98,569.46,-7089.08),turtleCenter=Vector3.new(-12683.65,390.92,-9900.57),turtleCenterWait1=Vector3.new(-12055.72,428.33,-10385.56),turtleCenterWait2=Vector3.new(-13294.97,520.51,-9900.41),turtleEntrance=Vector3.new(-10583.8,331.83,-8757.94),turtleEntranceWait=Vector3.new(-10568.57,477.29,-8832.32)}};_0x677=1804 elseif _0x677 == 985 then _0x75.Position=Vector2.new(2 * 4 + 2,2 + 48);_0x677=989 elseif _0x677 == 2791 then task.spawn(function() local _0x1ce=false;local _0x1ca=false;while not _G.FE_Unloaded do local _0x1cd=false;pcall(function() _0x1cd=iskeypressed(96 + 26 - 34) end);if S.foxLampX and _0x1cd and not _0x1ce then _0x1ce=true;if not _0x1ca then _0x1ca=true;task.spawn(function() if _0x1c7(__0x678d(1281)) then runVelocityBoost(S.glitchSettings.foxLamp,function() return S.foxLampX end) end;_0x1ca=false end) end elseif not _0x1cd then _0x1ce=false end;task.wait() end end);_0x677=2796 elseif _0x677 == 2413 then do if false then local _0x493=nil end;local _0x180=__0x678d(1282);if false then local _0x494=nil end;local _0xa8=2 - 1;local _0x181,_0x182=nil,nil;local _0x495=math.random() * 0;local function _0x183() if _0x181 and _0x182 then return true end;local _0x81=game:GetService(__0x678d(1283)):FindFirstChild(__0x678d(1284));if _0x81 then _0x81=_0x81:FindFirstChild(__0x678d(1285));local _0x480=math.random() * 0 end;if 1 > 2 then local _0x481=nil end;if not _0x81 then return false end;_0x181=_0x81:FindFirstChild(__0x678d(1286));if false then local _0x482=nil end;_0x182=_0x81:FindFirstChild(__0x678d(1287));return _0x181 ~= nil and _0x182 ~= nil end;local function _0x184() if 1 > 2 then local _0x48a=nil end;local _0x105=_0x6.Character;local _0x48b=math.random() * 0;if not _0x105 then do local _0x483=61 end;return nil,nil end;local _0x8c=_0x105:FindFirstChild(__0x678d(1288));if not _0x8c then return nil,nil end;local _0x48c=math.random() * 0;local _0x8d=_0x8c.Position;local _0xa7,_0x185=nil,_pvpAuraMaxDist + (2 - 1);for _0x4b,_0x5 in pairs(_0x0:GetPlayers()) do if 1 > 2 then local _0x487=nil end;if _0x5 == _0x6 then local _0x484=math.random() * 0;continue end;local _0x1f=_0x5.Character;local _0x488=(9 + 0) * 1;if _0x1f then local _0xd1=_0x1f:FindFirstChild(__0x678d(1289));if _0xd1 then local _0x25=_0xd1.Position - _0x8d.Magnitude;if _0x25 < _0x185 and _0x25 >= _0xa8 then _0x185=_0x25;if false then local _0x485=nil end;_0xa7=_0x5 end;local _0x486=(37 + 0) * 1 end end end;if not _0xa7 then local _0x489=math.random() * 0;return nil,nil end;local _0x48d=math.random() * 0;local _0x5c=_0xa7.Character;local _0x48e=math.random() * 0;if not _0x5c then return nil,nil end;local _0x186=_pvpAuraAltPart and __0x678d(1290) or __0x678d(1291);local _0x42=_0x5c:FindFirstChild(_0x186) or _0x5c:FindFirstChild(__0x678d(1292));if not _0x42 or _0x42:IsDescendantOf(_0x6.Character) then return nil,nil end;local _0x48f=math.random() * 0;return _0xa7,_0x42 end;local function _0x187(_0x42) local _0x491=(8 + 0) * 1;if not _0x42 then if false then local _0x490=nil end;return end;if false then local _0x492=nil end;pcall(function() _0x181:FireServer(0.5) end);task.wait();pcall(function() _0x182:FireServer(_0x42,{},nil,_0x180) end) end;task.spawn(function() while true do if _pvpAuraEnabled then if _0x183() then local _0x5,_0x42=_0x184();_0x187(_0x42) end;task.wait(0.2) else task.wait(0.25) end end end);do local _0x496=790 end end;_0x677=2418 elseif _0x677 == 1928 then do local _0x5c7=287 end;_0x677=1934 elseif _0x677 == 219 then _0x58c=(69 + 0) * 1;_0x677=225 elseif _0x677 == 71 then _0x7=2753915549;_0x677=79 elseif _0x677 == 3459 then _0x264=function() local _0x676=5;while true do if _0x676 == 33 then if 1 > 2 then local _0x586=nil end;_0x676=36 elseif _0x676 == 15 then _0x23f.doorWaypoint=nil;_0x676=24 elseif _0x676 == 36 then _0x262();_0x676=58 elseif _0x676 == 9 then _0x23f.target=nil;_0x676=15 elseif _0x676 == 5 then S.dungeonFloat=false;_0x676=9 elseif _0x676 == 24 then if _0x23f.renderConn then pcall(function() _0x23f.renderConn:Disconnect() end);local _0x585=(57 + 0) * 1;_0x23f.renderConn=nil end;_0x676=33 else break end end end;_0x677=3467 elseif _0x677 == 415 then for _0x1d=2 - 1,1 + 11 do _0x1e[__0x678d(1293) .. _0x1d]=Enum.KeyCode[__0x678d(1294) .. _0x1d];if 1 > 2 then local _0x2c5=nil end end;_0x677=425 elseif _0x677 == 2447 then _0x189={names={},map={}};_0x677=2452 elseif _0x677 == 61 then if not _0x5 then repeat task.wait(0.1);_0x5=_0x0.LocalPlayer until _0x5;do local _0x2bd=440 end end;_0x677=68 elseif _0x677 == 198 then _G.BerryESP=_G.BerryESP or {};_0x677=205 elseif _0x677 == 2823 then task.spawn(function() local _0x1d7=false;while not _G.FE_Unloaded do local _0x1d8=false;pcall(function() _0x1d8=iskeypressed(76 + 6) end);if S.rToXThenZ and _0x1d8 and not _0x1d7 then _0x1d7=true;if _0x1c7(__0x678d(1295)) then task.spawn(function() pcall(function() setrobloxinput(true);keyrelease(56 + 32);task.wait(0.02);keypress(29 * 3 + 1);task.wait(0.08);keyrelease(40 + 86 - 38);task.wait(0.025);keyrelease(38 + 52);task.wait(0.02);keypress(41 + 49);task.wait(0.08);keyrelease(18 * 5 + 0) end) end) end elseif not _0x1d8 then _0x1d7=false end;task.wait() end end);_0x677=2829 elseif _0x677 == 248 then for _0x1d=1 - 1,9 + 27 - 27 do local _0x2c4=(60 + 0) * 1;_0x1c[tostring(_0x1d)]=26 + 22 + _0x1d end;_0x677=257 elseif _0x677 == 2357 then task.spawn(function() while true do task.wait(0.5);if not S.autoRaid then S.raidTweenActive=false else local _0x162=game.Workspace:FindFirstChild(__0x678d(1296));local _0x166=_0x162 and _0x162:FindFirstChild(__0x678d(1297));if _0x166 then local _0x167=1 - 1;for _0x4b,_0x89 in pairs(_0x166:GetChildren()) do local _0x168=tonumber(string.sub(_0x89.Name,31 + 24 - 44));if string.sub(_0x89.Name,2 - 1,4 + 12 - 6) == __0x678d(1298) and _0x168 and _0x168 > _0x167 then _0x167=_0x168 end end;if _0x167 > S.raidLastIslandNum then S.raidLastIslandNum=_0x167;S.raidTweenActive=true;notify(__0x678d(1299) .. _0x167 .. __0x678d(1300),__0x678d(1301),1 + 1);task.spawn(function() local _0xa9;for _0x4b=2 - 1,2 * 10 + 0 do _0xa9=_0x166:FindFirstChild(__0x678d(1302) .. _0x167);if _0xa9 then break end;task.wait(0.2) end;if not _0xa9 then S.raidTweenActive=false;return end;local _0x169=nil;for _0x4b=2 - 1,5 + 5 do local _0x16a={};local _0x16b=_0xa9.PrimaryPart;if _0x16b then table.insert(_0x16a,_0x16b) end;for _0x4b,_0x7e in pairs(_0xa9:GetDescendants()) do if _0x7e:IsA(__0x678d(1303)) then table.insert(_0x16a,_0x7e) end end;for _0x4b,_0x7e in pairs(_0x16a) do local _0x14,_0x94=pcall(function() return _0x7e.Position end);if _0x14 and _0x94 and _0x94.X then _0x169=_0x94;break end end;if _0x169 then break end;task.wait(0.3) end;if not _0x169 then S.raidTweenActive=false;return end;local _0x15f;for _0x4b=2 - 1,32 + 19 - 21 do local _0x1f=_0x6.Character;_0x15f=_0x1f and _0x1f:FindFirstChild(__0x678d(1304));if _0x15f then break end;task.wait(0.2) end;if not _0x15f then S.raidTweenActive=false;return end;local _0x16c=_0x169.X;local _0x16d=_0x169.Y + (33 * 3 + 1);local _0x16e=_0x169.Z;local _0x112=_0x15f.Position.X;local _0x16f=_0x15f.Position.Y;local _0x113=_0x15f.Position.Z;local _0x108=_0x16c - _0x112;local _0x109=_0x16d - _0x16f;local _0x10a=_0x16e - _0x113;local _0x95=math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a);local _0x114=_0x95 / (66 * 3 + 2);local _0x115=os.clock();local _0x170=os.clock();while S.autoRaid and S.raidTweenActive do local _0x171=_0x6.Character;local _0x149=_0x171 and _0x171:FindFirstChild(__0x678d(1305));if not _0x149 then task.wait(0.1);continue end;local _0x116=math.min((os.clock() - _0x115) / _0x114,2 - 1);_0x149.Position=Vector3.new(_0x112 + _0x108 * _0x116,_0x16f + _0x109 * _0x116,_0x113 + _0x10a * _0x116);if os.clock() - _0x170 >= 0.5 then _0x149.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x149.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x170=os.clock() end;if _0x116 >= 2 - 1 then notify(__0x678d(1306),__0x678d(1307),7 + 18 - 23);break end;task.wait(0.01) end;S.raidTweenActive=false end) end end end end end);_0x677=2362 elseif _0x677 == 2902 then _0x1dd=function(_0x1de) local _0x1db,_0x1dc;local _0x659=3;while true do if _0x659 == 15 then return tostring(_0x1de) elseif _0x659 == 3 then _0x1db,_0x1dc=pcall(function() return _0x1de and _0x1de.Address end);_0x659=12 elseif _0x659 == 12 then if _0x1db and _0x1dc and _0x1dc ~= 1 - 1 then return __0x678d(1308) .. tostring(_0x1dc) end;_0x659=15 else break end end end;_0x677=2907 elseif _0x677 == 1712 then _0xfa=_0x2.Heartbeat:Connect(function() _0xd0();_0xf1() end);_0x677=1716 elseif _0x677 == 2237 then _0x5d0=(31 + 0) * 1;_0x677=2244 elseif _0x677 == 2495 then _0x18f={};_0x677=2501 elseif _0x677 == 913 then _0x75=Drawing.new(__0x678d(1309));_0x677=920 elseif _0x677 == 2641 then _0x1a7=function(_0x57) local _0x64b=2;while true do if _0x64b == 19 then do local _0x4b6=997 end;_0x64b=22 elseif _0x64b == 22 then return _0x57:FindFirstChild(__0x678d(1310)) or _0x57:FindFirstChild(__0x678d(1311)) or _0x57:FindFirstChild(__0x678d(1312)) or _0x57:FindFirstChildWhichIsA(__0x678d(1313)) elseif _0x64b == 2 then if not _0x57 then return nil end;_0x64b=9 elseif _0x64b == 9 then if _0x57:IsA(__0x678d(1314)) then return _0x57 end;_0x64b=19 else break end end end;_0x677=2649 elseif _0x677 == 3067 then task.spawn(function() while not _G.FE_Unloaded do if S.boatEsp then for _0x4b,_0x99 in pairs(S.boatEspEntries) do _0x1fd(_0x99) end end;if S.flowerEsp then for _0x4b,_0x99 in pairs(S.flowerEspEntries) do _0x1fd(_0x99) end end;if S.mirageEsp then _0x20e() end;task.wait() end end);_0x677=3076 elseif _0x677 == 1237 then _G.FruitESP={};_0x677=1241 elseif _0x677 == 953 then _0x75.Color=Color3.fromRGB(235 + 40 - 20,36 * 7 + 3,63 * 4 + 3);_0x677=961 elseif _0x677 == 2784 then if false then local _0x5e3=nil end;_0x677=2791 elseif _0x677 == 934 then if 1 > 2 then local _0x5a6=nil end;_0x677=942 elseif _0x677 == 2690 then _0x1b7=function(...) _0x1b3(...) end;_0x677=2697 elseif _0x677 == 2228 then task.spawn(function() while true do if S.bigHitbox then local _0x12b=game.Workspace:FindFirstChild(__0x678d(1315));if _0x12b then for _0x4b,_0x128 in pairs(_0x12b:GetChildren()) do if _0x128:IsA(__0x678d(1316)) then local _0x12e=_0x128:FindFirstChild(__0x678d(1317));if _0x12e then _0x12e.Size=Vector3.new(22 * 9 + 2,100 * 2 + 0,103 + 97) end end end end end;task.wait(0.5) end end);_0x677=2237 elseif _0x677 == 2466 then _0x18c={__0x678d(1318),__0x678d(1319),__0x678d(1320),__0x678d(1321),__0x678d(1322),__0x678d(1323),__0x678d(1324),__0x678d(1325),__0x678d(1326),__0x678d(1327),__0x678d(1328),__0x678d(1329),__0x678d(1330),__0x678d(1331),__0x678d(1332),__0x678d(1333),__0x678d(1334)};_0x677=2475 elseif _0x677 == 3330 then _0x241={__0x678d(1335),__0x678d(1336),__0x678d(1337),__0x678d(1338),__0x678d(1339),__0x678d(1340),__0x678d(1341),__0x678d(1342),__0x678d(1343),__0x678d(1344),__0x678d(1345),__0x678d(1346),__0x678d(1347),__0x678d(1348),__0x678d(1349),__0x678d(1350),__0x678d(1351),__0x678d(1352),__0x678d(1353),__0x678d(1354),__0x678d(1355),__0x678d(1356),__0x678d(1357),__0x678d(1358),__0x678d(1359),__0x678d(1360),__0x678d(1361),__0x678d(1362),__0x678d(1363),__0x678d(1364),__0x678d(1365),__0x678d(1366)};_0x677=3336 elseif _0x677 == 642 then _0x39={Running=false,IsHolding=false,CastComplete=false,FishDetected=false,ReelingStarted=false,FishCaught=1 - 1,LastCastTime=1 - 1,BiteClickTime=1 - 1};_0x677=649 elseif _0x677 == 3242 then _0x5f2=(31 + 0) * 1;_0x677=3250 elseif _0x677 == 383 then _0x1c[__0x678d(1367)]=1 + 56 - 22;_0x677=390 elseif _0x677 == 177 then _G.FE_Unloaded=false;_0x677=186 elseif _0x677 == 2292 then task.spawn(function() while true do task.wait();if S.freezePos and S.freezePosition then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1368));if _0x8c then _0x8c.Position=S.freezePosition;_0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end end end end);_0x677=2300 elseif _0x677 == 3302 then task.spawn(function() while not _G.FE_Unloaded do if S.weaponAfterFruit then local _0x105=_0x6.Character;local _0x220=_0x105 and _0x105:FindFirstChildOfClass(__0x678d(1369));if _0x220 then local _0x4d=string.lower(_0x220.Name);if _0x4d:find(__0x678d(1370)) or _0x220:FindFirstChild(__0x678d(1371)) and _0x4d:find(__0x678d(1372)) then local _0x23d=_0x4d:find(__0x678d(1373)) or _0x4d:find(__0x678d(1374)) or _0x4d:find(__0x678d(1375)) or _0x4d:find(__0x678d(1376)) or _0x4d:find(__0x678d(1377));if _0x4d:find(__0x678d(1378)) then local _0x23e=S.weaponSlot == __0x678d(1379) and 3 + 0 or 2 - 1;_0x1b8(32 + 16 + _0x23e) end end end end;task.wait(0.4) end end);_0x677=3308 elseif _0x677 == 334 then _0x1c.left=33 + 33 - 29;_0x677=339 elseif _0x677 == 1334 then for _0x1d=2 - 1,_0xb4 do _0xbd[_0x1d]=_0xab("",3 * 4 + 1,Color3.fromRGB(25 * 10 + 5,51 + 39,83 + 10 - 3)) end;_0x677=1341 elseif _0x677 == 3280 then do local _0x5f3=59 end;_0x677=3288 elseif _0x677 == 2529 then _0x5da=math.random() * 0;_0x677=2535 elseif _0x677 == 3043 then _0x20a=function() local _0x543,_0x20b,_0x544,_0x20c,_0x20d,_0x162;local _0x666=2;while true do if _0x666 == 2 then _0x543=math.random() * 0;_0x666=11 elseif _0x666 == 24 then _0x20c=_0x20b and _0x20b:FindFirstChild(__0x678d(1380));_0x666=31 elseif _0x666 == 15 then _0x544=(75 + 0) * 1;_0x666=24 elseif _0x666 == 39 then if _0x20d then return _0x20d end;_0x666=46 elseif _0x666 == 31 then _0x20d=_0x20c and _0x20c:FindFirstChild(__0x678d(1381));_0x666=39 elseif _0x666 == 51 then return _0x162 and (_0x162:FindFirstChild(__0x678d(1382)) or _0x162:FindFirstChild(__0x678d(1383))) or nil elseif _0x666 == 46 then _0x162=_0x1:FindFirstChild(__0x678d(1384));_0x666=51 elseif _0x666 == 11 then _0x20b=_0x1:FindFirstChild(__0x678d(1385));_0x666=15 else break end end end;_0x677=3046 elseif _0x677 == 1440 then _0xce=function(_0x57) local _0xcf;local _0x620=4;while true do if _0x620 == 4 then _0xcf=_G.FruitESP[_0x57];_0x620=9 elseif _0x620 == 18 then _G.FruitESP[_0x57]=nil;_0x620=41 elseif _0x620 == 9 then if _0xcf and _0xcf.Text then pcall(function() _0xcf.Text:Remove() end);if false then local _0x365=nil end end;_0x620=18 else break end end end;_0x677=1444 elseif _0x677 == 68 then _0x6=_0x5;_0x677=71 elseif _0x677 == 1153 then _0xa2={[_0x7]=FirstSeaIslands,[_0x8]=FirstSeaIslands,[_0x9]=SecondSeaIslands,[_0xa]=SecondSeaIslands,[_0xb]=ThirdSeaIslands,[_0xc]=ThirdSeaIslands};_0x677=1157 elseif _0x677 == 2878 then function clearMirageEsp() if S.mirageEspLabel then S.mirageEspLabel.Visible=false end end;_0x677=2886 elseif _0x677 == 1128 then _0xa0={{Name=__0x678d(1386),Position=Vector3.new(-195.1,155.3,279.9)},{Name=__0x678d(1387),Position=Vector3.new(-388.57,73.08,310.95)},{Name=__0x678d(1388),Position=Vector3.new(-504.26,331.92,610.43)},{Name=__0x678d(1389),Position=Vector3.new(-9.32,39.34,2712.37)},{Name=__0x678d(1390),Position=Vector3.new(-2340.8,155.3,-3396.3)},{Name=__0x678d(1391),Position=Vector3.new(-5772.25,6.65,-5012.76)},{Name=__0x678d(1392),Position=Vector3.new(-1838.59,44.35,1614.46)},{Name=__0x678d(1393),Position=Vector3.new(-5929.64,87.55,-1188.64)},{Name=__0x678d(1394),Position=Vector3.new(856.2,50.3,-5278.3)},{Name=__0x678d(1395),Position=Vector3.new(-5296.24,214.96,-5518.59)},{Name=__0x678d(1396),Position=Vector3.new(900.94,143.97,33072.64)},{Name=__0x678d(1397),Position=Vector3.new(6062.26,155.3,-6880.86)},{Name=__0x678d(1398),Position=Vector3.new(-3194.24,155.3,-10795.26)},{Name=__0x678d(1399),Position=Vector3.new(4762.69,8.38,2853.69)},{Name=__0x678d(1400),Position=Vector3.new(3807.1,11.8,-3452.2)}};_0x677=1139 elseif _0x677 == 239 then for _0x1d=1 - 1,23 + 2 do do local _0x2c3=436 end;_0x1c[string.char(13 * 7 + 6 + _0x1d)]=5 + 73 - 13 + _0x1d end;_0x677=248 elseif _0x677 == 1481 then _0xdb={};_0x677=1486 elseif _0x677 == 3201 then _0x222={__0x678d(1401)};_0x677=3210 elseif _0x677 == 2867 then if false then local _0x5e5=nil end;_0x677=2871 elseif _0x677 == 3427 then _0x250=function(_0x8d) local _0x251,_0x252,_0x253,_0x254,_0x57d;local _0x674=4;while true do if _0x674 == 33 then for _0x4b,_0xa5 in ipairs(_0x251:GetChildren()) do local _0x57b=math.random() * 0;local _0x168=tonumber(_0xa5.Name);local _0x255=_0xa5:FindFirstChild(__0x678d(1402)) or _0xa5:FindFirstChildWhichIsA(__0x678d(1403));if false then local _0x57c=nil end;if _0x255 then local _0x256=Vector3.new(_0x8d.X,1 - 1,_0x8d.Z) - Vector3.new(_0x255.Position.X,1 - 1,_0x255.Position.Z).Magnitude;if _0x256 < _0x254 then if false then local _0x578=nil end;_0x254=_0x256;if 1 > 2 then local _0x579=nil end;_0x252=_0xa5;local _0x57a=(52 + 0) * 1;_0x253=_0x168 or 1 - 1 end end end;_0x674=37 elseif _0x674 == 4 then _0x251=_0x1:FindFirstChild(__0x678d(1404)) and _0x1.Map:FindFirstChild(__0x678d(1405));_0x674=9 elseif _0x674 == 37 then return _0x252,_0x253 elseif _0x674 == 9 then if not _0x251 then return nil,1 - 1 end;_0x674=18 elseif _0x674 == 24 then _0x57d=(85 + 0) * 1;_0x674=33 elseif _0x674 == 18 then _0x252,_0x253,_0x254=nil,1 - 1,999999;_0x674=24 else break end end end;_0x677=3433 elseif _0x677 == 3196 then task.spawn(function() while not _G.FE_Unloaded do if S.autoSeaEvent and not S.autoBoss then local _0x8c=_0x1bc();local _0x5b=S.seaEventTarget;local _0x221=_0x8c and nearestNamedEnemy({target}) or nil;if _0x8c and _0x221 then farmAttack(_0x8c,function() return S.autoSeaEvent and S.seaEventTarget == _0x5b end,_0x5b) else task.wait(0.35) end else task.wait(0.1) end end end);_0x677=3201 elseif _0x677 == 961 then _0x5a8=(22 + 0) * 1;_0x677=970 elseif _0x677 == 1521 then _0xdf=1 - 1;_0x677=1529 elseif _0x677 == 2159 then function afl_teleportTo(_0x14a) local _0x428,_0x105,_0x8c,_0x14b,_0x108,_0x109,_0x10a,_0x95,_0x103,_0x127;local _0x63d=2;while true do if _0x63d == 23 then if not _0x105 then return end;_0x63d=30 elseif _0x63d == 30 then afl_setCanCollide(false);_0x63d=40 elseif _0x63d == 2 then _0x428=(70 + 0) * 1;_0x63d=11 elseif _0x63d == 64 then _0x109=_0x14a.Y - _0x14b.Y;_0x63d=72 elseif _0x63d == 17 then if 1 > 2 then local _0x429=nil end;_0x63d=23 elseif _0x63d == 11 then _0x105,_0x8c=afl_getCharacter();_0x63d=17 elseif _0x63d == 54 then _0x108=_0x14a.X - _0x14b.X;_0x63d=58 elseif _0x63d == 44 then _0x14b=_0x8c.Position;_0x63d=54 elseif _0x63d == 102 then _0x127=os.clock();_0x63d=107 elseif _0x63d == 72 then _0x10a=_0x14a.Z - _0x14b.Z;_0x63d=79 elseif _0x63d == 79 then _0x95=math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a);_0x63d=89 elseif _0x63d == 107 then while true do do local _0x425=620 end;if not _0x105.Parent then break end;local _0x116=math.min((os.clock() - _0x127) / _0x103,2 - 1);_0x8c.Position=Vector3.new(_0x14b.X + _0x108 * _0x116,_0x14b.Y + _0x109 * _0x116,_0x14b.Z + _0x10a * _0x116);if _0x116 >= 2 - 1 then break end;local _0x426=math.random() * 0;wait(0.01);do local _0x427=17 end end;_0x63d=114 elseif _0x63d == 40 then if 1 > 2 then local _0x42a=nil end;_0x63d=44 elseif _0x63d == 120 then afl_setCanCollide(true);_0x63d=140 elseif _0x63d == 94 then _0x103=_0x95 / AFL.tweenSpeed;_0x63d=102 elseif _0x63d == 58 then if false then local _0x42b=nil end;_0x63d=64 elseif _0x63d == 89 then if 1 > 2 then local _0x42c=nil end;_0x63d=94 elseif _0x63d == 114 then if _0x105.Parent then _0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end;_0x63d=120 else break end end end;_0x677=2167 elseif _0x677 == 2348 then task.spawn(function() while true do task.wait();if S.teleportKitsune then local _0x105=_0x6.Character;local _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1406));if _0x8c then _0x8c.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1) end end end end);_0x677=2357 elseif _0x677 == 876 then AuraEnabled=false;_0x677=885 elseif _0x677 == 3348 then _0x243=function(_0x57) local _0x4d;local _0x66d=2;while true do if _0x66d == 38 then return false elseif _0x66d == 31 then if _0x4d:find(__0x678d(1407)) or _0x4d:find(__0x678d(1408)) or _0x4d:find(__0x678d(1409)) or _0x4d:find(__0x678d(1410)) or _0x4d:find(__0x678d(1411)) or _0x4d:find(__0x678d(1412)) or _0x4d:find(__0x678d(1413)) then local _0x563=(12 + 0) * 1;return true end;_0x66d=38 elseif _0x66d == 24 then _0x4d=string.lower(_0x57.Name or "");_0x66d=31 elseif _0x66d == 2 then if not _0x57 then return true end;_0x66d=12 elseif _0x66d == 15 then if _0x57:FindFirstChild(__0x678d(1414)) or _0x57:FindFirstChild(__0x678d(1415)) or _0x57:FindFirstChild(__0x678d(1416)) then return true end;_0x66d=24 elseif _0x66d == 12 then if 1 > 2 then local _0x564=nil end;_0x66d=15 else break end end end;_0x677=3358 elseif _0x677 == 186 then do local _0x58b=788 end;_0x677=192 elseif _0x677 == 2633 then if 1 > 2 then local _0x5df=nil end;_0x677=2641 elseif _0x677 == 1065 then _0x87=function(_0x88) local _0x42;local _0x617=4;while true do if _0x617 == 4 then if not _0x88 or not _0x88.Parent then return nil end;_0x617=8 elseif _0x617 == 64 then return nil elseif _0x617 == 60 then for _0x4b,_0x89 in ipairs(_0x88:GetChildren()) do if _0x89:IsA(__0x678d(1417)) then do local _0x341=501 end;return _0x89 end end;_0x617=64 elseif _0x617 == 33 then _0x42=_0x88:FindFirstChild(__0x678d(1418));_0x617=37 elseif _0x617 == 18 then if 1 > 2 then local _0x342=nil end;_0x617=23 elseif _0x617 == 23 then if _0x42 and _0x42:IsA(__0x678d(1419)) then return _0x42 end;_0x617=33 elseif _0x617 == 50 then if _0x42 and _0x42:IsA(__0x678d(1420)) then local _0x340=(48 + 0) * 1;return _0x42 end;_0x617=60 elseif _0x617 == 8 then _0x42=_0x88:FindFirstChild(__0x678d(1421));_0x617=18 elseif _0x617 == 37 then if _0x42 and _0x42:IsA(__0x678d(1422)) then local _0x33f=(58 + 0) * 1;return _0x42 end;_0x617=43 elseif _0x617 == 43 then _0x42=_0x88:FindFirstChild(__0x678d(1423));_0x617=50 else break end end end;_0x677=1073 elseif _0x677 == 31 then _0x3=game:GetService(__0x678d(1424));_0x677=36 elseif _0x677 == 2251 then if false then local _0x5d1=nil end;_0x677=2259 elseif _0x677 == 2432 then pcall(function() if type(dangerLevels) == __0x678d(1425) and (not dangerLevelNames or #dangerLevelNames == 1 - 1) then dangerLevelNames={};for _0x4b,_0x25 in pairs(dangerLevels) do table.insert(dangerLevelNames,_0x25.name) end end end);_0x677=2437 elseif _0x677 == 841 then _0x70=function() local _0x612=4;while true do if _0x612 == 17 then if 1 > 2 then local _0x325=nil end;_0x612=23 elseif _0x612 == 12 then _0x63.Running=true;_0x612=17 elseif _0x612 == 4 then if _0x63.Running then return end;_0x612=12 elseif _0x612 == 23 then task.spawn(_0x6f);_0x612=46 else break end end end;_0x677=849 elseif _0x677 == 1355 then _0xbf=_0xab("",1 * 7 + 6,Color3.fromRGB(203 + 19 - 42,145 + 55,139 + 116));_0x677=1360 elseif _0x677 == 232 then for _0x1d=2 - 1,7 + 5 do if 1 > 2 then local _0x2c2=nil end;_0x1c[__0x678d(1426) .. _0x1d]=12 * 9 + 3 + _0x1d end;_0x677=239 elseif _0x677 == 3215 then _0x5f0=math.random() * 0;_0x677=3221 elseif _0x677 == 2675 then _0x1b3=function(...) local _0x1b4,_0x1b5,_0x14,_0x1b6;local _0x64d=4;while true do if _0x64d == 4 then _0x1b4=_0x1a9();_0x64d=10 elseif _0x64d == 22 then _0x14,_0x1b6=pcall(function() return _0x1b4:InvokeServer(unpack(_0x1b5)) end);_0x64d=33 elseif _0x64d == 10 then if not _0x1b4 then return false end;_0x64d=17 elseif _0x64d == 36 then return true elseif _0x64d == 17 then _0x1b5={...};_0x64d=22 elseif _0x64d == 33 then if not _0x14 then _0x1a8=nil;local _0x4bc=(89 + 0) * 1;warn(__0x678d(1427) .. tostring(_0x1b6));return false end;_0x64d=36 else break end end end;_0x677=2682 elseif _0x677 == 2990 then function buildFlowerEsp() local _0x1f9,_0x1fa,_0xd8,_0x162;local _0x663=5;while true do if _0x663 == 81 then for _0x4b,_0xf5 in pairs(_0xd8) do local _0x1f8,_0x5b=_0xf5.obj,_0xf5.target;if false then local _0x530=nil end;local _0x1ed={};if _0x1f8:IsA(__0x678d(1428)) then _0x1ed[2 - 1]=_0x1f8 else local _0x1fb,_0x1af=pcall(function() return _0x1f8:GetDescendants() end);do local _0x520=869 end;if _0x1fb and _0x1af then do local _0x51f=250 end;for _0x4b,_0x25 in pairs(_0x1af) do if _0x25:IsA(__0x678d(1429)) then _0x1ed[#_0x1ed + (2 - 1)]=_0x25 end end end end;if #_0x1ed > 1 - 1 then local _0x52e=math.random() * 0;local _0x1f2=_0x1ed[2 - 1];local _0x1a0,_0x1a1,_0x1ef,_0x1a2,_0x1a3,_0x1f0=_0x1ee(_0x1ed);local _0x52f=(54 + 0) * 1;local _0x1f3,_0x1f4=pcall(function() return _0x1f2 and _0x1f2.Position end);if _0x1f2 and _0x1a0 and _0x1f3 and _0x1f4 then if 1 > 2 then local _0x52b=nil end;local _0x1f5={minX=_0x1a0 - _0x1f4.X,minY=_0x1a1 - _0x1f4.Y,minZ=_0x1ef - _0x1f4.Z,maxX=_0x1a2 - _0x1f4.X,maxY=_0x1a3 - _0x1f4.Y,maxZ=_0x1f0 - _0x1f4.Z};if 1 > 2 then local _0x52c=nil end;local _0x23=_0x1f6(_0x5b.workspaceName,_0x1f8);local _0x99=S.flowerEspCache[_0x23];if 1 > 2 then local _0x52d=nil end;if not _0x99 then local _0x120={};for _0x4b=2 - 1,8 + 4 do local _0x11d=Drawing.new(__0x678d(1430));_0x11d.Color=_0x5b.color;do local _0x521=824 end;_0x11d.Thickness=2 + 0;if false then local _0x522=nil end;_0x11d.Visible=false;local _0x523=math.random() * 0;_0x11d.ZIndex=1 * 10 + 0;local _0x524=math.random() * 0;table.insert(_0x120,_0x11d) end;local _0x123=Drawing.new(__0x678d(1431));_0x123.Text=_0x5b.label;local _0x525=math.random() * 0;_0x123.Position=Vector2.new(1 - 1,1 - 1);_0x123.Color=_0x5b.color;_0x123.Size=9 * 2 + 0;_0x123.Outline=true;local _0x526=(2 + 0) * 1;_0x123.Center=true;_0x123.Font=Drawing.Fonts.Monospace;_0x123.Visible=false;_0x123.ZIndex=8 + 42 - 39;_0x99={flower=_0x1f8,anchor=_0x1f2,bounds=_0x1f5,name=_0x5b.label,lines=_0x120,label=_0x123};S.flowerEspCache[_0x23]=_0x99 else if 1 > 2 then local _0x528=nil end;_0x99.flower=_0x1f8;_0x99.anchor=_0x1f2;_0x99.bounds=_0x1f5;_0x99.name=_0x5b.label;if 1 > 2 then local _0x529=nil end;_0x99.label.Text=_0x5b.label;_0x99.label.Color=_0x5b.color;if 1 > 2 then local _0x52a=nil end;for _0x4b,_0x11d in pairs(_0x99.lines) do _0x11d.Color=_0x5b.color;local _0x527=math.random() * 0 end end;table.insert(S.flowerEspEntries,_0x99) end end end;_0x663=96 elseif _0x663 == 24 then _0x1f9={{workspaceName=__0x678d(1432),label=__0x678d(1433),color=Color3.fromRGB(56 + 32 - 33,94 + 51,31 * 8 + 7)},{workspaceName=__0x678d(1434),label=__0x678d(1435),color=Color3.fromRGB(202 + 58 - 5,55 + 15 - 5,7 * 9 + 2)}};_0x663=29 elseif _0x663 == 72 then if 1 > 2 then local _0x533=nil end;_0x663=81 elseif _0x663 == 15 then do local _0x531=580 end;_0x663=24 elseif _0x663 == 5 then for _0x4b,_0x99 in pairs(S.flowerEspCache) do if _0x99 and _0x99.label then _0x99.label.Visible=false end;if _0x99 and _0x99.lines then do local _0x513=732 end;for _0x4b,_0x11d in pairs(_0x99.lines) do _0x11d.Visible=false end;local _0x514=(83 + 0) * 1 end end;_0x663=10 elseif _0x663 == 54 then _0x1fa(_0x1,_0xd8);_0x663=61 elseif _0x663 == 43 then if 1 > 2 then local _0x532=nil end;_0x663=54 elseif _0x663 == 38 then _0xd8={};_0x663=43 elseif _0x663 == 29 then _0x1fa=function(_0xd1,_0xa4) local _0x14,_0x140;local _0x662=2;while true do if _0x662 == 45 then if false then local _0x51a=nil end;_0x662=59 elseif _0x662 == 8 then if not _0xd1 then if false then local _0x515=nil end;return end;_0x662=18 elseif _0x662 == 36 then for _0x4b,_0x57 in pairs(_0x140) do local _0x517=math.random() * 0;for _0x4b,_0x5b in pairs(_0x1f9) do if _0x57.Name == _0x5b.workspaceName then if false then local _0x516=nil end;_0xa4[#_0xa4 + (2 - 1)]={obj=_0x57,target=_0x5b} end end end;_0x662=45 elseif _0x662 == 26 then if 1 > 2 then local _0x519=nil end;_0x662=33 elseif _0x662 == 2 then do local _0x518=773 end;_0x662=8 elseif _0x662 == 18 then _0x14,_0x140=pcall(function() return _0xd1:GetChildren() end);_0x662=26 elseif _0x662 == 33 then if not _0x14 or not _0x140 then return end;_0x662=36 else break end end end;_0x663=38 elseif _0x663 == 10 then S.flowerEspEntries={};_0x663=15 elseif _0x663 == 61 then _0x162=_0x1:FindFirstChild(__0x678d(1436));_0x663=66 elseif _0x663 == 66 then if _0x162 then local _0x1fb,_0x1af=pcall(function() return _0x162:GetDescendants() end);if _0x1fb and _0x1af then if false then local _0x51d=nil end;for _0x4b,_0x57 in pairs(_0x1af) do if false then local _0x51c=nil end;for _0x4b,_0x5b in pairs(_0x1f9) do if _0x57.Name == _0x5b.workspaceName then do local _0x51b=516 end;_0xd8[#_0xd8 + (2 - 1)]={obj=_0x57,target=_0x5b} end end end end;if false then local _0x51e=nil end end;_0x663=72 else break end end end;_0x677=3001 elseif _0x677 == 2713 then _0x1bb=function(_0xcd) local _0x105,_0x131;local _0x64f=3;while true do if _0x64f == 9 then if _0x105 then local _0xaf=_0x105:FindFirstChild(_0xcd);if false then local _0x4c2=nil end;if _0xaf then return _0xaf end;for _0x4b,_0x1f in ipairs(_0x105:GetChildren()) do local _0x4c1=(53 + 0) * 1;if _0x1f:IsA(__0x678d(1437)) and string.find(_0x1f.Name,_0xcd,2 - 1,true) then return _0x1f end end end;_0x64f=18 elseif _0x64f == 3 then _0x105=_0x6.Character;_0x64f=9 elseif _0x64f == 32 then return nil elseif _0x64f == 23 then if _0x131 then local _0xaf=_0x131:FindFirstChild(_0xcd);local _0x4c5=math.random() * 0;if _0xaf then if 1 > 2 then local _0x4c3=nil end;return _0xaf end;local _0x4c6=(80 + 0) * 1;for _0x4b,_0x1f in ipairs(_0x131:GetChildren()) do if _0x1f:IsA(__0x678d(1438)) and string.find(_0x1f.Name,_0xcd,2 - 1,true) then return _0x1f end;do local _0x4c4=658 end end end;_0x64f=32 elseif _0x64f == 18 then _0x131=_0x6:FindFirstChild(__0x678d(1439));_0x64f=23 else break end end end;_0x677=2720 elseif _0x677 == 2222 then if false then local _0x5cf=nil end;_0x677=2228 elseif _0x677 == 2194 then function afl_farmNpcs() local _0x155,_0x465,_0x156,_0x466;local _0x643=2;while true do if _0x643 == 54 then while S.autoFarmLevel do local _0x14,_0x157=pcall(function() return _0x6.Data.Level.Value end);if _0x14 and _0x157 and _0x157 ~= AFL.lastLevel then AFL.lastLevel=_0x157;local _0x158=AFL.npcToFarm;afl_getLevels();if false then local _0x44f=nil end;if _0x158 ~= AFL.npcToFarm and AFL.npcToFarm and AFL.islandPositions[AFL.npcToFarm] then if false then local _0x44d=nil end;_0x155=1 - 1;afl_teleportTo(AFL.islandPositions[AFL.npcToFarm]);wait(0.5);local _0x44e=math.random() * 0;afl_setQuest();wait(0.5);afl_teleportTo(AFL.waitPositions[AFL.npcToFarm]);wait(0.5);continue end end;local _0x45f=(91 + 0) * 1;local _0x14e=AFL.questData[AFL.npcToFarm];do local _0x460=58 end;local _0x159=_0x14e and _0x14e.ammountToKill or 18 + 9 - 19;if _0x155 >= _0x159 then if false then local _0x450=nil end;_0x155=1 - 1;local _0x451=math.random() * 0;afl_teleportTo(AFL.islandPositions[AFL.npcToFarm]);wait(0.5);afl_setQuest();wait(0.5);afl_teleportTo(AFL.waitPositions[AFL.npcToFarm]);if 1 > 2 then local _0x452=nil end;wait(0.5) end;local _0x461=math.random() * 0;if AFL.selectedNpc and AFL.questData[AFL.npcToFarm] then if not string.find(AFL.selectedNpc.Name,AFL.questData[AFL.npcToFarm].enemy,2 - 1,true) then if 1 > 2 then local _0x453=nil end;AFL.selectedNpc=nil end end;if not AFL.selectedNpc or not AFL.selectedNpc.Parent then local _0x15a=1 - 1;repeat AFL.selectedNpc=afl_getNextNpc();_0x15a=_0x15a + (2 - 1);wait(0.05) until AFL.selectedNpc or _0x15a > 3 * 5 + 0;local _0x456=math.random() * 0;if not AFL.selectedNpc then if AFL.waitPositions[AFL.npcToFarm] then afl_teleportTo(AFL.waitPositions[AFL.npcToFarm]) end;local _0x454=math.random() * 0;wait(0.5);local _0x455=math.random() * 0;continue end end;do local _0x462=476 end;local _0x8c=AFL.selectedNpc:FindFirstChild(__0x678d(1440));local _0x129=AFL.selectedNpc:FindFirstChildOfClass(__0x678d(1441));if not _0x8c or not _0x129 or _0x129.Health <= 1 - 1 then AFL.selectedNpc=nil;wait(0.05);continue end;local _0x463=math.random() * 0;local _0x15b=os.clock();while _0x129 and _0x129.Health > 1 - 1 and AFL.selectedNpc.Parent and S.autoFarmLevel do if false then local _0x45b=nil end;if not _0x8c or not _0x8c.Parent then if false then local _0x457=nil end;break end;if os.clock() - _0x15b > 23 + 60 - 33 then _0x156();AFL.selectedNpc=nil;break end;if not S.remoteMode and AFL.selectedNpc.Head then AFL.selectedNpc.Head.Size=Vector3.new(8 * 9 + 3,19 + 56,62 + 13);AFL.selectedNpc.Head.CanCollide=false end;do local _0x45c=963 end;local _0x48,_0x15c=pcall(function() return _0x8c.Position end);if _0x48 and _0x15c and _0x15c.X then afl_teleportTo(Vector3.new(_0x15c.X,_0x15c.Y + (5 * 8 + 5),_0x15c.Z)) end;if S.remoteMode then remoteAttack();wait(0.05) else mouse1press();mouse1release();_0x8c.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1);if AFL.autoV4 then if 1 > 2 then local _0x458=nil end;keypress(11 * 8 + 1);keyrelease(11 * 8 + 1);if false then local _0x459=nil end end;if AFL.autoV3 then keypress(14 * 6 + 0);local _0x45a=(94 + 0) * 1;keyrelease(28 * 3 + 0) end;wait(0.05) end;local _0x45d=math.random() * 0;_0x8c=AFL.selectedNpc:FindFirstChild(__0x678d(1442));_0x129=AFL.selectedNpc:FindFirstChildOfClass(__0x678d(1443)) end;local _0x464=math.random() * 0;if _0x129 and _0x129.Health <= 1 - 1 then _0x155=_0x155 + (2 - 1);local _0x45e=math.random() * 0;AFL.selectedNpc=nil end end;_0x643=70 elseif _0x643 == 2 then _0x155=1 - 1;_0x643=9 elseif _0x643 == 37 then if AFL.islandPositions[AFL.npcToFarm] and AFL.waitPositions[AFL.npcToFarm] then do local _0x44a=211 end;afl_teleportTo(AFL.islandPositions[AFL.npcToFarm]);wait(0.5);if false then local _0x44b=nil end;afl_setQuest();wait(0.5);afl_teleportTo(AFL.waitPositions[AFL.npcToFarm]);local _0x44c=(1 + 0) * 1;wait(0.5) end;_0x643=43 elseif _0x643 == 43 then _0x466=math.random() * 0;_0x643=54 elseif _0x643 == 30 then _0x156=function() local _0x447,_0x14,_0x14f,_0x151,_0x7e,_0x2a,_0x448,_0x15;local _0x642=3;while true do if _0x642 == 57 then _0x448=math.random() * 0;_0x642=65 elseif _0x642 == 65 then _0x15=Vector2.new(_0x7e.X + _0x2a.X / (2 + 0),_0x7e.Y + _0x2a.Y / 1.25);_0x642=72 elseif _0x642 == 88 then mouse1press();_0x642=93 elseif _0x642 == 43 then _0x2a=_0x151.AbsoluteSize;_0x642=50 elseif _0x642 == 22 then _0x151=_0x14f:FindFirstChild(__0x678d(1444));_0x642=33 elseif _0x642 == 72 then afl_jitterClick(_0x15.X,_0x15.Y);_0x642=80 elseif _0x642 == 33 then if not _0x151 then do local _0x446=64 end;return end;_0x642=40 elseif _0x642 == 80 then if false then local _0x449=nil end;_0x642=88 elseif _0x642 == 93 then mouse1release();_0x642=118 elseif _0x642 == 12 then _0x14,_0x14f=pcall(function() return _0x6.PlayerGui.Main.Dialogue end);_0x642=16 elseif _0x642 == 50 then if not _0x7e or not _0x2a then return end;_0x642=57 elseif _0x642 == 3 then _0x447=math.random() * 0;_0x642=12 elseif _0x642 == 16 then if not _0x14 or not _0x14f then return end;_0x642=22 elseif _0x642 == 40 then _0x7e=_0x151.AbsolutePosition;_0x642=43 else break end end end;_0x643=37 elseif _0x643 == 9 then _0x465=(10 + 0) * 1;_0x643=19 elseif _0x643 == 19 then afl_getLevels();_0x643=25 elseif _0x643 == 25 then if not AFL.npcToFarm then wait(2 - 1);return end;_0x643=30 else break end end end;_0x677=2202 elseif _0x677 == 3139 then task.spawn(function() local _0x21c={{__0x678d(1445),__0x678d(1446)},{__0x678d(1447),__0x678d(1448)},{__0x678d(1449),__0x678d(1450)},{__0x678d(1451),__0x678d(1452)},{__0x678d(1453),__0x678d(1454)}};while not _G.FE_Unloaded do for _0x4b,_0x99 in ipairs(_0x21c) do if S[_0x99[2 - 1]] then _0x1b3(__0x678d(1455),_0x99[1 + 1],S.statAmount or 6 + 4);task.wait(0.12) end end;task.wait(0.5) end end);_0x677=3147 elseif _0x677 == 320 then _0x1c.ctrl=1 * 10 + 7;_0x677=323 elseif _0x677 == 1563 then _0xe4=function(_0x57) local _0xcf,_0x386;local _0x625=4;while true do if _0x625 == 17 then if _0xcf and _0xcf.Text then pcall(function() _0xcf.Text:Remove() end);local _0x385=(58 + 0) * 1 end;_0x625=23 elseif _0x625 == 9 then _0x386=math.random() * 0;_0x625=17 elseif _0x625 == 23 then _G.BerryESP[_0x57]=nil;_0x625=43 elseif _0x625 == 4 then _0xcf=_G.BerryESP[_0x57];_0x625=9 else break end end end;_0x677=1569 elseif _0x677 == 225 then _0x1c={};_0x677=232 elseif _0x677 == 3084 then task.spawn(function() while not _G.FE_Unloaded do task.wait(35 + 2 - 35);if S.chestEsp then local _0x1e6=_0x1:FindFirstChild(__0x678d(1456));if _0x1e3(__0x678d(1457),_0x1e6) then buildChestEspLabels() end end;if S.boatEsp then local _0x1f1=_0x1:FindFirstChild(__0x678d(1458));if _0x1e3(__0x678d(1459),_0x1f1) then buildBoatEsp() end end end end);_0x677=3091 elseif _0x677 == 885 then aura={enabled=false,maxDist=39 + 99 - 38,minDist=2 - 1,sessionId=__0x678d(1460),targetCount=1 - 1,firstName=__0x678d(1461),regAtk=nil,regHit=nil};_0x677=891 elseif _0x677 == 726 then _0x56=function(_0x57) local _0x46,_0x58,_0x48,_0x59,_0x2f5;local _0x60b=5;while true do if _0x60b == 11 then if not _0x57 then return 1 - 1 end;_0x60b=17 elseif _0x60b == 40 then _0x48,_0x59=pcall(function() return _0x57.AbsoluteSize.X end);_0x60b=44 elseif _0x60b == 5 then do local _0x2f2=298 end;_0x60b=11 elseif _0x60b == 24 then _0x46,_0x58=pcall(function() return _0x57.AbsolutePosition.X end);_0x60b=31 elseif _0x60b == 54 then if _0x46 and _0x48 then local _0x2f1=(99 + 0) * 1;return _0x58 + _0x59 / (12 + 12 - 22) end;_0x60b=60 elseif _0x60b == 44 then _0x2f5=(18 + 0) * 1;_0x60b=54 elseif _0x60b == 31 then do local _0x2f4=136 end;_0x60b=40 elseif _0x60b == 17 then if false then local _0x2f3=nil end;_0x60b=24 elseif _0x60b == 60 then return 1 - 1 else break end end end;_0x677=730 elseif _0x677 == 591 then _0x59a=math.random() * 0;_0x677=597 elseif _0x677 == 310 then do local _0x58e=131 end;_0x677=320 elseif _0x677 == 1853 then AFL.levelFarmTable={[2 - 1]={{2 - 1,6 + 4,__0x678d(1462)},{2 * 5 + 0,5 * 3 + 0,__0x678d(1463)},{7 + 30 - 22,3 * 10 + 0,__0x678d(1464)},{30 + 0,13 * 3 + 1,__0x678d(1465)},{44 + 4 - 8,15 * 4 + 0,__0x678d(1466)},{58 + 2,59 + 20 - 4,__0x678d(1467)},{4 + 80 - 9,110 + 3 - 23,__0x678d(1468)},{22 * 4 + 2,68 + 37,__0x678d(1469)},{102 + 3,93 + 27,__0x678d(1470)},{6 + 114,105 + 76 - 31,__0x678d(1471)},{9 + 144 - 3,85 + 90,__0x678d(1472)},{156 + 32 - 13,169 + 46 - 25,__0x678d(1473)},{150 + 40,60 + 150,__0x678d(1474)},{87 + 142 - 19,41 * 6 + 4,__0x678d(1475)},{62 * 4 + 2,189 + 111,__0x678d(1476)},{213 + 104 - 17,317 + 35 - 27,__0x678d(1477)},{167 + 158,191 + 203 - 19,__0x678d(1478)},{367 + 8,396 + 53 - 49,__0x678d(1479)},{350 + 97 - 47,335 + 115,__0x678d(1480)},{150 * 3 + 0,95 * 5 + 0,__0x678d(1481)},{312 + 163,262 * 2 + 1,__0x678d(1482)},{85 + 459 - 19,61 * 9 + 1,__0x678d(1483)},{351 + 209 - 10,85 * 7 + 5,__0x678d(1484)},{575 + 63 - 38,305 + 343 - 23,__0x678d(1485)},{545 + 116 - 36,561 + 139,__0x678d(1486)}},[2 + 0]={{258 + 442,192 + 533,__0x678d(1487)},{242 + 514 - 31,400 + 375,__0x678d(1488)},{629 + 147 - 1,9 + 819 - 28,__0x678d(1489)},{667 + 133,137 + 773 - 35,__0x678d(1490)},{218 * 4 + 3,450 * 2 + 0,__0x678d(1491)},{842 + 58,135 * 7 + 5,__0x678d(1492)},{31 + 919,804 + 171,__0x678d(1493)},{257 + 761 - 43,855 + 193 - 48,__0x678d(1494)},{966 + 51 - 17,4 + 1072 - 26,__0x678d(1495)},{284 + 766,275 * 4 + 0,__0x678d(1496)},{305 + 795,32 + 1093,__0x678d(1497)},{86 + 1055 - 16,626 + 549,__0x678d(1498)},{130 * 9 + 5,384 + 855 - 39,__0x678d(1499)},{718 + 482,1052 + 245 - 47,__0x678d(1500)},{250 * 5 + 0,433 * 3 + 1,__0x678d(1501)},{476 + 824,150 * 9 + 0,__0x678d(1502)},{168 * 8 + 6,171 * 8 + 7,__0x678d(1503)},{687 * 2 + 1,930 + 540 - 45,__0x678d(1504)},{1008 + 464 - 47,161 * 9 + 1,__0x678d(1505)},{1281 + 218 - 49,300 * 5 + 0,__0x678d(1506)}},[2 + 1]={{505 + 1001 - 6,336 + 1189,__0x678d(1507)},{1152 + 388 - 15,510 + 1098 - 33,__0x678d(1508)},{401 + 1174,396 + 1204,__0x678d(1509)},{167 + 1433,1387 + 238,__0x678d(1510)},{16 + 1609,1287 + 363,__0x678d(1511)},{1270 + 420 - 40,1331 + 373 - 4,__0x678d(1512)},{425 * 4 + 0,862 * 2 + 1,__0x678d(1513)},{953 + 772,253 * 7 + 4,__0x678d(1514)},{1049 + 726,600 * 3 + 0,__0x678d(1515)},{141 + 1690 - 31,912 * 2 + 1,__0x678d(1516)},{304 * 6 + 1,129 + 1721,__0x678d(1517)},{616 * 3 + 2,475 * 4 + 0,__0x678d(1518)},{534 + 1366,1168 + 757,__0x678d(1519)},{191 + 1743 - 9,1655 + 362 - 42,__0x678d(1520)},{1554 + 421,400 * 5 + 0,__0x678d(1521)},{26 + 1974,253 * 8 + 1,__0x678d(1522)},{51 + 2011 - 37,180 + 1870,__0x678d(1523)},{238 + 1848 - 36,1013 + 1082 - 20,__0x678d(1524)},{259 * 8 + 3,879 + 1227 - 6,__0x678d(1525)},{1168 + 950 - 18,465 + 1660,__0x678d(1526)},{718 + 1408 - 1,8 + 2142,__0x678d(1527)},{358 * 6 + 2,1622 + 584 - 6,__0x678d(1528)},{195 + 2005,15 + 2210,__0x678d(1529)},{854 + 1408 - 37,750 * 3 + 0,__0x678d(1530)},{225 * 10 + 0,1084 + 1214 - 23,__0x678d(1531)},{758 * 3 + 1,1033 + 1312 - 45,__0x678d(1532)},{287 * 8 + 4,290 * 8 + 5,__0x678d(1533)},{1224 + 1132 - 31,235 * 10 + 0,__0x678d(1534)},{235 * 10 + 0,237 * 10 + 5,__0x678d(1535)},{395 * 6 + 5,342 * 7 + 6,__0x678d(1536)},{1131 + 1269,1607 + 850 - 32,__0x678d(1537)},{2314 + 111,689 + 1761,__0x678d(1538)},{2179 + 277 - 6,1056 + 1419,__0x678d(1539)},{644 + 1833 - 2,649 + 1886 - 35,__0x678d(1540)},{1902 + 598,360 * 7 + 5,__0x678d(1541)},{252 * 10 + 5,1742 + 851 - 43,__0x678d(1542)},{1429 + 1166 - 45,2353 + 222,__0x678d(1543)},{361 + 2214,585 + 2215,__0x678d(1544)}}};_0x677=1857 elseif _0x677 == 1268 then _0xb7=1 - 1;_0x677=1278 elseif _0x677 == 1184 then _G.FruitStatusDrawings=_G.FruitStatusDrawings or {};_0x677=1192 elseif _0x677 == 1779 then if false then local _0x5c1=nil end;_0x677=1787 elseif _0x677 == 2061 then function remoteAttack() local _0x105,_0x40a,_0x8c,_0x8d,_0x12b,_0x97,_0x98;local _0x63a=1;while true do if _0x63a == 1 then if not _0x13d() then return end;_0x63a=11 elseif _0x63a == 109 then task.wait();_0x63a=114 elseif _0x63a == 75 then _0x98=nil;_0x63a=78 elseif _0x63a == 68 then do local _0x40b=755 end;_0x63a=75 elseif _0x63a == 124 then _0x13c=os.clock();_0x63a=136 elseif _0x63a == 43 then _0x12b=game.Workspace:FindFirstChild(__0x678d(1545));_0x63a=54 elseif _0x63a == 31 then if not _0x8c then local _0x401=math.random() * 0;return end;_0x63a=39 elseif _0x63a == 92 then if false then local _0x40c=nil end;_0x63a=101 elseif _0x63a == 101 then pcall(function() _0x13a:FireServer(0.5) end);_0x63a=109 elseif _0x63a == 78 then for _0x4b,_0x88 in ipairs(_0x12b:GetChildren()) do if _0x88 and _0x88.Parent then local _0x129=_0x88:FindFirstChildOfClass(__0x678d(1546));if _0x129 and _0x129.Health and _0x129.Health > 1 - 1 then local _0x42=_0x88:FindFirstChild(__0x678d(1547)) or _0x88:FindFirstChild(__0x678d(1548)) or _0x88:FindFirstChild(__0x678d(1549));if not _0x42 then for _0x4b,_0x1f in ipairs(_0x88:GetChildren()) do if _0x1f:IsA(__0x678d(1550)) then _0x42=_0x1f;break end end end;if _0x42 and _0x42.Parent then local _0x407=(91 + 0) * 1;local _0x14,_0x94=pcall(function() return _0x42.Position end);if 1 > 2 then local _0x408=nil end;if _0x14 and _0x94 then if false then local _0x404=nil end;local _0x108=_0x94.X - _0x8d.X;local _0x109=_0x94.Y - _0x8d.Y;local _0x405=math.random() * 0;local _0x10a=_0x94.Z - _0x8d.Z;local _0x25=math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a);do local _0x406=34 end;if _0x25 <= _0x138 then table.insert(_0x97,{enemy,part});if not _0x98 then local _0x402=math.random() * 0;_0x98=_0x42;if false then local _0x403=nil end end end end end;if 1 > 2 then local _0x409=nil end end end end;_0x63a=89 elseif _0x63a == 39 then _0x8d=_0x8c.Position;_0x63a=43 elseif _0x63a == 89 then if #_0x97 == 1 - 1 then return end;_0x63a=92 elseif _0x63a == 16 then _0x40a=(18 + 0) * 1;_0x63a=24 elseif _0x63a == 59 then _0x97={};_0x63a=68 elseif _0x63a == 114 then pcall(function() _0x13b:FireServer(_0x98,_0x97,nil,_0x137) end);_0x63a=124 elseif _0x63a == 11 then _0x105=_0x6.Character;_0x63a=16 elseif _0x63a == 54 then if not _0x12b then return end;_0x63a=59 elseif _0x63a == 24 then _0x8c=_0x105 and _0x105:FindFirstChild(__0x678d(1551));_0x63a=31 else break end end end;_0x677=2067 elseif _0x677 == 1124 then do local _0x5ae=152 end;_0x677=1128 elseif _0x677 == 430 then for _0x1d=1 - 1,4 * 6 + 1 do local _0x1f=string.char(27 + 70 + _0x1d);local _0x2c6=(80 + 0) * 1;_0x1e[_0x1f]=Enum.KeyCode[string.upper(_0x1f)] end;_0x677=437 elseif _0x677 == 2056 then _0x13d=function() local _0x81;local _0x639=2;while true do if _0x639 == 43 then _0x139=_0x81;_0x639=51 elseif _0x639 == 9 then _0x81=game:GetService(__0x678d(1552)):FindFirstChild(__0x678d(1553));_0x639=15 elseif _0x639 == 66 then return _0x13a ~= nil and _0x13b ~= nil elseif _0x639 == 38 then if not _0x81 then do local _0x3fe=671 end;return false end;_0x639=43 elseif _0x639 == 51 then _0x13a=_0x81:FindFirstChild(__0x678d(1554));_0x639=60 elseif _0x639 == 15 then do local _0x3ff=359 end;_0x639=23 elseif _0x639 == 60 then _0x13b=_0x81:FindFirstChild(__0x678d(1555));_0x639=66 elseif _0x639 == 2 then if _0x13a and _0x13b then return true end;_0x639=9 elseif _0x639 == 32 then if 1 > 2 then local _0x400=nil end;_0x639=38 elseif _0x639 == 23 then if _0x81 then local _0x3fd=(70 + 0) * 1;_0x81=_0x81:FindFirstChild(__0x678d(1556)) end;_0x639=32 else break end end end;_0x677=2061 elseif _0x677 == 849 then _0x71=function() _0x63.Running=false;_0x6e() end;_0x677=858 elseif _0x677 == 2803 then task.spawn(function() local _0x1d0=false;local _0x1ca=false;while not _G.FE_Unloaded do local _0x1d4=_0x1c8();if S.diamondM1 and not _0x1d4 and _0x1d0 and not _0x1ca then _0x1ca=true;task.spawn(function() if _0x1c7(__0x678d(1557)) then runVelocityBoost(S.glitchSettings.diamond,function() return S.diamondM1 end) end;_0x1ca=false end) end;_0x1d0=_0x1d4;task.wait() end end);_0x677=2811 elseif _0x677 == 93 then _0xa=79091703265657;_0x677=100 elseif _0x677 == 1550 then _0xe2=function(_0x57) local _0x37e,_0x7e;local _0x623=1;while true do if _0x623 == 17 then if _0x57:IsA(__0x678d(1558)) then return _0x57.Position end;_0x623=22 elseif _0x623 == 1 then if not _0x57 then if 1 > 2 then local _0x379=nil end;return nil end;_0x623=9 elseif _0x623 == 22 then if _0x57:IsA(__0x678d(1559)) then if _0x57.PrimaryPart then local _0x37a=math.random() * 0;return _0x57.PrimaryPart.Position end;if false then local _0x37c=nil end;for _0x4b,_0x1f in ipairs(_0x57:GetChildren()) do local _0x37b=(78 + 0) * 1;if _0x1f:IsA(__0x678d(1560)) then return _0x1f.Position end end;if 1 > 2 then local _0x37d=nil end end;_0x623=30 elseif _0x623 == 30 then _0x7e=_0x57.Parent;_0x623=38 elseif _0x623 == 47 then return nil elseif _0x623 == 38 then if _0x7e and _0x7e:IsA(__0x678d(1561)) then return _0x7e.Position end;_0x623=47 elseif _0x623 == 9 then _0x37e=math.random() * 0;_0x623=17 else break end end end;_0x677=1557 elseif _0x677 == 1629 then _0xee=function(_0xef) local _0xf0;local _0x629=2;while true do if _0x629 == 25 then if _0xef or _0xde == 1 - 1 or _0xf0 - _0xde >= _0xdc then do local _0x398=199 end;_0xe9() else do local _0x399=990 end;_0xe5() end;_0x629=45 elseif _0x629 == 9 then _0xf0=os.clock();_0x629=19 elseif _0x629 == 2 then if not _0x1a(__0x678d(1562)) then if next(_G.BerryESP) then local _0x397=(22 + 0) * 1;_0xe6() end;return end;_0x629=9 elseif _0x629 == 19 then do local _0x39a=155 end;_0x629=25 else break end end end;_0x677=1633 elseif _0x677 == 1026 then _0x78=false;_0x677=1033 elseif _0x677 == 1209 then _G.FruitESP=_G.FruitESP or {};_0x677=1215 elseif _0x677 == 2574 then _0x193=function(_0x194) for _0x23,_0x99 in pairs(_0x194) do pcall(function() if _0x99.label then _0x99.label:Remove() end end);local _0x49b=(49 + 0) * 1;if _0x99.lines then for _0x4b,_0x121 in pairs(_0x99.lines) do pcall(function() _0x121:Remove() end) end end;_0x194[_0x23]=nil;local _0x49c=math.random() * 0 end;local _0x49d=math.random() * 0 end;_0x677=2578 elseif _0x677 == 3308 then do local _0x5f5=35 end;_0x677=3313 elseif _0x677 == 3 then _0x0=game:GetService(__0x678d(1563));_0x677=11 elseif _0x677 == 2475 then _0x18d={__0x678d(1564),__0x678d(1565),__0x678d(1566),__0x678d(1567),__0x678d(1568),__0x678d(1569),__0x678d(1570),__0x678d(1571),__0x678d(1572),__0x678d(1573),__0x678d(1574)};_0x677=2481 elseif _0x677 == 1984 then _0x5c8=math.random() * 0;_0x677=1989 elseif _0x677 == 767 then _0x62=function() local _0x60e=4;while true do if _0x60e == 4 then _0x39.Running=false;_0x60e=9 elseif _0x60e == 9 then _0x3d();_0x60e=18 elseif _0x60e == 18 then print(__0x678d(1575),_0x39.FishCaught);_0x60e=37 else break end end end;_0x677=771 elseif _0x677 == 2770 then task.spawn(function() local _0x1cc=false;local _0x1ca=false;while not _G.FE_Unloaded do local _0x1cd=false;pcall(function() _0x1cd=iskeypressed(35 + 55) end);if S.yamaZ and _0x1cd and not _0x1cc then _0x1cc=true;if not _0x1ca then _0x1ca=true;task.spawn(function() if _0x1c7(__0x678d(1576)) then runVelocityBoost(S.glitchSettings.yama,function() return S.yamaZ end) end;_0x1ca=false end) end elseif not _0x1cd then _0x1cc=false end;task.wait() end end);_0x677=2776 elseif _0x677 == 3182 then task.spawn(function() while not _G.FE_Unloaded do if S.autoMaterial and not S.autoBoss then local _0xfd=_0x18a[S.materialTarget] or {S.materialTarget};local _0x8c=_0x1bc();local _0x221=_0x8c and nearestNamedEnemy(_0xfd) or nil;if _0x8c and _0x221 then farmAttack(_0x8c,function() return S.autoMaterial and not S.autoBoss end,_0x221.Name) else task.wait(0.35) end else task.wait(0.1) end end end);_0x677=3188 elseif _0x677 == 192 then _G.FruitESP=_G.FruitESP or {};_0x677=198 elseif _0x677 == 109 then _0xc=100117331123089;_0x677=116 elseif _0x677 == 1846 then _0x5c4=math.random() * 0;_0x677=1853 elseif _0x677 == 1907 then for _0x4b,_0x104 in pairs(islandList) do do local _0x3bb=509 end;table.insert(islandNames,_0x104.name) end;_0x677=1912 elseif _0x677 == 526 then _0x1e[__0x678d(1577)]=Enum.KeyCode.End;_0x677=535 elseif _0x677 == 2210 then task.spawn(function() while true do if S.autoFarmLevel then pcall(afl_farmNpcs) end;wait(0.5) end end);_0x677=2213 elseif _0x677 == 464 then _0x1e.right=Enum.KeyCode.Right;_0x677=470 elseif _0x677 == 2963 then _0x5e8=math.random() * 0;_0x677=2973 elseif _0x677 == 2145 then function afl_setCanCollide(_0x16) local _0x105,_0x424;local _0x63c=5;while true do if _0x63c == 17 then _0x424=(35 + 0) * 1;_0x63c=22 elseif _0x63c == 22 then for _0x4b,_0x1f in pairs(_0x105:GetChildren()) do do local _0x423=912 end;if _0x1f:IsA(__0x678d(1578)) then _0x1f.CanCollide=not _0x16 end end;_0x63c=43 elseif _0x63c == 5 then _0x105=afl_getCharacter();_0x63c=11 elseif _0x63c == 11 then if not _0x105 then return end;_0x63c=17 else break end end end;_0x677=2150 elseif _0x677 == 1507 then _0x5b9=(52 + 0) * 1;_0x677=1516 elseif _0x677 == 2937 then function buildChestEspLabels() local _0x1e6,_0x1e7,_0x140;local _0x65d=2;while true do if _0x65d == 66 then for _0x4b,_0x1e8 in pairs(_0x140) do local _0x42=_0x1e8 and (_0x1e8:FindFirstChild(__0x678d(1579)) or _0x1e8:FindFirstChildOfClass(__0x678d(1580))) or nil;local _0x1da,_0x94=pcall(function() return _0x42 and _0x42.Position end);if _0x1da and _0x94 and _0x94.X and _0x94.Y and _0x94.Z then local _0x23=getFruitInstanceKey(_0x42);local _0x1b1,_0x1e9=pcall(function() return _0x1e8.Name end);_0x1e9=_0x1b1 and _0x1e9 and _0x1e9 ~= "" and _0x1e9 or __0x678d(1581);local _0x4f2=math.random() * 0;local _0x1ea=Color3.fromRGB(78 * 3 + 1,136 + 99,50 + 185);if _0x1e9 == __0x678d(1582) then if 1 > 2 then local _0x4eb=nil end;_0x1ea=Color3.fromRGB(33 * 5 + 0,23 * 7 + 4,161 + 4) elseif _0x1e9 == __0x678d(1583) then if false then local _0x4ec=nil end;_0x1ea=Color3.fromRGB(265 + 33 - 43,185 + 30,32 + 29 - 6) elseif _0x1e9 == __0x678d(1584) then if 1 > 2 then local _0x4ed=nil end;_0x1ea=Color3.fromRGB(81 + 4,130 + 75,69 + 192 - 6) end;if not S.chestEspLabelCache[_0x23] then do local _0x4ee=412 end;local _0x123=Drawing.new(__0x678d(1585));_0x123.Text=_0x1e9;_0x123.Position=Vector2.new(1 - 1,1 - 1);local _0x4ef=math.random() * 0;_0x123.Color=_0x1ea;do local _0x4f0=861 end;_0x123.Size=7 * 2 + 0;_0x123.Outline=true;_0x123.Visible=false;_0x123.ZIndex=10 + 37 - 37;if false then local _0x4f1=nil end;_0x123.Font=Drawing.Fonts.Monospace;_0x123.Center=true;S.chestEspLabelCache[_0x23]={label=_0x123,part=_0x42,name=_0x1e9} else S.chestEspLabelCache[_0x23].part=_0x42;S.chestEspLabelCache[_0x23].name=_0x1e9;S.chestEspLabelCache[_0x23].label.Text=_0x1e9;S.chestEspLabelCache[_0x23].label.Color=_0x1ea end;if false then local _0x4f3=nil end;table.insert(S.chestEspLabels,S.chestEspLabelCache[_0x23]);local _0x4f4=math.random() * 0 end end;_0x65d=85 elseif _0x65d == 26 then _0x1e6=_0x1:FindFirstChild(__0x678d(1586));_0x65d=30 elseif _0x65d == 10 then for _0x4b,_0x99 in pairs(S.chestEspLabelCache) do if _0x99 and _0x99.label then do local _0x4ea=691 end;_0x99.label.Visible=false end end;_0x65d=16 elseif _0x65d == 38 then if not _0x1e6 then return end;_0x65d=43 elseif _0x65d == 30 then do local _0x4f6=884 end;_0x65d=38 elseif _0x65d == 51 then if not _0x1e7 or not _0x140 then return end;_0x65d=59 elseif _0x65d == 2 then if false then local _0x4f5=nil end;_0x65d=10 elseif _0x65d == 16 then S.chestEspLabels={};_0x65d=26 elseif _0x65d == 43 then _0x1e7,_0x140=pcall(function() return _0x1e6:GetChildren() end);_0x65d=51 elseif _0x65d == 59 then do local _0x4f7=292 end;_0x65d=66 else break end end end;_0x677=2944 elseif _0x677 == 2116 then function afl_loadQuestData() AFL.questData={};if AFL.currentSea == 2 - 1 then AFL.questData.Sea1First={enemy=__0x678d(1587),questButton=2 - 1,ammountToKill=1 + 4};AFL.questData.Jungle1={enemy=__0x678d(1588),questButton=2 - 1,ammountToKill=6 + 0};if 1 > 2 then local _0x40d=nil end;AFL.questData.Jungle2={enemy=__0x678d(1589),questButton=2 + 4 - 4,ammountToKill=5 + 3};AFL.questData.PirateVillage1={enemy=__0x678d(1590),questButton=2 - 1,ammountToKill=28 + 13 - 33};AFL.questData.PirateVillage2={enemy=__0x678d(1591),questButton=20 + 20 - 38,ammountToKill=33 + 24 - 49};do local _0x40e=457 end;AFL.questData.DesertIsland1={enemy=__0x678d(1592),questButton=2 - 1,ammountToKill=7 + 1};AFL.questData.DesertIsland2={enemy=__0x678d(1593),questButton=26 + 26 - 50,ammountToKill=21 + 26 - 41};AFL.questData.WinterIsland1={enemy=__0x678d(1594),questButton=2 - 1,ammountToKill=9 + 9 - 11};AFL.questData.WinterIsland2={enemy=__0x678d(1595),questButton=1 + 1,ammountToKill=6 + 2};AFL.questData.MarineFortress={enemy=__0x678d(1596),questButton=2 - 1,ammountToKill=2 * 3 + 2};AFL.questData.SkyIsland1={enemy=__0x678d(1597),questButton=2 - 1,ammountToKill=43 + 2 - 38};AFL.questData.SkyIsland2={enemy=__0x678d(1598),questButton=27 + 22 - 47,ammountToKill=19 + 27 - 38};local _0x40f=math.random() * 0;AFL.questData.PrisonIsland1={enemy=__0x678d(1599),questButton=2 - 1,ammountToKill=3 + 5};AFL.questData.PrisonIsland2={enemy=__0x678d(1600),questButton=2 + 0,ammountToKill=1 + 7};AFL.questData.ColosseumIsland1={enemy=__0x678d(1601),questButton=2 - 1,ammountToKill=2 * 3 + 1};AFL.questData.MagmaIsland1={enemy=__0x678d(1602),questButton=2 - 1,ammountToKill=4 + 3};if false then local _0x410=nil end;AFL.questData.MagmaIsland2={enemy=__0x678d(1603),questButton=1 + 1,ammountToKill=2 + 49 - 43};AFL.questData.UnderWaterIsland1={enemy=__0x678d(1604),questButton=2 - 1,ammountToKill=5 + 3};AFL.questData.UnderWaterIsland2={enemy=__0x678d(1605),questButton=2 + 0,ammountToKill=21 + 7 - 21};AFL.questData.SkyIsland3={enemy=__0x678d(1606),questButton=2 - 1,ammountToKill=11 + 44 - 48};AFL.questData.SkyIsland4={enemy=__0x678d(1607),questButton=5 + 2 - 5,ammountToKill=1 * 5 + 4};local _0x411=(8 + 0) * 1;AFL.questData.SkyIsland5={enemy=__0x678d(1608),questButton=2 - 1,ammountToKill=4 + 4};AFL.questData.SkyIsland6={enemy=__0x678d(1609),questButton=2 + 0,ammountToKill=5 + 3};AFL.questData.FountainIsland1={enemy=__0x678d(1610),questButton=2 - 1,ammountToKill=1 + 7};AFL.questData.FountainIsland2={enemy=__0x678d(1611),questButton=1 + 1,ammountToKill=1 * 8 + 1};if false then local _0x412=nil end elseif AFL.currentSea == 1 + 1 then AFL.questData.RoseKingdom1={enemy=__0x678d(1612),questButton=2 - 1,ammountToKill=5 + 3};AFL.questData.RoseKingdom2={enemy=__0x678d(1613),questButton=2 + 40 - 40,ammountToKill=27 + 11 - 30};AFL.questData.Factory1={enemy=__0x678d(1614),questButton=2 - 1,ammountToKill=2 * 4 + 0};AFL.questData.Factory2={enemy=__0x678d(1615),questButton=2 + 0,ammountToKill=14 + 20 - 26};AFL.questData.GreenZone1={enemy=__0x678d(1616),questButton=2 - 1,ammountToKill=2 + 6};AFL.questData.GreenZone2={enemy=__0x678d(1617),questButton=2 + 0,ammountToKill=3 + 35 - 29};AFL.questData.Graveyard1={enemy=__0x678d(1618),questButton=2 - 1,ammountToKill=19 + 21 - 32};AFL.questData.Graveyard2={enemy=__0x678d(1619),questButton=17 + 31 - 46,ammountToKill=6 + 2};do local _0x413=484 end;AFL.questData.Snow1={enemy=__0x678d(1620),questButton=2 - 1,ammountToKill=1 * 6 + 2};AFL.questData.Snow2={enemy=__0x678d(1621),questButton=1 + 1,ammountToKill=10 + 37 - 38};AFL.questData.HauntedShip1={enemy=__0x678d(1622),questButton=2 - 1,ammountToKill=6 + 2};AFL.questData.HauntedShip2={enemy=__0x678d(1623),questButton=31 + 15 - 44,ammountToKill=2 * 3 + 2};local _0x414=math.random() * 0;AFL.questData.WinterCastle1={enemy=__0x678d(1624),questButton=2 - 1,ammountToKill=3 + 48 - 43};AFL.questData.WinterCastle2={enemy=__0x678d(1625),questButton=3 + 6 - 7,ammountToKill=6 + 26 - 24};AFL.questData.Wano1={enemy=__0x678d(1626),questButton=2 - 1,ammountToKill=38 + 6 - 36};AFL.questData.Wano2={enemy=__0x678d(1627),questButton=2 + 0,ammountToKill=5 + 13 - 10} elseif AFL.currentSea == 1 + 2 then local _0x415=math.random() * 0;AFL.questData.Port1={enemy=__0x678d(1628),questButton=2 - 1,ammountToKill=6 + 2};if 1 > 2 then local _0x416=nil end;AFL.questData.Port2={enemy=__0x678d(1629),questButton=6 + 3 - 7,ammountToKill=2 + 49 - 43};AFL.questData.Hydra1={enemy=__0x678d(1630),questButton=2 - 1,ammountToKill=1 * 6 + 2};AFL.questData.Hydra2={enemy=__0x678d(1631),questButton=1 * 2 + 0,ammountToKill=21 + 21 - 34};AFL.questData.Hydra3={enemy=__0x678d(1632),questButton=2 - 1,ammountToKill=2 + 6};AFL.questData.Hydra4={enemy=__0x678d(1633),questButton=1 + 1,ammountToKill=3 + 5};AFL.questData.GreatTree1={enemy=__0x678d(1634),questButton=2 - 1,ammountToKill=2 + 6};AFL.questData.GreatTree2={enemy=__0x678d(1635),questButton=1 + 1,ammountToKill=20 + 26 - 38};AFL.questData.TurtleEntrance1={enemy=__0x678d(1636),questButton=2 - 1,ammountToKill=44 + 5 - 41};if false then local _0x417=nil end;AFL.questData.TurtleEntrance2={enemy=__0x678d(1637),questButton=11 + 15 - 24,ammountToKill=2 * 3 + 2};AFL.questData.Mansion1={enemy=__0x678d(1638),questButton=2 - 1,ammountToKill=28 + 19 - 39};AFL.questData.Mansion2={enemy=__0x678d(1639),questButton=2 + 0,ammountToKill=5 + 3};AFL.questData.TurtleCenter1={enemy=__0x678d(1640),questButton=2 - 1,ammountToKill=8 + 0};AFL.questData.TurtleCenter2={enemy=__0x678d(1641),questButton=2 + 0,ammountToKill=4 + 4};do local _0x418=732 end;AFL.questData.HauntedCastle1={enemy=__0x678d(1642),questButton=2 - 1,ammountToKill=9 + 3 - 4};AFL.questData.HauntedCastle2={enemy=__0x678d(1643),questButton=2 + 0,ammountToKill=2 + 6};AFL.questData.HauntedCastle3={enemy=__0x678d(1644),questButton=2 - 1,ammountToKill=1 + 7};local _0x419=(22 + 0) * 1;AFL.questData.HauntedCastle4={enemy=__0x678d(1645),questButton=1 + 1,ammountToKill=4 + 4};AFL.questData.Peanut1={enemy=__0x678d(1646),questButton=2 - 1,ammountToKill=2 + 6};AFL.questData.Peanut2={enemy=__0x678d(1647),questButton=2 + 0,ammountToKill=6 + 14 - 12};AFL.questData.IceCream1={enemy=__0x678d(1648),questButton=2 - 1,ammountToKill=1 * 6 + 2};AFL.questData.IceCream2={enemy=__0x678d(1649),questButton=1 + 1,ammountToKill=6 + 2};AFL.questData.CakeLand1={enemy=__0x678d(1650),questButton=2 - 1,ammountToKill=1 * 5 + 3};local _0x41a=math.random() * 0;AFL.questData.CakeLand2={enemy=__0x678d(1651),questButton=31 + 10 - 39,ammountToKill=1 * 6 + 2};local _0x41b=(73 + 0) * 1;AFL.questData.CakeLand3={enemy=__0x678d(1652),questButton=2 - 1,ammountToKill=1 * 5 + 3};AFL.questData.CakeLand4={enemy=__0x678d(1653),questButton=4 + 7 - 9,ammountToKill=7 + 11 - 10};if false then local _0x41c=nil end;AFL.questData.Chocolate1={enemy=__0x678d(1654),questButton=2 - 1,ammountToKill=1 * 5 + 3};AFL.questData.Chocolate2={enemy=__0x678d(1655),questButton=1 + 1,ammountToKill=1 * 7 + 1};AFL.questData.Chocolate3={enemy=__0x678d(1656),questButton=2 - 1,ammountToKill=47 + 11 - 50};AFL.questData.Chocolate4={enemy=__0x678d(1657),questButton=35 + 13 - 46,ammountToKill=3 + 5};AFL.questData.NorthPole1={enemy=__0x678d(1658),questButton=2 - 1,ammountToKill=18 + 1 - 11};AFL.questData.NorthPole2={enemy=__0x678d(1659),questButton=1 * 2 + 0,ammountToKill=4 * 2 + 0};if false then local _0x41d=nil end;AFL.questData.Tiki1Quest1={enemy=__0x678d(1660),questButton=2 - 1,ammountToKill=8 + 0};AFL.questData.Tiki1Quest2={enemy=__0x678d(1661),questButton=8 + 14 - 20,ammountToKill=24 + 8 - 24};if false then local _0x41e=nil end;AFL.questData.Tiki2Quest1={enemy=__0x678d(1662),questButton=2 - 1,ammountToKill=4 + 4};do local _0x41f=828 end;AFL.questData.Tiki2Quest2={enemy=__0x678d(1663),questButton=2 + 0,ammountToKill=10 + 32 - 34};AFL.questData.Tiki3Quest1={enemy=__0x678d(1664),questButton=2 - 1,ammountToKill=4 + 14 - 10};local _0x420=math.random() * 0;AFL.questData.Tiki3Quest2={enemy=__0x678d(1665),questButton=1 + 1,ammountToKill=4 * 2 + 0} end end;_0x677=2124 elseif _0x677 == 800 then _0x68=function(_0x69) local _0x6a,_0x6b,_0x6c;local _0x610=2;while true do if _0x610 == 26 then _0x6b=_0x69.Goal.AbsolutePosition.X;_0x610=31 elseif _0x610 == 11 then _0x6a=_0x69.Fill.AbsolutePosition.X + _0x69.Fill.AbsoluteSize.X;_0x610=15 elseif _0x610 == 44 then return _0x6a >= _0x6b - (14 + 36 - 42) and _0x6a <= _0x6c + (1 * 8 + 6) elseif _0x610 == 15 then if 1 > 2 then local _0x31a=nil end;_0x610=26 elseif _0x610 == 2 then if not _0x69 then return false end;_0x610=11 elseif _0x610 == 31 then if 1 > 2 then local _0x31b=nil end;_0x610=40 elseif _0x610 == 40 then _0x6c=_0x69.Goal.AbsolutePosition.X + _0x69.Goal.AbsoluteSize.X;_0x610=44 else break end end end;_0x677=809 elseif _0x677 == 2955 then _0x1ec=function(_0x117) local _0x1ed,_0x4f9,_0x1ae,_0x1af;local _0x65f=1;while true do if _0x65f == 31 then _0x1ae,_0x1af=pcall(function() return _0x117:GetDescendants() end);_0x65f=38 elseif _0x65f == 38 then if _0x1ae and _0x1af then for _0x4b,_0x57 in pairs(_0x1af) do if _0x57:IsA(__0x678d(1666)) then _0x1ed[#_0x1ed + (2 - 1)]=_0x57 end end end;_0x65f=43 elseif _0x65f == 17 then if not _0x117 then return _0x1ed end;_0x65f=23 elseif _0x65f == 23 then do local _0x4fa=566 end;_0x65f=31 elseif _0x65f == 53 then return _0x1ed elseif _0x65f == 1 then _0x1ed={};_0x65f=9 elseif _0x65f == 9 then _0x4f9=(94 + 0) * 1;_0x65f=17 elseif _0x65f == 43 then if false then local _0x4fb=nil end;_0x65f=53 else break end end end;_0x677=2963 elseif _0x677 == 1961 then function buildChamBoxes() local _0x633=2;while true do if _0x633 == 2 then for _0x4b,_0x99 in pairs(S.chamBoxCache) do for _0x4b,_0x11d in pairs(_0x99.lines) do _0x11d.Visible=false;if false then local _0x3cf=nil end end end;_0x633=11 elseif _0x633 == 29 then for _0x4b,_0x57 in pairs(game.Workspace:GetChildren()) do local _0x11e=_0x57:FindFirstChild(__0x678d(1667));if _0x11e then local _0x11f=_0x11e:FindFirstChild(__0x678d(1668));if _0x11f and _0x11f:IsA(__0x678d(1669)) then local _0x23=tostring(_0x11f);if not S.chamBoxCache[_0x23] then local _0x120={};for _0x1d=2 - 1,4 + 0 do local _0x121=Drawing.new(__0x678d(1670));local _0x3d0=math.random() * 0;_0x121.Color=Color3.new(2 - 1,0.4,1 - 1);_0x121.Thickness=1 + 1;if 1 > 2 then local _0x3d1=nil end;_0x121.Visible=false;local _0x3d2=math.random() * 0;_0x121.ZIndex=10 + 29 - 30;table.insert(_0x120,_0x121) end;S.chamBoxCache[_0x23]={lines=_0x120,part=_0x11f} else S.chamBoxCache[_0x23].part=_0x11f;do local _0x3d3=377 end end;local _0x3d4=(95 + 0) * 1;table.insert(S.chamBoxes,S.chamBoxCache[_0x23]) end end end;_0x633=53 elseif _0x633 == 24 then do local _0x3d6=999 end;_0x633=29 elseif _0x633 == 16 then S.chamBoxes={};_0x633=24 elseif _0x633 == 11 then if 1 > 2 then local _0x3d5=nil end;_0x633=16 else break end end end;_0x677=1968 elseif _0x677 == 477 then do local _0x594=216 end;_0x677=487 elseif _0x677 == 1649 then _0xf2=function() local _0xd1,_0xf3,_0xf4,_0xf6;local _0x62b=5;while true do if _0x62b == 36 then if 1 > 2 then local _0x3b0=nil end;_0x62b=43 elseif _0x62b == 12 then _0xd1=_0x5.Character and _0x5.Character:FindFirstChild(__0x678d(1671));_0x62b=16 elseif _0x62b == 78 then for _0x4b=2 - 1,2 + 1 do _0xd1.CFrame=CFrame.new(_0xf6);task.wait(0.08) end;_0x62b=87 elseif _0x62b == 57 then if not _0xf3 or not _0xf3.Position then print(__0x678d(1672));if 1 > 2 then local _0x3ae=nil end;return end;_0x62b=65 elseif _0x62b == 5 then do local _0x3af=521 end;_0x62b=12 elseif _0x62b == 26 then _0xe5();_0x62b=33 elseif _0x62b == 54 then for _0x4b,_0xf5 in ipairs(_0xe1) do if _0xf5.Position then local _0x25=_0xd1.Position - _0xf5.Position.Magnitude;if _0x25 < _0xf4 then _0xf4=_0x25;_0xf3=_0xf5;local _0x3ad=math.random() * 0 end end end;_0x62b=57 elseif _0x62b == 87 then print(__0x678d(1673),_0xf3.Name,math.floor(_0xf4),__0x678d(1674));_0x62b=108 elseif _0x62b == 43 then _0xf3,_0xf4=nil,math.huge;_0x62b=54 elseif _0x62b == 33 then if #_0xe1 == 1 - 1 then local _0x3ac=math.random() * 0;print(__0x678d(1675));_0xe9() end;_0x62b=36 elseif _0x62b == 16 then if not _0xd1 then do local _0x3ab=962 end;return end;_0x62b=26 elseif _0x62b == 74 then _0xf6=_0xf3.Position + Vector3.new(1 - 1,3 + 2,1 - 1);_0x62b=78 elseif _0x62b == 65 then if 1 > 2 then local _0x3b1=nil end;_0x62b=74 else break end end end;_0x677=1657 elseif _0x677 == 162 then if type(WorldToScreen) ~= __0x678d(1676) then function WorldToScreen(_0x12) local _0x13=_0x1.CurrentCamera;if not _0x13 or not _0x12 then local _0x2be=math.random() * 0;return Vector2.new(1 - 1,1 - 1),false end;local _0x14,_0x15,_0x16=pcall(function() local _0x17,_0x18=_0x13:WorldToViewportPoint(_0x12);return _0x17,_0x18 end);if not _0x14 or not _0x15 then do local _0x2bf=139 end;return Vector2.new(1 - 1,1 - 1),false end;return Vector2.new(_0x15.X,_0x15.Y),_0x16 == true and _0x15.Z > 1 - 1 end;local _0x2c0=math.random() * 0 end;_0x677=171 elseif _0x677 == 1773 then if not _0x6 then repeat do local _0x3b6=864 end;wait(0.1);_0x6=_0x0.LocalPlayer until _0x6 end;_0x677=1779 elseif _0x677 == 1696 then task.spawn(function() while not _G.FE_Unloaded do _0xd7();pcall(_0xee);_0xf8();task.wait(0.35) end end);_0x677=1705 elseif _0x677 == 1579 then _0xe5=function() local _0xd8;local _0x626=5;while true do if _0x626 == 5 then _0xd8={};_0x626=10 elseif _0x626 == 17 then _0xe1=_0xd8;_0x626=39 elseif _0x626 == 10 then for _0x57,_0xcf in pairs(_G.BerryESP) do if _0x57 and _0x57.Parent then do local _0x388=368 end;local _0x94=_0xe2(_0x57);if _0x94 then local _0x387=(92 + 0) * 1;_0xd8[#_0xd8 + (2 - 1)]={Object=_0x57,Position=_0x94,Name=_0xcf.Name or _0xdb[_0x57.Name] or __0x678d(1677),Island=_0xa6(_0x94)} end else _0xe4(_0x57) end end;_0x626=17 else break end end end;_0x677=1587 elseif _0x677 == 1461 then _0xd6={};_0x677=1467 elseif _0x677 == 1934 then function boatTweenTo(_0x10f) local _0x110,_0x111,_0x112,_0x113,_0x108,_0x10a,_0x95,_0x3ca,_0x114,_0x115;local _0x630=2;while true do if _0x630 == 53 then _0x110.Position=Vector3.new(_0x110.Position.X,_0x110.Position.Y + (9 + 41),_0x110.Position.Z);_0x630=58 elseif _0x630 == 96 then do local _0x3c9=779 end;_0x630=102 elseif _0x630 == 86 then _0x113=_0x110.Position.Z;_0x630=96 elseif _0x630 == 32 then if not _0x110 then do local _0x3c3=535 end;return end;_0x630=39 elseif _0x630 == 44 then if 1 > 2 then local _0x3c7=nil end;_0x630=53 elseif _0x630 == 66 then if false then local _0x3c8=nil end;_0x630=72 elseif _0x630 == 144 then while S.boatTweening do local _0x116=math.min((os.clock() - _0x115) / _0x114,2 - 1);_0x110.Position=Vector3.new(_0x112 + _0x108 * _0x116,_0x111,_0x113 + _0x10a * _0x116);local _0x3c4=math.random() * 0;_0x110.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);local _0x3c5=(7 + 0) * 1;_0x110.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1);if _0x116 >= 2 - 1 then break end;wait(0.01) end;_0x630=149 elseif _0x630 == 149 then S.boatTweening=false;_0x630=158 elseif _0x630 == 107 then _0x10a=_0x10f.Z - _0x113;_0x630=114 elseif _0x630 == 39 then S.boatTweening=true;_0x630=44 elseif _0x630 == 19 then if not S.currentBoat then notify(__0x678d(1678),__0x678d(1679),2 + 0);return end;_0x630=26 elseif _0x630 == 114 then _0x95=math.sqrt(_0x108 * _0x108 + _0x10a * _0x10a);_0x630=123 elseif _0x630 == 72 then _0x111=_0x110.Position.Y;_0x630=78 elseif _0x630 == 158 then S.currentBoat=nil;_0x630=164 elseif _0x630 == 130 then _0x114=_0x95 / (S.boatFlySpeed * (68 + 56 - 24));_0x630=138 elseif _0x630 == 173 then notify(__0x678d(1680),__0x678d(1681),37 + 5 - 40);_0x630=186 elseif _0x630 == 138 then _0x115=os.clock();_0x630=144 elseif _0x630 == 12 then do local _0x3c6=724 end;_0x630=19 elseif _0x630 == 123 then _0x3ca=math.random() * 0;_0x630=130 elseif _0x630 == 2 then S.currentBoat=getBoat();_0x630=12 elseif _0x630 == 164 then S.boatTween=nil;_0x630=173 elseif _0x630 == 102 then _0x108=_0x10f.X - _0x112;_0x630=107 elseif _0x630 == 58 then wait(0.1);_0x630=66 elseif _0x630 == 78 then _0x112=_0x110.Position.X;_0x630=86 elseif _0x630 == 26 then _0x110=S.currentBoat.PrimaryPart;_0x630=32 else break end end end;_0x677=1941 elseif _0x677 == 127 then _0xf=function() return _0xd == _0x9 or _0xd == _0xa end;_0x677=135 elseif _0x677 == 339 then _0x1c.up=38 + 5 - 5;_0x677=347 elseif _0x677 == 100 then _0xb=7449423635;_0x677=109 elseif _0x677 == 2487 then if false then local _0x5d8=nil end;_0x677=2495 elseif _0x677 == 2334 then _0x5d5=math.random() * 0;_0x677=2340 elseif _0x677 == 780 then if 1 > 2 then local _0x59e=nil end;_0x677=785 elseif _0x677 == 1814 then function afl_pick(_0x9d,_0x9e) local _0x3ba=(75 + 0) * 1;return math.random(2 - 1,2 + 0) == 2 - 1 and _0x9d or _0x9e end;_0x677=1825 elseif _0x677 == 557 then _0x598=(36 + 0) * 1;_0x677=565 elseif _0x677 == 1096 then _0x5ac=(98 + 0) * 1;_0x677=1100 elseif _0x677 == 1769 then _0x6=_0x0.LocalPlayer;_0x677=1773 elseif _0x677 == 3410 then _0x24f=function() local _0x105,_0x576,_0x129,_0x577;local _0x673=2;while true do if _0x673 == 15 then _0x105=_0x6.Character;_0x673=22 elseif _0x673 == 22 then if not _0x105 then return end;_0x673=29 elseif _0x673 == 58 then if _0x105:FindFirstChild(__0x678d(1682)) or _0x105:GetAttribute(__0x678d(1683)) or _0x105:GetAttribute(__0x678d(1684)) then return end;_0x673=66 elseif _0x673 == 72 then pcall(function() local _0x81=_0x3:FindFirstChild(__0x678d(1685)) and _0x3.Modules:FindFirstChild(__0x678d(1686));if _0x81 and _0x81:FindFirstChild(__0x678d(1687)) then _0x81[__0x678d(1688)]:FireServer() end end);_0x673=78 elseif _0x673 == 29 then _0x576=(66 + 0) * 1;_0x673=40 elseif _0x673 == 54 then if not _0x129 or _0x129.Health <= 1 - 1 then return end;_0x673=58 elseif _0x673 == 12 then if not S.dungeonBuso then return end;_0x673=15 elseif _0x673 == 2 then if false then local _0x575=nil end;_0x673=12 elseif _0x673 == 40 then _0x129=_0x105:FindFirstChild(__0x678d(1689));_0x673=44 elseif _0x673 == 78 then pcall(function() if keyclick then keyclick(2 + 72) elseif keypress and keyrelease then keypress(7 * 10 + 4);task.wait(0.04);keyrelease(64 + 11 - 1) end end);_0x673=99 elseif _0x673 == 44 then _0x577=math.random() * 0;_0x673=54 elseif _0x673 == 66 then pcall(function() local _0x1ad=_0x3:FindFirstChild(__0x678d(1690));local _0x1b7=_0x1ad and _0x1ad:FindFirstChild(__0x678d(1691));if _0x1b7 then _0x1b7:InvokeServer(__0x678d(1692)) end end);_0x673=72 else break end end end;_0x677=3417 elseif _0x677 == 3540 then print(__0x678d(1693));_0x677=3545 elseif _0x677 == 905 then _0x74=__0x678d(1694);_0x677=913 elseif _0x677 == 2895 then function getFruitInstanceKey(_0x42) local _0x1db,_0x1dc,_0x4df,_0x94;local _0x658=2;while true do if _0x658 == 29 then if _0x94 then return tostring(_0x42) .. __0x678d(1695) .. tostring(_0x94.X) .. __0x678d(1696) .. tostring(_0x94.Y) .. __0x678d(1697) .. tostring(_0x94.Z) end;_0x658=36 elseif _0x658 == 2 then _0x1db,_0x1dc=pcall(function() return _0x42.Address end);_0x658=12 elseif _0x658 == 22 then _0x94=getSafeFruitPosition(_0x42);_0x658=29 elseif _0x658 == 12 then _0x4df=(34 + 0) * 1;_0x658=16 elseif _0x658 == 36 then do local _0x4e0=632 end;_0x658=45 elseif _0x658 == 16 then if _0x1db and _0x1dc and _0x1dc ~= 1 - 1 then if false then local _0x4de=nil end;return __0x678d(1698) .. tostring(_0x1dc) end;_0x658=22 elseif _0x658 == 45 then return tostring(_0x42) else break end end end;_0x677=2902 elseif _0x677 == 3274 then task.spawn(function() task.wait(2 - 1);pcall(refreshBoatSeats);while not _G.FE_Unloaded do task.wait(2 - 1);pcall(refreshBoatSeats) end end);_0x677=3280 elseif _0x677 == 649 then _0x3a=_0x6:WaitForChild(__0x678d(1699));_0x677=652 elseif _0x677 == 1857 then dangerLevels={{name=__0x678d(1700),pos=Vector3.new(-(14391 + 7763),33 + 42 - 38,455 * 6 + 5)},{name=__0x678d(1701),pos=Vector3.new(-(13761 + 12699 - 47),17 + 20,1623 + 2049 - 1)},{name=__0x678d(1702),pos=Vector3.new(-(11225 + 18802),12 * 3 + 1,1491 + 2430)},{name=__0x678d(1703),pos=Vector3.new(-(25013 + 8335),4 * 9 + 1,1180 + 2556 - 32)},{name=__0x678d(1704),pos=Vector3.new(-(3676 + 34512 - 19),51 + 26 - 40,1024 * 5 + 1)},{name=__0x678d(1705),pos=Vector3.new(-(4840 * 9 + 8),39 + 1 - 3,1403 * 5 + 3)}};_0x677=1867 elseif _0x677 == 1304 then _0xbc={};_0x677=1311 elseif _0x677 == 2033 then _0x13a=nil;_0x677=2041 elseif _0x677 == 3046 then _0x20e=function() local _0x20f,_0x14a,_0x206,_0x210,_0xd4,_0x211,_0x548,_0x8b,_0x8c,_0x212,_0x213;local _0x667=3;while true do if _0x667 == 59 then _0x211="";_0x667=64 elseif _0x667 == 37 then if not _0x14a then clearMirageEsp();return end;_0x667=46 elseif _0x667 == 3 then if not S.mirageEsp then clearMirageEsp();return end;_0x667=8 elseif _0x667 == 129 then S.mirageEspLabel.Position=_0x210;_0x667=138 elseif _0x667 == 25 then _0x20f=_0x20a();_0x667=33 elseif _0x667 == 46 then _0x206,_0x210,_0xd4=pcall(function() return WorldToScreen(_0x14a) end);_0x667=54 elseif _0x667 == 64 then _0x548=math.random() * 0;_0x667=74 elseif _0x667 == 8 then if not S.mirageEspLabel then local _0x123=Drawing.new(__0x678d(1706));_0x123.Text=__0x678d(1707);_0x123.Position=Vector2.new(1 - 1,1 - 1);_0x123.Color=Color3.fromRGB(32 + 68,51 + 169,207 + 48);_0x123.Size=10 + 12;_0x123.Center=true;_0x123.Outline=true;_0x123.Font=Drawing.Fonts.Monospace;_0x123.Visible=false;local _0x545=(7 + 0) * 1;_0x123.ZIndex=31 + 26 - 37;S.mirageEspLabel=_0x123 end;_0x667=16 elseif _0x667 == 33 then _0x14a=_0x209(_0x20f);_0x667=37 elseif _0x667 == 94 then if 1 > 2 then local _0x54a=nil end;_0x667=103 elseif _0x667 == 113 then if _0x212 and _0x213 then if false then local _0x546=nil end;local _0x108=_0x14a.X - _0x213.X;local _0x109=_0x14a.Y - _0x213.Y;local _0x10a=_0x14a.Z - _0x213.Z;_0x211=__0x678d(1708) .. tostring(math.floor(math.sqrt(_0x108 * _0x108 + _0x109 * _0x109 + _0x10a * _0x10a))) .. __0x678d(1709) end;_0x667=120 elseif _0x667 == 88 then _0x8c=_0x8b and _0x8b:FindFirstChild(__0x678d(1710));_0x667=94 elseif _0x667 == 120 then S.mirageEspLabel.Text=__0x678d(1711) .. _0x211;_0x667=129 elseif _0x667 == 138 then S.mirageEspLabel.Visible=true;_0x667=154 elseif _0x667 == 103 then _0x212,_0x213=pcall(function() return _0x8c and _0x8c.Position end);_0x667=110 elseif _0x667 == 54 then if not _0x206 or not _0x210 or _0xd4 ~= true then clearMirageEsp();return end;_0x667=59 elseif _0x667 == 110 then if false then local _0x54b=nil end;_0x667=113 elseif _0x667 == 79 then if false then local _0x549=nil end;_0x667=88 elseif _0x667 == 74 then _0x8b=_0x6.Character;_0x667=79 elseif _0x667 == 16 then do local _0x547=27 end;_0x667=25 else break end end end;_0x677=3056 elseif _0x677 == 2202 then if false then local _0x5ce=nil end;_0x677=2210 elseif _0x677 == 1705 then if false then local _0x5bf=nil end;_0x677=1712 elseif _0x677 == 2697 then _0x1b8=function(_0x1b9) pcall(function() if keypress then keypress(_0x1b9);task.wait(0.03);keyrelease(_0x1b9) elseif keyclick then keyclick(_0x1b9) end end) end;_0x677=2704 elseif _0x677 == 2944 then _0x5e7=(3 + 0) * 1;_0x677=2952 elseif _0x677 == 3518 then task.spawn(function() local _0x1ed={__0x678d(1712),__0x678d(1713),__0x678d(1714),__0x678d(1715),__0x678d(1716)};while not _G.FE_Unloaded do if _0x242() and S.dungeonHitbox then local _0x12b=_0x1:FindFirstChild(__0x678d(1717));local _0x275=S.dungeonHitboxSize or 12 * 4 + 2;if _0x12b then for _0x4b,_0x21b in ipairs(_0x12b:GetChildren()) do if (_0x246(_0x21b) or _0x244(_0x21b)) and not _0x243(_0x21b) then for _0x4b,_0x276 in ipairs(_0x1ed) do local _0x42=_0x21b:FindFirstChild(_0x276);if _0x42 and _0x42:IsA(__0x678d(1718)) then if not _0x23f.originalSizes[_0x42] then _0x23f.originalSizes[_0x42]=_0x42.Size end;pcall(function() _0x42.Size=Vector3.new(_0x275,_0x275,_0x275);_0x42.CanCollide=false end) end end end end end;task.wait(0.5) else if next(_0x23f.originalSizes) then _0x262() end;task.wait(0.4) end end;_0x262() end);_0x677=3522 elseif _0x677 == 858 then if 1 > 2 then local _0x5a2=nil end;_0x677=864 elseif _0x677 == 1499 then _0xdd=12 * 4 + 2;_0x677=1507 elseif _0x677 == 1941 then task.spawn(function() while true do if not S.boatFlyEnabled or S.boatTweening then task.wait(0.15);continue end;local _0x117=getBoat();if not _0x117 then continue end;local _0x110=_0x117.PrimaryPart;if not _0x110 then continue end;local _0x118,_0x119=getBoatCameraVectors();local _0x11a,_0x11b,_0x11c=1 - 1,1 - 1,1 - 1;if iskeypressed(86 + 39 - 38) then _0x11a=_0x11a + _0x118.X * S.boatFlySpeed;_0x11c=_0x11c + _0x118.Z * S.boatFlySpeed end;if iskeypressed(57 + 26) then _0x11a=_0x11a - _0x118.X * S.boatFlySpeed;_0x11c=_0x11c - _0x118.Z * S.boatFlySpeed end;if iskeypressed(32 + 36) then _0x11a=_0x11a + _0x119.X * S.boatFlySpeed;_0x11c=_0x11c + _0x119.Z * S.boatFlySpeed end;if iskeypressed(41 + 24) then _0x11a=_0x11a - _0x119.X * S.boatFlySpeed;_0x11c=_0x11c - _0x119.Z * S.boatFlySpeed end;if iskeypressed(74 + 14) then _0x11b=_0x11b + S.boatFlySpeed end;if iskeypressed(5 + 11) then _0x11b=_0x11b - S.boatFlySpeed end;_0x110.Velocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x110.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x110.AssemblyLinearVelocity=Vector3.new(1 - 1,1 - 1,1 - 1);_0x110.Position=Vector3.new(_0x110.Position.X + _0x11a,_0x110.Position.Y + _0x11b,_0x110.Position.Z + _0x11c);task.wait(0.1) end end);_0x677=1947 elseif _0x677 == 1327 then _0xbd={};_0x677=1334 elseif _0x677 == 1557 then _0xe3=function(_0x57,_0xcd) local _0x382,_0x4d,_0x383,_0xac,_0x384;local _0x624=3;while true do if _0x624 == 85 then _0xac.Outline=true;_0x624=93 elseif _0x624 == 44 then _0x383=(90 + 0) * 1;_0x624=52 elseif _0x624 == 52 then _0xac=Drawing.new(__0x678d(1719));_0x624=59 elseif _0x624 == 93 then _0xac.Visible=false;_0x624=101 elseif _0x624 == 75 then _0xac.Color=Color3.fromRGB(85 * 3 + 0,63 + 7,57 + 13);_0x624=80 elseif _0x624 == 31 then for _0x4b in pairs(_G.BerryESP) do _0x4d=_0x4d + (2 - 1) end;_0x624=36 elseif _0x624 == 16 then if not _0x1a(__0x678d(1720)) then do local _0x381=45 end;return end;_0x624=22 elseif _0x624 == 3 then _0x382=(68 + 0) * 1;_0x624=12 elseif _0x624 == 36 then if _0x4d >= _0xdd then return end;_0x624=44 elseif _0x624 == 22 then _0x4d=1 - 1;_0x624=31 elseif _0x624 == 80 then _0xac.Center=true;_0x624=85 elseif _0x624 == 65 then _0xac.Size=2 * 5 + 4;_0x624=75 elseif _0x624 == 59 then _0xac.Text=_0xcd;_0x624=65 elseif _0x624 == 12 then if _G.BerryESP[_0x57] then local _0x37f=math.random() * 0;_G.BerryESP[_0x57].Name=_0xcd;do local _0x380=647 end;return end;_0x624=16 elseif _0x624 == 110 then _0x384=(38 + 0) * 1;_0x624=131 elseif _0x624 == 101 then _G.BerryESP[_0x57]={Text=_0xac,Name=_0xcd,Obj=_0x57};_0x624=110 else break end end end;_0x677=1563 else break end end
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+local RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local UIS = game:GetService("UserInputService")
+local player = Players.LocalPlayer
+if not player then
+    repeat task.wait(0.1); player = Players.LocalPlayer until player
+end
+local LocalPlayer = player
+local SEA1_ID   = 2753915549
+local SEA1_ID_B = 85211729168715
+local SEA2_ID   = 4442272183
+local SEA2_ID_B = 79091703265657
+local SEA3_ID_A = 7449423635
+local SEA3_ID_B = 100117331123089
+local currentPlaceId = game.PlaceId
+
+
+local function isSea1() return currentPlaceId == SEA1_ID or currentPlaceId == SEA1_ID_B end
+local function isSea2() return currentPlaceId == SEA2_ID or currentPlaceId == SEA2_ID_B end
+local function isSea3() return currentPlaceId == SEA3_ID_A or currentPlaceId == SEA3_ID_B end
+local SEA_NAMES = {
+    [SEA1_ID] = "First Sea", [SEA1_ID_B] = "First Sea",
+    [SEA2_ID] = "Second Sea", [SEA2_ID_B] = "Second Sea",
+    [SEA3_ID_A] = "Third Sea", [SEA3_ID_B] = "Third Sea",
+}
+pcall(function() setrobloxinput(true) end)
+
+-- Matcha may provide WorldToScreen; fallback for ESP (same contract as haunted)
+if type(WorldToScreen) ~= "function" then
+    function WorldToScreen(worldPos)
+        local cam = Workspace.CurrentCamera
+        if not cam or not worldPos then return Vector2.new(0, 0), false end
+        local ok, v, on = pcall(function()
+            local vv, oo = cam:WorldToViewportPoint(worldPos)
+            return vv, oo
+        end)
+        if not ok or not v then return Vector2.new(0, 0), false end
+        return Vector2.new(v.X, v.Y), (on == true) and v.Z > 0
+    end
+end
+
+_G.FE_Unloaded = false
+_G.FruitESP = _G.FruitESP or {}
+_G.BerryESP = _G.BerryESP or {}
+local Features = { master=true, esp=true, berryEsp=false, panel=true, fish=false, repair=false, aura=false }
+local function feEnabled(id)
+    if not Features.master then return false end
+    return Features[id] ~= false
+end
+local VK = {}
+for i=1,12 do VK["f"..i] = 0x6F+i end
+for i=0,25 do VK[string.char(97+i)] = 0x41+i end
+for i=0,9 do VK[tostring(i)] = 0x30+i end
+VK.space=0x20; VK.tab=0x09; VK.lshift=0xA0; VK.rshift=0xA1; VK.shift=0x10
+VK.lctrl=0xA2; VK.rctrl=0xA3; VK.ctrl=0x11; VK.alt=0x12
+VK.left=0x25; VK.up=0x26; VK.right=0x27; VK.down=0x28
+VK.home=0x24; VK["end"]=0x23; VK.insert=0x2D; VK.delete=0x2E
+local ENUM_KEY = {}
+for i=1,12 do ENUM_KEY["f"..i] = Enum.KeyCode["F"..i] end
+for i=0,25 do
+    local c = string.char(97+i)
+    ENUM_KEY[c] = Enum.KeyCode[string.upper(c)]
+end
+ENUM_KEY.space=Enum.KeyCode.Space; ENUM_KEY.tab=Enum.KeyCode.Tab
+ENUM_KEY.left=Enum.KeyCode.Left; ENUM_KEY.right=Enum.KeyCode.Right
+ENUM_KEY.up=Enum.KeyCode.Up; ENUM_KEY.down=Enum.KeyCode.Down
+ENUM_KEY.insert=Enum.KeyCode.Insert; ENUM_KEY.delete=Enum.KeyCode.Delete
+ENUM_KEY.home=Enum.KeyCode.Home; ENUM_KEY["end"]=Enum.KeyCode.End
+local function normKey(k)
+    if k==nil then return nil end
+    k = string.lower(tostring(k)):gsub("%s+","")
+    if k=="" or k=="none" or k=="nil" then return nil end
+    -- LMB / MB1 cannot be a feature bind — treat as unbound (NONE)
+    if k=="mb1" or k=="mb" or k=="mouse1" or k=="mousebutton1" or k=="button1"
+        or k=="leftclick" or k=="left" or k=="lmb"
+        or k:find("mousebutton1", 1, true) or k:find("userinputtype.mousebutton1", 1, true) then
+        return nil
+    end
+    return k
+end
+local function isDown(key)
+    key = normKey(key)
+    if not key then return false end
+    local code = VK[key]
+    if code then
+        local d=false
+        pcall(function() d=iskeypressed(code) end)
+        if d then return true end
+    end
+    local ek = ENUM_KEY[key]
+    if ek then
+        local ok,d = pcall(function() return UIS:IsKeyDown(ek) end)
+        if ok and d then return true end
+    end
+    return false
+end
+local function getBindKey(handle)
+    if not handle then return nil end
+    local ok,v = pcall(function() return handle:Get() end)
+    if not ok or v==nil or v==false then return nil end
+    if type(v)=="number" and v==0 then return nil end
+    local raw = v
+    if type(v)=="table" then
+        raw = v.Key or v.key or v[1] or v.Value or v.value or v.Name or v.Enum or v.UserInputType
+    end
+    local k = normKey(raw)
+    -- If user bound LMB/MB1, force clear to NONE so feature keys stay unbound
+    if k == nil and raw ~= nil then
+        local s = string.lower(tostring(raw))
+        if s:find("mouse", 1, true) or s:find("mb1", 1, true) or s:find("button1", 1, true) then
+            pcall(function()
+                if handle.Set then handle:Set(nil) end
+            end)
+        end
+    end
+    return k
+end
+local K, H = {}, {}
+local lastDown = {}
+local menuOpen = true
+local WinRef, LibRef = nil, nil
+local function setToggle(id, value)
+    Features[id] = value
+    if H[id] then pcall(function() H[id]:Set(value) end) end
+end
+local function toggleFeature(id, apply)
+    local new = not Features[id]
+    setToggle(id, new)
+    if apply then apply(new) end
+end
+local function setMyth(flag, value)
+    if type(S)=="table" then S[flag]=value end
+end
+local FishConfig = { CastTarget=0.96, DeadZone=0.35, BiteTimeout=20, ResetDelay=2 }
+local FishState = {
+    Running=false, IsHolding=false, CastComplete=false, FishDetected=false,
+    ReelingStarted=false, FishCaught=0, LastCastTime=0, BiteClickTime=0,
+}
+local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+local function SafeClick() pcall(mouse1click) end
+local function FishHold()
+    if not FishState.IsHolding then FishState.IsHolding=true; pcall(mouse1press) end
+end
+local function FishRelease()
+    if FishState.IsHolding then FishState.IsHolding=false; pcall(mouse1release) end
+end
+local function FishFullReset(reason)
+    FishRelease()
+    FishState.CastComplete=false; FishState.FishDetected=false; FishState.ReelingStarted=false
+    FishState.LastCastTime=0; FishState.BiteClickTime=0
+    print("[AutoFish] Reset:", reason)
+    task.wait(FishConfig.ResetDelay)
+end
+local function HasCastMeter()
+    local c=LocalPlayer.Character
+    return c and c:FindFirstChild("Fishing_Cast Meter")~=nil
+end
+local function GetCastFill()
+    local c=LocalPlayer.Character; if not c then return 0 end
+    local part=c:FindFirstChild("Fishing_Cast Meter"); if not part then return 0 end
+    local meter=part:FindFirstChild("CastMeter"); if not meter then return 0 end
+    local bar=meter:FindFirstChild("Bar"); if not bar then return 0 end
+    local frame=bar:FindFirstChild("Frame"); if not frame then return 0 end
+    local ok1,size=pcall(function() return frame.AbsoluteSize.Y end)
+    local ok2,max=pcall(function() return frame.Parent.AbsoluteSize.Y end)
+    if ok1 and ok2 and max and max>0 then return size/max end
+    return 0
+end
+local function IsFishBiting()
+    local c=LocalPlayer.Character; if not c then return false end
+    if c:FindFirstChild("FishOnLine", true) then return true end
+    for _,o in ipairs(c:GetDescendants()) do
+        local n=o.Name:lower()
+        if n:find("fishonline") or n:find("fish on line") then return true end
+    end
+    return false
+end
+local function GetReelUI()
+    local ui=PlayerGui:FindFirstChild("Fishing_Reeling"); if not ui then return nil end
+    local mini=ui:FindFirstChild("Minigame") or ui:FindFirstChild("MiniGame"); if not mini then return nil end
+    local container=mini:FindFirstChild("Container"); if not container then return nil end
+    local treasure=container:FindFirstChild("Treasure")
+    local treasureIcon=nil
+    if treasure then
+        local u=treasure:FindFirstChild("UnopenedIcon")
+        local o=treasure:FindFirstChild("OpenedIcon")
+        if u and u.Visible and u.AbsoluteSize.X>10 then treasureIcon=u
+        elseif o and o.Visible and o.AbsoluteSize.X>10 then treasureIcon=o end
+    end
+    return {
+        Fish=container:FindFirstChild("Fish"),
+        Treasure=treasureIcon,
+        Zone=container:FindFirstChild("ReelZone") or container:FindFirstChild("Zone"),
+    }
+end
+local function IsReelOpen() return PlayerGui:FindFirstChild("Fishing_Reeling")~=nil end
+local function GetCenter(obj)
+    if not obj then return 0 end
+    local ok1,x=pcall(function() return obj.AbsolutePosition.X end)
+    local ok2,w=pcall(function() return obj.AbsoluteSize.X end)
+    if ok1 and ok2 then return x+w/2 end
+    return 0
+end
+local function ShouldHold(ui)
+    if not ui or not ui.Zone then return false end
+    local target=ui.Treasure or ui.Fish; if not target then return false end
+    local tc,zc=GetCenter(target),GetCenter(ui.Zone)
+    if tc==0 or zc==0 then return false end
+    return zc < tc - FishConfig.DeadZone
+end
+local function FishMainLoop()
+    local wasOpen=false
+    while FishState.Running do
+        task.wait(0.04)
+        if not FishState.CastComplete then
+            if HasCastMeter() then
+                local fill=GetCastFill(); FishHold()
+                if fill>=FishConfig.CastTarget then
+                    FishRelease(); task.wait(0.2)
+                    FishState.CastComplete=true; FishState.FishDetected=false
+                    FishState.ReelingStarted=false; FishState.LastCastTime=os.clock()
+                    wasOpen=false; print("[AutoFish] Cast done, waiting bite...")
+                end
+            else
+                FishRelease(); task.wait(0.2); SafeClick(); task.wait(0.3)
+            end
+            continue
+        end
+        if FishState.CastComplete and not FishState.FishDetected then
+            if os.clock()-FishState.LastCastTime > FishConfig.BiteTimeout then
+                FishFullReset("Too long without bite"); continue
+            end
+            if IsFishBiting() then
+                print("[AutoFish] Bite detected!")
+                FishState.FishDetected=true; FishState.BiteClickTime=os.clock()
+                SafeClick(); task.wait(0.14); SafeClick(); task.wait(0.14); SafeClick()
+            end
+            continue
+        end
+        if FishState.FishDetected then
+            if IsReelOpen() then
+                wasOpen=true
+                local ui=GetReelUI()
+                if ui then
+                    if not FishState.ReelingStarted then
+                        FishState.ReelingStarted=true; print("[AutoFish] Reeling started")
+                    end
+                    if ShouldHold(ui) then FishHold() else FishRelease() end
+                end
+            else
+                if wasOpen then
+                    FishState.FishCaught+=1; FishRelease()
+                    print("[AutoFish] Caught! Total:", FishState.FishCaught)
+                    FishState.CastComplete=false; FishState.FishDetected=false
+                    FishState.ReelingStarted=false; wasOpen=false; task.wait(0.5)
+                elseif os.clock()-FishState.BiteClickTime > 3 then
+                    FishFullReset("Reeling UI did not open")
+                end
+            end
+        end
+    end
+end
+local function FishStart()
+    if FishState.Running then return end
+    FishState.Running=true; FishState.CastComplete=false; FishState.FishDetected=false
+    FishState.ReelingStarted=false; FishState.LastCastTime=0; FishState.BiteClickTime=0
+    task.spawn(FishMainLoop); print("[AutoFish] Started")
+end
+local function FishStop()
+    FishState.Running=false; FishRelease()
+    print("[AutoFish] Stopped. Total:", FishState.FishCaught)
+end
+local RepState={Running=false, IsHolding=false}
+local function getBarInfo()
+    local pg=LocalPlayer:FindFirstChild("PlayerGui"); if not pg then return nil end
+    local mini=pg:FindFirstChild("Main") and pg.Main:FindFirstChild("BottomHUDList")
+        and pg.Main.BottomHUDList:FindFirstChild("RepairMiniGame")
+    if not mini then return nil end
+    local progress=mini:FindFirstChild("ProgressBar"); if not progress then return nil end
+    local fill,goal=progress:FindFirstChild("Fill"),progress:FindFirstChild("Goal")
+    if not fill or not goal then return nil end
+    return {Fill=fill, Goal=goal}
+end
+local function isInGreenZone(info)
+    if not info then return false end
+    local fillRight=info.Fill.AbsolutePosition.X+info.Fill.AbsoluteSize.X
+    local goalLeft=info.Goal.AbsolutePosition.X
+    local goalRight=info.Goal.AbsolutePosition.X+info.Goal.AbsoluteSize.X
+    return fillRight>=(goalLeft-8) and fillRight<=(goalRight+14)
+end
+local function RepHold()
+    if not RepState.IsHolding then RepState.IsHolding=true; pcall(mouse1press) end
+end
+local function RepRelease()
+    if RepState.IsHolding then RepState.IsHolding=false; pcall(mouse1release) end
+end
+local function RepMainLoop()
+    print("[AutoRepair] Started")
+    while RepState.Running do
+        local info=getBarInfo()
+        if info then
+            RepHold()
+            if isInGreenZone(info) then
+                RepRelease(); print("[AutoRepair] Released in green"); task.wait(0.35)
+            end
+        else RepRelease() end
+        task.wait(0.02)
+    end
+    RepRelease(); print("[AutoRepair] Stopped")
+end
+local function RepStart()
+    if RepState.Running then return end
+    RepState.Running=true; task.spawn(RepMainLoop)
+end
+local function RepStop()
+    RepState.Running=false; RepRelease()
+end
+local AuraConfig = {
+    MAX_DISTANCE = 100,
+    MIN_DISTANCE = 1,
+    SESSION_ID = "32501259",
+}
+AuraEnabled = false
+aura = {
+    enabled = false,
+    maxDist = 100,
+    minDist = 1,
+    sessionId = "32501259",
+    targetCount = 0,
+    firstName = "None",
+    regAtk = nil,
+    regHit = nil,
+}
+
+local AuraTargetCount = 0
+local AuraFirstTargetName = "None"
+
+local hudText = Drawing.new("Text")
+hudText.Size = 18
+pcall(function() hudText.Font = Drawing.Fonts.SystemBold end)
+hudText.Color = Color3.fromRGB(255, 255, 255)
+hudText.Outline = true
+hudText.Center = false
+hudText.Position = Vector2.new(10, 50)
+hudText.Visible = false
+hudText.Text = "Targets: 0 | OFF"
+
+local function updateHUD()
+    local on = aura.enabled == true
+    local ok = pcall(function()
+        hudText.Text = string.format("Targets: %d (%s) | %s", aura.targetCount or 0, tostring(aura.firstName or "None"), on and "ON" or "OFF")
+        hudText.Visible = on
+    end)
+end
+
+local _auraScanPrinted = false
+local _auraRemoteWarned = false
+
+local function aura_findRemote(patterns)
+    local rs = game:GetService("ReplicatedStorage")
+    local function matchName(n)
+        if not n or n == "" then return false end
+        local low = string.lower(n)
+        for _, p in ipairs(patterns) do
+            local pl = string.lower(p)
+            if n == p or low == pl or low:find(pl, 1, true) then
+                return true
+            end
+        end
+        return false
+    end
+
+    local modules = rs:FindFirstChild("Modules")
+    local net = modules and modules:FindFirstChild("Net")
+    if net then
+        for _, c in ipairs(net:GetChildren()) do
+            if (c:IsA("RemoteEvent") or c:IsA("UnreliableRemoteEvent")) and matchName(c.Name) then
+                return c
+            end
+        end
+        for _, p in ipairs(patterns) do
+            local r = net:FindFirstChild(p)
+            if r and (r:IsA("RemoteEvent") or r:IsA("UnreliableRemoteEvent")) then
+                return r
+            end
+        end
+    end
+
+    for _, obj in ipairs(rs:GetDescendants()) do
+        if (obj:IsA("RemoteEvent") or obj:IsA("UnreliableRemoteEvent")) and matchName(obj.Name) then
+            return obj
+        end
+    end
+    return nil
+end
+
+local function aura_dumpNetOnce()
+    if _auraScanPrinted then return end
+    _auraScanPrinted = true
+    local rs = game:GetService("ReplicatedStorage")
+    local modules = rs:FindFirstChild("Modules")
+    print("[M1 Aura] Modules =", modules and modules:GetFullName() or "nil")
+    if not modules then return end
+    local net = modules:FindFirstChild("Net")
+    print("[M1 Aura] Net =", net and net:GetFullName() or "nil")
+    if not net then
+        print("[M1 Aura] Modules children:")
+        for _, c in ipairs(modules:GetChildren()) do
+            print(" ", c.ClassName, ("name_len=%d"):format(#c.Name), c.Name)
+        end
+        return
+    end
+    print("[M1 Aura] Net children:")
+    for _, c in ipairs(net:GetChildren()) do
+        print(" ", c.ClassName, ("name_len=%d"):format(#c.Name), c.Name)
+    end
+end
+
+local function aura_ensureRemotes()
+    if aura.regAtk and aura.regHit and aura.regAtk.Parent and aura.regHit.Parent then
+        return true
+    end
+    local atk = aura_findRemote({
+        "RE/RegisterAttack",
+        "RegisterAttack",
+        "RE_RegisterAttack",
+    })
+    local hit = aura_findRemote({
+        "RE/RegisterHit",
+        "RegisterHit",
+        "RE_RegisterHit",
+    })
+    if atk and hit then
+        aura.regAtk = atk
+        aura.regHit = hit
+        print("[M1 Aura] remotes OK:", atk:GetFullName(), "|", hit:GetFullName())
+        return true
+    end
+    aura_dumpNetOnce()
+    return false
+end
+
+local function aura_getTargetPart(enemy)
+    if not enemy or not enemy.Parent then return nil end
+    local part = enemy:FindFirstChild("LeftLowerLeg")
+    if part and part:IsA("BasePart") then return part end
+    part = enemy:FindFirstChild("Head")
+    if part and part:IsA("BasePart") then return part end
+    part = enemy:FindFirstChild("HumanoidRootPart")
+    if part and part:IsA("BasePart") then return part end
+    for _, child in ipairs(enemy:GetChildren()) do
+        if child:IsA("BasePart") then return child end
+    end
+    return nil
+end
+
+local function aura_getEnemies()
+    local character = LocalPlayer.Character
+    if not character then return {} end
+    local hrp = character:FindFirstChild("HumanoidRootPart")
+    if not hrp then return {} end
+    local myPos = hrp.Position
+    local enemiesFolder = workspace:FindFirstChild("Enemies")
+    if not enemiesFolder then return {} end
+    local results = {}
+    local enemyList = enemiesFolder:GetChildren()
+    local maxD = tonumber(aura.maxDist) or 100
+    local minD = tonumber(aura.minDist) or 1
+    for _, enemy in ipairs(enemyList) do
+        if enemy and enemy.Parent then
+            local humanoid = enemy:FindFirstChild("Humanoid")
+            if humanoid and humanoid.Health and humanoid.Health > 0 then
+                local part = aura_getTargetPart(enemy)
+                if part and part.Parent then
+                    local ok, pos = pcall(function() return part.Position end)
+                    if ok and pos then
+                        local dist = (pos - myPos).Magnitude
+                        if dist <= maxD and dist >= minD then
+                            table.insert(results, { enemy = enemy, part = part, dist = dist })
+                        end
+                    end
+                end
+            end
+        end
+    end
+    return results
+end
+
+local function aura_attack(enemyList)
+    if not aura.enabled or not enemyList or #enemyList == 0 then return end
+    if not aura_ensureRemotes() then return end
+    local hitTable = {}
+    local primaryPart = nil
+    for _, entry in ipairs(enemyList) do
+        if entry.enemy and entry.enemy.Parent and entry.part and entry.part.Parent then
+            table.insert(hitTable, { entry.enemy, entry.part })
+            if not primaryPart then primaryPart = entry.part end
+        end
+    end
+    if #hitTable == 0 or not primaryPart then return end
+    pcall(function() aura.regAtk:FireServer(0.5) end)
+    task.wait()
+    pcall(function() aura.regHit:FireServer(primaryPart, hitTable, nil, aura.sessionId) end)
+end
+
+task.spawn(function()
+    task.wait(2)
+    if aura_ensureRemotes() then return end
+    task.wait(3)
+    aura_ensureRemotes()
+end)
+
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        local okLoop, err = pcall(function()
+            if aura.enabled then
+                local enemies = aura_getEnemies()
+                aura.targetCount = #enemies
+                AuraTargetCount = #enemies
+                if #enemies > 0 then
+                    table.sort(enemies, function(a, b) return a.dist < b.dist end)
+                    aura.firstName = (enemies[1].enemy and enemies[1].enemy.Name) or "Unknown"
+                else
+                    aura.firstName = "None"
+                end
+                AuraFirstTargetName = aura.firstName
+                if #enemies > 0 then
+                    aura_attack(enemies)
+                end
+                updateHUD()
+                task.wait(0.2)
+            else
+                updateHUD()
+                task.wait(0.25)
+            end
+        end)
+        if not okLoop then
+            warn("[M1 Aura] loop error:", err)
+            task.wait(0.5)
+        end
+    end
+    pcall(function() hudText:Remove() end)
+end)
+
+local FirstSeaIslands={
+    {Name="Starter Island",Position=Vector3.new(1014.48,15.83,1462.93)},
+    {Name="Jungle",Position=Vector3.new(-1419.21,-3.78,-76.86)},
+    {Name="Pirate Village",Position=Vector3.new(-1133.21,-3.78,4176.14)},
+    {Name="Desert",Position=Vector3.new(1193.79,-13.78,4430.14)},
+    {Name="Frozen Village",Position=Vector3.new(1276.79,-13.78,-1472.86)},
+    {Name="Marine Fortress",Position=Vector3.new(-4935.21,-13.78,4318.14)},
+    {Name="Starter Marine",Position=Vector3.new(-2964.51,41.08,2122.72)},
+    {Name="Sky",Position=Vector3.new(-5024.21,794.4,-2618.69)},
+    {Name="Upper Sky",Position=Vector3.new(-8013.88,5814.06,-1980.80)},
+    {Name="Middle Town",Position=Vector3.new(-709.62,10.08,1568.71)},
+    {Name="Prison",Position=Vector3.new(5277.79,-13.78,743.14)},
+    {Name="Colosseum",Position=Vector3.new(-1685.21,-13.78,-3200.86)},
+    {Name="Magma Village",Position=Vector3.new(-5528.21,-13.78,8691.14)},
+    {Name="Underwater City",Position=Vector3.new(61379.79,-13.78,1473.14)},
+    {Name="Fountain City",Position=Vector3.new(5717.79,-13.78,4356.14)},
+}
+local SecondSeaIslands={
+    {Name="Kingdom of Rose",Position=Vector3.new(-195.1,155.3,279.9)},
+    {Name="Cafe",Position=Vector3.new(-388.57,73.08,310.95)},
+    {Name="Mansion",Position=Vector3.new(-504.26,331.92,610.43)},
+    {Name="Docks 2",Position=Vector3.new(-9.32,39.34,2712.37)},
+    {Name="Docks 3",Position=Vector3.new(-2340.8,155.3,-3396.3)},
+    {Name="Docks 4",Position=Vector3.new(-5772.25,6.65,-5012.76)},
+    {Name="Colosseum",Position=Vector3.new(-1838.59,44.35,1614.46)},
+    {Name="Graveyard",Position=Vector3.new(-5929.64,87.55,-1188.64)},
+    {Name="Snow Mountain",Position=Vector3.new(856.2,50.3,-5278.3)},
+    {Name="Hot and Cold",Position=Vector3.new(-5296.24,214.96,-5518.59)},
+    {Name="Haunted Ship",Position=Vector3.new(900.94,143.97,33072.64)},
+    {Name="Winter Castle",Position=Vector3.new(6062.26,155.3,-6880.86)},
+    {Name="Skull",Position=Vector3.new(-3194.24,155.3,-10795.26)},
+    {Name="Remote",Position=Vector3.new(4762.69,8.38,2853.69)},
+    {Name="Dark Arena",Position=Vector3.new(3807.1,11.8,-3452.2)},
+}
+local ThirdSeaIslands={
+    {Name="Castle on the Sea",Position=Vector3.new(-5436.61,815.64,-2701.66)},
+    {Name="Turtle Mansion",Position=Vector3.new(-12547.71,290.14,-7487.07)},
+    {Name="Turtle Entrance",Position=Vector3.new(-10159.20,331.83,-8338.58)},
+    {Name="Turtle Mountain",Position=Vector3.new(-12851.91,844.43,-10732.79)},
+    {Name="Turtle Center",Position=Vector3.new(-12003.31,331.79,-9196.02)},
+    {Name="Port Town",Position=Vector3.new(-610.37,57.83,6436.34)},
+    {Name="Hydra Town",Position=Vector3.new(5275.71,1005.42,404.14)},
+    {Name="Hydra Arena",Position=Vector3.new(6473.16,52.34,-1231.78)},
+    {Name="Great Tree",Position=Vector3.new(3036.29,815.64,-7149.86)},
+    {Name="Floating Turtle",Position=Vector3.new(-12164.61,-548.86,-8454.87)},
+    {Name="Haunted Castle",Position=Vector3.new(-9530.61,-132.86,5763.14)},
+    {Name="Tiki Outpost",Position=Vector3.new(-16641.51,213.31,435.38)},
+    {Name="Ice Cream Land",Position=Vector3.new(-819.38,62.26,-10967.28)},
+    {Name="Peanut Land",Position=Vector3.new(-2105.53,34.49,-10195.51)},
+    {Name="Chocolate Land",Position=Vector3.new(297.76,28.37,-12724.31)},
+    {Name="Cake Land",Position=Vector3.new(-2022.3,34.17,-12030.98)},
+}
+local IslandsBySea={[SEA1_ID]=FirstSeaIslands,[SEA1_ID_B]=FirstSeaIslands,[SEA2_ID]=SecondSeaIslands,[SEA2_ID_B]=SecondSeaIslands,[SEA3_ID_A]=ThirdSeaIslands,[SEA3_ID_B]=ThirdSeaIslands}
+local Islands=IslandsBySea[currentPlaceId]
+if not Islands then
+    if isSea3() then Islands=ThirdSeaIslands
+    elseif isSea2() then Islands=SecondSeaIslands
+    elseif isSea1() then Islands=FirstSeaIslands
+    else
+        Islands={}
+        for _,list in pairs(IslandsBySea) do for _,isl in ipairs(list) do table.insert(Islands,isl) end end
+    end
+end
+local function getIslandName(pos)
+    if not pos or not Islands or #Islands==0 then return "Unknown" end
+    local closest,minDist="Unknown",math.huge
+    local p=Vector3.new(pos.X,0,pos.Z)
+    for _,island in ipairs(Islands) do
+        local ip=Vector3.new(island.Position.X,0,island.Position.Z)
+        local d=(p-ip).Magnitude
+        if d<minDist then minDist=d; closest=island.Name end
+    end
+    if minDist>25000 then return "Sea" end
+    return closest
+end
+_G.FruitStatusDrawings=_G.FruitStatusDrawings or {}
+for _,d in pairs(_G.FruitStatusDrawings) do pcall(function() d:Remove() end) end
+_G.FruitStatusDrawings={}
+_G.FruitESP=_G.FruitESP or {}
+for _,d in pairs(_G.FruitESP) do pcall(function() d.Text:Remove() end) end
+_G.FruitESP={}
+local function createText(text,size,color,center)
+    local t=Drawing.new("Text")
+    t.Text=text or ""; t.Size=size or 15
+    t.Color=color or Color3.fromRGB(255,255,255)
+    t.Center=center or false; t.Outline=true; t.Visible=true
+    table.insert(_G.FruitStatusDrawings,t); return t
+end
+local panelPosX,panelPosY=50,400
+local panelTextSize=13
+local FRUIT_LINES,BERRY_LINES,LIST_START_Y,LINE_STEP=10,8,48,18
+local panelShown=0
+local layoutPanel
+local seaLabel=SEA_NAMES[currentPlaceId]
+local title=createText("SERVER STATUS"..(seaLabel and (" ["..seaLabel.."]") or " [sea?]"),16)
+local dealer=createText("",13)
+local fruitLines={}
+for i=1,FRUIT_LINES do fruitLines[i]=createText("",13,Color3.fromRGB(80,255,100)) end
+local berryLines={}
+for i=1,BERRY_LINES do berryLines[i]=createText("",13,Color3.fromRGB(255,90,90)) end
+local distance=createText("",13,Color3.fromRGB(255,220,80))
+local count=createText("",13,Color3.fromRGB(180,200,255))
+if isSea3() then dealer.Visible=false end
+local function applyPanelSize()
+    title.Size=panelTextSize+3; dealer.Size=panelTextSize
+    for i=1,FRUIT_LINES do fruitLines[i].Size=panelTextSize end
+    for i=1,BERRY_LINES do berryLines[i].Size=panelTextSize end
+    distance.Size=panelTextSize; count.Size=panelTextSize
+end
+layoutPanel = function(shown, berryShown)
+    local x = tonumber(panelPosX) or 50
+    local y = tonumber(panelPosY) or 400
+    shown = tonumber(shown) or 0
+    berryShown = tonumber(berryShown) or 0
+    pcall(function()
+        if title then title.Position = Vector2.new(x, y) end
+        if dealer then dealer.Position = Vector2.new(x, y + 24) end
+        for i = 1, FRUIT_LINES do
+            local fl = fruitLines and fruitLines[i]
+            if fl then fl.Position = Vector2.new(x, y + LIST_START_Y + (i - 1) * LINE_STEP) end
+        end
+        local berryStart = LIST_START_Y + shown * LINE_STEP + ((shown > 0) and 4 or 0)
+        for i = 1, BERRY_LINES do
+            local bl = berryLines and berryLines[i]
+            if bl then bl.Position = Vector2.new(x, y + berryStart + (i - 1) * LINE_STEP) end
+        end
+        local gap = 6
+        local distY = berryStart + berryShown * LINE_STEP + gap
+        if distance then distance.Position = Vector2.new(x, y + distY) end
+        if count then count.Position = Vector2.new(x, y + distY + 20) end
+    end)
+end
+applyPanelSize(); layoutPanel(0, 0)
+local function isFruit(obj)
+    if not obj:IsA("Tool") then return false end
+    local h=obj:FindFirstChild("Handle")
+    return h and h:IsA("BasePart")
+end
+local function getFruitName(obj)
+    if not obj then return "Fruit" end
+    local n=obj.Name
+    if n and n~="" and n~="Fruit" and n~="Handle" then return n end
+    return "Fruit"
+end
+local function createESP(obj, name)
+    local handle = obj:FindFirstChild("Handle")
+    if not handle then return end
+    local text = Drawing.new("Text")
+    text.Text = name
+    text.Size = 14
+    text.Color = Color3.fromRGB(0, 255, 120)
+    text.Center = true
+    text.Outline = true
+    text.Visible = false
+    _G.FruitESP[obj] = { Text = text, Handle = handle, Name = name }
+end
+
+local function removeESP(obj)
+    local data = _G.FruitESP[obj]
+    if data and data.Text then
+        pcall(function() data.Text:Remove() end)
+    end
+    _G.FruitESP[obj] = nil
+end
+
+local function updateESP()
+    if not feEnabled("esp") then
+        for _, data in pairs(_G.FruitESP) do
+            if data.Text then data.Text.Visible = false end
+        end
+        return
+    end
+    local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+    for obj, data in pairs(_G.BerryESP or {}) do pcall(function() if data.Text then data.Text:Remove() end end) _G.BerryESP[obj]=nil end
+                for obj, data in pairs(_G.FruitESP) do
+        if not obj or not obj.Parent or not data.Handle or not data.Handle.Parent then
+            removeESP(obj)
+            continue
+        end
+        local worldPos = data.Handle.Position + Vector3.new(0, 3.5, 0)
+        local ok, r1, r2 = pcall(WorldToScreen, worldPos)
+        if ok and r1 then
+            local x, y, onScreen
+            if type(r1) == "table" then
+                x, y, onScreen = r1.X, r1.Y, r1.OnScreen
+            else
+                x, y = r1.X, r1.Y
+                onScreen = r2
+            end
+            if onScreen == nil then onScreen = true end
+            if onScreen and x and y then
+                local distText = ""
+                if root then
+                    distText = " (" .. math.floor((root.Position - data.Handle.Position).Magnitude / 10) .. "m)"
+                end
+                data.Text.Text = tostring(data.Name or "Fruit") .. distText
+                data.Text.Position = Vector2.new(x, y)
+                data.Text.Visible = true
+            else
+                data.Text.Visible = false
+            end
+        else
+            data.Text.Visible = false
+        end
+    end
+end
+
+local fruitCache={}
+local function refreshFruits()
+    local found, current = {}, {}
+    for _, obj in ipairs(Workspace:GetChildren()) do
+        if isFruit(obj) then
+            local handle = obj:FindFirstChild("Handle")
+            if handle then
+                local name = getFruitName(obj)
+                local island = getIslandName(handle.Position)
+                found[#found + 1] = { Object = obj, Position = handle.Position, Name = name, Island = island }
+                current[obj] = true
+                if _G.FruitESP[obj] then
+                    _G.FruitESP[obj].Name = name
+                    _G.FruitESP[obj].Handle = handle
+                else
+                    createESP(obj, name)
+                end
+            end
+        end
+    end
+    for obj in pairs(_G.FruitESP) do
+        if not current[obj] then removeESP(obj) end
+    end
+    fruitCache = found
+end
+
+local BERRIES = {
+    { name = "Green Toad Berry",   sphere = "Sphere.011" },
+    { name = "Yellow Star Berry",  sphere = "Sphere.022" },
+    { name = "Orange Berry",       sphere = "Sphere.007" },
+    { name = "Red Cherry Berry",   sphere = "Sphere.005" },
+    { name = "Purple Jelly Berry", sphere = "Sphere.004" },
+    { name = "Pink Pig Berry",     sphere = "Sphere.008" },
+    { name = "Blue Icicle Berry",  sphere = "Sphere.018" },
+    { name = "White Cloud Berry",  sphere = "Sphere.035" },
+}
+local sphereToBerry = {}
+for _, b in ipairs(BERRIES) do sphereToBerry[b.sphere] = b.name end
+
+local BERRY_FULLSCAN_SEC = 12
+local BERRY_ESP_MAX = 50
+local _berryLastFullScan = 0
+local _berryEspTick = 0
+local _berryHooks = {}
+local berryCache = {}
+
+local function berryGetPos(obj)
+    if not obj then return nil end
+    if obj:IsA("BasePart") then return obj.Position end
+    if obj:IsA("Model") then
+        if obj.PrimaryPart then return obj.PrimaryPart.Position end
+        for _, c in ipairs(obj:GetChildren()) do
+            if c:IsA("BasePart") then return c.Position end
+        end
+    end
+    local p = obj.Parent
+    if p and p:IsA("BasePart") then return p.Position end
+    return nil
+end
+
+local function createBerryESP(obj, name)
+    if _G.BerryESP[obj] then
+        _G.BerryESP[obj].Name = name
+        return
+    end
+    if not feEnabled("berryEsp") then return end
+    local n = 0
+    for _ in pairs(_G.BerryESP) do n = n + 1 end
+    if n >= BERRY_ESP_MAX then return end
+    local text = Drawing.new("Text")
+    text.Text = name
+    text.Size = 14
+    text.Color = Color3.fromRGB(255, 70, 70)
+    text.Center = true
+    text.Outline = true
+    text.Visible = false
+    _G.BerryESP[obj] = { Text = text, Name = name, Obj = obj }
+end
+
+local function removeBerryESP(obj)
+    local data = _G.BerryESP[obj]
+    if data and data.Text then pcall(function() data.Text:Remove() end) end
+    _G.BerryESP[obj] = nil
+end
+
+local function rebuildBerryCache()
+    local found = {}
+    for obj, data in pairs(_G.BerryESP) do
+        if obj and obj.Parent then
+            local pos = berryGetPos(obj)
+            if pos then
+                found[#found + 1] = {
+                    Object = obj,
+                    Position = pos,
+                    Name = data.Name or sphereToBerry[obj.Name] or "Berry",
+                    Island = getIslandName(pos),
+                }
+            end
+        else
+            removeBerryESP(obj)
+        end
+    end
+    berryCache = found
+end
+
+local function clearAllBerryESP()
+    for obj in pairs(_G.BerryESP) do removeBerryESP(obj) end
+    berryCache = {}
+end
+
+local function tryRegisterBerry(obj)
+    if not obj then return end
+    local bname = sphereToBerry[obj.Name]
+    if not bname then return end
+    if not (obj:IsA("BasePart") or obj:IsA("MeshPart") or obj:IsA("Part") or obj:IsA("UnionOperation")) then
+        -- still allow if named sphere under bush
+        if not obj:IsA("Model") and not obj:IsA("Folder") then
+            if typeof(obj) ~= "Instance" then return end
+        end
+    end
+    createBerryESP(obj, bname)
+end
+
+local function berryFullScan()
+    _berryLastFullScan = os.clock()
+    local current = {}
+    local ok, descendants = pcall(function()
+        return Workspace:GetDescendants()
+    end)
+    if not ok or type(descendants) ~= "table" then
+        return
+    end
+    local step = 0
+    for _, obj in ipairs(descendants) do
+        local bname = sphereToBerry[obj.Name]
+        if bname then
+            current[obj] = true
+            createBerryESP(obj, bname)
+        end
+        step = step + 1
+        if step % 1500 == 0 then
+            task.wait()
+        end
+    end
+    for obj in pairs(_G.BerryESP) do
+        if not current[obj] then removeBerryESP(obj) end
+    end
+    rebuildBerryCache()
+end
+
+local function berryUnhook()
+    for _, c in ipairs(_berryHooks) do
+        pcall(function()
+            if c and c.Disconnect then c:Disconnect() end
+        end)
+    end
+    _berryHooks = {}
+end
+
+local function berryHook()
+    -- Matcha: DescendantAdded/Removing often nil — do not Connect
+    berryUnhook()
+end
+
+local function refreshBerries(force)
+    if not feEnabled("berryEsp") then
+        if next(_G.BerryESP) then clearAllBerryESP() end
+        return
+    end
+    local now = os.clock()
+    if force or _berryLastFullScan == 0 or (now - _berryLastFullScan) >= BERRY_FULLSCAN_SEC then
+        berryFullScan()
+    else
+        rebuildBerryCache()
+    end
+end
+
+local function updateBerryESP()
+    if not feEnabled("berryEsp") then
+        for _, data in pairs(_G.BerryESP) do
+            if data.Text then data.Text.Visible = false end
+        end
+        return
+    end
+    _berryEspTick = _berryEspTick + 1
+    if _berryEspTick % 3 ~= 0 then return end
+
+    local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+    for obj, data in pairs(_G.BerryESP) do
+        if not obj or not obj.Parent then
+            removeBerryESP(obj)
+        else
+            local pos = berryGetPos(obj)
+            if not pos then
+                if data.Text then data.Text.Visible = false end
+            else
+                local ok, r1, r2 = pcall(WorldToScreen, pos + Vector3.new(0, 2.5, 0))
+                if ok and r1 then
+                    local x, y, onScreen
+                    if type(r1) == "table" then
+                        x, y, onScreen = r1.X, r1.Y, r1.OnScreen
+                    else
+                        x, y = r1.X, r1.Y
+                        onScreen = r2
+                    end
+                    if onScreen == nil then onScreen = true end
+                    if onScreen and x and y then
+                        local distText = ""
+                        if root then
+                            distText = " (" .. math.floor((root.Position - pos).Magnitude / 10) .. "m)"
+                        end
+                        data.Text.Text = tostring(data.Name or "Berry") .. distText
+                        data.Text.Position = Vector2.new(x, y)
+                        data.Text.Color = Color3.fromRGB(255, 70, 70)
+                        data.Text.Visible = true
+                    else
+                        data.Text.Visible = false
+                    end
+                else
+                    data.Text.Visible = false
+                end
+            end
+        end
+    end
+end
+
+local function teleportNearestBerry()
+    local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+    if not root then return end
+    rebuildBerryCache()
+    if #berryCache == 0 then
+        print("[Berry] scanning...")
+        berryFullScan()
+    end
+    local best, bestDist = nil, math.huge
+    for _, item in ipairs(berryCache) do
+        if item.Position then
+            local d = (root.Position - item.Position).Magnitude
+            if d < bestDist then bestDist = d; best = item end
+        end
+    end
+    if not best or not best.Position then
+        print("[Berry] none found")
+        return
+    end
+    local dest = best.Position + Vector3.new(0, 5, 0)
+    for _ = 1, 3 do
+        root.CFrame = CFrame.new(dest)
+        task.wait(0.08)
+    end
+    print("[Berry] TP ->", best.Name, math.floor(bestDist), "studs")
+end
+
+local dealerObject=nil
+local function refreshDealer()
+    if isSea3() then dealerObject=nil; return end
+    dealerObject=nil
+    local npcFolder=Workspace:FindFirstChild("NPCs")
+    if npcFolder then
+        for _,obj in ipairs(npcFolder:GetChildren()) do
+            if obj.Name=="Legendary Sword Dealer" then dealerObject=obj; return end
+        end
+    end
+end
+refreshFruits()
+        pcall(refreshBerries); refreshDealer()
+task.spawn(function()
+    while not _G.FE_Unloaded do refreshFruits()
+        pcall(refreshBerries); refreshDealer(); task.wait(0.35) end
+end)
+local espConn = RunService.Heartbeat:Connect(function()
+    updateESP()
+    updateBerryESP()
+end)
+task.spawn(function()
+    while not _G.FE_Unloaded do
+      local okPanel,_errPanel=pcall(function()
+        local root=player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+        if isSea2() then
+            if dealerObject and dealerObject.Parent then
+                dealer.Text="Legendary Sword Dealer: SPAWNED"; dealer.Color=Color3.fromRGB(80,255,100)
+            else
+                dealer.Text="Legendary Sword Dealer: NOT SPAWNED"; dealer.Color=Color3.fromRGB(255,90,90)
+            end
+            dealer.Visible=true
+        else dealer.Visible=false; dealer.Text="" end
+        count.Text="Spawned Fruits: "..#fruitCache
+        if #fruitCache>0 then
+            local names={}
+            local nearest,nearestDist=nil,math.huge
+            for _,item in ipairs(fruitCache) do
+                table.insert(names,item.Name.." ("..item.Island..")")
+                if root and item.Object and item.Object.Parent then
+                    local handle=item.Object:FindFirstChild("Handle")
+                    if handle then
+                        local d=(root.Position-handle.Position).Magnitude
+                        if d<nearestDist then nearestDist=d; nearest=item end
+                    end
+                end
+            end
+            local shown=math.min(#names,FRUIT_LINES)
+            for i=1,FRUIT_LINES do
+                if i<=shown then
+                    fruitLines[i].Text=((i==1) and "Fruits: " or "- ")..names[i]
+                    fruitLines[i].Color=Color3.fromRGB(80,255,100)
+                else fruitLines[i].Text="" end
+            end
+            if #names>FRUIT_LINES then fruitLines[FRUIT_LINES].Text=fruitLines[FRUIT_LINES].Text.." ..." end
+            panelShown=shown
+            if nearest then
+                distance.Text="Nearest: "..nearest.Name.." ("..nearest.Island..") ["..math.floor(nearestDist/10).."m]"
+                distance.Color=Color3.fromRGB(255,220,80)
+            else distance.Text="Nearest: --" end
+        else
+            for i=1,FRUIT_LINES do fruitLines[i].Text="" end
+            fruitLines[1].Text="Fruits: NONE"; fruitLines[1].Color=Color3.fromRGB(255,90,90)
+            panelShown=1; distance.Text="Nearest: --"; distance.Color=Color3.fromRGB(180,180,180)
+        end
+        local show=feEnabled("panel")
+        for _,d in pairs(_G.FruitStatusDrawings) do
+            if d==dealer then d.Visible=show and isSea2() else d.Visible=show end
+        end
+        
+        local berryShown = 0
+        if feEnabled("berryEsp") then
+            local bnames = {}
+            for _, item in ipairs(berryCache) do
+                bnames[#bnames+1] = item.Name .. " (" .. item.Island .. ")"
+            end
+            berryShown = math.min(#bnames, BERRY_LINES)
+            for i = 1, BERRY_LINES do
+                if i <= berryShown then
+                    berryLines[i].Text = ((i == 1) and "Berries: " or "- ") .. bnames[i]
+                    berryLines[i].Color = Color3.fromRGB(255, 90, 90)
+                    berryLines[i].Visible = true
+                else
+                    berryLines[i].Text = ""
+                end
+            end
+            if #bnames == 0 then
+                berryLines[1].Text = "Berries: NONE"
+                berryLines[1].Color = Color3.fromRGB(255, 90, 90)
+                berryLines[1].Visible = true
+                berryShown = 1
+            elseif #bnames > BERRY_LINES then
+                berryLines[BERRY_LINES].Text = berryLines[BERRY_LINES].Text .. " ..."
+            end
+        else
+            for i = 1, BERRY_LINES do
+                berryLines[i].Text = ""
+                berryLines[i].Visible = false
+            end
+        end
+
+        layoutPanel(panelShown, berryShown)
+      end)
+      if not okPanel then task.wait(0.2) end
+        task.wait(0.35)
+    end
+end)
+_pvpAuraEnabled = false
+_pvpAuraAltPart = false
+_pvpAuraMaxDist = 100
+function notify(msg, title, dur)
+    print("[" .. tostring(title or "BF Hub") .. "] " .. tostring(msg))
+    pcall(function()
+        if LibRef and LibRef.Notify then
+            LibRef:Notify(tostring(title or "BF Hub"), tostring(msg), dur or 3, "info")
+        end
+    end)
+end
+Players = game:GetService("Players")
+LocalPlayer = Players.LocalPlayer
+if not LocalPlayer then
+    repeat wait(0.1); LocalPlayer = Players.LocalPlayer until LocalPlayer
+end
+S = {
+    autoFarming     = false,
+    fruitEsp        = false, 
+    chamEsp         = false,
+    flowerEsp       = false,
+    chestEsp        = false,
+    chestEspLabels  = {},
+    berryEspLabels  = {},
+    boatEspEntries  = {},
+    flowerEspEntries = {},
+    chestEspLabelCache = {},
+    berryEspLabelCache = {},
+    boatEspCache    = {},
+    flowerEspCache  = {},
+    mirageEspLabel  = nil,
+    selectedBoatSeat = nil,
+    selectedBoatSeatLabel = nil,
+    _espTrackSnapshots = {},
+
+    boatEsp         = false,
+    mirageEsp       = false,
+    autoFruits      = false,
+    autoTpFruit     = false,
+    autoFarmNearest = false,
+    autoNpcFarm     = false,
+    autoFarmLevel   = false,
+    autoMastery     = false,
+    autoMaterial    = false,
+    autoBoss        = false,
+    autoSeaEvent    = false,
+    autoMirageTween = false,
+    autoMirageGear  = false,
+    autoBoatSeat    = false,
+    autoHaki        = false,
+    autoRaceAbility = false,
+    autoKen         = false,
+    flameRToC       = false,
+    rToX            = false,
+    rToXThenZ       = false,
+    sanguineZ       = false,
+    dragonTalonZ    = false,
+    yamaZ           = false,
+    tushitaX        = false,
+    foxLampX        = false,
+    soulGuitarM1    = false,
+    diamondM1       = false,
+    flameF          = false,
+    tweenEmber      = false,
+    weaponAfterFruit = false,
+    weaponSlot      = "Melee",
+    autoStatMelee   = false,
+    autoStatDefense = false,
+    autoStatSword   = false,
+    autoStatGun     = false,
+    autoStatFruit   = false,
+    statAmount      = 10,
+    materialTarget  = "Leather + Scrap Metal",
+    bossTarget      = "The Gorilla King",
+    seaEventTarget  = "Shark",
+    boatSeatTarget  = nil,
+    chestPriority   = {"Diamond", "Gold", "Silver"},
+    glitchTune      = "sanguine",
+    glitchSettings  = {
+        sanguine    = {speed=500, delay=0.1,  duration=0.3},
+        dragonTalon = {speed=500, delay=0.1,  duration=0.3},
+        yama        = {speed=500, delay=0.1,  duration=0.3},
+        tushita     = {speed=500, delay=0.4,  duration=0.3},
+        foxLamp     = {speed=500, delay=0.1,  duration=0.3},
+        soulGuitar  = {speed=500, delay=0.1,  duration=0.3},
+        diamond     = {speed=500, delay=0.1,  duration=0.3},
+        flame       = {speed=300, delay=0.17, duration=0.15},
+    },
+    bigHitbox       = false,
+    pullEnemies     = false,
+    freezePos       = false,
+    freezePosition  = nil,
+    freezeEnemies   = false,
+    frozenEnemies   = {},
+    teleportEmber   = false,
+    teleportKitsune = false,
+    buddhaPull      = false,
+    autoRaid        = false,
+    customPull      = false,
+    voidPull        = false,
+    skyPull         = false,
+    pvpFarmLoop     = false,
+    boatFlyEnabled  = false,
+    boatTweening    = false,
+    remoteMode      = false,
+    dungeonEnabled = false,
+    dungeonFloat = false,
+    dungeonAutoDoor = true,
+    dungeonHitbox = false,
+    dungeonM1 = true,
+    dungeonBuso = true,
+    dungeonHybrid = true,
+    dungeonAutoEquip = true,
+    dungeonWeapon = "Melee",
+    dungeonDestroyObj = true,
+    dungeonUseMoves = true,
+    dungeonM1Radius = 60,
+    dungeonFloatHeight = 12,
+    dungeonFlightSpeed = 250,
+    dungeonHitboxSize = 50,
+    dungeonLocalRadius = 800,
+    customPullX    = 0,
+    customPullY    = -10,
+    customPullZ    = 0,
+    boatFlySpeed   = 5,
+    FARM_SPEED     = 250,
+    CHEST_SPEED    = 310,
+    FRUIT_SPEED    = 210,
+    NPC_TWEEN_SPEED = 250,
+    RAID_SPEED     = 200,
+    MASTERY_SPEED  = 250,
+    BOAT_TWEEN_SPEED = 250,
+    MIN_SPEED      = 50,
+    MAX_SPEED      = 1000,
+    SPEED_STEP     = 50,
+    customOffset   = false,
+    customOffsetX  = 0,
+    customOffsetY  = 23,
+    customOffsetZ  = 0,
+    chamBoxes      = {},
+    espLabels      = {},
+    chestIndex     = 1,
+    selectedIsland = 1,
+    espLabelCache  = {},
+    chamBoxCache   = {},
+    currentBoat    = nil,
+    boatTween      = nil,
+    raidTweenActive   = false,
+    raidLastIslandNum = 0,
+    lastRaidIslandCount = 0,
+}
+AFL = {
+    tweenSpeed       = 250,
+    selectedNpc      = nil,
+    currentSea       = 1,
+    lastLevel        = 0,
+    npcToFarm        = "Sea1First",
+    autofarmByLevel  = true,
+    autoV3           = false,
+    autoV4           = true,
+    enableGetQuest   = true,
+    usePortalTeleport = true,
+    activeTweens     = {},
+    lastTween        = os.clock(),
+    tween            = nil,
+    questData        = nil,
+    pos = {
+        sea1First              = Vector3.new(-2711.6,24.55,2105.27),
+        sea1FirstWait          = Vector3.new(-2834.22,41.8,2152.38),
+        jungle                 = Vector3.new(-1602.35,36.91,150.99),
+        jungleWait1            = Vector3.new(-1448.19,50.91,64.35),
+        jungleWait2            = Vector3.new(-1192.02,7.83,-448.82),
+        pirateVillage          = Vector3.new(-1140.03,4.81,3828.47),
+        pirateVillageWait1     = Vector3.new(-1233.49,115.64,3985.23),
+        pirateVillageWait2     = Vector3.new(-1142.35,84.96,4297.03),
+        desert                 = Vector3.new(896.93,6.5,4388.77),
+        desertWait1            = Vector3.new(1054.99,52.5,4490.5),
+        desertWait2            = Vector3.new(1528.99,14.51,4395.69),
+        winter                 = Vector3.new(1382.2,87.34,-1294.29),
+        winterWait1            = Vector3.new(1332.85,104.47,-1313.92),
+        winterWait2            = Vector3.new(1200.95,144.64,-1550.89),
+        marineFortress         = Vector3.new(-5036.22,28.71,4325.45),
+        marineFortressWait1    = Vector3.new(-4819.73,20.71,4359.87),
+        marineFortressWait2    = Vector3.new(-4950.39,71.41,4166.69),
+        sky1                   = Vector3.new(-4841.94,717.73,-2623.45),
+        sky1Wait1              = Vector3.new(-4959.59,365.07,-2911.46),
+        sky1Wait2              = Vector3.new(-5223.22,449.34,-2397.63),
+        prison                 = Vector3.new(5305.62,1.72,474.79),
+        prisonWait1            = Vector3.new(5200.82,88.71,481.99),
+        prisonWait2            = Vector3.new(5426.98,88.71,988.44),
+        colosseum              = Vector3.new(-1576.94,7.45,-2984.09),
+        colosseumWait1         = Vector3.new(-1940.03,49.12,-2894.37),
+        colosseumWait2         = Vector3.new(-1300.48,7.51,-3243.32),
+        magma                  = Vector3.new(-5316.38,11.38,8510.77),
+        magmaWait1             = Vector3.new(-5401.39,23.07,8506.53),
+        magmaWait2             = Vector3.new(-5775.68,118.91,8802.16),
+        underwater             = Vector3.new(61123.74,18.53,1567.43),
+        underwaterWait1        = Vector3.new(60952.76,48.74,1532.15),
+        underwaterWait2        = Vector3.new(61905.32,108.55,1556.68),
+        sky3                   = Vector3.new(-4725.1,845.34,-1956.55),
+        sky3Wait               = Vector3.new(-4634.47,866.97,-1938.53),
+        sky4                   = Vector3.new(-7861.91,5545.56,-376.38),
+        sky4Wait               = Vector3.new(-7688.82,5600.79,-441.55),
+        sky5                   = Vector3.new(-7899.52,5636.03,-1409.42),
+        sky5Wait1              = Vector3.new(-7638.64,5637.14,-1421.99),
+        sky5Wait2              = Vector3.new(-7838.8,5680.52,-1793.07),
+        fountain               = Vector3.new(5254.86,38.56,4049.82),
+        fountainWait1          = Vector3.new(5633.07,103.08,4059.29),
+        fountainWait2          = Vector3.new(5685.56,66.35,4825),
+        roseKingdom            = Vector3.new(-424.07,73.14,1835.97),
+        roseKingdomWait1       = Vector3.new(-713.92,39.31,2375.86),
+        roseKingdomWait2       = Vector3.new(351.33,39.31,2327.74),
+        roseKingdomWait3       = Vector3.new(-959.84,80.5,1691.61),
+        roseKingdomWait4       = Vector3.new(-1096.17,80.65,1155.03),
+        factory                = Vector3.new(634.46,73.29,919.02),
+        factoryWait1           = Vector3.new(828.24,140.36,1182.37),
+        factoryWait2           = Vector3.new(628.62,73.18,-5.86),
+        factoryWait3           = Vector3.new(-45.62,149.66,-301.97),
+        greenZone              = Vector3.new(-2442.94,73.24,-3219.45),
+        greenZoneWait1         = Vector3.new(-2947.85,111.16,-2979.32),
+        greenZoneWait2         = Vector3.new(-1846.47,90.45,-3207.15),
+        graveyard              = Vector3.new(-5493.04,48.7,-794.38),
+        graveyardWait1         = Vector3.new(-5722.79,126.26,-752.72),
+        graveyardWait2         = Vector3.new(-6038.78,6.63,-1297.6),
+        snow                   = Vector3.new(605.73,401.65,-5371.18),
+        snowWait1              = Vector3.new(536.02,433.39,-5482.01),
+        snowWait2              = Vector3.new(1269.49,454.57,-5143.11),
+        coldSide               = Vector3.new(-6229.27,82.05,-4851.89),
+        coldSideWait1          = Vector3.new(-5867.03,88.63,-4385.88),
+        coldSideWait2          = Vector3.new(-6310.69,35.63,-5882.5),
+        hotSide                = Vector3.new(-5400.93,29.39,-5376.38),
+        hotSideWait1           = Vector3.new(-5700.74,135.59,-5696.33),
+        hotSideWait2           = Vector3.new(-5227.32,79.8,-4910.44),
+        hauntedShip1           = Vector3.new(1037.82,125.28,32909.95),
+        hauntedShip1Wait1      = Vector3.new(1257.26,125.67,33093.13),
+        hauntedShip1Wait2      = Vector3.new(612.15,125.28,33049.17),
+        hauntedShip1Wait3      = Vector3.new(943.62,40.67,32827.61),
+        hauntedShip2           = Vector3.new(971.4,125.28,33248.01),
+        winterCastle           = Vector3.new(5670.71,28.4,-6479.92),
+        winterCastleWait1      = Vector3.new(5924.53,70.64,-6202.01),
+        winterCastleWait2      = Vector3.new(5431.28,75.24,-6812.18),
+        wano                   = Vector3.new(-3053.98,239.87,-10147.38),
+        wanoWait1              = Vector3.new(-3044.49,29.76,-9787.32),
+        wanoWait2              = Vector3.new(-3435.25,275.76,-10480.77),
+        hydra1                 = Vector3.new(6737.77,127.56,-715.37),
+        hydra1Wait             = Vector3.new(6744.37,115.45,-792.37),
+        hydra2                 = Vector3.new(6651.94,546.71,260.22),
+        hydra2Wait             = Vector3.new(6753.75,565.17,263.09),
+        hydra3                 = Vector3.new(5211.85,1004.13,757.35),
+        hydra3Wait             = Vector3.new(4563.77,1002.4,824.84),
+        port                   = Vector3.new(-449.36,108.63,5946.07),
+        portWait1a             = Vector3.new(-128.02,57.04,5759.62),
+        portWait1b             = Vector3.new(-646.17,57.04,5583.4),
+        portWait2a             = Vector3.new(-778.57,143.02,6048.03),
+        portWait2b             = Vector3.new(-232.7,152.3,6283.1),
+        greatTree              = Vector3.new(2479.55,74.3,-6786.71),
+        greatTreeWait1         = Vector3.new(2613.79,131.61,-7825.64),
+        greatTreeWait2         = Vector3.new(3550.92,155.81,-7354.19),
+        hauntedCastle1         = Vector3.new(-9484.23,142.17,5563.99),
+        hauntedCastle2         = Vector3.new(-9513.78,172.17,6077.79),
+        hauntedCastleWait1     = Vector3.new(-8891,223.03,6137.75),
+        hauntedCastleWait2     = Vector3.new(-10079.95,237.5,5913.72),
+        hauntedCastleWait3     = Vector3.new(-9502.4,172.17,6049.03),
+        hauntedCastleWait4     = Vector3.new(-9545.33,60.32,6341.16),
+        iceCream               = Vector3.new(-821.24,65.88,-10963.49),
+        iceCreamWait           = Vector3.new(-875.19,184.15,-11124.79),
+        cakeLand1              = Vector3.new(-2021.32,37.86,-12029.23),
+        cakeLand1Wait1         = Vector3.new(-2299.21,112.6,-12210.75),
+        cakeLand1Wait2         = Vector3.new(-1649.28,195.72,-12314.08),
+        cakeLand2              = Vector3.new(-1927.75,37.86,-12842.92),
+        cakeLand2Wait1         = Vector3.new(-1738.96,143.87,-12935.42),
+        cakeLand2Wait2         = Vector3.new(-2248.69,53.57,-12849.23),
+        chocolate1             = Vector3.new(237.92,24.8,-12201.14),
+        chocolate1Wait1        = Vector3.new(80.22,73.51,-12310.81),
+        chocolate1Wait2        = Vector3.new(684.82,45.34,-12421.76),
+        chocolate2             = Vector3.new(147.05,24.86,-12778.49),
+        chocolate2Wait1        = Vector3.new(48.8,75.13,-12763.81),
+        northPole              = Vector3.new(-1159.84,61,-14495.45),
+        northPoleWait1         = Vector3.new(-1357.6,83.3,-14704.45),
+        northPoleWait2         = Vector3.new(-822.36,80.32,-14390.73),
+        peanut                 = Vector3.new(-2104.58,38.17,-10191.75),
+        peanutWait             = Vector3.new(-2049.21,165.51,-10335.04),
+        tiki1                  = Vector3.new(-16543.93,55.75,-173.82),
+        tiki1Wait              = Vector3.new(-16228.02,145.37,-231.54),
+        tiki2                  = Vector3.new(-16538.69,55.75,1051.88),
+        tiki2Wait              = Vector3.new(-16498.12,131.81,1051.74),
+        tiki3                  = Vector3.new(-16665.98,105.31,1576.49),
+        tiki3Wait1             = Vector3.new(-16537.67,158.94,1311.88),
+        tiki3Wait2             = Vector3.new(-16847.48,122.17,1727.21),
+        mansion                = Vector3.new(-13231.25,332.44,-7626.68),
+        mansionWait1           = Vector3.new(-13448.1,416.3,-7780.96),
+        mansionWait2           = Vector3.new(-13878.98,569.46,-7089.08),
+        turtleCenter           = Vector3.new(-12683.65,390.92,-9900.57),
+        turtleCenterWait1      = Vector3.new(-12055.72,428.33,-10385.56),
+        turtleCenterWait2      = Vector3.new(-13294.97,520.51,-9900.41),
+        turtleEntrance         = Vector3.new(-10583.8,331.83,-8757.94),
+        turtleEntranceWait     = Vector3.new(-10568.57,477.29,-8832.32),
+    },
+}
+if isSea1() then
+    AFL.currentSea = 1; AFL.npcToFarm = "Sea1First"
+elseif isSea2() then
+    AFL.currentSea = 2; AFL.npcToFarm = "RoseKingdom1"
+elseif isSea3() then
+    AFL.currentSea = 3; AFL.npcToFarm = "Port1"
+end
+function afl_pick(a, b) return (math.random(1,2)==1) and a or b end
+AFL.islandPositions = {
+    Sea1First=AFL.pos.sea1First,
+    Jungle1=AFL.pos.jungle, Jungle2=AFL.pos.jungle,
+    PirateVillage1=AFL.pos.pirateVillage, PirateVillage2=AFL.pos.pirateVillage,
+    DesertIsland1=AFL.pos.desert, DesertIsland2=AFL.pos.desert,
+    WinterIsland1=AFL.pos.winter, WinterIsland2=AFL.pos.winter,
+    MarineFortress=AFL.pos.marineFortress,
+    SkyIsland1=AFL.pos.sky1, SkyIsland2=AFL.pos.sky1,
+    PrisonIsland1=AFL.pos.prison, PrisonIsland2=AFL.pos.prison,
+    ColosseumIsland1=AFL.pos.colosseum,
+    MagmaIsland1=AFL.pos.magma, MagmaIsland2=AFL.pos.magma,
+    UnderWaterIsland1=AFL.pos.underwater, UnderWaterIsland2=AFL.pos.underwater,
+    SkyIsland3=AFL.pos.sky3, SkyIsland4=AFL.pos.sky4,
+    SkyIsland5=AFL.pos.sky5, SkyIsland6=AFL.pos.sky5,
+    FountainIsland1=AFL.pos.fountain, FountainIsland2=AFL.pos.fountain,
+    RoseKingdom1=AFL.pos.roseKingdom, RoseKingdom2=AFL.pos.roseKingdom,
+    Factory1=AFL.pos.factory, Factory2=AFL.pos.factory,
+    GreenZone1=AFL.pos.greenZone, GreenZone2=AFL.pos.greenZone,
+    Graveyard1=AFL.pos.graveyard, Graveyard2=AFL.pos.graveyard,
+    Snow1=AFL.pos.snow, Snow2=AFL.pos.snow,
+    ColdSide1=AFL.pos.coldSide, ColdSide2=AFL.pos.coldSide,
+    HotSide1=AFL.pos.hotSide, HotSide2=AFL.pos.hotSide,
+    HauntedShip1=AFL.pos.hauntedShip1, HauntedShip2=AFL.pos.hauntedShip1,
+    WinterCastle1=AFL.pos.winterCastle, WinterCastle2=AFL.pos.winterCastle,
+    Wano1=AFL.pos.wano, Wano2=AFL.pos.wano,
+    Hydra1=AFL.pos.hydra1, Hydra2=AFL.pos.hydra2, Hydra3=AFL.pos.hydra3, Hydra4=AFL.pos.hydra3,
+    Port1=AFL.pos.port, Port2=AFL.pos.port,
+    GreatTree1=AFL.pos.greatTree, GreatTree2=AFL.pos.greatTree,
+    HauntedCastle1=AFL.pos.hauntedCastle1, HauntedCastle2=AFL.pos.hauntedCastle1,
+    HauntedCastle3=AFL.pos.hauntedCastle2, HauntedCastle4=AFL.pos.hauntedCastle2,
+    IceCream1=AFL.pos.iceCream, IceCream2=AFL.pos.iceCream,
+    CakeLand1=AFL.pos.cakeLand1, CakeLand2=AFL.pos.cakeLand1,
+    CakeLand3=AFL.pos.cakeLand2, CakeLand4=AFL.pos.cakeLand2,
+    Chocolate1=AFL.pos.chocolate1, Chocolate2=AFL.pos.chocolate1,
+    Chocolate3=AFL.pos.chocolate2, Chocolate4=AFL.pos.chocolate2,
+    NorthPole1=AFL.pos.northPole, NorthPole2=AFL.pos.northPole,
+    Peanut1=AFL.pos.peanut, Peanut2=AFL.pos.peanut,
+    Tiki1Quest1=AFL.pos.tiki1, Tiki1Quest2=AFL.pos.tiki1,
+    Tiki2Quest1=AFL.pos.tiki2, Tiki2Quest2=AFL.pos.tiki2,
+    Tiki3Quest1=AFL.pos.tiki3, Tiki3Quest2=AFL.pos.tiki3,
+    Mansion1=AFL.pos.mansion, Mansion2=AFL.pos.mansion,
+    TurtleCenter1=AFL.pos.turtleCenter, TurtleCenter2=AFL.pos.turtleCenter,
+    TurtleEntrance1=AFL.pos.turtleEntrance, TurtleEntrance2=AFL.pos.turtleEntrance,
+}
+AFL.waitPositions = {
+    Sea1First=AFL.pos.sea1FirstWait,
+    Jungle1=AFL.pos.jungleWait1, Jungle2=AFL.pos.jungleWait2,
+    PirateVillage1=AFL.pos.pirateVillageWait1, PirateVillage2=AFL.pos.pirateVillageWait2,
+    DesertIsland1=AFL.pos.desertWait1, DesertIsland2=AFL.pos.desertWait2,
+    WinterIsland1=AFL.pos.winterWait1, WinterIsland2=AFL.pos.winterWait2,
+    MarineFortress=afl_pick(AFL.pos.marineFortressWait1, AFL.pos.marineFortressWait2),
+    SkyIsland1=AFL.pos.sky1Wait1, SkyIsland2=AFL.pos.sky1Wait2,
+    PrisonIsland1=AFL.pos.prisonWait1, PrisonIsland2=AFL.pos.prisonWait2,
+    ColosseumIsland1=AFL.pos.colosseumWait1, ColosseumIsland2=AFL.pos.colosseumWait2,
+    MagmaIsland1=AFL.pos.magmaWait1, MagmaIsland2=AFL.pos.magmaWait2,
+    UnderWaterIsland1=AFL.pos.underwaterWait1, UnderWaterIsland2=AFL.pos.underwaterWait2,
+    SkyIsland3=AFL.pos.sky3Wait, SkyIsland4=AFL.pos.sky4Wait,
+    SkyIsland5=AFL.pos.sky5Wait1, SkyIsland6=AFL.pos.sky5Wait2,
+    FountainIsland1=AFL.pos.fountainWait1, FountainIsland2=AFL.pos.fountainWait2,
+    RoseKingdom1=afl_pick(AFL.pos.roseKingdomWait1, AFL.pos.roseKingdomWait2),
+    RoseKingdom2=afl_pick(AFL.pos.roseKingdomWait3, AFL.pos.roseKingdomWait4),
+    Factory1=AFL.pos.factoryWait1, Factory2=afl_pick(AFL.pos.factoryWait2, AFL.pos.factoryWait3),
+    GreenZone1=AFL.pos.greenZoneWait1, GreenZone2=AFL.pos.greenZoneWait2,
+    Graveyard1=AFL.pos.graveyardWait1, Graveyard2=AFL.pos.graveyardWait2,
+    Snow1=AFL.pos.snowWait1, Snow2=AFL.pos.snowWait2,
+    ColdSide1=AFL.pos.coldSideWait1, ColdSide2=AFL.pos.coldSideWait2,
+    HotSide1=AFL.pos.hotSideWait1, HotSide2=AFL.pos.hotSideWait2,
+    HauntedShip1=afl_pick(AFL.pos.hauntedShip1Wait1, AFL.pos.hauntedShip1Wait2),
+    HauntedShip2=AFL.pos.hauntedShip1Wait3,
+    WinterCastle1=AFL.pos.winterCastleWait1, WinterCastle2=AFL.pos.winterCastleWait2,
+    Wano1=AFL.pos.wanoWait1, Wano2=AFL.pos.wanoWait2,
+    Hydra1=AFL.pos.hydra1Wait, Hydra2=AFL.pos.hydra2Wait,
+    Hydra3=AFL.pos.hydra3Wait, Hydra4=AFL.pos.hydra3Wait,
+    Port1=afl_pick(AFL.pos.portWait1a, AFL.pos.portWait1b),
+    Port2=afl_pick(AFL.pos.portWait2a, AFL.pos.portWait2b),
+    GreatTree1=AFL.pos.greatTreeWait1, GreatTree2=AFL.pos.greatTreeWait2,
+    HauntedCastle1=AFL.pos.hauntedCastleWait1, HauntedCastle2=AFL.pos.hauntedCastleWait2,
+    HauntedCastle3=AFL.pos.hauntedCastleWait3, HauntedCastle4=AFL.pos.hauntedCastleWait4,
+    IceCream1=AFL.pos.iceCreamWait, IceCream2=AFL.pos.iceCreamWait,
+    CakeLand1=AFL.pos.cakeLand1Wait1, CakeLand2=AFL.pos.cakeLand1Wait2,
+    CakeLand3=AFL.pos.cakeLand2Wait1, CakeLand4=AFL.pos.cakeLand2Wait2,
+    Chocolate1=AFL.pos.chocolate1Wait1, Chocolate2=AFL.pos.chocolate1Wait2,
+    Chocolate3=AFL.pos.chocolate2Wait1, Chocolate4=AFL.pos.chocolate2Wait1,
+    NorthPole1=AFL.pos.northPoleWait1, NorthPole2=AFL.pos.northPoleWait2,
+    Peanut1=AFL.pos.peanutWait, Peanut2=AFL.pos.peanutWait,
+    Tiki1Quest1=AFL.pos.tiki1Wait, Tiki1Quest2=AFL.pos.tiki1Wait,
+    Tiki2Quest1=AFL.pos.tiki2Wait, Tiki2Quest2=AFL.pos.tiki2Wait,
+    Tiki3Quest1=AFL.pos.tiki3Wait1, Tiki3Quest2=AFL.pos.tiki3Wait2,
+    Mansion1=AFL.pos.mansionWait1, Mansion2=AFL.pos.mansionWait2,
+    TurtleCenter1=AFL.pos.turtleCenterWait1, TurtleCenter2=AFL.pos.turtleCenterWait2,
+    TurtleEntrance1=AFL.pos.turtleEntranceWait, TurtleEntrance2=AFL.pos.turtleEntranceWait,
+}
+AFL.levelFarmTable = {
+    [1]={{1,10,"Sea1First"},{10,15,"Jungle1"},{15,30,"Jungle2"},{30,40,"PirateVillage1"},{40,60,"PirateVillage2"},{60,75,"DesertIsland1"},{75,90,"DesertIsland2"},{90,105,"WinterIsland1"},{105,120,"WinterIsland2"},{120,150,"MarineFortress"},{150,175,"SkyIsland1"},{175,190,"SkyIsland2"},{190,210,"PrisonIsland1"},{210,250,"PrisonIsland2"},{250,300,"ColosseumIsland1"},{300,325,"MagmaIsland1"},{325,375,"MagmaIsland2"},{375,400,"UnderWaterIsland1"},{400,450,"UnderWaterIsland2"},{450,475,"SkyIsland3"},{475,525,"SkyIsland4"},{525,550,"SkyIsland5"},{550,600,"SkyIsland6"},{600,625,"FountainIsland1"},{625,700,"FountainIsland2"}},
+    [2]={{700,725,"RoseKingdom1"},{725,775,"RoseKingdom2"},{775,800,"Factory1"},{800,875,"Factory2"},{875,900,"GreenZone1"},{900,950,"GreenZone2"},{950,975,"Graveyard1"},{975,1000,"Graveyard2"},{1000,1050,"Snow1"},{1050,1100,"Snow2"},{1100,1125,"ColdSide1"},{1125,1175,"ColdSide2"},{1175,1200,"HotSide1"},{1200,1250,"HotSide2"},{1250,1300,"HauntedShip1"},{1300,1350,"HauntedShip2"},{1350,1375,"WinterCastle1"},{1375,1425,"WinterCastle2"},{1425,1450,"Wano1"},{1450,1500,"Wano2"}},
+    [3]={{1500,1525,"Port1"},{1525,1575,"Port2"},{1575,1600,"Hydra1"},{1600,1625,"Hydra2"},{1625,1650,"Hydra3"},{1650,1700,"Hydra4"},{1700,1725,"GreatTree1"},{1725,1775,"GreatTree2"},{1775,1800,"TurtleEntrance1"},{1800,1825,"TurtleEntrance2"},{1825,1850,"Mansion1"},{1850,1900,"Mansion2"},{1900,1925,"TurtleCenter1"},{1925,1975,"TurtleCenter2"},{1975,2000,"HauntedCastle1"},{2000,2025,"HauntedCastle2"},{2025,2050,"HauntedCastle3"},{2050,2075,"HauntedCastle4"},{2075,2100,"Peanut1"},{2100,2125,"Peanut2"},{2125,2150,"IceCream1"},{2150,2200,"IceCream2"},{2200,2225,"CakeLand1"},{2225,2250,"CakeLand2"},{2250,2275,"CakeLand3"},{2275,2300,"CakeLand4"},{2300,2325,"Chocolate1"},{2325,2350,"Chocolate2"},{2350,2375,"Chocolate3"},{2375,2400,"Chocolate4"},{2400,2425,"NorthPole1"},{2425,2450,"NorthPole2"},{2450,2475,"Tiki1Quest1"},{2475,2500,"Tiki1Quest2"},{2500,2525,"Tiki2Quest1"},{2525,2550,"Tiki2Quest2"},{2550,2575,"Tiki3Quest1"},{2575,2800,"Tiki3Quest2"}}
+}
+dangerLevels = {
+    {name="Level 1", pos=Vector3.new(-22154,37,2735)},
+    {name="Level 2", pos=Vector3.new(-26413,37,3671)},
+    {name="Level 3", pos=Vector3.new(-30027,37,3921)},
+    {name="Level 4", pos=Vector3.new(-33348,37,3704)},
+    {name="Level 5", pos=Vector3.new(-38169,37,5121)},
+    {name="Level 6", pos=Vector3.new(-43568,37,7018)},
+}
+dangerLevelNames = {}
+for _, d in pairs(dangerLevels) do table.insert(dangerLevelNames, d.name) end
+islandNames = {}
+islandList = {
+    {name="Tiki2",          pos=Vector3.new(-16577.81,107.2,1226.22)},
+    {name="Tiki1",          pos=Vector3.new(-16546.72,55.87,-228.59)},
+    {name="Port",           pos=Vector3.new(-706.75,85.98,5775.46)},
+    {name="Hydra1",         pos=Vector3.new(6737.77,127.56,-715.37)},
+    {name="Hydra2",         pos=Vector3.new(6651.94,546.71,260.22)},
+    {name="Hydra3",         pos=Vector3.new(4563.77,1002.40,824.84)},
+    {name="GreatTree1",     pos=Vector3.new(2976.45,74.41,-7919.18)},
+    {name="GreatTree2",     pos=Vector3.new(3727.85,124.12,-7153.10)},
+    {name="HauntedCastle",  pos=Vector3.new(-9558.96,172.28,6139.46)},
+    {name="IceCream",       pos=Vector3.new(-836.01,65.99,-10973.16)},
+    {name="CakeLand",       pos=Vector3.new(-2115.22,70.16,-12366.38)},
+    {name="Chocolate",      pos=Vector3.new(314.05,24.97,-12480.51)},
+    {name="Peanut",         pos=Vector3.new(-2093.83,38.28,-10204.63)},
+    {name="Mansion",        pos=Vector3.new(-13330.71,450.81,-7441.45)},
+    {name="TurtleCenter2",  pos=Vector3.new(-13274.77,391.72,-9791.60)},
+    {name="TurtleCenter1",  pos=Vector3.new(-12019.83,331.91,-10562.06)},
+    {name="TurtleEntrance", pos=Vector3.new(-10607.67,331.94,-8782.75)},
+}
+for _, isle in pairs(islandList) do table.insert(islandNames, isle.name) end
+function getBoat()
+    local char=LocalPlayer.Character
+    local hrp=char and char:FindFirstChild("HumanoidRootPart")
+    if not hrp then return nil end
+    local boatsFolder=game.Workspace:FindFirstChild("Boats")
+    if not boatsFolder then return nil end
+    for _, b in pairs(boatsFolder:GetChildren()) do
+        if b:IsA("Model") then
+            local seat=b:FindFirstChildOfClass("VehicleSeat")
+            if seat then
+                local dx=seat.Position.X-hrp.Position.X
+                local dy=seat.Position.Y-hrp.Position.Y
+                local dz=seat.Position.Z-hrp.Position.Z
+                if math.sqrt(dx*dx+dy*dy+dz*dz)<20 then return b end
+            end
+        end
+    end
+    return nil
+end
+function getBoatCameraVectors()
+    local char=LocalPlayer.Character
+    local hrp=char and char:FindFirstChild("HumanoidRootPart")
+    if not hrp then return Vector3.new(0,0,-1), Vector3.new(1,0,0) end
+    local cp=game.Workspace.CurrentCamera.Position
+    local hp=hrp.Position
+    local fx=hp.X-cp.X; local fz=hp.Z-cp.Z
+    local fl=math.sqrt(fx*fx+fz*fz)
+    if fl>0.001 then fx=fx/fl; fz=fz/fl else fx=0; fz=-1 end
+    return Vector3.new(fx,0,fz), Vector3.new(-fz,0,fx)
+end
+function boatTweenTo(targetPos)
+    S.currentBoat = getBoat()
+    if not S.currentBoat then notify("No boat found!","Boat Fly",2); return end
+    local primary=S.currentBoat.PrimaryPart
+    if not primary then return end
+    S.boatTweening=true
+    primary.Position=Vector3.new(primary.Position.X, primary.Position.Y+50, primary.Position.Z)
+    wait(0.1)
+    local fixedY=primary.Position.Y
+    local startX=primary.Position.X; local startZ=primary.Position.Z
+    local dx=targetPos.X-startX; local dz=targetPos.Z-startZ
+    local dist=math.sqrt(dx*dx+dz*dz)
+    local duration=dist/(S.boatFlySpeed*100)
+    local t0=os.clock()
+    while S.boatTweening do
+        local alpha=math.min((os.clock()-t0)/duration,1)
+        primary.Position=Vector3.new(startX+dx*alpha, fixedY, startZ+dz*alpha)
+        primary.Velocity=Vector3.new(0,0,0)
+        primary.AssemblyLinearVelocity=Vector3.new(0,0,0)
+        if alpha>=1 then break end
+        wait(0.01)
+    end
+    S.boatTweening=false; S.currentBoat=nil; S.boatTween=nil
+    notify("Arrived!","Boat Fly",2)
+end
+task.spawn(function()
+    while true do
+        if not S.boatFlyEnabled or S.boatTweening then
+            task.wait(0.15)
+            continue
+        end
+        local boat=getBoat(); if not boat then continue end
+        local primary=boat.PrimaryPart; if not primary then continue end
+        local fwd, right=getBoatCameraVectors()
+        local mx, my, mz=0,0,0
+        if iskeypressed(0x57) then mx=mx+fwd.X*S.boatFlySpeed;   mz=mz+fwd.Z*S.boatFlySpeed   end
+        if iskeypressed(0x53) then mx=mx-fwd.X*S.boatFlySpeed;   mz=mz-fwd.Z*S.boatFlySpeed   end
+        if iskeypressed(0x44) then mx=mx+right.X*S.boatFlySpeed; mz=mz+right.Z*S.boatFlySpeed end
+        if iskeypressed(0x41) then mx=mx-right.X*S.boatFlySpeed; mz=mz-right.Z*S.boatFlySpeed end
+        if iskeypressed(0x58) then my=my+S.boatFlySpeed end
+        if iskeypressed(0x10) then my=my-S.boatFlySpeed end
+        primary.Velocity=Vector3.new(0,0,0)
+        primary.AssemblyLinearVelocity=Vector3.new(0,0,0)
+        primary.AssemblyLinearVelocity=Vector3.new(0,0,0)
+        primary.Position=Vector3.new(primary.Position.X+mx, primary.Position.Y+my, primary.Position.Z+mz)
+        task.wait(0.1)
+    end
+end)
+function clearEspLabels()
+    for _, entry in pairs(S.espLabels) do entry.label.Visible=false end
+    S.espLabels={}
+end
+function clearChamBoxes()
+    for _, entry in pairs(S.chamBoxes) do
+        for _, line in pairs(entry.lines) do line.Visible=false end
+    end
+    S.chamBoxes={}
+end
+function buildChamBoxes()
+    for _, entry in pairs(S.chamBoxCache) do
+        for _, line in pairs(entry.lines) do line.Visible=false end
+    end
+    S.chamBoxes={}
+    for _, obj in pairs(game.Workspace:GetChildren()) do
+        local fruitFolder=obj:FindFirstChild("Fruit")
+        if fruitFolder then
+            local fruitPart=fruitFolder:FindFirstChild("Fruit")
+            if fruitPart and fruitPart:IsA("BasePart") then
+                local key=tostring(fruitPart)
+                if not S.chamBoxCache[key] then
+                    local lines={}
+                    for i=1,4 do
+                        local l=Drawing.new("Line")
+                        l.Color=Color3.new(1,0.4,0); l.Thickness=2; l.Visible=false; l.ZIndex=9
+                        table.insert(lines,l)
+                    end
+                    S.chamBoxCache[key]={lines=lines, part=fruitPart}
+                else
+                    S.chamBoxCache[key].part=fruitPart
+                end
+                table.insert(S.chamBoxes, S.chamBoxCache[key])
+            end
+        end
+    end
+end
+function buildEspLabels()
+    for _, entry in pairs(S.espLabelCache) do entry.label.Visible=false end
+    S.espLabels={}
+    for _, obj in pairs(game.Workspace:GetChildren()) do
+        local fruitFolder=obj:FindFirstChild("Fruit")
+        if fruitFolder then
+            local fruitPart=fruitFolder:FindFirstChild("Fruit")
+            if fruitPart and fruitPart:IsA("BasePart") then
+                local fruitName=(obj.Name~="Fruit" and obj.Name) or "Spawned Fruit"
+                local key=tostring(fruitPart)
+                if not S.espLabelCache[key] then
+                    local label=Drawing.new("Text")
+                    label.Text=fruitName; label.Position=Vector2.new(0,0)
+                    label.Color=Color3.new(0,1,0); label.Size=14; label.Outline=true
+                    label.Visible=false; label.ZIndex=10; label.Font=Drawing.Fonts.Monospace; label.Center=true
+                    S.espLabelCache[key]={label=label, part=fruitPart}
+                else
+                    S.espLabelCache[key].label.Text=fruitName
+                    S.espLabelCache[key].part=fruitPart
+                end
+                table.insert(S.espLabels, S.espLabelCache[key])
+            end
+        end
+    end
+end
+function tweenTo(hrp, targetPos, speed, checkFn)
+    local startPos=hrp.Position
+    local dx=targetPos.X-startPos.X; local dy=targetPos.Y-startPos.Y; local dz=targetPos.Z-startPos.Z
+    local distance=math.sqrt(dx*dx+dy*dy+dz*dz)
+    if distance<0.1 then return end
+    local duration=distance/speed; local startTime=os.clock()
+    while true do
+        if not checkFn() then return end
+        local alpha=math.min((os.clock()-startTime)/duration,1)
+        hrp.Position=Vector3.new(startPos.X+dx*alpha, startPos.Y+dy*alpha, startPos.Z+dz*alpha)
+        hrp.Velocity=Vector3.new(0,0,0); hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+        if alpha>=1 then break end
+        task.wait()
+    end
+end
+function isAlive(model)
+    if not model or not model.Parent then return false end
+    local hum=model:FindFirstChildOfClass("Humanoid")
+    if hum and hum.Health<=0 then return false end
+    return true
+end
+function farmAttack(hrp, checkFn, enemyName)
+    local folder=game.Workspace:FindFirstChild("Enemies")
+    if not folder then return end
+    local nearest, bestDist=nil, math.huge
+    for _, model in pairs(folder:GetChildren()) do
+        if model:IsA("Model") and isAlive(model) then
+            if not enemyName or model.Name==enemyName then
+                local root=model:FindFirstChild("HumanoidRootPart") or model:FindFirstChildOfClass("BasePart")
+                if root then
+                    local dx=root.Position.X-hrp.Position.X
+                    local dy=root.Position.Y-hrp.Position.Y
+                    local dz=root.Position.Z-hrp.Position.Z
+                    local d=math.sqrt(dx*dx+dy*dy+dz*dz)
+                    if d<bestDist and d<=5000 then bestDist=d; nearest=model end
+                end
+            end
+        end
+    end
+    if not nearest then return end
+    task.spawn(function()
+        while checkFn() and isAlive(nearest) do
+            local eh=nearest:FindFirstChild("HumanoidRootPart")
+            local hd=nearest:FindFirstChild("Head")
+            if eh then eh.CanCollide=false end
+            if hd then hd.CanCollide=false end
+            task.wait()
+        end
+    end)
+    task.spawn(function()
+        while checkFn() and isAlive(nearest) do
+            if not S.remoteMode then
+                local head=nearest:FindFirstChild("Head")
+                if head then head.Size=Vector3.new(50,50,50) end
+            end
+            task.wait()
+        end
+    end)
+    local lastClick=0
+    local function hasSanguineArt()
+        local bp=LocalPlayer:FindFirstChild("Backpack")
+        if bp then for _,i in pairs(bp:GetChildren()) do if i.Name=="Sanguine Art" then return true end end end
+        local char=LocalPlayer.Character
+        if char then for _,i in pairs(char:GetChildren()) do if i.Name=="Sanguine Art" then return true end end end
+        return false
+    end
+    while checkFn() and isAlive(nearest) do
+        local tr=nearest:FindFirstChild("HumanoidRootPart") or nearest:FindFirstChildOfClass("BasePart")
+        if tr then
+            local xOffset=hasSanguineArt() and 15 or 0
+            local ox = S.customOffset and S.customOffsetX or xOffset
+            local oy = S.customOffset and S.customOffsetY or 23
+            local oz = S.customOffset and S.customOffsetZ or 0
+            hrp.Position=Vector3.new(tr.Position.X+ox, tr.Position.Y+oy, tr.Position.Z+oz)
+            hrp.Velocity=Vector3.new(0,0,0); hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+        end
+        local now=os.clock()
+        if now-lastClick>=0.06 then mouse1click(); lastClick=now end
+        task.wait()
+    end
+end
+local REMOTE_SESSION_ID = "32501259"
+local REMOTE_MAX_DIST   = 60
+local _remoteNet        = nil
+local _remoteRegAtk     = nil
+local _remoteRegHit     = nil
+local _lastRemoteFire   = 0
+local function ensureRemotes()
+    if _remoteRegAtk and _remoteRegHit then return true end
+    local net = game:GetService("ReplicatedStorage"):FindFirstChild("Modules")
+    if net then net = net:FindFirstChild("Net") end
+    if not net then return false end
+    _remoteNet    = net
+    _remoteRegAtk = net:FindFirstChild("RE/RegisterAttack")
+    _remoteRegHit = net:FindFirstChild("RE/RegisterHit")
+    return _remoteRegAtk ~= nil and _remoteRegHit ~= nil
+end
+function remoteAttack()
+    if not ensureRemotes() then return end
+    local char = LocalPlayer.Character
+    local hrp  = char and char:FindFirstChild("HumanoidRootPart")
+    if not hrp then return end
+    local myPos  = hrp.Position
+    local folder = game.Workspace:FindFirstChild("Enemies")
+    if not folder then return end
+    local hitTable   = {}
+    local primaryPart = nil
+    for _, enemy in ipairs(folder:GetChildren()) do
+        if enemy and enemy.Parent then
+            local hum  = enemy:FindFirstChildOfClass("Humanoid")
+            if hum and hum.Health and hum.Health > 0 then
+                local part = enemy:FindFirstChild("LeftLowerLeg")
+                          or enemy:FindFirstChild("Head")
+                          or enemy:FindFirstChild("HumanoidRootPart")
+                if not part then
+                    for _, c in ipairs(enemy:GetChildren()) do
+                        if c:IsA("BasePart") then part = c; break end
+                    end
+                end
+                if part and part.Parent then
+                    local ok, pos = pcall(function() return part.Position end)
+                    if ok and pos then
+                        local dx = pos.X - myPos.X
+                        local dy = pos.Y - myPos.Y
+                        local dz = pos.Z - myPos.Z
+                        local d  = math.sqrt(dx*dx + dy*dy + dz*dz)
+                        if d <= REMOTE_MAX_DIST then
+                            table.insert(hitTable, {enemy, part})
+                            if not primaryPart then primaryPart = part end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    if #hitTable == 0 then return end
+    pcall(function() _remoteRegAtk:FireServer(0.5) end)
+    task.wait()
+    pcall(function() _remoteRegHit:FireServer(primaryPart, hitTable, nil, REMOTE_SESSION_ID) end)
+    _lastRemoteFire = os.clock()
+end
+task.spawn(function()
+    local lastChestCount=0
+    while true do
+        if S.autoFarming then
+            local ChestModels=game.Workspace:FindFirstChild("ChestModels")
+            if ChestModels then
+                local children=ChestModels:GetChildren()
+                local ranked={}
+                for _, model in ipairs(children) do
+                    local name=tostring(model.Name or "")
+                    local rank=99
+                    local pri=S.chestPriority or {"Diamond","Gold","Silver"}
+                    local low=string.lower(name)
+                    for i, p in ipairs(pri) do
+                        if low:find(string.lower(p), 1, true) then rank=i; break end
+                    end
+                    ranked[#ranked+1]={model=model, rank=rank}
+                end
+                table.sort(ranked, function(a,b) return a.rank<b.rank end)
+                local count=#ranked
+                if count~=lastChestCount then S.chestIndex=1; lastChestCount=count end
+                if count>0 then
+                    if S.chestIndex>count then S.chestIndex=1 end
+                    local entry=ranked[S.chestIndex]
+                    local model=entry and entry.model
+                    if model then
+                        local tp=model:FindFirstChild("RootPart") or model:FindFirstChildWhichIsA("BasePart")
+                        if tp then
+                            notify("Going to "..model.Name.." chest","laced.club",2)
+                            local char=LocalPlayer.Character
+                            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+                            if hrp then tweenTo(hrp, Vector3.new(tp.Position.X,tp.Position.Y+3,tp.Position.Z), S.CHEST_SPEED, function() return S.autoFarming end) end
+                            S.chestIndex=S.chestIndex+1
+                        else S.chestIndex=S.chestIndex+1 end
+                    end
+                end
+            else lastChestCount=0 end
+            task.wait(0.5)
+        else task.wait(0.1) end
+    end
+end)
+task.spawn(function()
+    while true do
+        if S.autoFruits then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then
+                local bestPart, bestDist=nil, math.huge
+                for _, obj in pairs(game.Workspace:GetChildren()) do
+                    local ff=obj:FindFirstChild("Fruit")
+                    if ff then
+                        local fp=ff:FindFirstChild("Fruit")
+                        if fp and fp:IsA("BasePart") then
+                            local dx=fp.Position.X-hrp.Position.X; local dy=fp.Position.Y-hrp.Position.Y; local dz=fp.Position.Z-hrp.Position.Z
+                            local dist=math.sqrt(dx*dx+dy*dy+dz*dz)
+                            if dist<bestDist then bestDist=dist; bestPart=fp end
+                        end
+                    end
+                end
+                if bestPart then
+                    notify("Farming fruit...","redacted",1)
+                    tweenTo(hrp, Vector3.new(bestPart.Position.X,bestPart.Position.Y+3,bestPart.Position.Z), S.FRUIT_SPEED, function() return S.autoFruits end)
+                end
+            end
+            task.wait(1)
+        else task.wait(0.1) end
+    end
+end)
+task.spawn(function()
+    while true do
+        if S.autoFarmNearest then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then
+                if S.remoteMode then
+                    local folder=game.Workspace:FindFirstChild("Enemies")
+                    if folder then
+                        local nearest, bestDist=nil, math.huge
+                        for _, model in pairs(folder:GetChildren()) do
+                            if model:IsA("Model") and isAlive(model) then
+                                local root=model:FindFirstChild("HumanoidRootPart") or model:FindFirstChildOfClass("BasePart")
+                                if root then
+                                    local dx=root.Position.X-hrp.Position.X
+                                    local dy=root.Position.Y-hrp.Position.Y
+                                    local dz=root.Position.Z-hrp.Position.Z
+                                    local d=math.sqrt(dx*dx+dy*dy+dz*dz)
+                                    if d<bestDist then bestDist=d; nearest=model end
+                                end
+                            end
+                        end
+                        if nearest then
+                            while S.autoFarmNearest and S.remoteMode and isAlive(nearest) do
+                                local tr=nearest:FindFirstChild("HumanoidRootPart") or nearest:FindFirstChildOfClass("BasePart")
+                                if not tr then break end
+                                hrp.Position=Vector3.new(tr.Position.X, tr.Position.Y+30, tr.Position.Z)
+                                hrp.Velocity=Vector3.new(0,0,0); hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                                remoteAttack()
+                                task.wait(0.05)
+                            end
+                        end
+                    end
+                else
+                    farmAttack(hrp, function() return S.autoFarmNearest and not S.remoteMode end, nil)
+                end
+            end
+            task.wait(0.1)
+        else task.wait(0.1) end
+    end
+end)
+task.spawn(function()
+    while true do
+        if S.autoTpFruit then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then
+                local bestPart, bestDist=nil, math.huge
+                for _, obj in pairs(game.Workspace:GetChildren()) do
+                    local ff=obj:FindFirstChild("Fruit")
+                    if ff then
+                        local fp=ff:FindFirstChild("Fruit")
+                        if fp and fp:IsA("BasePart") then
+                            local dx=fp.Position.X-hrp.Position.X; local dy=fp.Position.Y-hrp.Position.Y; local dz=fp.Position.Z-hrp.Position.Z
+                            local dist=math.sqrt(dx*dx+dy*dy+dz*dz)
+                            if dist<bestDist then bestDist=dist; bestPart=fp end
+                        end
+                    end
+                end
+                if bestPart then
+                    hrp.Position=Vector3.new(bestPart.Position.X,bestPart.Position.Y+3,bestPart.Position.Z)
+                    hrp.Velocity=Vector3.new(0,0,0); hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                end
+            end
+            task.wait(0.1)
+        else task.wait(0.1) end
+    end
+end)
+task.spawn(function()
+    while true do
+        if S.autoNpcFarm then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then
+                local island=islandList[S.selectedIsland]
+                local ip=island.pos
+                notify("NPC Farm: going to "..island.name,"redacted",2)
+                tweenTo(hrp, Vector3.new(ip.X,ip.Y,ip.Z), S.NPC_TWEEN_SPEED, function() return S.autoNpcFarm end)
+                task.wait(0.5)
+                local char2=LocalPlayer.Character
+                if char2 then for _,part in pairs(char2:GetChildren()) do if part:IsA("BasePart") then part.CanCollide=false end end end
+                while S.autoNpcFarm do
+                    local hrp2=LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+                    if not hrp2 then task.wait(0.1); break end
+                    farmAttack(hrp2, function() return S.autoNpcFarm end, nil)
+                    task.wait(0.1)
+                end
+            end
+            task.wait(0.1)
+        else task.wait(0.1) end
+    end
+end)
+function afl_loadQuestData()
+    AFL.questData={}
+    if AFL.currentSea==1 then
+        AFL.questData.Sea1First={enemy="Trainee",questButton=1,ammountToKill=5}
+        AFL.questData.Jungle1={enemy="Monkey",questButton=1,ammountToKill=6}
+        AFL.questData.Jungle2={enemy="Gorilla",questButton=2,ammountToKill=8}
+        AFL.questData.PirateVillage1={enemy="Pirate",questButton=1,ammountToKill=8}
+        AFL.questData.PirateVillage2={enemy="Brute",questButton=2,ammountToKill=8}
+        AFL.questData.DesertIsland1={enemy="Desert Bandit",questButton=1,ammountToKill=8}
+        AFL.questData.DesertIsland2={enemy="Desert Officer",questButton=2,ammountToKill=6}
+        AFL.questData.WinterIsland1={enemy="Snow Bandit",questButton=1,ammountToKill=7}
+        AFL.questData.WinterIsland2={enemy="Snowman",questButton=2,ammountToKill=8}
+        AFL.questData.MarineFortress={enemy="Chief Petty Officer",questButton=1,ammountToKill=8}
+        AFL.questData.SkyIsland1={enemy="Sky Bandit",questButton=1,ammountToKill=7}
+        AFL.questData.SkyIsland2={enemy="Dark Master",questButton=2,ammountToKill=8}
+        AFL.questData.PrisonIsland1={enemy="Prisoner",questButton=1,ammountToKill=8}
+        AFL.questData.PrisonIsland2={enemy="Dangerous Prisoner",questButton=2,ammountToKill=8}
+        AFL.questData.ColosseumIsland1={enemy="Toga Warrior",questButton=1,ammountToKill=7}
+        AFL.questData.MagmaIsland1={enemy="Military Soldier",questButton=1,ammountToKill=7}
+        AFL.questData.MagmaIsland2={enemy="Military Spy",questButton=2,ammountToKill=8}
+        AFL.questData.UnderWaterIsland1={enemy="Fishman Warrior",questButton=1,ammountToKill=8}
+        AFL.questData.UnderWaterIsland2={enemy="Fishman Commando",questButton=2,ammountToKill=7}
+        AFL.questData.SkyIsland3={enemy="God's Guard",questButton=1,ammountToKill=7}
+        AFL.questData.SkyIsland4={enemy="Shanda",questButton=2,ammountToKill=9}
+        AFL.questData.SkyIsland5={enemy="Royal Squad",questButton=1,ammountToKill=8}
+        AFL.questData.SkyIsland6={enemy="Royal Soldier",questButton=2,ammountToKill=8}
+        AFL.questData.FountainIsland1={enemy="Galley Pirate",questButton=1,ammountToKill=8}
+        AFL.questData.FountainIsland2={enemy="Galley Captain",questButton=2,ammountToKill=9}
+    elseif AFL.currentSea==2 then
+        AFL.questData.RoseKingdom1={enemy="Raider",questButton=1,ammountToKill=8}
+        AFL.questData.RoseKingdom2={enemy="Mercenary",questButton=2,ammountToKill=8}
+        AFL.questData.Factory1={enemy="Swan Pirate",questButton=1,ammountToKill=8}
+        AFL.questData.Factory2={enemy="Factory Staff",questButton=2,ammountToKill=8}
+        AFL.questData.GreenZone1={enemy="Marine Lieutenant",questButton=1,ammountToKill=8}
+        AFL.questData.GreenZone2={enemy="Marine Captain",questButton=2,ammountToKill=9}
+        AFL.questData.Graveyard1={enemy="Zombie",questButton=1,ammountToKill=8}
+        AFL.questData.Graveyard2={enemy="Vampire",questButton=2,ammountToKill=8}
+        AFL.questData.Snow1={enemy="Snow Trooper",questButton=1,ammountToKill=8}
+        AFL.questData.Snow2={enemy="Winter Warrior",questButton=2,ammountToKill=9}
+        AFL.questData.HauntedShip1={enemy="Ship Deckhand",questButton=1,ammountToKill=8}
+        AFL.questData.HauntedShip2={enemy="Ship Engineer",questButton=2,ammountToKill=8}
+        AFL.questData.WinterCastle1={enemy="Arctic Warrior",questButton=1,ammountToKill=8}
+        AFL.questData.WinterCastle2={enemy="Snow Lurker",questButton=2,ammountToKill=8}
+        AFL.questData.Wano1={enemy="Sea Soldier",questButton=1,ammountToKill=8}
+        AFL.questData.Wano2={enemy="Water Fighter",questButton=2,ammountToKill=8}
+    elseif AFL.currentSea==3 then
+        AFL.questData.Port1={enemy="Pirate Millionaire",questButton=1,ammountToKill=8}
+        AFL.questData.Port2={enemy="Pirate Billionaire",questButton=2,ammountToKill=8}
+        AFL.questData.Hydra1={enemy="Dragon Crew Warrior",questButton=1,ammountToKill=8}
+        AFL.questData.Hydra2={enemy="Dragon Crew Archer",questButton=2,ammountToKill=8}
+        AFL.questData.Hydra3={enemy="Hydra Enforcer",questButton=1,ammountToKill=8}
+        AFL.questData.Hydra4={enemy="Venemous Assailant",questButton=2,ammountToKill=8}
+        AFL.questData.GreatTree1={enemy="Marine Commodore",questButton=1,ammountToKill=8}
+        AFL.questData.GreatTree2={enemy="Marine Admiral",questButton=2,ammountToKill=8}
+        AFL.questData.TurtleEntrance1={enemy="Fishman Raider",questButton=1,ammountToKill=8}
+        AFL.questData.TurtleEntrance2={enemy="Fishman Captain",questButton=2,ammountToKill=8}
+        AFL.questData.Mansion1={enemy="Forest Pirate",questButton=1,ammountToKill=8}
+        AFL.questData.Mansion2={enemy="Mythological Pirate",questButton=2,ammountToKill=8}
+        AFL.questData.TurtleCenter1={enemy="Jungle Pirate",questButton=1,ammountToKill=8}
+        AFL.questData.TurtleCenter2={enemy="Musketeer Pirate",questButton=2,ammountToKill=8}
+        AFL.questData.HauntedCastle1={enemy="Reborn Skeleton",questButton=1,ammountToKill=8}
+        AFL.questData.HauntedCastle2={enemy="Living Zombie",questButton=2,ammountToKill=8}
+        AFL.questData.HauntedCastle3={enemy="Demonic Soul",questButton=1,ammountToKill=8}
+        AFL.questData.HauntedCastle4={enemy="Posessed Mummy",questButton=2,ammountToKill=8}
+        AFL.questData.Peanut1={enemy="Peanut Scout",questButton=1,ammountToKill=8}
+        AFL.questData.Peanut2={enemy="Peanut President",questButton=2,ammountToKill=8}
+        AFL.questData.IceCream1={enemy="Ice Cream Chef",questButton=1,ammountToKill=8}
+        AFL.questData.IceCream2={enemy="Ice Cream Commander",questButton=2,ammountToKill=8}
+        AFL.questData.CakeLand1={enemy="Cookie Crafter",questButton=1,ammountToKill=8}
+        AFL.questData.CakeLand2={enemy="Cake Guard",questButton=2,ammountToKill=8}
+        AFL.questData.CakeLand3={enemy="Baking Staff",questButton=1,ammountToKill=8}
+        AFL.questData.CakeLand4={enemy="Head Baker",questButton=2,ammountToKill=8}
+        AFL.questData.Chocolate1={enemy="Cocoa Warrior",questButton=1,ammountToKill=8}
+        AFL.questData.Chocolate2={enemy="Chocolate Bar Battler",questButton=2,ammountToKill=8}
+        AFL.questData.Chocolate3={enemy="Sweet Thief",questButton=1,ammountToKill=8}
+        AFL.questData.Chocolate4={enemy="Candy Rebel",questButton=2,ammountToKill=8}
+        AFL.questData.NorthPole1={enemy="Candy Pirate",questButton=1,ammountToKill=8}
+        AFL.questData.NorthPole2={enemy="Snow Demon",questButton=2,ammountToKill=8}
+        AFL.questData.Tiki1Quest1={enemy="Isle Outlaw",questButton=1,ammountToKill=8}
+        AFL.questData.Tiki1Quest2={enemy="Isle Boy",questButton=2,ammountToKill=8}
+        AFL.questData.Tiki2Quest1={enemy="Sun-kissed Warrior",questButton=1,ammountToKill=8}
+        AFL.questData.Tiki2Quest2={enemy="Isle Champion",questButton=2,ammountToKill=8}
+        AFL.questData.Tiki3Quest1={enemy="Serpent Hunter",questButton=1,ammountToKill=8}
+        AFL.questData.Tiki3Quest2={enemy="Skull Slayer",questButton=2,ammountToKill=8}
+    end
+end
+afl_loadQuestData()
+function afl_jitterClick(x, y)
+    for i=1,5 do
+        local ox=math.random(-3,3); local oy=math.random(-3,3)
+        mousemoveabs(x+ox, y+oy); wait(0.03)
+    end
+end
+function afl_getCharacter()
+    local char=LocalPlayer.Character
+    local hrp=char and char:FindFirstChild("HumanoidRootPart")
+    if char and hrp then return char,hrp end
+end
+function afl_setCanCollide(on)
+    local char=afl_getCharacter()
+    if not char then return end
+    for _,c in pairs(char:GetChildren()) do
+        if c:IsA("BasePart") then c.CanCollide=not on end
+    end
+end
+function afl_teleportTo(position)
+    local char,hrp=afl_getCharacter()
+    if not char then return end
+    afl_setCanCollide(false)
+    local cur=hrp.Position
+    local dx=position.X-cur.X; local dy=position.Y-cur.Y; local dz=position.Z-cur.Z
+    local dist=math.sqrt(dx*dx+dy*dy+dz*dz)
+    local dur=dist/AFL.tweenSpeed
+    local startTime=os.clock()
+    while true do
+        if not char.Parent then break end
+        local alpha=math.min((os.clock()-startTime)/dur, 1)
+        hrp.Position=Vector3.new(cur.X+dx*alpha, cur.Y+dy*alpha, cur.Z+dz*alpha)
+        if alpha>=1 then break end
+        wait(0.01)
+    end
+    if char.Parent then
+        hrp.Velocity=Vector3.new(0,0,0)
+        hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+    end
+    afl_setCanCollide(true)
+end
+function afl_getLevels()
+    if not AFL.autofarmByLevel then return end
+    local ok,level=pcall(function() return LocalPlayer.Data.Level.Value end)
+    if not ok or not level then return end
+    local seaTable=AFL.levelFarmTable[AFL.currentSea]
+    if not seaTable then return end
+    for _,data in ipairs(seaTable) do
+        if level>=data[1] and level<data[2] and AFL.questData[data[3]] then
+            AFL.npcToFarm=data[3]; return
+        end
+    end
+    for i=#seaTable,1,-1 do
+        if AFL.questData[seaTable[i][3]] then AFL.npcToFarm=seaTable[i][3]; return end
+    end
+end
+function afl_setQuest()
+    if not AFL.enableGetQuest then return end
+    local quest=AFL.questData and AFL.questData[AFL.npcToFarm]
+    if not quest then return end
+    wait(0.5); mouse1press(); mouse1release(); wait(1.1)
+    local ok,dialogue=pcall(function() return LocalPlayer.PlayerGui.Main.Dialogue end)
+    if not ok or not dialogue then return end
+    local function getBtnCenter(name)
+        local btn=dialogue:FindFirstChild(name)
+        if not btn then return nil end
+        local p=btn.AbsolutePosition; local s=btn.AbsoluteSize
+        if not p or not s then return nil end; return Vector2.new(p.X+s.X/2, p.Y+s.Y/1.25)
+    end
+    local opt1=getBtnCenter("Option1"); local opt2=getBtnCenter("Option2")
+    if quest.questButton==1 and opt1 then
+        afl_jitterClick(opt1.X,opt1.Y); mouse1press(); mouse1release()
+    elseif opt2 then
+        afl_jitterClick(opt2.X,opt2.Y); mouse1press(); mouse1release()
+    end
+    wait(0.5)
+    if opt1 then afl_jitterClick(opt1.X,opt1.Y); mouse1press(); mouse1release() end
+end
+function afl_getNextNpc()
+    local quest=AFL.questData[AFL.npcToFarm]; if not quest then return end
+    local _,root=afl_getCharacter(); if not root then return end
+    local cur=root.Position; local best,bestD=nil,math.huge
+    local ok,enemies=pcall(function() return workspace.Enemies:GetChildren() end)
+    if not ok then return end
+    for _,enemy in pairs(enemies) do
+        if enemy and enemy.Parent then
+            local hrp=enemy:FindFirstChild("HumanoidRootPart")
+            local hum=enemy:FindFirstChildOfClass("Humanoid")
+            if hrp and hum and hum.Health>0 and string.find(enemy.Name,quest.enemy,1,true) then
+                local dx=hrp.Position.X-cur.X; local dy=hrp.Position.Y-cur.Y; local dz=hrp.Position.Z-cur.Z
+                local d=dx*dx+dy*dy+dz*dz
+                if d<bestD then bestD=d; best=enemy end
+            end
+        end
+    end
+    return best
+end
+function afl_farmNpcs()
+    local kills=0
+    afl_getLevels()
+    if not AFL.npcToFarm then wait(1); return end
+    local function pressNevermind()
+        local ok,dialogue=pcall(function() return LocalPlayer.PlayerGui.Main.Dialogue end)
+        if not ok or not dialogue then return end
+        local btn=dialogue:FindFirstChild("Option3"); if not btn then return end
+        local p=btn.AbsolutePosition; local s=btn.AbsoluteSize
+        if not p or not s then return end; local v=Vector2.new(p.X+s.X/2, p.Y+s.Y/1.25)
+        afl_jitterClick(v.X,v.Y); mouse1press(); mouse1release()
+    end
+    if AFL.islandPositions[AFL.npcToFarm] and AFL.waitPositions[AFL.npcToFarm] then
+        afl_teleportTo(AFL.islandPositions[AFL.npcToFarm])
+        wait(0.5); afl_setQuest(); wait(0.5)
+        afl_teleportTo(AFL.waitPositions[AFL.npcToFarm]); wait(0.5)
+    end
+    while S.autoFarmLevel do
+        local ok,curLevel=pcall(function() return LocalPlayer.Data.Level.Value end)
+        if ok and curLevel and curLevel~=AFL.lastLevel then
+            AFL.lastLevel=curLevel; local old=AFL.npcToFarm; afl_getLevels()
+            if old~=AFL.npcToFarm and AFL.npcToFarm and AFL.islandPositions[AFL.npcToFarm] then
+                kills=0; afl_teleportTo(AFL.islandPositions[AFL.npcToFarm])
+                wait(0.5); afl_setQuest(); wait(0.5)
+                afl_teleportTo(AFL.waitPositions[AFL.npcToFarm]); wait(0.5)
+                continue
+            end
+        end
+        local quest=AFL.questData[AFL.npcToFarm]
+        local maxKills=quest and quest.ammountToKill or 8
+        if kills>=maxKills then
+            kills=0
+            afl_teleportTo(AFL.islandPositions[AFL.npcToFarm]); wait(0.5)
+            afl_setQuest(); wait(0.5)
+            afl_teleportTo(AFL.waitPositions[AFL.npcToFarm]); wait(0.5)
+        end
+        if AFL.selectedNpc and AFL.questData[AFL.npcToFarm] then
+            if not string.find(AFL.selectedNpc.Name,AFL.questData[AFL.npcToFarm].enemy,1,true) then AFL.selectedNpc=nil end
+        end
+        if not AFL.selectedNpc or not AFL.selectedNpc.Parent then
+            local attempts=0
+            repeat AFL.selectedNpc=afl_getNextNpc(); attempts=attempts+1; wait(0.05) until AFL.selectedNpc or attempts>15
+            if not AFL.selectedNpc then
+                if AFL.waitPositions[AFL.npcToFarm] then afl_teleportTo(AFL.waitPositions[AFL.npcToFarm]) end
+                wait(0.5); continue
+            end
+        end
+        local hrp=AFL.selectedNpc:FindFirstChild("HumanoidRootPart")
+        local hum=AFL.selectedNpc:FindFirstChildOfClass("Humanoid")
+        if not hrp or not hum or hum.Health<=0 then AFL.selectedNpc=nil; wait(0.05); continue end
+        local fightStart=os.clock()
+        while hum and hum.Health>0 and AFL.selectedNpc.Parent and S.autoFarmLevel do
+            if not hrp or not hrp.Parent then break end
+            if os.clock()-fightStart>50 then pressNevermind(); AFL.selectedNpc=nil; break end
+            if not S.remoteMode and AFL.selectedNpc.Head then
+                AFL.selectedNpc.Head.Size=Vector3.new(75,75,75); AFL.selectedNpc.Head.CanCollide=false
+            end
+            local ok2,ppos=pcall(function() return hrp.Position end)
+            if ok2 and ppos and ppos.X then
+                afl_teleportTo(Vector3.new(ppos.X,ppos.Y+45,ppos.Z))
+            end
+            if S.remoteMode then
+                remoteAttack()
+                wait(0.05)
+            else
+                mouse1press(); mouse1release()
+                hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                if AFL.autoV4 then keypress(0x59); keyrelease(0x59) end
+                if AFL.autoV3 then keypress(0x54); keyrelease(0x54) end
+                wait(0.05)
+            end
+            hrp=AFL.selectedNpc:FindFirstChild("HumanoidRootPart")
+            hum=AFL.selectedNpc:FindFirstChildOfClass("Humanoid")
+        end
+        if hum and hum.Health<=0 then kills=kills+1; AFL.selectedNpc=nil end
+    end
+end
+task.spawn(function()
+    while true do
+        if S.autoFarmLevel then pcall(afl_farmNpcs) end
+        wait(0.5)
+    end
+end)
+task.spawn(function()
+    while true do
+        local folder=game.Workspace:FindFirstChild("Enemies")
+        if folder then
+            for _, model in pairs(folder:GetChildren()) do
+                if model:IsA("Model") then
+                    local eh=model:FindFirstChild("HumanoidRootPart")
+                    local hd=model:FindFirstChild("Head")
+                    if eh then eh.CanCollide=false end
+                    if hd then hd.CanCollide=false end
+                end
+            end
+        end
+        task.wait(0.5)
+    end
+end)
+task.spawn(function()
+    while true do
+        if S.bigHitbox then
+            local folder=game.Workspace:FindFirstChild("Enemies")
+            if folder then
+                for _, model in pairs(folder:GetChildren()) do
+                    if model:IsA("Model") then
+                        local head=model:FindFirstChild("Head")
+                        if head then head.Size=Vector3.new(200,200,200) end
+                    end
+                end
+            end
+        end
+        task.wait(0.5)
+    end
+end)
+local function doPullLoop(flag, getPoint)
+    task.spawn(function()
+        while true do
+            if flag() then
+                local char=LocalPlayer.Character
+                local myHrp=char and char:FindFirstChild("HumanoidRootPart")
+                if myHrp then
+                    local pullPoint=getPoint(myHrp)
+                    local folder=Workspace:FindFirstChild("Enemies")
+                    if folder then
+                        for _, model in ipairs(folder:GetChildren()) do
+                            if model:IsA("Model") then
+                                local hrp=model:FindFirstChild("HumanoidRootPart")
+                                if hrp then
+                                    pcall(function()
+                                        hrp.CanCollide=false
+                                        hrp.CFrame=CFrame.new(pullPoint)
+                                    end)
+                                end
+                            end
+                        end
+                    end
+                end
+                task.wait(0.05)
+            else
+                task.wait(0.15)
+            end
+        end
+    end)
+end
+doPullLoop(function() return S.pullEnemies end,  function(h) return Vector3.new(h.Position.X, h.Position.Y-10, h.Position.Z) end)
+doPullLoop(function() return S.buddhaPull end,   function(h) return Vector3.new(h.Position.X+37, h.Position.Y-3, h.Position.Z) end)
+doPullLoop(function() return S.customPull end,   function(h) return Vector3.new(h.Position.X+S.customPullX, h.Position.Y+S.customPullY, h.Position.Z+S.customPullZ) end)
+task.spawn(function()
+    while true do
+        task.wait(0.1)
+        if S.autoKen then
+            if not LocalPlayer:GetAttribute("KenActive") then
+                keypress(0x45); task.wait(0.1); keyrelease(0x45)
+            end
+        end
+    end
+end)
+task.spawn(function()
+    while true do
+        task.wait()
+        if S.freezePos and S.freezePosition then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then
+                hrp.Position=S.freezePosition
+                hrp.Velocity=Vector3.new(0,0,0); hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+            end
+        end
+    end
+end)
+task.spawn(function()
+    while true do
+        task.wait()
+        if S.freezeEnemies then
+            local folder=game.Workspace:FindFirstChild("Enemies")
+            if folder then
+                for _, model in pairs(folder:GetChildren()) do
+                    if model:IsA("Model") and not S.frozenEnemies[model] then
+                        local hrp=model:FindFirstChild("HumanoidRootPart")
+                        if hrp then S.frozenEnemies[model]=hrp.Position end
+                    end
+                end
+            end
+            for model, frozenPos in pairs(S.frozenEnemies) do
+                if model and model.Parent then
+                    local hrp=model:FindFirstChild("HumanoidRootPart")
+                    if hrp then
+                        hrp.Position=frozenPos
+                        hrp.Velocity=Vector3.new(0,0,0); hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                    end
+                else S.frozenEnemies[model]=nil end
+            end
+        end
+    end
+end)
+task.spawn(function()
+    while true do
+        task.wait(0.5)
+        if S.teleportEmber then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then
+                for _, obj in pairs(game.Workspace:GetChildren()) do
+                    if obj.Name=="EmberTemplate" and obj:IsA("Model") then
+                        local part=obj:FindFirstChild("Part")
+                        if part and part:IsA("BasePart") then
+                            hrp.Position=Vector3.new(part.Position.X, part.Position.Y+3, part.Position.Z)
+                            hrp.Velocity=Vector3.new(0,0,0); hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                            task.wait(0.5)
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+task.spawn(function()
+    while true do
+        task.wait()
+        if S.teleportEmber then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then hrp.Velocity=Vector3.new(0,1,0); hrp.AssemblyLinearVelocity=Vector3.new(0,1,0) end
+        end
+    end
+end)
+task.spawn(function()
+    while true do
+        task.wait(2)
+        if S.teleportKitsune then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then
+                local map=game.Workspace:FindFirstChild("Map")
+                if map then
+                    local kitsune=map:FindFirstChild("KitsuneIsland")
+                    if kitsune then
+                        local lampPost=kitsune:FindFirstChild("LampPost")
+                        if lampPost then
+                            local part=lampPost:FindFirstChild("Part")
+                            if part and part:IsA("BasePart") then
+                                local startPos=hrp.Position
+                                local endPos=Vector3.new(part.Position.X, part.Position.Y+3, part.Position.Z)
+                                local duration=2; local startTime=os.clock()
+                                while S.teleportKitsune and os.clock()-startTime<duration do
+                                    local progress=(os.clock()-startTime)/duration
+                                    hrp.Position=Vector3.new(
+                                        startPos.X+(endPos.X-startPos.X)*progress,
+                                        startPos.Y+(endPos.Y-startPos.Y)*progress,
+                                        startPos.Z+(endPos.Z-startPos.Z)*progress
+                                    )
+                                    task.wait(0.05)
+                                end
+                                if S.teleportKitsune then
+                                    hrp.Position=endPos
+                                    hrp.Velocity=Vector3.new(0,0,0); hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+task.spawn(function()
+    while true do
+        task.wait()
+        if S.teleportKitsune then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then hrp.Velocity=Vector3.new(0,0,0); hrp.AssemblyLinearVelocity=Vector3.new(0,0,0) end
+        end
+    end
+end)
+task.spawn(function()
+    while true do
+        task.wait(0.5)
+        if not S.autoRaid then
+            S.raidTweenActive=false
+        else
+            local map=game.Workspace:FindFirstChild("Map")
+            local raidMap=map and map:FindFirstChild("RaidMap")
+            if raidMap then
+                local highestIsland=0
+                for _, child in pairs(raidMap:GetChildren()) do
+                    local num=tonumber(string.sub(child.Name,11))
+                    if string.sub(child.Name,1,10)=="RaidIsland" and num and num>highestIsland then highestIsland=num end
+                end
+                if highestIsland>S.raidLastIslandNum then
+                    S.raidLastIslandNum=highestIsland; S.raidTweenActive=true
+                    notify("Raid Island "..highestIsland.." - Going there!","redacted",2)
+                    task.spawn(function()
+                        local island
+                        for _=1,20 do island=raidMap:FindFirstChild("RaidIsland"..highestIsland); if island then break end; task.wait(0.2) end
+                        if not island then S.raidTweenActive=false; return end
+                        local cpos=nil
+                        for _=1,10 do
+                            local candidates={}
+                            local pp=island.PrimaryPart
+                            if pp then table.insert(candidates,pp) end
+                            for _,p in pairs(island:GetDescendants()) do if p:IsA("BasePart") then table.insert(candidates,p) end end
+                            for _,p in pairs(candidates) do
+                                local ok,pos=pcall(function() return p.Position end)
+                                if ok and pos and pos.X then cpos=pos; break end
+                            end
+                            if cpos then break end
+                            task.wait(0.3)
+                        end
+                        if not cpos then S.raidTweenActive=false; return end
+                        local myHrp
+                        for _=1,30 do
+                            local c=LocalPlayer.Character; myHrp=c and c:FindFirstChild("HumanoidRootPart")
+                            if myHrp then break end; task.wait(0.2)
+                        end
+                        if not myHrp then S.raidTweenActive=false; return end
+                        local tx=cpos.X; local ty=cpos.Y+100; local tz=cpos.Z
+                        local startX=myHrp.Position.X; local startY=myHrp.Position.Y; local startZ=myHrp.Position.Z
+                        local dx=tx-startX; local dy=ty-startY; local dz=tz-startZ
+                        local dist=math.sqrt(dx*dx+dy*dy+dz*dz)
+                        local duration=dist/200; local t0=os.clock(); local velTick=os.clock()
+                        while S.autoRaid and S.raidTweenActive do
+                            local c2=LocalPlayer.Character
+                            local hrp2=c2 and c2:FindFirstChild("HumanoidRootPart")
+                            if not hrp2 then task.wait(0.1); continue end
+                            local alpha=math.min((os.clock()-t0)/duration,1)
+                            hrp2.Position=Vector3.new(startX+dx*alpha, startY+dy*alpha, startZ+dz*alpha)
+                            if os.clock()-velTick>=0.5 then
+                                hrp2.Velocity=Vector3.new(0,0,0); hrp2.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                                velTick=os.clock()
+                            end
+                            if alpha>=1 then notify("Arrived!","redacted",2); break end
+                            task.wait(0.01)
+                        end
+                        S.raidTweenActive=false
+                    end)
+                end
+            end
+        end
+    end
+end)
+task.spawn(function()
+    while true do
+        if S.autoRaid and not S.raidTweenActive then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then farmAttack(hrp, function() return S.autoRaid and not S.raidTweenActive end, nil) end
+            task.wait(0.1)
+        else task.wait(0.1) end
+    end
+end)
+task.spawn(function()
+    while true do
+        if S.voidPull then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then
+                pcall(function()
+                    hrp.CFrame=CFrame.new(hrp.Position.X, 5000, hrp.Position.Z)
+                    hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                end)
+            end
+            task.wait(0.1)
+        else
+            task.wait(0.2)
+        end
+    end
+end)
+task.spawn(function()
+    while true do
+        if S.skyPull then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then
+                pcall(function()
+                    hrp.CFrame=CFrame.new(hrp.Position.X, 100, hrp.Position.Z)
+                    hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                end)
+            end
+            task.wait(0.1)
+        else
+            task.wait(0.2)
+        end
+    end
+end)
+function isPvpTargetDead(char)
+    if not char or not char.Parent then return true end
+    local hum=char:FindFirstChildOfClass("Humanoid")
+    if not hum or hum.Health<=0 then return true end
+    return false
+end
+task.spawn(function()
+    local pvpTarget=nil
+    while true do
+        if S.pvpFarmLoop then
+            local char=LocalPlayer.Character
+            local myHrp=char and char:FindFirstChild("HumanoidRootPart")
+            if myHrp then
+                if isPvpTargetDead(pvpTarget) then
+                    pvpTarget=nil
+                    local nearest, bestDist=nil, math.huge
+                    local myName=LocalPlayer.Name
+                    local myTeamName=(LocalPlayer.Team and LocalPlayer.Team.Name) or ""
+                    local charsFolder=game.Workspace:FindFirstChild("Characters")
+                    if charsFolder then
+                        for _, c in pairs(charsFolder:GetChildren()) do
+                            if c:IsA("Model") and c.Name~=myName then
+                                local root=c:FindFirstChild("HumanoidRootPart")
+                                local hum=c:FindFirstChildOfClass("Humanoid")
+                                if root and hum and hum.Health>0 then
+                                    local skip=false
+                                    if myTeamName=="Marines" then
+                                        local tp=Players:FindFirstChild(c.Name)
+                                        if tp and tp.Team and tp.Team.Name=="Marines" then skip=true end
+                                    end
+                                    if not skip then
+                                        local dx=root.Position.X-myHrp.Position.X
+                                        local dy=root.Position.Y-myHrp.Position.Y
+                                        local dz=root.Position.Z-myHrp.Position.Z
+                                        local d=math.sqrt(dx*dx+dy*dy+dz*dz)
+                                        if d<bestDist then bestDist=d; nearest=c end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                    if nearest then pvpTarget=nearest end
+                end
+                if pvpTarget and not isPvpTargetDead(pvpTarget) then
+                    local enemyRoot=pvpTarget:FindFirstChild("HumanoidRootPart")
+                    if enemyRoot then
+                        task.spawn(function()
+                            while S.pvpFarmLoop and not isPvpTargetDead(pvpTarget) do
+                                local eh=pvpTarget:FindFirstChild("HumanoidRootPart")
+                                local hd=pvpTarget:FindFirstChild("Head")
+                                if eh then eh.CanCollide=false end
+                                if hd then hd.CanCollide=false end
+                                task.wait()
+                            end
+                        end)
+                        local startX=myHrp.Position.X; local startY=myHrp.Position.Y; local startZ=myHrp.Position.Z
+                        local tx=enemyRoot.Position.X+20; local ty=enemyRoot.Position.Y; local tz=enemyRoot.Position.Z
+                        local dx=tx-startX; local dy=ty-startY; local dz=tz-startZ
+                        local duration=math.sqrt(dx*dx+dy*dy+dz*dz)/320; local t0=os.clock()
+                        while S.pvpFarmLoop and not isPvpTargetDead(pvpTarget) do
+                            local alpha=math.min((os.clock()-t0)/duration,1)
+                            myHrp.Position=Vector3.new(startX+dx*alpha, startY+dy*alpha, startZ+dz*alpha)
+                            if alpha>=1 then break end; task.wait(0.01)
+                        end
+                        local lastClick=0
+                        local attackStart=os.clock()
+                        while os.clock()-attackStart<2 and S.pvpFarmLoop and not isPvpTargetDead(pvpTarget) do
+                            local tr=pvpTarget:FindFirstChild("HumanoidRootPart")
+                            if tr then
+                                myHrp.Position=Vector3.new(tr.Position.X+20, tr.Position.Y, tr.Position.Z)
+                                myHrp.Velocity=Vector3.new(0,0,0); myHrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                            end
+                            local now=os.clock()
+                            if now-lastClick>=0.06 then mouse1click(); lastClick=now end
+                            task.wait()
+                        end
+                        if S.pvpFarmLoop then
+                            local savedX=myHrp.Position.X; local savedZ=myHrp.Position.Z
+                            local upStart=os.clock()
+                            while os.clock()-upStart<5 and S.pvpFarmLoop and not isPvpTargetDead(pvpTarget) do
+                                myHrp.Position=Vector3.new(savedX,10000000,savedZ)
+                                myHrp.Velocity=Vector3.new(0,0,0); myHrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                                task.wait(0.1)
+                            end
+                            local dHrp=pvpTarget:FindFirstChild("HumanoidRootPart")
+                            local groundY=dHrp and dHrp.Position and dHrp.Position.Y or 0
+                            myHrp.Position=Vector3.new(savedX,groundY,savedZ)
+                            myHrp.Velocity=Vector3.new(0,0,0); myHrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                            task.wait(0.2)
+                            if S.pvpFarmLoop and not isPvpTargetDead(pvpTarget) then
+                                local a2=os.clock()
+                                while os.clock()-a2<0.5 and S.pvpFarmLoop and not isPvpTargetDead(pvpTarget) do
+                                    local tr2=pvpTarget:FindFirstChild("HumanoidRootPart")
+                                    if tr2 then
+                                        myHrp.Position=Vector3.new(tr2.Position.X+20,tr2.Position.Y,tr2.Position.Z)
+                                        myHrp.Velocity=Vector3.new(0,0,0); myHrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                                    end
+                                    local now=os.clock()
+                                    if now-lastClick>=0.06 then mouse1click(); lastClick=now end
+                                    task.wait()
+                                end
+                            end
+                        end
+                    end
+                else task.wait(0.5) end
+            else task.wait(0.5) end
+        else pvpTarget=nil; task.wait(0.5) end
+    end
+end)
+do
+    aura = aura or {
+        enabled       = false,
+        maxDist       = 100,
+        minDist       = 1,
+        sessionId     = "32501259",
+        targetCount   = 0,
+        firstName     = "None",
+        regAtk        = nil,
+        regHit        = nil,
+    }
+    local function aura_ensureRemotes()
+        if aura.regAtk and aura.regHit then return true end
+        local net = game:GetService("ReplicatedStorage"):FindFirstChild("Modules")
+        if net then net = net:FindFirstChild("Net") end
+        if not net then return false end
+        aura.regAtk = net:FindFirstChild("RE/RegisterAttack")
+        aura.regHit = net:FindFirstChild("RE/RegisterHit")
+        return aura.regAtk ~= nil and aura.regHit ~= nil
+    end
+    local function aura_getTargetPart(enemy)
+        if not enemy or not enemy.Parent then return nil end
+        local p = enemy:FindFirstChild("LeftLowerLeg")
+        if p and p:IsA("BasePart") then return p end
+        p = enemy:FindFirstChild("Head")
+        if p and p:IsA("BasePart") then return p end
+        p = enemy:FindFirstChild("HumanoidRootPart")
+        if p and p:IsA("BasePart") then return p end
+        for _, c in ipairs(enemy:GetChildren()) do
+            if c:IsA("BasePart") then return c end
+        end
+        return nil
+    end
+    local function aura_getEnemies()
+        local char = LocalPlayer.Character
+        if not char then return {} end
+        local hrp = char:FindFirstChild("HumanoidRootPart")
+        if not hrp then return {} end
+        local myPos = hrp.Position
+        local folder = workspace:FindFirstChild("Enemies")
+        if not folder then return {} end
+        local results = {}
+        for _, enemy in ipairs(folder:GetChildren()) do
+            if enemy and enemy.Parent then
+                local hum = enemy:FindFirstChild("Humanoid")
+                if hum and hum.Health and hum.Health > 0 then
+                    local part = aura_getTargetPart(enemy)
+                    if part and part.Parent then
+                        local ok, pos = pcall(function() return part.Position end)
+                        if ok and pos then
+                            local d = (pos - myPos).Magnitude
+                            if d <= aura.maxDist and d >= aura.minDist then
+                                table.insert(results, {enemy=enemy, part=part, dist=d})
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        return results
+    end
+    local function aura_attack(list)
+        if #list == 0 then return end
+        local hitTable = {}
+        local primary = nil
+        for _, entry in ipairs(list) do
+            if entry.enemy and entry.enemy.Parent and entry.part and entry.part.Parent then
+                table.insert(hitTable, {entry.enemy, entry.part})
+                if not primary then primary = entry.part end
+            end
+        end
+        if #hitTable == 0 then return end
+        pcall(function() aura.regAtk:FireServer(0.5) end)
+        task.wait()
+        pcall(function() aura.regHit:FireServer(primary, hitTable, nil, aura.sessionId) end)
+    end
+    task.spawn(function()
+        while true do
+            if false and aura.enabled then
+                if aura_ensureRemotes() then
+                    local enemies = aura_getEnemies()
+                    aura.targetCount = #enemies
+                    if aura.targetCount > 0 then
+                        table.sort(enemies, function(a,b) return a.dist < b.dist end)
+                        aura.firstName = enemies[1].enemy.Name or "Unknown"
+                    else
+                        aura.firstName = "None"
+                    end
+                    aura_attack(enemies)
+                end
+                task.wait(0.05)
+            else
+                task.wait(0.1)
+            end
+        end
+    end)
+end
+do
+    local sessionId = "325bb15e"
+    local minDist   = 1
+    local regAtk, regHit = nil, nil
+    local function pvp_ensureRemotes()
+        if regAtk and regHit then return true end
+        local net = game:GetService("ReplicatedStorage"):FindFirstChild("Modules")
+        if net then net = net:FindFirstChild("Net") end
+        if not net then return false end
+        regAtk = net:FindFirstChild("RE/RegisterAttack")
+        regHit = net:FindFirstChild("RE/RegisterHit")
+        return regAtk ~= nil and regHit ~= nil
+    end
+    local function pvp_getTarget()
+        local char = LocalPlayer.Character
+        if not char then return nil, nil end
+        local hrp = char:FindFirstChild("HumanoidRootPart")
+        if not hrp then return nil, nil end
+        local myPos = hrp.Position
+        local closest, closestDist = nil, _pvpAuraMaxDist + 1
+        for _, player in pairs(Players:GetPlayers()) do
+            if player == LocalPlayer then continue end
+            local c = player.Character
+            if c then
+                local root = c:FindFirstChild("HumanoidRootPart")
+                if root then
+                    local d = (root.Position - myPos).Magnitude
+                    if d < closestDist and d >= minDist then
+                        closestDist = d; closest = player
+                    end
+                end
+            end
+        end
+        if not closest then return nil, nil end
+        local tc = closest.Character
+        if not tc then return nil, nil end
+        local partName = _pvpAuraAltPart and "ModelHitbox" or "Head"
+        local part = tc:FindFirstChild(partName) or tc:FindFirstChild("Head")
+        if not part or part:IsDescendantOf(LocalPlayer.Character) then return nil, nil end
+        return closest, part
+    end
+    local function pvp_attack(part)
+        if not part then return end
+        pcall(function() regAtk:FireServer(0.5) end)
+        task.wait()
+        pcall(function() regHit:FireServer(part, {}, nil, sessionId) end)
+    end
+    task.spawn(function()
+        while true do
+            if _pvpAuraEnabled then
+                if pvp_ensureRemotes() then
+                    local player, part = pvp_getTarget()
+                    pvp_attack(part)
+                end
+                task.wait(0.2)
+            else
+                task.wait(0.25)
+            end
+        end
+    end)
+end
+pcall(function()
+    if type(islandList) == "table" and (not islandNames or #islandNames == 0) then
+        islandNames = {}
+        for _, isle in pairs(islandList) do table.insert(islandNames, isle.name) end
+    end
+end)
+pcall(function()
+    if type(dangerLevels) == "table" and (not dangerLevelNames or #dangerLevelNames == 0) then
+        dangerLevelNames = {}
+        for _, d in pairs(dangerLevels) do table.insert(dangerLevelNames, d.name) end
+    end
+end)
+-- ============================================================
+-- Haunted extras (myth4c / laced.club) — Fruit ESP + AutoFish stay ours
+-- ============================================================
+local ExtraDraw = { flower={}, chest={}, boat={}, mirage={}, chamLast=0 }
+local BoatSeats = { names={}, map={} }
+local MATERIAL_MAP = {
+    ["Leather + Scrap Metal"] = {"Pirate","Brute","Gladiator","Mercenary","Swan Pirate","Marine Captain","Jungle Pirate","Forest Pirate"},
+    ["Angel Wings"] = {"God's Guard","Shanda","Royal Squad","Royal Soldier"},
+    ["Magma Ore"] = {"Military Soldier","Military Spy","Magma Ninja","Lava Pirate"},
+    ["Fish Tail"] = {"Fishman Warrior","Fishman Commando","Fishman Raider","Fishman Captain"},
+    ["Radioactive Material"] = {"Factory Staff"},
+    ["Ectoplasm"] = {"Ship Deckhand","Ship Engineer","Ship Steward","Ship Officer","Cursed Captain"},
+    ["Mystic Droplet"] = {"Sea Soldier","Water Fighter"},
+    ["Vampire Fang"] = {"Vampire"},
+    ["Demonic Wisp"] = {"Demonic Soul"},
+    ["Conjured Cocoa"] = {"Cocoa Warrior","Chocolate Bar Battler","Sweet Thief","Candy Rebel"},
+    ["Dragon Scale"] = {"Dragon Crew Warrior","Dragon Crew Archer"},
+    ["Gunpowder"] = {"Pistol Billionaire"},
+    ["Mini Tusk"] = {"Mythological Pirate"},
+}
+local MATERIAL_NAMES = {
+    "Leather + Scrap Metal","Angel Wings","Magma Ore","Fish Tail","Radioactive Material",
+    "Ectoplasm","Mystic Droplet","Vampire Fang","Demonic Wisp","Conjured Cocoa",
+    "Dragon Scale","Gunpowder","Mini Tusk",
+}
+local BOSS_NAMES_SEA1 = {
+    "The Gorilla King","Bobby","The Saw","Yeti","Mob Leader","Vice Admiral","Saber Expert",
+    "Warden","Chief Warden","Swan","Magma Admiral","Fishman Lord","Wysper","Thunder God",
+    "Cyborg","Ice Admiral","Greybeard",
+}
+local BOSS_NAMES_SEA2 = {
+    "Diamond","Jeremy","Orbitus","Don Swan","Smoke Admiral","Awakened Ice Admiral",
+    "Tide Keeper","Darkbeard","Cursed Captain","Order","Stone",
+}
+local BOSS_NAMES_SEA3 = {
+    "Hydra Leader","Kilo Admiral","Captain Elephant","Beautiful Pirate","Cake Queen",
+    "Dough King","Longma","Soul Reaper","rip_indra True Form","Tyrant of the Skies",
+}
+local BOSS_NAMES = {}
+for _,n in ipairs(BOSS_NAMES_SEA1) do BOSS_NAMES[#BOSS_NAMES+1]=n end
+for _,n in ipairs(BOSS_NAMES_SEA2) do BOSS_NAMES[#BOSS_NAMES+1]=n end
+for _,n in ipairs(BOSS_NAMES_SEA3) do BOSS_NAMES[#BOSS_NAMES+1]=n end
+local function bossesForCurrentSea()
+    if isSea1() then return BOSS_NAMES_SEA1 end
+    if isSea2() then return BOSS_NAMES_SEA2 end
+    if isSea3() then return BOSS_NAMES_SEA3 end
+    return BOSS_NAMES
+end
+local SEA_EVENT_NAMES = {"Shark","Terrorshark","Piranha","Fish Crew Member","Haunted Crew Member"}
+local GLITCH_KEYS = {
+    {id="sanguine",    flag="sanguineZ",    label="Sanguine Z"},
+    {id="dragonTalon", flag="dragonTalonZ", label="Dragon Talon Z"},
+    {id="yama",        flag="yamaZ",        label="Yama Z"},
+    {id="tushita",     flag="tushitaX",     label="Tushita X"},
+    {id="foxLamp",     flag="foxLampX",     label="Fox Lamp X"},
+    {id="soulGuitar",  flag="soulGuitarM1", label="Soul Guitar M1"},
+    {id="diamond",     flag="diamondM1",    label="Diamond M1"},
+    {id="flame",       flag="flameF",       label="Flame F"},
+}
+
+local function extraClearGroup(group)
+    for key, entry in pairs(group) do
+        pcall(function() if entry.label then entry.label:Remove() end end)
+        if entry.lines then
+            for _, l in pairs(entry.lines) do pcall(function() l:Remove() end) end
+        end
+        group[key] = nil
+    end
+end
+function extraClearAllESP()
+    extraClearGroup(ExtraDraw.flower)
+    extraClearGroup(ExtraDraw.chest)
+    extraClearGroup(ExtraDraw.boat)
+    extraClearGroup(ExtraDraw.mirage)
+    pcall(clearChamBoxes)
+end
+
+local function extraMakeLabel(color)
+    local t = Drawing.new("Text")
+    t.Size = 14
+    t.Center = true
+    t.Outline = true
+    t.Color = color
+    t.Visible = false
+    t.ZIndex = 10
+    pcall(function() t.Font = Drawing.Fonts.Monospace end)
+    return t
+end
+local function extraMakeLines(n, color)
+    local lines = {}
+    for i = 1, n do
+        local l = Drawing.new("Line")
+        l.Color = color
+        l.Thickness = 1.5
+        l.Visible = false
+        l.ZIndex = 9
+        lines[i] = l
+    end
+    return lines
+end
+local function extraToScreen(pos)
+    local cam = Workspace.CurrentCamera
+    if not cam or not pos then return nil, false end
+    local ok, v, vis = pcall(function()
+        local vv, on = cam:WorldToViewportPoint(pos)
+        return vv, on
+    end)
+    if not ok or not v then return nil, false end
+    return Vector2.new(v.X, v.Y), vis and v.Z > 0
+end
+local function extraHideLines(lines)
+    if not lines then return end
+    for _, l in pairs(lines) do l.Visible = false end
+end
+local function extraDrawAABB(lines, part)
+    if not lines or not part or not part.Parent then extraHideLines(lines); return end
+    local cam = Workspace.CurrentCamera
+    if not cam then extraHideLines(lines); return end
+    local cf, s = part.CFrame, part.Size
+    local hx, hy, hz = s.X/2, s.Y/2, s.Z/2
+    local corners = {
+        cf * Vector3.new(-hx,-hy,-hz), cf * Vector3.new(hx,-hy,-hz),
+        cf * Vector3.new(hx,-hy, hz), cf * Vector3.new(-hx,-hy, hz),
+        cf * Vector3.new(-hx, hy,-hz), cf * Vector3.new(hx, hy,-hz),
+        cf * Vector3.new(hx, hy, hz), cf * Vector3.new(-hx, hy, hz),
+    }
+    local minX, minY, maxX, maxY = math.huge, math.huge, -math.huge, -math.huge
+    local any = false
+    for i = 1, 8 do
+        local sp, vis = extraToScreen(corners[i])
+        if vis and sp then
+            any = true
+            if sp.X < minX then minX = sp.X end
+            if sp.Y < minY then minY = sp.Y end
+            if sp.X > maxX then maxX = sp.X end
+            if sp.Y > maxY then maxY = sp.Y end
+        end
+    end
+    if not any or #lines < 4 then extraHideLines(lines); return end
+    local pts = {
+        Vector2.new(minX, minY), Vector2.new(maxX, minY),
+        Vector2.new(maxX, maxY), Vector2.new(minX, maxY),
+    }
+    for i = 1, 4 do
+        local a, b = pts[i], pts[i == 4 and 1 or i + 1]
+        lines[i].From = a
+        lines[i].To = b
+        lines[i].Visible = true
+    end
+end
+local function extraGetPart(obj)
+    if not obj then return nil end
+    if obj:IsA("BasePart") then return obj end
+    return obj:FindFirstChild("HumanoidRootPart")
+        or obj:FindFirstChild("RootPart")
+        or obj:FindFirstChild("Part")
+        or obj:FindFirstChildWhichIsA("BasePart")
+end
+
+local enhancedComm = nil
+local function getCommF()
+    if enhancedComm then
+        local okParent, parent = pcall(function() return enhancedComm.Parent end)
+        if okParent and parent then return enhancedComm end
+        enhancedComm = nil
+    end
+    local storage = ReplicatedStorage
+    local remotes = storage and storage:FindFirstChild("Remotes")
+    enhancedComm = remotes and remotes:FindFirstChild("CommF_") or nil
+    if not enhancedComm and storage then
+        local okDesc, desc = pcall(function() return storage:GetDescendants() end)
+        if okDesc and desc then
+            for _, object in pairs(desc) do
+                local okName, name = pcall(function() return object.Name end)
+                if okName and name == "CommF_" then enhancedComm = object; break end
+            end
+        end
+    end
+    return enhancedComm
+end
+local function getCommE()
+    local remotes = ReplicatedStorage:FindFirstChild("Remotes")
+    return remotes and remotes:FindFirstChild("CommE")
+end
+local function invokeCommF(...)
+    local remote = getCommF()
+    if not remote then return false end
+    local args = {...}
+    local ok, result = pcall(function()
+        return remote:InvokeServer(unpack(args))
+    end)
+    if not ok then
+        enhancedComm = nil
+        warn("[Automation] CommF_ failed: " .. tostring(result))
+        return false
+    end
+    return true
+end
+local function commF(...)
+    invokeCommF(...)
+end
+local function tapKey(vk)
+    pcall(function()
+        if keypress then
+            keypress(vk)
+            task.wait(0.03)
+            keyrelease(vk)
+        elseif keyclick then
+            keyclick(vk)
+        end
+    end)
+end
+local function toolEquipped(name)
+    local char = LocalPlayer.Character
+    if not char then return false end
+    local t = char:FindFirstChildOfClass("Tool")
+    if not t then return false end
+    if t.Name == name then return true end
+    return string.find(t.Name, name, 1, true) ~= nil
+end
+local function findTool(name)
+    local char = LocalPlayer.Character
+    if char then
+        local t = char:FindFirstChild(name)
+        if t then return t end
+        for _, c in ipairs(char:GetChildren()) do
+            if c:IsA("Tool") and string.find(c.Name, name, 1, true) then return c end
+        end
+    end
+    local bp = LocalPlayer:FindFirstChild("Backpack")
+    if bp then
+        local t = bp:FindFirstChild(name)
+        if t then return t end
+        for _, c in ipairs(bp:GetChildren()) do
+            if c:IsA("Tool") and string.find(c.Name, name, 1, true) then return c end
+        end
+    end
+    return nil
+end
+local function getMyHrp()
+    local char = LocalPlayer.Character
+    return char and char:FindFirstChild("HumanoidRootPart")
+end
+-- Velocity boost (ported 1:1 from hauntedscripts blox fruits — Matcha)
+function runVelocityBoost(settings, enabledFn, horizontalOnly, lockedDirection)
+    if not settings then return end
+    task.wait(settings.delay)
+    if enabledFn and not enabledFn() then return end
+
+    local char = LocalPlayer and LocalPlayer.Character or nil
+    local hrp = char and char:FindFirstChild("HumanoidRootPart") or nil
+    if not hrp then return end
+
+    local direction = lockedDirection
+    if not direction then
+        pcall(function()
+            local velocity = hrp.AssemblyLinearVelocity
+            if not velocity then return end
+            local dx, dy, dz = velocity.X, velocity.Y, velocity.Z
+            if horizontalOnly then dy = 0 end
+            local magnitude = math.sqrt(dx * dx + dy * dy + dz * dz)
+            if magnitude > 0.1 then
+                direction = Vector3.new(dx / magnitude, dy / magnitude, dz / magnitude)
+            end
+        end)
+    end
+    if not direction then return end
+
+    local endTime = os.clock() + (settings.duration or 0.3)
+    while os.clock() < endTime and (not enabledFn or enabledFn()) do
+        local currentChar = LocalPlayer and LocalPlayer.Character or nil
+        local currentHrp = currentChar and currentChar:FindFirstChild("HumanoidRootPart") or nil
+        if not currentHrp then return end
+        pcall(function()
+            currentHrp.AssemblyLinearVelocity = Vector3.new(
+                direction.X * settings.speed,
+                horizontalOnly and 0 or direction.Y * settings.speed,
+                direction.Z * settings.speed
+            )
+        end)
+        task.wait()
+    end
+end
+
+local function charHasTool(name)
+    local char = LocalPlayer and LocalPlayer.Character
+    return char and char:FindFirstChild(name) ~= nil
+end
+
+local function mouse1Down()
+    local d = false
+    pcall(function()
+        if ismouse1pressed then d = ismouse1pressed()
+        else d = UIS:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) end
+    end)
+    return d
+end
+
+-- Sanguine Z: only when SanguineArtZFire appears on HRP (not backpack)
+task.spawn(function()
+    local wasZFire = false
+    local boosting = false
+    while not _G.FE_Unloaded do
+        local char = LocalPlayer and LocalPlayer.Character or nil
+        local hrp = char and char:FindFirstChild("HumanoidRootPart") or nil
+        local zFire = hrp and hrp:FindFirstChild("SanguineArtZFire") ~= nil or false
+        if S.sanguineZ and zFire and not wasZFire and not boosting then
+            boosting = true
+            task.spawn(function()
+                runVelocityBoost(S.glitchSettings.sanguine, function() return S.sanguineZ end)
+                boosting = false
+            end)
+        end
+        wasZFire = zFire
+        task.wait()
+    end
+end)
+
+-- Dragon Talon Z — tool must be IN HANDS (character child)
+task.spawn(function()
+    local holdingZ = false
+    local boosting = false
+    while not _G.FE_Unloaded do
+        local pressed = false
+        pcall(function() pressed = iskeypressed(0x5A) end)
+        if S.dragonTalonZ and pressed and not holdingZ then
+            holdingZ = true
+            if not boosting then
+                boosting = true
+                task.spawn(function()
+                    if charHasTool("Dragon Talon") then
+                        runVelocityBoost(S.glitchSettings.dragonTalon, function() return S.dragonTalonZ end)
+                    end
+                    boosting = false
+                end)
+            end
+        elseif not pressed then
+            holdingZ = false
+        end
+        task.wait()
+    end
+end)
+
+-- Yama Z
+task.spawn(function()
+    local holdingZ = false
+    local boosting = false
+    while not _G.FE_Unloaded do
+        local pressed = false
+        pcall(function() pressed = iskeypressed(0x5A) end)
+        if S.yamaZ and pressed and not holdingZ then
+            holdingZ = true
+            if not boosting then
+                boosting = true
+                task.spawn(function()
+                    if charHasTool("Yama") then
+                        runVelocityBoost(S.glitchSettings.yama, function() return S.yamaZ end)
+                    end
+                    boosting = false
+                end)
+            end
+        elseif not pressed then
+            holdingZ = false
+        end
+        task.wait()
+    end
+end)
+
+-- Tushita X
+task.spawn(function()
+    local holdingX = false
+    local boosting = false
+    while not _G.FE_Unloaded do
+        local pressed = false
+        pcall(function() pressed = iskeypressed(0x58) end)
+        if S.tushitaX and pressed and not holdingX then
+            holdingX = true
+            if not boosting then
+                boosting = true
+                task.spawn(function()
+                    if charHasTool("Tushita") then
+                        runVelocityBoost(S.glitchSettings.tushita, function() return S.tushitaX end)
+                    end
+                    boosting = false
+                end)
+            end
+        elseif not pressed then
+            holdingX = false
+        end
+        task.wait()
+    end
+end)
+
+-- Fox Lamp X
+task.spawn(function()
+    local holdingX = false
+    local boosting = false
+    while not _G.FE_Unloaded do
+        local pressed = false
+        pcall(function() pressed = iskeypressed(0x58) end)
+        if S.foxLampX and pressed and not holdingX then
+            holdingX = true
+            if not boosting then
+                boosting = true
+                task.spawn(function()
+                    if charHasTool("Fox Lamp") then
+                        runVelocityBoost(S.glitchSettings.foxLamp, function() return S.foxLampX end)
+                    end
+                    boosting = false
+                end)
+            end
+        elseif not pressed then
+            holdingX = false
+        end
+        task.wait()
+    end
+end)
+
+-- Soul Guitar M1 (Q + M1 within 0.5s) — tool in hands only
+task.spawn(function()
+    local wasQPressed = false
+    local wasM1Pressed = false
+    local lastQPress = nil
+    local lastM1Press = nil
+    local boosting = false
+    while not _G.FE_Unloaded do
+        local qPressed = false
+        pcall(function() qPressed = iskeypressed(0x51) end)
+        local m1Pressed = mouse1Down()
+        local now = os.clock()
+
+        if S.soulGuitarM1 then
+            if qPressed and not wasQPressed then lastQPress = now end
+            if m1Pressed and not wasM1Pressed then lastM1Press = now end
+
+            if not boosting and lastQPress and lastM1Press and math.abs(lastQPress - lastM1Press) <= 0.5 then
+                lastQPress = nil
+                lastM1Press = nil
+                boosting = true
+                task.spawn(function()
+                    local char = LocalPlayer and LocalPlayer.Character or nil
+                    local hasGuitar = char and (
+                        char:FindFirstChild("Skull Guitar") or
+                        char:FindFirstChild("Soul Guitar")
+                    )
+                    if hasGuitar then
+                        runVelocityBoost(S.glitchSettings.soulGuitar, function() return S.soulGuitarM1 end, true)
+                    end
+                    boosting = false
+                end)
+            end
+        else
+            lastQPress = nil
+            lastM1Press = nil
+        end
+
+        wasQPressed = qPressed
+        wasM1Pressed = m1Pressed
+        task.wait()
+    end
+end)
+
+-- Diamond M1 release — Diamond-Diamond in hands only
+task.spawn(function()
+    local wasM1Pressed = false
+    local boosting = false
+    while not _G.FE_Unloaded do
+        local m1Pressed = mouse1Down()
+        if S.diamondM1 and not m1Pressed and wasM1Pressed and not boosting then
+            boosting = true
+            task.spawn(function()
+                if charHasTool("Diamond-Diamond") then
+                    runVelocityBoost(S.glitchSettings.diamond, function() return S.diamondM1 end)
+                end
+                boosting = false
+            end)
+        end
+        wasM1Pressed = m1Pressed
+        task.wait()
+    end
+end)
+
+-- Flame F
+task.spawn(function()
+    local holdingF = false
+    local boosting = false
+    while not _G.FE_Unloaded do
+        local pressed = false
+        pcall(function() pressed = iskeypressed(0x46) end)
+        if S.flameF and pressed and not holdingF then
+            holdingF = true
+            if not boosting then
+                boosting = true
+                task.spawn(function()
+                    if charHasTool("Flame-Flame") then
+                        runVelocityBoost(S.glitchSettings.flame, function() return S.flameF end)
+                    end
+                    boosting = false
+                end)
+            end
+        elseif not pressed then
+            holdingF = false
+        end
+        task.wait()
+    end
+end)
+
+-- R to X (only with Portal-Portal in hands)
+task.spawn(function()
+    local holdingR = false
+    while not _G.FE_Unloaded do
+        local rPressed = false
+        pcall(function() rPressed = iskeypressed(0x52) end)
+        if S.rToX and rPressed and not holdingR then
+            holdingR = true
+            if charHasTool("Portal-Portal") then
+                task.spawn(function()
+                    pcall(function()
+                        setrobloxinput(true)
+                        keyrelease(0x58)
+                        task.wait(0.02)
+                        keypress(0x58)
+                        task.wait(0.08)
+                        keyrelease(0x58)
+                    end)
+                end)
+            end
+        elseif not rPressed then
+            holdingR = false
+        end
+        task.wait()
+    end
+end)
+
+-- R to X then Z (Portal-Portal in hands)
+task.spawn(function()
+    local holdingR = false
+    while not _G.FE_Unloaded do
+        local rPressed = false
+        pcall(function() rPressed = iskeypressed(0x52) end)
+        if S.rToXThenZ and rPressed and not holdingR then
+            holdingR = true
+            if charHasTool("Portal-Portal") then
+                task.spawn(function()
+                    pcall(function()
+                        setrobloxinput(true)
+                        keyrelease(0x58)
+                        task.wait(0.02)
+                        keypress(0x58)
+                        task.wait(0.08)
+                        keyrelease(0x58)
+                        task.wait(0.025)
+                        keyrelease(0x5A)
+                        task.wait(0.02)
+                        keypress(0x5A)
+                        task.wait(0.08)
+                        keyrelease(0x5A)
+                    end)
+                end)
+            end
+        elseif not rPressed then
+            holdingR = false
+        end
+        task.wait()
+    end
+end)
+
+-- Flame R to C (Flame-Flame in hands)
+task.spawn(function()
+    local holdingR = false
+    while not _G.FE_Unloaded do
+        local rPressed = false
+        pcall(function() rPressed = iskeypressed(0x52) end)
+        if S.flameRToC and rPressed and not holdingR then
+            holdingR = true
+            if charHasTool("Flame-Flame") then
+                task.spawn(function()
+                    pcall(function()
+                        setrobloxinput(true)
+                        keyrelease(0x43)
+                        task.wait(0.02)
+                        keypress(0x43)
+                        task.wait(0.08)
+                        keyrelease(0x43)
+                    end)
+                end)
+            end
+        elseif not rPressed then
+            holdingR = false
+        end
+        task.wait()
+    end
+end)
+
+
+
+-- ============================================================
+-- ESP from hauntedscripts blox fruits (chest/boat/flower/berry/mirage)
+-- Fruit ESP remains our Features.esp implementation
+-- ============================================================
+function clearChestEspLabels()
+    for _,entry in pairs(S.chestEspLabels) do
+        if entry and entry.label then entry.label.Visible=false end
+    end
+    S.chestEspLabels={}
+end
+
+function clearBerryEspLabels()
+    for _,entry in pairs(S.berryEspLabels) do
+        if entry and entry.label then entry.label.Visible=false end
+    end
+    S.berryEspLabels={}
+end
+
+function clearBoatEsp()
+    for _,entry in pairs(S.boatEspEntries) do
+        if entry and entry.label then entry.label.Visible=false end
+        if entry and entry.lines then
+            for _,line in pairs(entry.lines) do line.Visible=false end
+        end
+    end
+    S.boatEspEntries={}
+end
+
+function clearFlowerEsp()
+    for _,entry in pairs(S.flowerEspEntries) do
+        if entry and entry.label then entry.label.Visible=false end
+        if entry and entry.lines then
+            for _,line in pairs(entry.lines) do line.Visible=false end
+        end
+    end
+    S.flowerEspEntries={}
+end
+
+function clearMirageEsp()
+    if S.mirageEspLabel then S.mirageEspLabel.Visible=false end
+end
+
+function getSafeFruitPosition(candidate)
+    if not candidate then return nil end
+    local okParent, parent=pcall(function() return candidate.Parent end)
+    if not okParent or not parent then return nil end
+    local okPos, pos=pcall(function() return candidate.Position end)
+    if okPos and pos and pos.X and pos.Y and pos.Z then return pos end
+    return nil
+end
+
+function getFruitInstanceKey(part)
+    local okAddress, address=pcall(function() return part.Address end)
+    if okAddress and address and address~=0 then return "addr:"..tostring(address) end
+    local pos=getSafeFruitPosition(part)
+    if pos then
+        return tostring(part)..":"..tostring(pos.X)..":"..tostring(pos.Y)..":"..tostring(pos.Z)
+    end
+    return tostring(part)
+end
+
+local function trackedInstanceKey(instance)
+    local okAddress, address=pcall(function() return instance and instance.Address end)
+    if okAddress and address and address~=0 then return "addr:"..tostring(address) end
+    return tostring(instance)
+end
+
+local function trackedSetChanged(snapshotName,current)
+    S._espTrackSnapshots = S._espTrackSnapshots or {}
+    local prev=S._espTrackSnapshots[snapshotName]
+    local changed=false
+    if type(prev)~="table" or #prev~=#current then
+        changed=true
+    else
+        for i=1,#current do
+            if prev[i]~=current[i] then changed=true; break end
+        end
+    end
+    S._espTrackSnapshots[snapshotName]=current
+    return changed
+end
+
+local function trackedFolderChanged(snapshotName,folder)
+    local keys={}
+    if folder then
+        local ok,children=pcall(function() return folder:GetChildren() end)
+        if ok and children then
+            for _,child in pairs(children) do
+                keys[#keys+1]=trackedInstanceKey(child)
+            end
+            table.sort(keys)
+        end
+    end
+    return trackedSetChanged(snapshotName,keys)
+end
+
+local function trackedFlowersChanged()
+    local keys={}
+    local ok,children=pcall(function() return Workspace:GetChildren() end)
+    if ok and children then
+        for _,obj in pairs(children) do
+            if obj.Name=="Flower1" or obj.Name=="Flower2" then
+                keys[#keys+1]=trackedInstanceKey(obj)
+            end
+        end
+    end
+    local map=Workspace:FindFirstChild("Map")
+    if map then
+        for _,obj in pairs(map:GetDescendants()) do
+            if obj.Name=="Flower1" or obj.Name=="Flower2" then
+                keys[#keys+1]=trackedInstanceKey(obj)
+            end
+        end
+    end
+    table.sort(keys)
+    return trackedSetChanged("flowers",keys)
+end
+
+function buildChestEspLabels()
+    for _,entry in pairs(S.chestEspLabelCache) do
+        if entry and entry.label then entry.label.Visible=false end
+    end
+    S.chestEspLabels={}
+    local chestModels=Workspace:FindFirstChild("ChestModels")
+    if not chestModels then return end
+    local okChildren,children=pcall(function() return chestModels:GetChildren() end)
+    if not okChildren or not children then return end
+    for _,chest in pairs(children) do
+        local part=chest and (chest:FindFirstChild("RootPart") or chest:FindFirstChildOfClass("BasePart")) or nil
+        local okPos,pos=pcall(function() return part and part.Position end)
+        if okPos and pos and pos.X and pos.Y and pos.Z then
+            local key=getFruitInstanceKey(part)
+            local okName,chestName=pcall(function() return chest.Name end)
+            chestName=(okName and chestName and chestName~="") and chestName or "Chest"
+            local chestColor=Color3.fromRGB(235,235,235)
+            if chestName=="SilverChest" then chestColor=Color3.fromRGB(165,165,165)
+            elseif chestName=="GoldChest" then chestColor=Color3.fromRGB(255,215,55)
+            elseif chestName=="DiamondChest" then chestColor=Color3.fromRGB(85,205,255) end
+            if not S.chestEspLabelCache[key] then
+                local label=Drawing.new("Text")
+                label.Text=chestName
+                label.Position=Vector2.new(0,0)
+                label.Color=chestColor
+                label.Size=14
+                label.Outline=true
+                label.Visible=false
+                label.ZIndex=10
+                label.Font=Drawing.Fonts.Monospace
+                label.Center=true
+                S.chestEspLabelCache[key]={label=label,part=part,name=chestName}
+            else
+                S.chestEspLabelCache[key].part=part
+                S.chestEspLabelCache[key].name=chestName
+                S.chestEspLabelCache[key].label.Text=chestName
+                S.chestEspLabelCache[key].label.Color=chestColor
+            end
+            table.insert(S.chestEspLabels, S.chestEspLabelCache[key])
+        end
+    end
+end
+
+local function getBoatEspKey(boat)
+    local okAddress,address=pcall(function() return boat and boat.Address end)
+    if okAddress and address and address~=0 then return "boat:"..tostring(address) end
+    return "boat:"..tostring(boat)
+end
+
+local function getBoatEspParts(boat)
+    local parts={}
+    if not boat then return parts end
+    local okDesc,desc=pcall(function() return boat:GetDescendants() end)
+    if okDesc and desc then
+        for _,obj in pairs(desc) do
+            if obj:IsA("BasePart") then parts[#parts+1]=obj end
+        end
+    end
+    return parts
+end
+
+local function getBoatEspBounds(parts)
+    local minX,minY,minZ=math.huge,math.huge,math.huge
+    local maxX,maxY,maxZ=-math.huge,-math.huge,-math.huge
+    local any=false
+    for _,part in pairs(parts) do
+        local ok,pos,size=pcall(function() return part.Position, part.Size end)
+        if ok and pos and size then
+            any=true
+            local hx,hy,hz=size.X*0.5,size.Y*0.5,size.Z*0.5
+            if pos.X-hx<minX then minX=pos.X-hx end
+            if pos.Y-hy<minY then minY=pos.Y-hy end
+            if pos.Z-hz<minZ then minZ=pos.Z-hz end
+            if pos.X+hx>maxX then maxX=pos.X+hx end
+            if pos.Y+hy>maxY then maxY=pos.Y+hy end
+            if pos.Z+hz>maxZ then maxZ=pos.Z+hz end
+        end
+    end
+    if not any then return nil end
+    return minX,minY,minZ,maxX,maxY,maxZ
+end
+
+function buildBoatEsp()
+    for _,entry in pairs(S.boatEspCache) do
+        if entry and entry.label then entry.label.Visible=false end
+        if entry and entry.lines then
+            for _,line in pairs(entry.lines) do line.Visible=false end
+        end
+    end
+    S.boatEspEntries={}
+    local boats=Workspace:FindFirstChild("Boats")
+    if not boats then return end
+    local okChildren,children=pcall(function() return boats:GetChildren() end)
+    if not okChildren or not children then return end
+    for _,boat in pairs(children) do
+        local parts=getBoatEspParts(boat)
+        if #parts>0 then
+            local anchor=boat.PrimaryPart or boat:FindFirstChildOfClass("VehicleSeat") or parts[1]
+            local minX,minY,minZ,maxX,maxY,maxZ=getBoatEspBounds(parts)
+            local okAnchor,anchorPos=pcall(function() return anchor and anchor.Position end)
+            if anchor and minX and okAnchor and anchorPos then
+                local bounds={
+                    minX=minX-anchorPos.X,minY=minY-anchorPos.Y,minZ=minZ-anchorPos.Z,
+                    maxX=maxX-anchorPos.X,maxY=maxY-anchorPos.Y,maxZ=maxZ-anchorPos.Z,
+                }
+                local key=getBoatEspKey(boat)
+                local entry=S.boatEspCache[key]
+                if not entry then
+                    local lines={}
+                    for _=1,12 do
+                        local line=Drawing.new("Line")
+                        line.Color=Color3.fromRGB(80,180,255)
+                        line.Thickness=2
+                        line.Visible=false
+                        line.ZIndex=10
+                        table.insert(lines,line)
+                    end
+                    local label=Drawing.new("Text")
+                    local okName,bname=pcall(function() return boat.Name end)
+                    label.Text=(okName and bname) or "Boat"
+                    label.Position=Vector2.new(0,0)
+                    label.Color=Color3.fromRGB(80,180,255)
+                    label.Size=16
+                    label.Outline=true
+                    label.Center=true
+                    label.Font=Drawing.Fonts.Monospace
+                    label.Visible=false
+                    label.ZIndex=11
+                    entry={boat=boat,anchor=anchor,bounds=bounds,lines=lines,label=label}
+                    S.boatEspCache[key]=entry
+                else
+                    entry.boat=boat
+                    entry.anchor=anchor
+                    entry.bounds=bounds
+                    local okName,bname=pcall(function() return boat.Name end)
+                    entry.label.Text=(okName and bname) or "Boat"
+                end
+                table.insert(S.boatEspEntries, entry)
+            end
+        end
+    end
+end
+
+local function getFlowerEspKey(flowerName,flower)
+    return tostring(flowerName)..":"..trackedInstanceKey(flower)
+end
+
+function buildFlowerEsp()
+    for _,entry in pairs(S.flowerEspCache) do
+        if entry and entry.label then entry.label.Visible=false end
+        if entry and entry.lines then
+            for _,line in pairs(entry.lines) do line.Visible=false end
+        end
+    end
+    S.flowerEspEntries={}
+    local targets={
+        {workspaceName="Flower1", label="Blue Flower", color=Color3.fromRGB(55,145,255)},
+        {workspaceName="Flower2", label="Red Flower", color=Color3.fromRGB(255,65,65)},
+    }
+    local function collectFlowers(root, list)
+        if not root then return end
+        local ok,children=pcall(function() return root:GetChildren() end)
+        if not ok or not children then return end
+        for _,obj in pairs(children) do
+            for _,target in pairs(targets) do
+                if obj.Name==target.workspaceName then list[#list+1]={obj=obj,target=target} end
+            end
+        end
+    end
+    local found={}
+    collectFlowers(Workspace, found)
+    local map=Workspace:FindFirstChild("Map")
+    if map then
+        local okd,desc=pcall(function() return map:GetDescendants() end)
+        if okd and desc then
+            for _,obj in pairs(desc) do
+                for _,target in pairs(targets) do
+                    if obj.Name==target.workspaceName then found[#found+1]={obj=obj,target=target} end
+                end
+            end
+        end
+    end
+    for _,item in pairs(found) do
+        local flower,target=item.obj,item.target
+        local parts={}
+        if flower:IsA("BasePart") then parts[1]=flower
+        else
+            local okd,desc=pcall(function() return flower:GetDescendants() end)
+            if okd and desc then
+                for _,d in pairs(desc) do
+                    if d:IsA("BasePart") then parts[#parts+1]=d end
+                end
+            end
+        end
+        if #parts>0 then
+            local anchor=parts[1]
+            local minX,minY,minZ,maxX,maxY,maxZ=getBoatEspBounds(parts)
+            local okAnchor,anchorPos=pcall(function() return anchor and anchor.Position end)
+            if anchor and minX and okAnchor and anchorPos then
+                local bounds={
+                    minX=minX-anchorPos.X,minY=minY-anchorPos.Y,minZ=minZ-anchorPos.Z,
+                    maxX=maxX-anchorPos.X,maxY=maxY-anchorPos.Y,maxZ=maxZ-anchorPos.Z,
+                }
+                local key=getFlowerEspKey(target.workspaceName,flower)
+                local entry=S.flowerEspCache[key]
+                if not entry then
+                    local lines={}
+                    for _=1,12 do
+                        local line=Drawing.new("Line")
+                        line.Color=target.color
+                        line.Thickness=2
+                        line.Visible=false
+                        line.ZIndex=10
+                        table.insert(lines,line)
+                    end
+                    local label=Drawing.new("Text")
+                    label.Text=target.label
+                    label.Position=Vector2.new(0,0)
+                    label.Color=target.color
+                    label.Size=18
+                    label.Outline=true
+                    label.Center=true
+                    label.Font=Drawing.Fonts.Monospace
+                    label.Visible=false
+                    label.ZIndex=11
+                    entry={flower=flower,anchor=anchor,bounds=bounds,name=target.label,lines=lines,label=label}
+                    S.flowerEspCache[key]=entry
+                else
+                    entry.flower=flower
+                    entry.anchor=anchor
+                    entry.bounds=bounds
+                    entry.name=target.label
+                    entry.label.Text=target.label
+                    entry.label.Color=target.color
+                    for _,line in pairs(entry.lines) do line.Color=target.color end
+                end
+                table.insert(S.flowerEspEntries, entry)
+            end
+        end
+    end
+end
+
+local ESP_BOX_EDGES={
+    {1,2},{2,4},{4,3},{3,1},
+    {5,6},{6,8},{8,7},{7,5},
+    {1,5},{2,6},{3,7},{4,8},
+}
+
+local function updateWorldBoxEntry(entry)
+    local visible=false
+    local okAnchor,anchorParent,anchorPos=pcall(function()
+        return entry.anchor and entry.anchor.Parent, entry.anchor and entry.anchor.Position
+    end)
+    local bounds=entry.bounds
+    if okAnchor and anchorParent and anchorPos and bounds then
+        local minX=anchorPos.X+bounds.minX
+        local minY=anchorPos.Y+bounds.minY
+        local minZ=anchorPos.Z+bounds.minZ
+        local maxX=anchorPos.X+bounds.maxX
+        local maxY=anchorPos.Y+bounds.maxY
+        local maxZ=anchorPos.Z+bounds.maxZ
+        local corners=entry.worldCorners or {}
+        entry.worldCorners=corners
+        corners[1]=Vector3.new(minX,minY,minZ)
+        corners[2]=Vector3.new(maxX,minY,minZ)
+        corners[3]=Vector3.new(minX,maxY,minZ)
+        corners[4]=Vector3.new(maxX,maxY,minZ)
+        corners[5]=Vector3.new(minX,minY,maxZ)
+        corners[6]=Vector3.new(maxX,minY,maxZ)
+        corners[7]=Vector3.new(minX,maxY,maxZ)
+        corners[8]=Vector3.new(maxX,maxY,maxZ)
+
+        local screenPoints=entry.screenPoints or {}
+        entry.screenPoints=screenPoints
+        local screenMinX,screenMinY=math.huge,math.huge
+        local screenMaxX=-math.huge
+        local projectedCount=0
+        for index=1,8 do
+            local okScreen,screenPos,onScreen=pcall(function() return WorldToScreen(corners[index]) end)
+            if okScreen and screenPos and onScreen==true then
+                screenPoints[index]=screenPos
+                projectedCount=projectedCount+1
+                if screenPos.X<screenMinX then screenMinX=screenPos.X end
+                if screenPos.Y<screenMinY then screenMinY=screenPos.Y end
+                if screenPos.X>screenMaxX then screenMaxX=screenPos.X end
+            else
+                break
+            end
+        end
+
+        if projectedCount==8 then
+            for index,edge in ipairs(ESP_BOX_EDGES) do
+                entry.lines[index].From=screenPoints[edge[1]]
+                entry.lines[index].To=screenPoints[edge[2]]
+            end
+            entry.label.Position=Vector2.new((screenMinX+screenMaxX)/2,screenMinY-20)
+            visible=true
+        end
+    end
+
+    for _,line in pairs(entry.lines) do line.Visible=visible end
+    entry.label.Visible=visible
+end
+
+local function safeObjectPosition(object)
+    if not object then return nil end
+    local okPos,pos=pcall(function()
+        if object:IsA("BasePart") then return object.Position end
+        local p=object:FindFirstChild("HumanoidRootPart") or object:FindFirstChildOfClass("BasePart") or object.PrimaryPart
+        return p and p.Position
+    end)
+    if okPos and pos and pos.X then return pos end
+    return nil
+end
+
+local function findMirageObject()
+    local origin=Workspace:FindFirstChild("_WorldOrigin")
+    local locations=origin and origin:FindFirstChild("Locations")
+    local location=locations and locations:FindFirstChild("Mirage Island")
+    if location then return location end
+    local map=Workspace:FindFirstChild("Map")
+    return map and (map:FindFirstChild("MysticIsland") or map:FindFirstChild("Mirage Island")) or nil
+end
+
+local function updateMirageEsp()
+    if not S.mirageEsp then clearMirageEsp(); return end
+    if not S.mirageEspLabel then
+        local label=Drawing.new("Text")
+        label.Text="Mirage Island"
+        label.Position=Vector2.new(0,0)
+        label.Color=Color3.fromRGB(100,220,255)
+        label.Size=22
+        label.Center=true
+        label.Outline=true
+        label.Font=Drawing.Fonts.Monospace
+        label.Visible=false
+        label.ZIndex=20
+        S.mirageEspLabel=label
+    end
+    local mirage=findMirageObject()
+    local position=safeObjectPosition(mirage)
+    if not position then clearMirageEsp(); return end
+    local okScreen,screen,onScreen=pcall(function() return WorldToScreen(position) end)
+    if not okScreen or not screen or onScreen~=true then clearMirageEsp(); return end
+    local distanceText=""
+    local character=LocalPlayer.Character
+    local hrp=character and character:FindFirstChild("HumanoidRootPart")
+    local okPlayer,playerPosition=pcall(function() return hrp and hrp.Position end)
+    if okPlayer and playerPosition then
+        local dx=position.X-playerPosition.X
+        local dy=position.Y-playerPosition.Y
+        local dz=position.Z-playerPosition.Z
+        distanceText=" ["..tostring(math.floor(math.sqrt(dx*dx+dy*dy+dz*dz))).."]"
+    end
+    S.mirageEspLabel.Text="Mirage Island"..distanceText
+    S.mirageEspLabel.Position=screen
+    S.mirageEspLabel.Visible=true
+end
+
+-- ESP render loops (haunted)
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.chestEsp then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart") or nil
+            local okPlayer,playerPos=pcall(function() return hrp and hrp.Position end)
+            for _,entry in pairs(S.chestEspLabels) do
+                local label=entry and entry.label or nil
+                local part=entry and entry.part or nil
+                local okParent,parent=pcall(function() return part and part.Parent end)
+                local okPos,pos=pcall(function() return part and part.Position end)
+                if label and okPlayer and playerPos and okParent and parent and okPos and pos then
+                    local dx=pos.X-playerPos.X
+                    local dy=pos.Y-playerPos.Y
+                    local dz=pos.Z-playerPos.Z
+                    local distanceSq=dx*dx+dy*dy+dz*dz
+                    if distanceSq<=100000000 then
+                        local okScreen,screenPos,onScreen=pcall(function() return WorldToScreen(pos) end)
+                        label.Visible=okScreen and onScreen or false
+                        if okScreen and onScreen and screenPos then
+                            label.Position=Vector2.new(screenPos.X,screenPos.Y-20)
+                        end
+                    else
+                        label.Visible=false
+                    end
+                elseif label then
+                    label.Visible=false
+                end
+            end
+        end
+        task.wait()
+    end
+end)
+
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.boatEsp then
+            for _,entry in pairs(S.boatEspEntries) do
+                updateWorldBoxEntry(entry)
+            end
+        end
+        if S.flowerEsp then
+            for _,entry in pairs(S.flowerEspEntries) do
+                updateWorldBoxEntry(entry)
+            end
+        end
+        if S.mirageEsp then
+            updateMirageEsp()
+        end
+        task.wait()
+    end
+end)
+
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        task.wait(1)
+        if S.flowerEsp and trackedFlowersChanged() then buildFlowerEsp() end
+    end
+end)
+
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        task.wait(2)
+        if S.chestEsp then
+            local chestModels=Workspace:FindFirstChild("ChestModels")
+            if trackedFolderChanged("chests",chestModels) then buildChestEspLabels() end
+        end
+        if S.boatEsp then
+            local boats=Workspace:FindFirstChild("Boats")
+            if trackedFolderChanged("boats",boats) then buildBoatEsp() end
+        end
+    end
+end)
+
+
+-- World checks (haunted — FindFirstChild only, no GetDescendants)
+function showEventStatus()
+    local locations=nil
+    pcall(function()
+        local origin=Workspace:FindFirstChild("_WorldOrigin")
+        locations=origin and origin:FindFirstChild("Locations") or nil
+    end)
+    local map=Workspace:FindFirstChild("Map")
+    local mirage=locations and locations:FindFirstChild("Mirage Island")
+    local prehistoric=locations and locations:FindFirstChild("Prehistoric Island")
+    local frozen=locations and locations:FindFirstChild("Frozen Dimension")
+    local kitsune=map and map:FindFirstChild("KitsuneIsland")
+    local message="Mirage: "..(mirage and "YES" or "NO").." | Kitsune: "..(kitsune and "YES" or "NO").." | Prehistoric: "..(prehistoric and "YES" or "NO").." | Frozen: "..(frozen and "YES" or "NO")
+    print("[World Status] "..message)
+    notify(message,"World Status",8)
+end
+
+function showBossStatus()
+    local storage=ReplicatedStorage
+    local enemies=Workspace:FindFirstChild("Enemies")
+    local function present(name,alternate)
+        return (enemies and (enemies:FindFirstChild(name) or (alternate and enemies:FindFirstChild(alternate))))
+            or storage:FindFirstChild(name)
+            or (alternate and storage:FindFirstChild(alternate))
+    end
+    local message="Rip Indra: "..(present("rip_indra True Form","rip_indra") and "YES" or "NO")
+        .." | Dough King: "..(present("Dough King") and "YES" or "NO")
+        .." | Cake Prince: "..(present("Cake Prince") and "YES" or "NO")
+    print("[Boss Status] "..message)
+    notify(message,"Boss Status",8)
+end
+
+-- aliases used by older UI callbacks
+function checkEventIslands()
+    showEventStatus()
+end
+function checkImportantBosses()
+    showBossStatus()
+end
+
+-- Auto Haki + Race Ability
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.autoHaki then
+            local char = LocalPlayer.Character
+            if char and not char:FindFirstChild("HasBuso") then
+                invokeCommF("Buso")
+            end
+        end
+        if S.autoRaceAbility then
+            local e = getCommE()
+            if e then pcall(function() e:FireServer("ActivateAbility") end) end
+        end
+        task.wait(0.5)
+    end
+end)
+
+-- Auto Stats (InvokeServer AddPoint — same as haunted)
+task.spawn(function()
+    local statEntries = {
+        {"autoStatMelee", "Melee"},
+        {"autoStatDefense", "Defense"},
+        {"autoStatSword", "Sword"},
+        {"autoStatGun", "Gun"},
+        {"autoStatFruit", "Demon Fruit"},
+    }
+    while not _G.FE_Unloaded do
+        for _, entry in ipairs(statEntries) do
+            if S[entry[1]] then
+                invokeCommF("AddPoint", entry[2], S.statAmount or 10)
+                task.wait(0.12)
+            end
+        end
+        task.wait(0.5)
+    end
+end)
+
+-- Tween Ember (smooth, separate from instant TP)
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.tweenEmber then
+            local hrp = getMyHrp()
+            if hrp then
+                for _, obj in ipairs(Workspace:GetChildren()) do
+                    if obj.Name == "EmberTemplate" and obj:IsA("Model") then
+                        local part = obj:FindFirstChild("Part") or extraGetPart(obj)
+                        if part and part:IsA("BasePart") then
+                            tweenTo(hrp, Vector3.new(part.Position.X, part.Position.Y + 3, part.Position.Z), S.FRUIT_SPEED, function() return S.tweenEmber end)
+                            break
+                        end
+                    end
+                end
+            end
+            task.wait(0.4)
+        else
+            task.wait(0.2)
+        end
+    end
+end)
+
+-- Mirage tween + gear
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.autoMirageTween then
+            local m = findMirageModel()
+            local hrp = getMyHrp()
+            local part = m and extraGetPart(m)
+            if hrp and part then
+                tweenTo(hrp, Vector3.new(part.Position.X, part.Position.Y + 120, part.Position.Z), S.FARM_SPEED, function() return S.autoMirageTween end)
+            end
+            task.wait(1)
+        else
+            task.wait(0.3)
+        end
+    end
+end)
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.autoMirageGear then
+            local m = findMirageModel()
+            local hrp = getMyHrp()
+            if hrp and m then
+                local best, bestVol = nil, 0
+                for _, p in ipairs(m:GetDescendants()) do
+                    if (p:IsA("MeshPart") or p:IsA("Part")) and p.Transparency < 0.4 then
+                        local vol = p.Size.X * p.Size.Y * p.Size.Z
+                        if vol > 2 and vol < 400 and vol > bestVol then
+                            bestVol = vol; best = p
+                        end
+                    end
+                end
+                if best then
+                    tweenTo(hrp, Vector3.new(best.Position.X, best.Position.Y + 4, best.Position.Z), S.FRUIT_SPEED, function() return S.autoMirageGear end)
+                end
+            end
+            task.wait(0.8)
+        else
+            task.wait(0.3)
+        end
+    end
+end)
+
+-- Auto mastery (chocolate + buddha)
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.autoMastery then
+            local hrp = getMyHrp()
+            if hrp then
+                local dest = AFL.pos and AFL.pos.chocolate1 or Vector3.new(237.92, 24.8, -12201.14)
+                tweenTo(hrp, dest, S.MASTERY_SPEED or S.FARM_SPEED, function() return S.autoMastery end)
+                local tool = findTool("Buddha-Buddha") or findTool("Buddha")
+                if tool then
+                    local char = LocalPlayer.Character
+                    local hum = char and char:FindFirstChildOfClass("Humanoid")
+                    if hum and tool.Parent ~= char then pcall(function() hum:EquipTool(tool) end) end
+                    task.wait(0.15)
+                    tapKey(0x5A)
+                end
+                hrp = getMyHrp()
+                if hrp then farmAttack(hrp, function() return S.autoMastery end, nil) end
+            end
+            task.wait(0.2)
+        else
+            task.wait(0.3)
+        end
+    end
+end)
+
+-- Material / Boss / Sea event farms (haunted-style)
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.autoBoss then
+            local hrp = getMyHrp()
+            local target = S.bossTarget
+            local spawned = hrp and nearestNamedEnemy({target}) or nil
+            if hrp and spawned then
+                if S.remoteMode then
+                    while S.autoBoss and S.bossTarget == target and isAlive(spawned) do
+                        hrp = getMyHrp()
+                        local root = spawned:FindFirstChild("HumanoidRootPart") or spawned:FindFirstChildOfClass("BasePart")
+                        if not hrp or not root then break end
+                        hrp.Position = Vector3.new(root.Position.X, root.Position.Y + 30, root.Position.Z)
+                        hrp.Velocity = Vector3.new(0,0,0)
+                        hrp.AssemblyLinearVelocity = Vector3.new(0,0,0)
+                        pcall(remoteAttack)
+                        task.wait(0.05)
+                    end
+                else
+                    farmAttack(hrp, function()
+                        return S.autoBoss and S.bossTarget == target
+                    end, target)
+                end
+            else
+                task.wait(0.35)
+            end
+        else
+            task.wait(0.1)
+        end
+    end
+end)
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.autoMaterial and not S.autoBoss then
+            local names = MATERIAL_MAP[S.materialTarget] or {S.materialTarget}
+            local hrp = getMyHrp()
+            local spawned = hrp and nearestNamedEnemy(names) or nil
+            if hrp and spawned then
+                farmAttack(hrp, function()
+                    return S.autoMaterial and not S.autoBoss
+                end, spawned.Name)
+            else
+                task.wait(0.35)
+            end
+        else
+            task.wait(0.1)
+        end
+    end
+end)
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.autoSeaEvent and not S.autoBoss then
+            local hrp = getMyHrp()
+            local target = S.seaEventTarget
+            local spawned = hrp and nearestNamedEnemy({target}) or nil
+            if hrp and spawned then
+                farmAttack(hrp, function()
+                    return S.autoSeaEvent and S.seaEventTarget == target
+                end, target)
+            else
+                task.wait(0.35)
+            end
+        else
+            task.wait(0.1)
+        end
+    end
+end)
+
+
+-- Boat seats (haunted method)
+local boatSeatOptions={"No boats found"}
+local boatSeatByLabel={}
+local lastBoatSeatSignature=""
+local boatSeatDropdownHandle=nil
+
+local function findBoatVehicleSeat(boat)
+    if not boat then return nil end
+    local okDirect,directSeat=pcall(function() return boat:FindFirstChildOfClass("VehicleSeat") end)
+    if okDirect and directSeat then return directSeat end
+    local okDescendants,descendants=pcall(function() return boat:GetDescendants() end)
+    if okDescendants and descendants then
+        for _,object in pairs(descendants) do
+            local okClass,className=pcall(function() return object.ClassName end)
+            if okClass and className=="VehicleSeat" then return object end
+        end
+    end
+    return nil
+end
+
+function refreshBoatSeats()
+    local entries={}
+    local boats=Workspace:FindFirstChild("Boats")
+    local okChildren,children=pcall(function() return boats and boats:GetChildren() end)
+    if okChildren and children then
+        for _,boat in pairs(children) do
+            local seat=findBoatVehicleSeat(boat)
+            if seat then
+                local okName,name=pcall(function() return boat.Name end)
+                name=(okName and type(name)=="string" and name~="") and name or "Boat"
+                local okAddress,address=pcall(function() return seat.Address end)
+                local key=(okAddress and address and address~=0) and tostring(address) or tostring(seat)
+                table.insert(entries,{name=name,seat=seat,key=key})
+            end
+        end
+    end
+    table.sort(entries,function(a,b)
+        if a.name==b.name then return a.key<b.key end
+        return a.name<b.name
+    end)
+    local totals={}
+    for _,entry in ipairs(entries) do totals[entry.name]=(totals[entry.name] or 0)+1 end
+    local used={}
+    local nextLabels={}
+    local nextMap={}
+    local selectedLabel=nil
+    for _,entry in ipairs(entries) do
+        used[entry.name]=(used[entry.name] or 0)+1
+        local label=entry.name
+        if totals[entry.name]>1 then label=label.." #"..tostring(used[entry.name]) end
+        table.insert(nextLabels,label)
+        nextMap[label]=entry.seat
+        if entry.seat==S.selectedBoatSeat then selectedLabel=label end
+    end
+    if #nextLabels==0 then
+        nextLabels={"No boats found"}
+        nextMap={}
+    end
+    boatSeatByLabel=nextMap
+    local signature=table.concat(nextLabels,"|")
+    if signature~=lastBoatSeatSignature then
+        for index=#boatSeatOptions,1,-1 do boatSeatOptions[index]=nil end
+        for _,label in ipairs(nextLabels) do table.insert(boatSeatOptions,label) end
+        lastBoatSeatSignature=signature
+        pcall(function()
+            if boatSeatDropdownHandle and boatSeatDropdownHandle.UpdateChoices then
+                boatSeatDropdownHandle:UpdateChoices(boatSeatOptions)
+            end
+        end)
+    end
+    if not selectedLabel and S.selectedBoatSeatLabel and nextMap[S.selectedBoatSeatLabel] then
+        selectedLabel=S.selectedBoatSeatLabel
+    end
+    if not selectedLabel then selectedLabel=nextLabels[1] end
+    local selectedSeat=nextMap[selectedLabel]
+    if selectedLabel~=S.selectedBoatSeatLabel or selectedSeat~=S.selectedBoatSeat then
+        S.selectedBoatSeatLabel=selectedLabel
+        S.selectedBoatSeat=selectedSeat
+        pcall(function()
+            if boatSeatDropdownHandle and boatSeatDropdownHandle.Set and selectedLabel then
+                boatSeatDropdownHandle:Set({ selectedLabel })
+            end
+        end)
+    end
+    return boatSeatOptions
+end
+
+local function isUsingSelectedBoatSeat(seat,char,humanoid,hrp)
+    local okOccupant,occupant=pcall(function() return seat.Occupant end)
+    if okOccupant and occupant then
+        if occupant==humanoid then return true end
+        local okParent,parent=pcall(function() return occupant.Parent end)
+        return okParent and parent==char
+    end
+    local okSeatPart,seatPart=pcall(function() return humanoid and humanoid.SeatPart end)
+    if okSeatPart and seatPart then return seatPart==seat end
+    if okOccupant or okSeatPart then return false end
+    local okPositions,seatPos,playerPos=pcall(function() return seat.Position,hrp.Position end)
+    if not okPositions or not seatPos or not playerPos then return false end
+    local dx=seatPos.X-playerPos.X
+    local dy=seatPos.Y-playerPos.Y
+    local dz=seatPos.Z-playerPos.Z
+    return dx*dx+dy*dy+dz*dz<=25
+end
+
+task.spawn(function()
+    task.wait(1)
+    pcall(refreshBoatSeats)
+    while not _G.FE_Unloaded do
+        task.wait(1)
+        pcall(refreshBoatSeats)
+    end
+end)
+
+-- Auto boat seat (haunted)
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.autoBoatSeat then
+            local seat=S.selectedBoatSeat
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart") or nil
+            local humanoid=char and char:FindFirstChildOfClass("Humanoid") or nil
+            local okSeat,seatParent,seatPos=pcall(function()
+                return seat and seat.Parent,seat and seat.Position
+            end)
+            if seat and char and hrp and humanoid and okSeat and seatParent and seatPos
+                and not isUsingSelectedBoatSeat(seat,char,humanoid,hrp) then
+                pcall(function()
+                    hrp.Position=Vector3.new(seatPos.X,seatPos.Y+2,seatPos.Z)
+                    hrp.Velocity=Vector3.new(0,0,0)
+                    hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+                end)
+            end
+        end
+        task.wait()
+    end
+end)
+
+-- Switch weapon after picking a fruit
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.weaponAfterFruit then
+            local char = LocalPlayer.Character
+            local tool = char and char:FindFirstChildOfClass("Tool")
+            if tool then
+                local n = string.lower(tool.Name)
+                if n:find("fruit") or tool:FindFirstChild("Handle") and n:find("-") then
+                    local fruitLike = n:find("fruit") or n:find("-fruit") or n:find("-flame") or n:find("-ice") or n:find("-dark")
+                    if n:find("fruit") then
+                        local slot = (S.weaponSlot == "Sword") and 3 or 1
+                        tapKey(0x30 + slot)
+                    end
+                end
+            end
+        end
+        task.wait(0.4)
+    end
+end)
+
+-- ============================================================
+-- Dungeon (2nd sea) — no Drawing GUI; controlled via Hub Dungeon tab
+-- ============================================================
+local Dungeon = {
+    target = nil,
+    doorWaypoint = nil,
+    doorStatus = "Door Not Ready",
+    floorName = "Scanning...",
+    status = "Idle",
+    targetingObjective = false,
+    originalSizes = {},
+    renderConn = nil,
+}
+
+local DUNGEON_MELEE_KW = {
+    "godhuman","sanguine","sharkman","electric","dragon talon","dragon breath",
+    "death step","superhuman","water kung fu","dark step","electro","combat",
+    "karate","claw","talon","art","human",
+}
+local DUNGEON_SWORD_KW = {
+    "yama","tushita","cursed dual katana","true triple katana","cdk","ttk",
+    "saber","pole","bisento","hallow scythe","dark blade","yoru","spikey trident",
+    "shark anchor","fox lamp","gravity cane","rengoku","shisui","wando","saddi",
+    "midnight blade","canvander","buddy sword","twin hooks","dragon trident",
+    "sword","blade","katana","scythe","trident","dagger","cutlass",
+}
+
+local function dungeonActive()
+    return S.dungeonEnabled == true and not _G.FE_Unloaded
+end
+
+local function dungeonIsSummon(obj)
+    if not obj then return true end
+    if obj:FindFirstChild("Summoner") or obj:FindFirstChild("Creator") or obj:FindFirstChild("Owner") then return true end
+    local n = string.lower(obj.Name or "")
+    if n:find("shadow") or n:find("buddy") or n:find("blank") or n:find("clone") or n:find("summon") or n:find("decoy") or n:find("dummy") then
+        return true
+    end
+    return false
+end
+
+local function dungeonIsObjective(obj)
+    if not obj or not obj.Parent or dungeonIsSummon(obj) then return false end
+    local name = string.lower(obj.Name or "")
+    local isProp = name == "prophitboxplaceholder"
+        or name:find("placeholder")
+        or name:find("gasvent")
+        or name:find("vent")
+        or name:find("shrine")
+        or name:find("rock")
+        or name:find("totem")
+        or (name:find("prop") and not name:find("knight") and not name:find("boss"))
+    if not isProp then return false end
+    local hum = obj:FindFirstChild("Humanoid")
+    local root = obj:FindFirstChild("HumanoidRootPart") or obj:FindFirstChildWhichIsA("BasePart")
+    return root and hum and hum.Health > 0 and hum.MaxHealth < 50000
+end
+
+local function dungeonIsEnemy(mob)
+    if not mob or not mob.Parent or dungeonIsSummon(mob) then return false end
+    local hum = mob:FindFirstChild("Humanoid")
+    local root = mob:FindFirstChild("HumanoidRootPart") or mob:FindFirstChild("Head") or mob:FindFirstChildWhichIsA("BasePart")
+    return hum and root and hum.Health > 0
+end
+
+local function dungeonMatchWeapon(tool, pref)
+    if not tool or tool.ClassName ~= "Tool" then return false end
+    local name = string.lower(tool.Name)
+    local list = (pref == "Sword") and DUNGEON_SWORD_KW or DUNGEON_MELEE_KW
+    for _, k in ipairs(list) do
+        if name:find(k, 1, true) then return true end
+    end
+    if pref == "Melee" and tool.ToolTip == "Melee" then return true end
+    if pref == "Sword" and tool.ToolTip == "Sword" then return true end
+    return false
+end
+
+local function dungeonTriggerHotbar(slotNum)
+    local keyCode = 0x30 + slotNum
+    pcall(function()
+        if keyclick then keyclick(keyCode)
+        elseif keypress and keyrelease then
+            keypress(keyCode); task.wait(0.04); keyrelease(keyCode)
+        end
+    end)
+end
+
+local function dungeonAutoEquip()
+    if not S.dungeonAutoEquip then return end
+    local char = LocalPlayer.Character
+    if not char then return end
+    local hum = char:FindFirstChild("Humanoid")
+    if not hum or hum.Health <= 0 then return end
+    local pref = S.dungeonWeapon or "Melee"
+    for _, c in ipairs(char:GetChildren()) do
+        if c.ClassName == "Tool" and dungeonMatchWeapon(c, pref) then return end
+    end
+    dungeonTriggerHotbar((pref == "Melee") and 1 or 3)
+    task.delay(0.15, function()
+        if not LocalPlayer.Character then return end
+        local cChar = LocalPlayer.Character
+        for _, c in ipairs(cChar:GetChildren()) do
+            if c.ClassName == "Tool" and dungeonMatchWeapon(c, pref) then return end
+        end
+        local bp = LocalPlayer:FindFirstChild("Backpack")
+        if bp then
+            for _, item in ipairs(bp:GetChildren()) do
+                if item.ClassName == "Tool" and dungeonMatchWeapon(item, pref) then
+                    item.Parent = cChar
+                    break
+                end
+            end
+        end
+    end)
+end
+
+local function dungeonActivateBuso()
+    if not S.dungeonBuso then return end
+    local char = LocalPlayer.Character
+    if not char then return end
+    local hum = char:FindFirstChild("Humanoid")
+    if not hum or hum.Health <= 0 then return end
+    if char:FindFirstChild("HasBuso") or char:GetAttribute("Buso") or char:GetAttribute("Haki") then return end
+    pcall(function()
+        local remotes = ReplicatedStorage:FindFirstChild("Remotes")
+        local commF = remotes and remotes:FindFirstChild("CommF_")
+        if commF then commF:InvokeServer("Buso") end
+    end)
+    pcall(function()
+        local net = ReplicatedStorage:FindFirstChild("Modules") and ReplicatedStorage.Modules:FindFirstChild("Net")
+        if net and net:FindFirstChild("RE/Buso") then net["RE/Buso"]:FireServer() end
+    end)
+    pcall(function()
+        if keyclick then keyclick(0x4A)
+        elseif keypress and keyrelease then keypress(0x4A); task.wait(0.04); keyrelease(0x4A) end
+    end)
+end
+
+local function dungeonGetIsland(myPos)
+    local dungeon = Workspace:FindFirstChild("Map") and Workspace.Map:FindFirstChild("Dungeon")
+    if not dungeon then return nil, 0 end
+    local bestIsland, bestNum, minDelta = nil, 0, 999999
+    for _, isl in ipairs(dungeon:GetChildren()) do
+        local num = tonumber(isl.Name)
+        local rootPart = isl:FindFirstChild("Root") or isl:FindFirstChildWhichIsA("BasePart")
+        if rootPart then
+            local delta = (Vector3.new(myPos.X, 0, myPos.Z) - Vector3.new(rootPart.Position.X, 0, rootPart.Position.Z)).Magnitude
+            if delta < minDelta then
+                minDelta = delta
+                bestIsland = isl
+                bestNum = num or 0
+            end
+        end
+    end
+    return bestIsland, bestNum
+end
+
+local function dungeonCalcDoor(pPos)
+    local currentIslandModel, currentIslandNum = dungeonGetIsland(pPos)
+    Dungeon.floorName = "Island " .. tostring(currentIslandNum > 0 and currentIslandNum or "1")
+    if currentIslandModel then
+        local islandRootPart = currentIslandModel:FindFirstChild("Root") or currentIslandModel:FindFirstChildWhichIsA("BasePart")
+        local exitTele = currentIslandModel:FindFirstChild("ExitTeleporter")
+        if exitTele then
+            local doorPart = exitTele:FindFirstChild("Root") or exitTele:FindFirstChildWhichIsA("BasePart")
+            if doorPart then
+                local doorPos = doorPart.Position
+                local distXZ = (Vector3.new(doorPos.X - pPos.X, 0, doorPos.Z - pPos.Z)).Magnitude
+                local islandRootY = islandRootPart and islandRootPart.Position.Y or 200
+                if distXZ > 30 then
+                    local safeY = math.max(pPos.Y, doorPos.Y, islandRootY) + 35
+                    return Vector3.new(doorPos.X, safeY, doorPos.Z), "Sky Arc -> Door"
+                else
+                    return doorPos + Vector3.new(0, 3, 0), "Entering Door"
+                end
+            end
+        end
+    end
+    return nil, "Door Not Ready"
+end
+
+local function dungeonRestoreHitboxes()
+    for part, originalSize in pairs(Dungeon.originalSizes) do
+        if part and part.Parent then pcall(function() part.Size = originalSize end) end
+    end
+    Dungeon.originalSizes = {}
+end
+
+local function dungeonStop()
+    S.dungeonFloat = false
+    Dungeon.target = nil
+    Dungeon.doorWaypoint = nil
+    if Dungeon.renderConn then
+        pcall(function() Dungeon.renderConn:Disconnect() end)
+        Dungeon.renderConn = nil
+    end
+    dungeonRestoreHitboxes()
+end
+
+-- scanner
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if dungeonActive() and S.dungeonFloat then
+            local char = LocalPlayer.Character
+            local myRoot = char and char:FindFirstChild("HumanoidRootPart")
+            if myRoot then
+                local myPos = myRoot.Position
+                local folder = Workspace:FindFirstChild("Enemies")
+                local foundObjective, foundMob = nil, nil
+                if folder then
+                    if S.dungeonDestroyObj then
+                        local best = math.huge
+                        for _, e in ipairs(folder:GetChildren()) do
+                            if dungeonIsObjective(e) then
+                                local part = e:FindFirstChild("HumanoidRootPart") or e:FindFirstChildWhichIsA("BasePart")
+                                if part then
+                                    local d = (myPos - part.Position).Magnitude
+                                    if d < best then best = d; foundObjective = e end
+                                end
+                            end
+                        end
+                    end
+                    if not foundObjective then
+                        local best = S.dungeonLocalRadius or 800
+                        for _, e in ipairs(folder:GetChildren()) do
+                            if dungeonIsEnemy(e) then
+                                local part = e:FindFirstChild("HumanoidRootPart") or e:FindFirstChild("Head") or e:FindFirstChildWhichIsA("BasePart")
+                                if part then
+                                    local d = (myPos - part.Position).Magnitude
+                                    if d < best then best = d; foundMob = e end
+                                end
+                            end
+                        end
+                    end
+                end
+                if foundObjective then
+                    Dungeon.target = foundObjective
+                    Dungeon.targetingObjective = true
+                elseif foundMob then
+                    Dungeon.target = foundMob
+                    Dungeon.targetingObjective = false
+                else
+                    Dungeon.target = nil
+                    Dungeon.targetingObjective = false
+                end
+                if not Dungeon.target and S.dungeonAutoDoor then
+                    Dungeon.doorWaypoint, Dungeon.doorStatus = dungeonCalcDoor(myPos)
+                else
+                    Dungeon.doorWaypoint = nil
+                end
+            end
+        elseif not S.dungeonFloat then
+            Dungeon.target = nil
+        end
+        task.wait(0.12)
+    end
+end)
+
+-- flight RenderStepped
+task.spawn(function()
+    task.wait(1)
+    if not RunService.RenderStepped then return end
+    Dungeon.renderConn = RunService.RenderStepped:Connect(function(dt)
+        if _G.FE_Unloaded then
+            pcall(function() if Dungeon.renderConn then Dungeon.renderConn:Disconnect() end end)
+            return
+        end
+        if not dungeonActive() or not S.dungeonFloat then return end
+        local char = LocalPlayer.Character
+        local myRoot = char and char:FindFirstChild("HumanoidRootPart")
+        local myHum = char and char:FindFirstChild("Humanoid")
+        if not myRoot or not myHum or myHum.Health <= 0 then return end
+        pcall(function() myRoot.CanCollide = false end)
+        local currentPos = myRoot.Position
+        local speed = S.dungeonFlightSpeed or 250
+        local height = S.dungeonFloatHeight or 12
+        if Dungeon.target and Dungeon.target.Parent then
+            local targetPart = Dungeon.target:FindFirstChild("HumanoidRootPart")
+                or Dungeon.target:FindFirstChild("UpperTorso")
+                or Dungeon.target:FindFirstChild("Head")
+                or Dungeon.target:FindFirstChildWhichIsA("BasePart")
+            if targetPart then
+                local live = targetPart.Position
+                local hover = live + Vector3.new(0, height, 0)
+                local diff = hover - currentPos
+                local dist = diff.Magnitude
+                Dungeon.status = Dungeon.targetingObjective and "Tween to Vent" or "Magnet Lock"
+                if dist <= 2.5 then
+                    myRoot.CFrame = CFrame.lookAt(hover, live)
+                else
+                    local step = math.min(dist, speed * dt)
+                    myRoot.CFrame = CFrame.lookAt(currentPos + diff.Unit * step, live)
+                end
+                myRoot.AssemblyLinearVelocity = Vector3.zero
+            end
+        elseif S.dungeonAutoDoor and Dungeon.doorWaypoint then
+            Dungeon.status = Dungeon.doorStatus or "Door"
+            local diff = Dungeon.doorWaypoint - currentPos
+            local dist = diff.Magnitude
+            local lookDir = Dungeon.doorWaypoint + Vector3.new(0, 0, 10)
+            if dist <= 2 then
+                myRoot.CFrame = CFrame.lookAt(Dungeon.doorWaypoint, lookDir)
+            else
+                local step = math.min(dist, speed * dt)
+                myRoot.CFrame = CFrame.lookAt(currentPos + diff.Unit * step, lookDir)
+            end
+            myRoot.AssemblyLinearVelocity = Vector3.zero
+        else
+            Dungeon.status = "Island Cleared"
+        end
+    end)
+end)
+
+-- skills on objectives
+task.spawn(function()
+    local keys = {0x5A, 0x58, 0x43, 0x56}
+    while not _G.FE_Unloaded do
+        if dungeonActive() and S.dungeonFloat and S.dungeonUseMoves and Dungeon.targetingObjective and Dungeon.target then
+            local tp = Dungeon.target:FindFirstChild("HumanoidRootPart") or Dungeon.target:FindFirstChildWhichIsA("BasePart")
+            if tp then
+                pcall(function()
+                    local cam = Workspace.CurrentCamera
+                    if cam then cam.CFrame = CFrame.lookAt(cam.CFrame.Position, tp.Position) end
+                end)
+                for _, vk in ipairs(keys) do
+                    if not Dungeon.targetingObjective then break end
+                    pcall(function() if keyclick then keyclick(vk) end end)
+                    task.wait(0.2)
+                end
+            end
+        end
+        task.wait(0.3)
+    end
+end)
+
+-- dungeon M1 (only hybrid)
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if dungeonActive() and S.dungeonM1 then
+            local char = LocalPlayer.Character
+            local myRoot = char and char:FindFirstChild("HumanoidRootPart")
+            local myHum = char and char:FindFirstChild("Humanoid")
+            if myRoot and myHum and myHum.Health > 0 then
+                local hits = {}
+                local folder = Workspace:FindFirstChild("Enemies")
+                local radius = S.dungeonM1Radius or 60
+                if folder then
+                    for _, enemy in ipairs(folder:GetChildren()) do
+                        if (dungeonIsEnemy(enemy) or dungeonIsObjective(enemy)) and not dungeonIsSummon(enemy) then
+                            local ep = enemy:FindFirstChild("HumanoidRootPart") or enemy:FindFirstChild("Head") or enemy:FindFirstChildWhichIsA("BasePart")
+                            if ep and (myRoot.Position - ep.Position).Magnitude <= radius then
+                                hits[#hits + 1] = ep
+                            end
+                        end
+                    end
+                end
+                if #hits > 0 then
+                    pcall(function()
+                        local net = ReplicatedStorage:FindFirstChild("Modules") and ReplicatedStorage.Modules:FindFirstChild("Net")
+                        if net then
+                            local regAttack = net:FindFirstChild("RE/RegisterAttack") or net:FindFirstChild("RegisterAttack")
+                            local regHit = net:FindFirstChild("RE/RegisterHit") or net:FindFirstChild("RegisterHit")
+                            if regAttack then regAttack:FireServer(0) end
+                            if regHit then
+                                for _, part in ipairs(hits) do
+                                    regHit:FireServer(part, {})
+                                end
+                            end
+                        end
+                    end)
+                    local tool = char:FindFirstChildOfClass("Tool")
+                    if tool then pcall(function() tool:Activate() end) end
+                end
+            end
+            task.wait(0.12)
+        else
+            task.wait(0.25)
+        end
+    end
+end)
+
+-- equip + buso
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if dungeonActive() then
+            pcall(dungeonAutoEquip)
+            pcall(dungeonActivateBuso)
+            task.wait(0.35)
+        else
+            task.wait(0.5)
+        end
+    end
+end)
+
+-- hitbox expander
+task.spawn(function()
+    local parts = {"HumanoidRootPart", "UpperTorso", "Torso", "Head", "LowerTorso"}
+    while not _G.FE_Unloaded do
+        if dungeonActive() and S.dungeonHitbox then
+            local folder = Workspace:FindFirstChild("Enemies")
+            local sz = S.dungeonHitboxSize or 50
+            if folder then
+                for _, e in ipairs(folder:GetChildren()) do
+                    if (dungeonIsEnemy(e) or dungeonIsObjective(e)) and not dungeonIsSummon(e) then
+                        for _, pName in ipairs(parts) do
+                            local part = e:FindFirstChild(pName)
+                            if part and part:IsA("BasePart") then
+                                if not Dungeon.originalSizes[part] then
+                                    Dungeon.originalSizes[part] = part.Size
+                                end
+                                pcall(function()
+                                    part.Size = Vector3.new(sz, sz, sz)
+                                    part.CanCollide = false
+                                end)
+                            end
+                        end
+                    end
+                end
+            end
+            task.wait(0.5)
+        else
+            if next(Dungeon.originalSizes) then dungeonRestoreHitboxes() end
+            task.wait(0.4)
+        end
+    end
+    dungeonRestoreHitboxes()
+end)
+
+
+
+
+task.spawn(function()
+    local t0 = os.clock()
+    while not workspace.CurrentCamera and os.clock() - t0 < 15 do
+        task.wait(0.1)
+    end
+    local okLib, Lib = pcall(function()
+        local src = game:HttpGet("https://raw.githubusercontent.com/neaxusxgod-png/INS-ui/main/uilib.min.lua")
+        src = src:gsub(
+            "Camera = workspace%.CurrentCamera",
+            "Camera = workspace.CurrentCamera\n" ..
+            "local function INS_SafeViewport()\n" ..
+            "  local c = workspace.CurrentCamera\n" ..
+            "  if c then Camera = c end\n" ..
+            "  c = Camera\n" ..
+            "  if c then\n" ..
+            "    local ok, vs = pcall(function() return c.ViewportSize end)\n" ..
+            "    if ok and vs then return vs end\n" ..
+            "  end\n" ..
+            "  return Vector2.new(1920, 1080)\n" ..
+            "end",
+            1
+        )
+        src = src:gsub("Camera%.ViewportSize", "INS_SafeViewport()")
+        local fn, err = loadstring(src)
+        if not fn then error(err or "INS-ui compile failed") end
+        return fn() or INSUI
+    end)
+    if not okLib or type(Lib) ~= "table" then
+        warn("[Hub] INS UI not loaded", Lib)
+        return
+    end
+    LibRef = Lib
+    pcall(function()
+        if Lib.SetKeybindOverlay then Lib:SetKeybindOverlay(false) end
+        if Lib.SetMenuKey then Lib:SetMenuKey("f1") end
+    end)
+    pcall(function()
+        if Lib.SetMenuKey then Lib:SetMenuKey("f1") end
+    end)
+    local win = Lib:CreateWindow({
+        title = "BF Hub",
+        subtitle = "Blox Fruits",
+        size = Vector2.new(940, 700),
+        menuKey = "f1",
+        checkboxStyle = true,
+        opacity = 0.97,
+        keybindOverlay = false,
+        autoSave = true,
+        configName = "default",
+        configFolder = "BFHub",
+    })
+    WinRef = win
+    menuOpen = true
+    local function tip(handle, text)
+        if handle and text then
+            pcall(function() handle:Tooltip(text) end)
+        end
+        return handle
+    end
+    Lib:Category("VISUALS")
+    local espTab = win:Tab("ESP", "eye")
+    local espSec = espTab:Section("Main", "Left")
+    H.master = tip(espSec:Toggle("Enabled", true, function(on) Features.master = on end, "master switch for overlays"), "master switch for overlays")
+    espSec:Divider("Toggles")
+    H.esp = tip(espSec:Toggle("Fruit ESP", true, function(on) Features.esp = on end, "labels above fruits"), "labels above fruits")
+    H.berryEsp = tip(espSec:Toggle("Berry ESP", false, function(on)
+        Features.berryEsp = on
+        if not on then
+            clearAllBerryESP()
+        else
+            task.spawn(function()
+                refreshBerries(true)
+            end)
+        end
+    end, "berry spheres on bushes (red)"), "berry spheres on bushes (red)")
+    tip(espSec:Toggle("Flower ESP", false, function(v)
+        setMyth("flowerEsp", v)
+        if v then pcall(buildFlowerEsp) else pcall(clearFlowerEsp) end
+    end, "Shows a label and a 3d box around all flowers, 2ND SEA"), "Shows a label and a 3d box around all flowers, 2ND SEA")
+    tip(espSec:Toggle("Chest ESP", false, function(v)
+        setMyth("chestEsp", v)
+        if v then pcall(buildChestEspLabels) else pcall(clearChestEspLabels) end
+    end, "Shows a text label on every spawned chest"), "Shows a text label on every spawned chest")
+    tip(espSec:Toggle("Boat ESP", false, function(v)
+        setMyth("boatEsp", v)
+        if v then pcall(buildBoatEsp) else pcall(clearBoatEsp) end
+    end, "Draws a full 3D box around each on-screen boat"), "Draws a full 3D box around each on-screen boat")
+    tip(espSec:Toggle("Mirage ESP", false, function(v)
+        setMyth("mirageEsp", v)
+        if not v then pcall(clearMirageEsp) end
+    end, "Shows the Mirage Island location"), "Shows the Mirage Island location")
+    H.panel = tip(espSec:Toggle("Status Panel", true, function(on) Features.panel = on end, "server status overlay"), "server status overlay")
+    local panelTab = win:Tab("Panel", "map")
+    local posSec = panelTab:Section("Position", "Left")
+    tip(posSec:Slider("Panel X", 50, 50, 0, 3000, "", function(v) panelPosX = v; layoutPanel(panelShown, 0) end), "horizontal position of status panel")
+    tip(posSec:Slider("Panel Y", 400, 20, 0, 1500, "", function(v) panelPosY = v; layoutPanel(panelShown, 0) end), "vertical position of status panel")
+    local styleSec = panelTab:Section("Style", "Right")
+    tip(styleSec:Slider("Text size", 13, 1, 10, 22, "", function(v) panelTextSize = v; applyPanelSize() end), "status panel text size")
+    Lib:Category("FARMING")
+    local farmTab = win:Tab("Farm", "sword")
+    local farmSec = farmTab:Section("Farming", "Left")
+    tip(farmSec:Toggle("Auto Farm Nearest", false, function(v) setMyth("autoFarmNearest", v) end, "Farms the nearest enemy (load chests/enemies first!)"), "Farms the nearest enemy (load chests/enemies first!)")
+    tip(farmSec:Toggle("Remote Mode (60 studs)", false, function(v) setMyth("remoteMode", v) end, "Use RegisterHit remotes instead of mouse clicks (60 studs)"), "Use RegisterHit remotes instead of mouse clicks (60 studs)")
+    tip(farmSec:Toggle("Auto Farm Chest", false, function(v)
+        setMyth("autoFarming", v)
+        if type(S) == "table" and v then S.chestIndex = 1 end
+    end, "Tween between chest models"), "Tween between chest models")
+    tip(farmSec:Toggle("Auto Farm Fruits", false, function(v) setMyth("autoFruits", v) end, "Tween to nearest spawned fruit"), "Tween to nearest spawned fruit")
+    tip(farmSec:Toggle("Auto TP To Fruit", false, function(v) setMyth("autoTpFruit", v) end, "Instant teleport on top of nearest fruit"), "Instant teleport on top of nearest fruit")
+    local npcSec = farmTab:Section("NPC Farm", "Right")
+    tip(npcSec:Toggle("Auto NPC Farm", false, function(v) setMyth("autoNpcFarm", v) end, "Go to selected NPC Island and farm NPCs there"), "Go to selected NPC Island and farm NPCs there")
+    local isleOpts = {}
+    if type(islandNames) == "table" and #islandNames > 0 then
+        for _, n in ipairs(islandNames) do isleOpts[#isleOpts + 1] = n end
+    elseif type(islandList) == "table" then
+        for _, isle in pairs(islandList) do isleOpts[#isleOpts + 1] = isle.name end
+    end
+    if #isleOpts == 0 then
+        isleOpts = {"Tiki2", "Tiki1", "Port", "Hydra1", "Hydra2", "Hydra3", "GreatTree1", "GreatTree2", "HauntedCastle", "IceCream", "CakeLand", "Chocolate", "Peanut", "Mansion", "TurtleCenter2", "TurtleCenter1", "TurtleEntrance"}
+    end
+    local defaultIsle = isleOpts[1]
+    local ddIsle = npcSec:Dropdown("NPC Island", { defaultIsle }, isleOpts, false, function(v)
+        local name = v
+        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
+        name = tostring(name)
+        if type(islandList) ~= "table" then return end
+        for i, isle in pairs(islandList) do
+            if isle.name == name then
+                setMyth("selectedIsland", i)
+                break
+            end
+        end
+    end)
+    tip(ddIsle, "Select which island to farm NPCs on")
+    pcall(function()
+        if ddIsle and ddIsle.UpdateChoices then ddIsle:UpdateChoices(isleOpts) end
+        if ddIsle and ddIsle.Set then ddIsle:Set({ defaultIsle }) end
+    end)
+    tip(npcSec:Toggle("Auto Farm Level", false, function(v) setMyth("autoFarmLevel", v) end, "Farms mobs based on your current level (quest giver must be nearby)"), "Farms mobs based on your current level (quest giver must be nearby)")
+    local offSec = farmTab:Section("Custom NPC Offset", "Left")
+    tip(offSec:Toggle("Custom NPC Offset", false, function(v) setMyth("customOffset", v) end, "Use custom XYZ offset when positioning on NPCs"), "Use custom XYZ offset when positioning on NPCs")
+    tip(offSec:Slider("Offset X", 0, 1, -100, 100, "", function(v) setMyth("customOffsetX", v) end), "X offset from enemy position")
+    tip(offSec:Slider("Offset Y", 23, 1, -100, 100, "", function(v) setMyth("customOffsetY", v) end), "Y offset from enemy position")
+    tip(offSec:Slider("Offset Z", 0, 1, -100, 100, "", function(v) setMyth("customOffsetZ", v) end), "Z offset from enemy position")
+    local bossSec = farmTab:Section("Boss / Material / Sea", "Right")
+    tip(bossSec:Toggle("Auto Mastery", false, function(v) setMyth("autoMastery", v) end, "Goto Chocolate Island and use Buddha transformation"), "Goto Chocolate Island and use Buddha transformation")
+    tip(bossSec:Toggle("Auto Farm Material", false, function(v) setMyth("autoMaterial", v) end, "Farms enemies that drop the selected material"), "Farms enemies that drop the selected material")
+    local ddMat = bossSec:Dropdown("Material", { S.materialTarget or MATERIAL_NAMES[1] }, MATERIAL_NAMES, false, function(v)
+        local name = v
+        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
+        setMyth("materialTarget", tostring(name))
+    end)
+    tip(ddMat, "Material to farm")
+    tip(bossSec:Toggle("Auto Farm Boss", false, function(v) setMyth("autoBoss", v) end, "Tweens to and farms the selected spawned boss"), "Tweens to and farms the selected spawned boss")
+    local seaBosses = bossesForCurrentSea()
+    local defaultBoss = S.bossTarget
+    local inSea = false
+    for _, n in ipairs(seaBosses) do if n == defaultBoss then inSea = true; break end end
+    if not inSea then defaultBoss = seaBosses[1] or BOSS_NAMES[1]; setMyth("bossTarget", defaultBoss) end
+    local ddBoss = bossSec:Dropdown("Boss", { defaultBoss }, seaBosses, false, function(v)
+        local name = v
+        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
+        setMyth("bossTarget", tostring(name))
+    end)
+    tip(ddBoss, "Bosses for current sea only (must be spawned/loaded)")
+    tip(bossSec:Toggle("Auto Farm Sea Target", false, function(v) setMyth("autoSeaEvent", v) end, "Tweens to and attacks the selected spawned sea enemy"), "Tweens to and attacks the selected spawned sea enemy")
+    local ddSea = bossSec:Dropdown("Sea Target", { S.seaEventTarget or SEA_EVENT_NAMES[1] }, SEA_EVENT_NAMES, false, function(v)
+        local name = v
+        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
+        setMyth("seaEventTarget", tostring(name))
+    end)
+    tip(ddSea, "Sea event enemy")
+    local statSec = farmTab:Section("Stats / Weapon", "Left")
+    tip(statSec:Toggle("Auto Melee", false, function(v) setMyth("autoStatMelee", v) end, "Spend points into Melee"), "Spend points into Melee")
+    tip(statSec:Toggle("Auto Defense", false, function(v) setMyth("autoStatDefense", v) end, "Spend points into Defense"), "Spend points into Defense")
+    tip(statSec:Toggle("Auto Sword", false, function(v) setMyth("autoStatSword", v) end, "Spend points into Sword"), "Spend points into Sword")
+    tip(statSec:Toggle("Auto Gun", false, function(v) setMyth("autoStatGun", v) end, "Spend points into Gun"), "Spend points into Gun")
+    tip(statSec:Toggle("Auto Fruit", false, function(v) setMyth("autoStatFruit", v) end, "Spend points into Demon Fruit"), "Spend points into Demon Fruit")
+    tip(statSec:Slider("Points Per Upgrade", S.statAmount or 10, 1, 1, 50, "", function(v) setMyth("statAmount", v) end), "Points per AddPoint call")
+    tip(statSec:Toggle("Weapon After Fruit", false, function(v) setMyth("weaponAfterFruit", v) end, "Switch to melee/sword after collecting a fruit"), "Switch to melee/sword after collecting a fruit")
+    tip(statSec:Toggle("Weapon: Melee (off=Sword)", true, function(v)
+        setMyth("weaponSlot", v and "Melee" or "Sword")
+    end, "ON = Melee slot1, OFF = Sword slot3"), "ON = Melee slot1, OFF = Sword slot3")
+    local speedSec = farmTab:Section("Tween Speeds", "Right")
+    tip(speedSec:Slider("Farm Speed", S.FARM_SPEED or 250, 10, 50, 1000, "", function(v)
+        setMyth("FARM_SPEED", v)
+        if type(AFL) == "table" then AFL.tweenSpeed = v end
+    end), "General farm tween speed")
+    tip(speedSec:Slider("Chest Speed", S.CHEST_SPEED or 310, 10, 50, 1000, "", function(v) setMyth("CHEST_SPEED", v) end), "Chest farm tween speed")
+    tip(speedSec:Slider("Fruit Speed", S.FRUIT_SPEED or 210, 10, 50, 1000, "", function(v) setMyth("FRUIT_SPEED", v) end), "Fruit farm tween speed")
+    tip(speedSec:Slider("NPC Speed", S.NPC_TWEEN_SPEED or 250, 10, 50, 1000, "", function(v) setMyth("NPC_TWEEN_SPEED", v) end), "NPC travel speed")
+    tip(speedSec:Slider("Raid Speed", S.RAID_SPEED or 200, 10, 50, 1000, "", function(v) setMyth("RAID_SPEED", v) end), "Raid island tween speed")
+    tip(speedSec:Slider("Mastery Speed", S.MASTERY_SPEED or 250, 10, 50, 1000, "", function(v) setMyth("MASTERY_SPEED", v) end), "Mastery tween speed")
+    Lib:Category("COMBAT")
+    local combatTab = win:Tab("Combat", "crosshair")
+    local combatSec = combatTab:Section("Combat", "Left")
+    tip(combatSec:Toggle("Big Hitbox", false, function(v) setMyth("bigHitbox", v) end, "Enlarge enemy hitboxes while farming"), "Enlarge enemy hitboxes while farming")
+    tip(combatSec:Toggle("Pull Enemies", false, function(v) setMyth("pullEnemies", v) end, "Pull nearby enemies toward you"), "Pull nearby enemies toward you")
+    tip(combatSec:Toggle("Buddha Pull", false, function(v) setMyth("buddhaPull", v) end, "Buddha fruit pull variant"), "Buddha fruit pull variant")
+    tip(combatSec:Toggle("Auto Ken", false, function(v) setMyth("autoKen", v) end, "Auto Observation Haki"), "Auto Observation Haki")
+    tip(combatSec:Toggle("Auto Haki", false, function(v) setMyth("autoHaki", v) end, "Automatically keeps Armament Haki active"), "Automatically keeps Armament Haki active")
+    tip(combatSec:Toggle("Auto Race Ability", false, function(v) setMyth("autoRaceAbility", v) end, "Keeps sending the race ability activation remote"), "Keeps sending the race ability activation remote")
+    tip(combatSec:Toggle("Freeze Position", false, function(v) setMyth("freezePos", v) end, "Lock your character position"), "Lock your character position")
+    tip(combatSec:Toggle("Freeze Enemies", false, function(v) setMyth("freezeEnemies", v) end, "Freeze enemy positions"), "Freeze enemy positions")
+    tip(combatSec:Toggle("Auto TP Ember", false, function(v) setMyth("teleportEmber", v) end, "Teleport to Ember template"), "Teleport to Ember template")
+    tip(combatSec:Toggle("Auto Tween Dragon Ember", false, function(v) setMyth("tweenEmber", v) end, "Smooth tween to Workspace EmberTemplate objects"), "Smooth tween to Workspace EmberTemplate objects")
+    tip(combatSec:Toggle("Goto Kitsune Island", false, function(v) setMyth("teleportKitsune", v) end, "Teleport to Kitsune island"), "Teleport to Kitsune island")
+    local skillSec = combatTab:Section("Skill Combos", "Right")
+    tip(skillSec:Toggle("Flame R to C", false, function(v) setMyth("flameRToC", v) end, "FLAME: when you flashstep (R) = Flame C move"), "FLAME: when you flashstep (R) = Flame C move")
+    tip(skillSec:Toggle("R to X", false, function(v) setMyth("rToX", v) end, "Automatically taps X when you press R"), "Automatically taps X when you press R")
+    tip(skillSec:Toggle("R to X then Z", false, function(v) setMyth("rToXThenZ", v) end, "Taps X when you press R, waits 25ms, then taps Z"), "Taps X when you press R, waits 25ms, then taps Z")
+    local pullSec = combatTab:Section("Custom Pull", "Right")
+    tip(pullSec:Toggle("Custom Pull", false, function(v) setMyth("customPull", v) end, "Use custom pull offsets"), "Use custom pull offsets")
+    tip(pullSec:Slider("Pull X Offset", 0, 1, -100, 100, "", function(v) setMyth("customPullX", v) end), "Custom pull X")
+    tip(pullSec:Slider("Pull Y Offset", -10, 1, -100, 100, "", function(v) setMyth("customPullY", v) end), "Custom pull Y")
+    tip(pullSec:Slider("Pull Z Offset", 0, 1, -100, 100, "", function(v) setMyth("customPullZ", v) end), "Custom pull Z")
+    local m1Sec = combatTab:Section("M1 Aura", "Left")
+    H.aura = tip(m1Sec:Toggle("M1 Aura", false, function(on)
+        Features.aura = on
+        AuraEnabled = on
+        aura.enabled = on == true
+        if on then
+            local ok = aura_ensureRemotes()
+            print("[M1 Aura] ON | remotes:", ok, ok and aura.regAtk and aura.regAtk:GetFullName() or "?")
+        else
+            print("[M1 Aura] OFF")
+        end
+        updateHUD()
+    end, "crashable"), "unavailable on Matcha")
+    K.aura = m1Sec:Keybind("Aura key", nil, function() end)
+    tip(m1Sec:Slider("M1 Range", 100, 5, 10, 500, "studs", function(v)
+        AuraConfig.MAX_DISTANCE = v
+        aura.maxDist = v
+    end), "Max distance to hit NPCs")
+
+    pcall(function()
+        if m1Sec.Label then m1Sec:Label("  unavailable on Matcha") end
+    end)
+    local glitchTab = win:Tab("Glitch", "zap")
+    local glitchSec = glitchTab:Section("Velocity Boosts", "Left")
+    tip(glitchSec:Toggle("Sanguine Z Boost", false, function(v) setMyth("sanguineZ", v) end, "Boosts current velocity during Sanguine Art Z"), "Boosts current velocity during Sanguine Art Z")
+    tip(glitchSec:Toggle("Dragon Talon Z Boost", false, function(v) setMyth("dragonTalonZ", v) end, "Boosts current velocity after pressing Z"), "Boosts current velocity after pressing Z")
+    tip(glitchSec:Toggle("Yama Z Boost", false, function(v) setMyth("yamaZ", v) end, "Boosts current velocity after pressing Z"), "Boosts current velocity after pressing Z")
+    tip(glitchSec:Toggle("Tushita X Boost", false, function(v) setMyth("tushitaX", v) end, "Boosts current velocity after pressing X"), "Boosts current velocity after pressing X")
+    tip(glitchSec:Toggle("Fox Lamp X Boost", false, function(v) setMyth("foxLampX", v) end, "Boosts current velocity after pressing X"), "Boosts current velocity after pressing X")
+    tip(glitchSec:Toggle("Soul Guitar M1", false, function(v) setMyth("soulGuitarM1", v) end, "Boosts after Q + M1 within 0.5 seconds"), "Boosts after Q + M1 within 0.5 seconds")
+    tip(glitchSec:Toggle("Diamond M1", false, function(v) setMyth("diamondM1", v) end, "Sanguine-style boost when M1 is released with Diamond-Diamond equipped"), "Sanguine-style boost when M1 is released with Diamond-Diamond equipped")
+    tip(glitchSec:Toggle("Flame F Boost", false, function(v) setMyth("flameF", v) end, "Boosts current velocity after pressing F"), "Boosts current velocity after pressing F")
+    local glitchTuneSec = glitchTab:Section("Glitch Sliders", "Right")
+    local glitchTuneOpts = {"sanguine","dragonTalon","yama","tushita","foxLamp","soulGuitar","diamond","flame"}
+    local glitchSliderHandles = {speed=nil, delay=nil, duration=nil}
+    local function currentGlitchProfile()
+        local key = S.glitchTune or "sanguine"
+        return S.glitchSettings[key] or S.glitchSettings.sanguine
+    end
+    local function syncGlitchSliders()
+        local g = currentGlitchProfile()
+        if not g then return end
+        pcall(function()
+            if glitchSliderHandles.speed and glitchSliderHandles.speed.Set then glitchSliderHandles.speed:Set(g.speed or 500) end
+            if glitchSliderHandles.delay and glitchSliderHandles.delay.Set then glitchSliderHandles.delay:Set(math.floor((g.delay or 0.1)*100 + 0.5)) end
+            if glitchSliderHandles.duration and glitchSliderHandles.duration.Set then glitchSliderHandles.duration:Set(math.floor((g.duration or 0.3)*100 + 0.5)) end
+        end)
+    end
+    local ddGlitch = glitchTuneSec:Dropdown("Glitch Target", { S.glitchTune or "sanguine" }, glitchTuneOpts, false, function(v)
+        local name = v
+        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
+        setMyth("glitchTune", tostring(name))
+        syncGlitchSliders()
+    end)
+    tip(ddGlitch, "Which glitch the sliders edit (each has its own speed/delay/duration)")
+    glitchSliderHandles.speed = glitchTuneSec:Slider("Speed", (S.glitchSettings[S.glitchTune or "sanguine"] or {}).speed or 500, 10, 100, 1500, "", function(v)
+        local g = currentGlitchProfile()
+        if g then g.speed = v end
+    end)
+    tip(glitchSliderHandles.speed, "Velocity boost speed for selected glitch only")
+    glitchSliderHandles.delay = glitchTuneSec:Slider("Start Delay", math.floor(((S.glitchSettings[S.glitchTune or "sanguine"] or {}).delay or 0.1)*100 + 0.5), 1, 0, 50, "x0.01s", function(v)
+        local g = currentGlitchProfile()
+        if g then g.delay = v / 100 end
+    end)
+    tip(glitchSliderHandles.delay, "Delay before boost starts (selected glitch only)")
+    glitchSliderHandles.duration = glitchTuneSec:Slider("Duration", math.floor(((S.glitchSettings[S.glitchTune or "sanguine"] or {}).duration or 0.3)*100 + 0.5), 1, 5, 100, "x0.01s", function(v)
+        local g = currentGlitchProfile()
+        if g then g.duration = v / 100 end
+    end)
+    tip(glitchSliderHandles.duration, "How long the boost lasts (selected glitch only)")
+    Lib:Category("SEA")
+    local seaTab = win:Tab("Sea", "globe")
+    local seaSec = seaTab:Section("Boat", "Left")
+    tip(seaSec:Toggle("Boat Fly", false, function(v) setMyth("boatFlyEnabled", v) end, "Fly the boat with WASD / X / Shift"), "Fly the boat with WASD / X / Shift")
+    tip(seaSec:Slider("Fly Speed", 5, 1, 1, 50, "", function(v) setMyth("boatFlySpeed", v) end), "Boat fly speed")
+    local dOpts = {}
+    if type(dangerLevelNames) == "table" and #dangerLevelNames > 0 then
+        for _, n in ipairs(dangerLevelNames) do dOpts[#dOpts + 1] = n end
+    elseif type(dangerLevels) == "table" then
+        for _, d in pairs(dangerLevels) do dOpts[#dOpts + 1] = d.name end
+    end
+    if #dOpts == 0 then
+        dOpts = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6"}
+    end
+    local defaultDanger = dOpts[1]
+    local ddDanger = seaSec:Dropdown("Danger Level", { defaultDanger }, dOpts, false, function(v)
+        local name = v
+        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
+        name = tostring(name)
+        if type(dangerLevels) ~= "table" then return end
+        for _, d in pairs(dangerLevels) do
+            if d.name == name then
+                setMyth("boatTweening", false)
+                task.wait(0.05)
+                task.spawn(function()
+                    if type(boatTweenTo) == "function" then
+                        boatTweenTo(d.pos)
+                    end
+                end)
+                break
+            end
+        end
+    end)
+    tip(ddDanger, "Fly boat to selected danger level")
+    pcall(function()
+        if ddDanger and ddDanger.UpdateChoices then ddDanger:UpdateChoices(dOpts) end
+        if ddDanger and ddDanger.Set then ddDanger:Set({ defaultDanger }) end
+    end)
+    tip(seaSec:Button("Stop Boat", function()
+        setMyth("boatTweening", false)
+    end), "Stop current boat tween")
+    local seatSec = seaTab:Section("Boat Seat", "Right")
+    tip(seatSec:Toggle("Auto Go To Seat", false, function(v)
+        setMyth("autoBoatSeat", v)
+        if v then pcall(refreshBoatSeats) end
+        notify(v and "Auto Boat Seat ON!" or "Auto Boat Seat OFF!", "Sea", 2)
+    end, "Teleports to the selected seat until you are sitting"), "Teleports to the selected seat until you are sitting")
+    pcall(refreshBoatSeats)
+    local seatOpts = boatSeatOptions or {"No boats found"}
+    local ddSeat = seatSec:Dropdown("Boat Seat", { seatOpts[1] }, seatOpts, false, function(v)
+        local name = v
+        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
+        name = tostring(name)
+        S.selectedBoatSeatLabel = name
+        S.selectedBoatSeat = boatSeatByLabel[name]
+    end)
+    boatSeatDropdownHandle = ddSeat
+    tip(ddSeat, "Select a spawned boat seat")
+    tip(seatSec:Button("Refresh Boat Seats", function()
+        lastBoatSeatSignature = "" -- force UI update
+        local names = refreshBoatSeats() or boatSeatOptions
+        notify("Seats: " .. tostring(#names), "Sea", 2)
+    end), "Rescan Workspace.Boats now")
+    local raidSec = seaTab:Section("Games", "Right")
+    tip(raidSec:Toggle("Auto Raid", false, function(v) setMyth("autoRaid", v) end, "Scans for RaidMap, teleports to center and pulls enemies"), "Scans for RaidMap, teleports to center and pulls enemies")
+    tip(raidSec:Toggle("Tween to Mirage", false, function(v) setMyth("autoMirageTween", v) end, "Tweens above Mirage Island when it exists"), "Tweens above Mirage Island when it exists")
+    tip(raidSec:Toggle("Collect Mirage Gear", false, function(v) setMyth("autoMirageGear", v) end, "Finds and tweens to the visible Mirage gear"), "Finds and tweens to the visible Mirage gear")
+    local worldSec = seaTab:Section("World Checks", "Left")
+    tip(worldSec:Button("Check Event Islands", function()
+        task.spawn(showEventStatus)
+    end), "Mirage / Kitsune / Prehistoric / Frozen")
+    tip(worldSec:Button("Check Important Bosses", function()
+        task.spawn(showBossStatus)
+    end), "Rip Indra / Dough King / Cake Prince")
+    Lib:Category("PVP")
+    local pvpTab = win:Tab("PvP", "skull")
+    local pvpSec = pvpTab:Section("Pull / Aura", "Left")
+    tip(pvpSec:Toggle("Escape (risky)", false, function(v) setMyth("voidPull", v) end, "Sends you to Y=100000"), "Sends you to Y=100000")
+    tip(pvpSec:Toggle("Go Back Down (risky)", false, function(v) setMyth("skyPull", v) end, "Brings you back to Y=100"), "Brings you back to Y=100")
+    tip(pvpSec:Toggle("PvP Aura", false, function(v) _pvpAuraEnabled = v end, "Fires RegisterHit on the nearest player"), "Fires RegisterHit on the nearest player")
+    tip(pvpSec:Toggle("PvP Farm Loop", false, function(v) setMyth("pvpFarmLoop", v) end, "Tween to nearest enemy player and farm"), "Tween to nearest enemy player and farm")
+    tip(pvpSec:Toggle("Use ModelHitbox", false, function(v) _pvpAuraAltPart = v end, "Toggle between Head and ModelHitbox hit part"), "Toggle between Head and ModelHitbox hit part")
+    tip(pvpSec:Slider("PvP Range", 100, 10, 10, 300, "studs", function(v) _pvpAuraMaxDist = v end), "Max distance to target players")
+    Lib:Category("AUTOMATION")
+    local fishTab = win:Tab("Fish", "zap")
+    local fishSec = fishTab:Section("Auto Fish", "Left")
+    H.fish = tip(fishSec:Toggle("Auto Fish", false, function(on)
+        Features.fish = on
+        if on then FishStart() else FishStop() end
+    end, "Automatically casts, detects bite, reels (treasure priority)"), "Automatically casts, detects bite, reels (treasure priority)")
+    K.fish = fishSec:Keybind("Fish key", nil, function() end)
+    local fishTune = fishTab:Section("Tuning", "Right")
+    tip(fishTune:Slider("Cast power", FishConfig.CastTarget * 100, 1, 50, 100, "%", function(v) FishConfig.CastTarget = v / 100 end), "Release cast when bar reaches this fill")
+    tip(fishTune:Slider("Reel dead zone", FishConfig.DeadZone * 100, 1, 0, 200, "%", function(v) FishConfig.DeadZone = v / 100 end), "Hold/release threshold vs fish/treasure")
+    tip(fishTune:Slider("Bite timeout", FishConfig.BiteTimeout, 1, 5, 60, "s", function(v) FishConfig.BiteTimeout = v end), "Reset if no bite within this time")
+    local repairTab = win:Tab("Repair", "cog")
+    local repairSec = repairTab:Section("Auto Repair", "Left")
+    H.repair = tip(repairSec:Toggle("Auto Repair", false, function(on)
+        Features.repair = on
+        if on then RepStart() else RepStop() end
+    end, "Auto hold/release ship repair minigame on green zone"), "Auto hold/release ship repair minigame on green zone")
+    K.repair = repairSec:Keybind("Repair key", nil, function() end)
+    win:AddSettingsTab("gear")
+    pcall(function()
+        local menuSec = win:SettingsSection("Menu Bind", "Right")
+        if menuSec then
+            K.menu = menuSec:Keybind("Menu key", "F1", function() end)
+        end
+    end)
+    if not K.menu then
+        local sTab = win:Tab("Settings", "gear")
+        local sSec = sTab:Section("Menu", "Left")
+        K.menu = sSec:Keybind("Menu key", "F1", function() end)
+    end
+    pcall(function()
+        if K.menu and K.menu.Set then K.menu:Set("F1") end
+    end)
+    if WinRef and WinRef.SetMenuKey then
+        pcall(function() WinRef:SetMenuKey("f1") end)
+    end
+    if LibRef and LibRef.SetMenuKey then
+        pcall(function() LibRef:SetMenuKey("f1") end)
+    end
+    
+    local dungeonTab = win:Tab("Dungeon", "map")
+    local dMain = dungeonTab:Section("Dungeon Farm", "Left")
+    tip(dMain:Toggle("Enable Dungeon", false, function(v)
+        setMyth("dungeonEnabled", v)
+        if not v then
+            setMyth("dungeonFloat", false)
+            Dungeon.target = nil
+        end
+    end, "Master switch for 2nd sea dungeon module"), "Master switch for 2nd sea dungeon module")
+    tip(dMain:Toggle("Magnet / Float", false, function(v)
+        setMyth("dungeonFloat", v)
+        if not v then Dungeon.target = nil end
+    end, "Tween above target (vents/mobs)"), "Tween above target (vents/mobs)")
+    tip(dMain:Toggle("Smart Door Path", true, function(v) setMyth("dungeonAutoDoor", v) end, "Fly to exit teleporter when island clear"), "Fly to exit teleporter when island clear")
+    tip(dMain:Toggle("Destroy Vents First", true, function(v) setMyth("dungeonDestroyObj", v) end, "Priority: vents/shrines over mobs"), "Priority: vents/shrines over mobs")
+    tip(dMain:Toggle("Skills on Vents Z/X/C/V", true, function(v) setMyth("dungeonUseMoves", v) end, "Spam skills while on objective"), "Spam skills while on objective")
+    tip(dMain:Toggle("Dungeon Hitbox", false, function(v) setMyth("dungeonHitbox", v) end, "Expand enemy/objective hitboxes in dungeon"), "Expand enemy/objective hitboxes in dungeon")
+    local dCombat = dungeonTab:Section("Combat", "Right")
+    tip(dCombat:Toggle("Dungeon M1 Aura", true, function(v) setMyth("dungeonM1", v) end, "RegisterAttack/Hit in dungeon (Matcha hybrid/remotes)"), "RegisterAttack/Hit in dungeon")
+    tip(dCombat:Toggle("Auto Buso", true, function(v) setMyth("dungeonBuso", v) end, "Auto Buso Haki"), "Auto Buso Haki")
+    tip(dCombat:Toggle("Auto Equip", true, function(v) setMyth("dungeonAutoEquip", v) end, "Keep melee/sword equipped"), "Keep melee/sword equipped")
+    tip(dCombat:Toggle("Weapon: Melee (off=Sword)", true, function(v)
+        setMyth("dungeonWeapon", v and "Melee" or "Sword")
+    end, "ON = Melee slot1, OFF = Sword slot3"), "ON = Melee slot1, OFF = Sword slot3")
+    tip(dCombat:Slider("M1 Radius", 60, 5, 20, 120, "studs", function(v) setMyth("dungeonM1Radius", v) end), "Dungeon M1 reach")
+    tip(dCombat:Slider("Flight Speed", 250, 50, 100, 750, "", function(v) setMyth("dungeonFlightSpeed", v) end), "Tween speed")
+    tip(dCombat:Slider("Hover Height", 12, 1, 5, 30, "studs", function(v) setMyth("dungeonFloatHeight", v) end), "Height above target")
+    tip(dCombat:Slider("Hitbox Size", 50, 5, 10, 120, "", function(v) setMyth("dungeonHitboxSize", v) end), "Expanded hitbox size")
+
+
+    local unloadSec = win:Tab("Unload", "trash"):Section("Danger", "Full")
+    unloadSec:Button("Unload Hub", function()
+        Lib:Dialog({
+            title = "Unload?",
+            text = "Stop all modules?",
+            confirm = "Unload",
+            onConfirm = function()
+                _G.FE_Unloaded = true
+                FishStop(); RepStop(); AuraEnabled = false
+                pcall(dungeonStop)
+                if type(S) == "table" then
+                    for k, v in pairs(S) do
+                        if type(v) == "boolean" then S[k] = false end
+                    end
+                end
+                _pvpAuraEnabled = false
+                if espConn then pcall(function() espConn:Disconnect() end) end
+                pcall(berryUnhook)
+                for _, d in pairs(_G.FruitStatusDrawings) do pcall(function() d:Remove() end) end
+                _G.FruitStatusDrawings = {}
+                for obj, data in pairs(_G.FruitESP) do
+                    pcall(function() data.Text:Remove() end)
+                    _G.FruitESP[obj] = nil
+                end
+                pcall(clearChestEspLabels)
+                pcall(clearBoatEsp)
+                pcall(clearFlowerEsp)
+                pcall(clearMirageEsp)
+                pcall(clearBerryEspLabels)
+                pcall(clearChamBoxes)
+                pcall(clearEspLabels)
+                pcall(mouse1release)
+                pcall(function() Lib:Destroy() end)
+            end,
+        })
+    end):SetRisk()
+    task.spawn(function()
+        while not _G.FE_Unloaded do
+            do
+                local key = getBindKey(K.menu)
+                if not key then key = "f1" end
+                local down = isDown(key) or isDown("f1")
+                if key ~= "f1" then
+                    down = isDown(key)
+                end
+                if down and not lastDown.menu then
+                    menuOpen = not menuOpen
+                    pcall(function()
+                        if WinRef and WinRef.SetOpen then
+                            WinRef:SetOpen(menuOpen)
+                        elseif LibRef and LibRef.SetOpen then
+                            LibRef:SetOpen(menuOpen)
+                        elseif WinRef and WinRef.SetVisible then
+                            WinRef:SetVisible(menuOpen)
+                        end
+                    end)
+                end
+                lastDown.menu = down
+            end
+            do
+                local key = getBindKey(K.fish)
+                local down = key ~= nil and isDown(key)
+                if down and not lastDown.fish then
+                    toggleFeature("fish", function(on) if on then FishStart() else FishStop() end end)
+                end
+                lastDown.fish = down
+            end
+            do
+                local key = getBindKey(K.repair)
+                local down = key ~= nil and isDown(key)
+                if down and not lastDown.repair then
+                    toggleFeature("repair", function(on) if on then RepStart() else RepStop() end end)
+                end
+                lastDown.repair = down
+            end
+            do
+                local key = getBindKey(K.aura)
+                local down = key ~= nil and isDown(key)
+                if down and not lastDown.aura then
+                    toggleFeature("aura", function(on)
+                        AuraEnabled = on
+                        aura.enabled = on == true
+                        updateHUD()
+                    end)
+                end
+                lastDown.aura = down
+            end
+            task.wait(0.03)
+        end
+    end)
+    pcall(function()
+        if Lib.SetKeybindOverlay then Lib:SetKeybindOverlay(false) end
+        if Lib.SetMenuKey then Lib:SetMenuKey("f1") end
+        if WinRef and WinRef.SetMenuKey then WinRef:SetMenuKey("f1") end
+    end)
+    pcall(function()
+        local f1Held = false
+        UIS.InputBegan:Connect(function(input, gp)
+            if input.KeyCode ~= Enum.KeyCode.F1 then return end
+            if f1Held then return end
+            f1Held = true
+            menuOpen = not menuOpen
+            pcall(function()
+                if WinRef then
+                    if WinRef.SetOpen then WinRef:SetOpen(menuOpen)
+                    elseif WinRef.Toggle then WinRef:Toggle()
+                    end
+                end
+                if LibRef and LibRef.SetOpen then LibRef:SetOpen(menuOpen) end
+            end)
+        end)
+        UIS.InputEnded:Connect(function(input)
+            if input.KeyCode == Enum.KeyCode.F1 then f1Held = false end
+        end)
+    end)
+    pcall(function()
+        task.spawn(function()
+            local last = false
+            while not _G.FE_Unloaded do
+                local down = false
+                pcall(function() down = iskeypressed(0x70) end)
+                if not down then
+                    pcall(function() down = UIS:IsKeyDown(Enum.KeyCode.F1) end)
+                end
+                if down and not last then
+                    menuOpen = not menuOpen
+                    pcall(function()
+                        if WinRef and WinRef.SetOpen then WinRef:SetOpen(menuOpen) end
+                    end)
+                end
+                last = down
+                task.wait(0.03)
+            end
+        end)
+    end)
+    pcall(function() Lib:Notify("BF Hub", "Loaded", 3, "success") end)
+end)

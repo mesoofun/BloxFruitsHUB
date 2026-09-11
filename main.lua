@@ -51,6 +51,9 @@ local function feEnabled(id)
 end
 local VK = {}
 for i=1,12 do VK["f"..i] = 0x6F+i end
+VK["f1"]=0x70;  VK["f2"]=0x71;  VK["f3"]=0x72;  VK["f4"]=0x73
+VK["f5"]=0x74;  VK["f6"]=0x75;  VK["f7"]=0x76;  VK["f8"]=0x77
+VK["f9"]=0x78;  VK["f10"]=0x79; VK["f11"]=0x7A; VK["f12"]=0x7B
 for i=0,25 do VK[string.char(97+i)] = 0x41+i end
 for i=0,9 do VK[tostring(i)] = 0x30+i end
 VK.space=0x20; VK.tab=0x09; VK.lshift=0xA0; VK.rshift=0xA1; VK.shift=0x10
@@ -83,17 +86,22 @@ end
 local function isDown(key)
     key = normKey(key)
     if not key then return false end
-    local code = VK[key]
-    if code then
-        local d=false
-        pcall(function() d=iskeypressed(code) end)
-        if d then return true end
-    end
+
     local ek = ENUM_KEY[key]
     if ek then
-        local ok,d = pcall(function() return UIS:IsKeyDown(ek) end)
+        local ok, d = pcall(function() return UIS:IsKeyDown(ek) end)
         if ok and d then return true end
     end
+
+    local code = VK[key]
+    if code then
+        local d = false
+        pcall(function() d = iskeypressed(code) end)
+        if d then return true end
+    end
+
+    return false
+end
     return false
 end
 local function isMouseBind(raw)

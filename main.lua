@@ -83,10 +83,23 @@ local function normKey(k)
     end
     return k
 end
-local function isDown(key)
-    key = normKey(key)
-    if not key then return false end
+local FKEYS = {
+    f1=Enum.KeyCode.F1, f2=Enum.KeyCode.F2, f3=Enum.KeyCode.F3, f4=Enum.KeyCode.F4,
+    f5=Enum.KeyCode.F5, f6=Enum.KeyCode.F6, f7=Enum.KeyCode.F7, f8=Enum.KeyCode.F8,
+    f9=Enum.KeyCode.F9, f10=Enum.KeyCode.F10, f11=Enum.KeyCode.F11, f12=Enum.KeyCode.F12,
+}
 
+local function isDown(key)
+    if not key then return false end
+    key = string.lower(tostring(key)):gsub("%s+", "")
+
+    -- Для F1-F12 используем только Enum.KeyCode (без VK — они глючат)
+    if FKEYS[key] then
+        local ok, d = pcall(function() return UIS:IsKeyDown(FKEYS[key]) end)
+        return ok and d == true
+    end
+
+    -- Остальные клавиши — через свою логику
     local ek = ENUM_KEY[key]
     if ek then
         local ok, d = pcall(function() return UIS:IsKeyDown(ek) end)
@@ -101,10 +114,7 @@ local function isDown(key)
     end
 
     return false
-end
-    return false
-end
-local function isMouseBind(raw)
+endlocal function isMouseBind(raw)
     if raw == nil then return false end
     local s = string.lower(tostring(raw)):gsub("%s+", "")
     if s == "" or s == "nil" or s == "none" then return false end

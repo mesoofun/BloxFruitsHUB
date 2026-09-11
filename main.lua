@@ -5335,27 +5335,6 @@ end)
     task.spawn(function()
         while not _G.FE_Unloaded do
             do
-                local key = getBindKey(K.menu)
-                if not key then key = "f1" end
-                local down = isDown(key) or isDown("f1")
-                if key ~= "f1" then
-                    down = isDown(key)
-                end
-                if down and not lastDown.menu then
-                    menuOpen = not menuOpen
-                    pcall(function()
-                        if WinRef and WinRef.SetOpen then
-                            WinRef:SetOpen(menuOpen)
-                        elseif LibRef and LibRef.SetOpen then
-                            LibRef:SetOpen(menuOpen)
-                        elseif WinRef and WinRef.SetVisible then
-                            WinRef:SetVisible(menuOpen)
-                        end
-                    end)
-                end
-                lastDown.menu = down
-            end
-            do
                 local key = getBindKey(K.fish)
                 local down = key ~= nil and isDown(key)
                 if down and not lastDown.fish then

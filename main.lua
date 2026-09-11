@@ -50,9 +50,6 @@ local function feEnabled(id)
 end
 local VK = {}
 for i=1,12 do VK["f"..i] = 0x6F+i end
-VK["f1"]=0x70;  VK["f2"]=0x71;  VK["f3"]=0x72;  VK["f4"]=0x73
-VK["f5"]=0x74;  VK["f6"]=0x75;  VK["f7"]=0x76;  VK["f8"]=0x77
-VK["f9"]=0x78;  VK["f10"]=0x79; VK["f11"]=0x7A; VK["f12"]=0x7B
 for i=0,25 do VK[string.char(97+i)] = 0x41+i end
 for i=0,9 do VK[tostring(i)] = 0x30+i end
 VK.space=0x20; VK.tab=0x09; VK.lshift=0xA0; VK.rshift=0xA1; VK.shift=0x10
@@ -82,29 +79,20 @@ local function normKey(k)
     end
     return k
 end
-local FKEYS = {
-    f1=Enum.KeyCode.F1, f2=Enum.KeyCode.F2, f3=Enum.KeyCode.F3, f4=Enum.KeyCode.F4,
-    f5=Enum.KeyCode.F5, f6=Enum.KeyCode.F6, f7=Enum.KeyCode.F7, f8=Enum.KeyCode.F8,
-    f9=Enum.KeyCode.F9, f10=Enum.KeyCode.F10, f11=Enum.KeyCode.F11, f12=Enum.KeyCode.F12,
-}
-
 local function isDown(key)
     key = normKey(key)
     if not key then return false end
-
-    local ek = ENUM_KEY[key]
-    if ek then
-        local ok, d = pcall(function() return UIS:IsKeyDown(ek) end)
-        if ok and d then return true end
-    end
-
     local code = VK[key]
     if code then
-        local d = false
-        pcall(function() d = iskeypressed(code) end)
+        local d=false
+        pcall(function() d=iskeypressed(code) end)
         if d then return true end
     end
-
+    local ek = ENUM_KEY[key]
+    if ek then
+        local ok,d = pcall(function() return UIS:IsKeyDown(ek) end)
+        if ok and d then return true end
+    end
     return false
 end
 local function isMouseBind(raw)
@@ -966,7 +954,6 @@ local function berryUnhook()
 end
 
 local function berryHook()
-    -- Matcha: DescendantAdded/Removing often nil — do not Connect
     berryUnhook()
 end
 
@@ -5252,29 +5239,31 @@ task.spawn(function()
     K.repair = repairSec:Keybind("Repair key", nil, function(v)
         if isMouseBind(v) then return end
     end)
-K.menu = nil
-
-pcall(function()
-    local menuSec = win:SettingsSection("Interface", "Left")
-    if menuSec then
-        K.menu = menuSec:Keybind("Menu key", "F1", function(v)
+    win:AddSettingsTab("gear")
+    pcall(function()
+        local menuSec = win:SettingsSection("Menu Bind", "Right")
+        if menuSec then
+            K.menu = menuSec:Keybind("Menu key", "F1", function(v)
+            if isMouseBind(v) then return end
+        end)
+        end
+    end)
+    if not K.menu then
+        local sTab = win:Tab("Settings", "gear")
+        local sSec = sTab:Section("Menu", "Left")
+        K.menu = sSec:Keybind("Menu key", "F1", function(v)
             if isMouseBind(v) then return end
         end)
     end
-end)
-
-if not K.menu then
-    local sTab = win:Tab("Settings", "gear")
-    local sSec = sTab:Section("Interface", "Left")
-    K.menu = sSec:Keybind("Menu key", "F1", function(v)
-        if isMouseBind(v) then return end
+    pcall(function()
+        if K.menu and K.menu.Set then K.menu:Set("F1") end
     end)
-end
-
-pcall(function()
-    if WinRef and WinRef.SetMenuKey then WinRef:SetMenuKey("F1") end
-    if LibRef and LibRef.SetMenuKey then LibRef:SetMenuKey("F1") end
-end)
+    if WinRef and WinRef.SetMenuKey then
+        pcall(function() WinRef:SetMenuKey("f1") end)
+    end
+    if LibRef and LibRef.SetMenuKey then
+        pcall(function() LibRef:SetMenuKey("f1") end)
+    end
     
     local dungeonTab = win:Tab("Dungeon", "map")
     local dMain = dungeonTab:Section("Dungeon Farm", "Left")
@@ -5345,6 +5334,27 @@ end)
     task.spawn(function()
         while not _G.FE_Unloaded do
             do
+                local key = getBindKey(K.menu)
+                if not key then key = "f1" end
+                local down = isDown(key) or isDown("f1")
+                if key ~= "f1" then
+                    down = isDown(key)
+                end
+                if down and not lastDown.menu then
+                    menuOpen = not menuOpen
+                    pcall(function()
+                        if WinRef and WinRef.SetOpen then
+                            WinRef:SetOpen(menuOpen)
+                        elseif LibRef and LibRef.SetOpen then
+                            LibRef:SetOpen(menuOpen)
+                        elseif WinRef and WinRef.SetVisible then
+                            WinRef:SetVisible(menuOpen)
+                        end
+                    end)
+                end
+                lastDown.menu = down
+            end
+            do
                 local key = getBindKey(K.fish)
                 local down = key ~= nil and isDown(key)
                 if down and not lastDown.fish then
@@ -5377,10 +5387,49 @@ end)
     end)
     pcall(function()
         if Lib.SetKeybindOverlay then Lib:SetKeybindOverlay(false) end
-        if Lib.SetMenuKey then Lib:SetMenuKey("F1") end
-        if WinRef and WinRef.SetMenuKey then WinRef:SetMenuKey("F1") end
+        if Lib.SetMenuKey then Lib:SetMenuKey("f1") end
+        if WinRef and WinRef.SetMenuKey then WinRef:SetMenuKey("f1") end
     end)
-
+    pcall(function()
+        local f1Held = false
+        UIS.InputBegan:Connect(function(input, gp)
+            if input.KeyCode ~= Enum.KeyCode.F1 then return end
+            if f1Held then return end
+            f1Held = true
+            menuOpen = not menuOpen
+            pcall(function()
+                if WinRef then
+                    if WinRef.SetOpen then WinRef:SetOpen(menuOpen)
+                    elseif WinRef.Toggle then WinRef:Toggle()
+                    end
+                end
+                if LibRef and LibRef.SetOpen then LibRef:SetOpen(menuOpen) end
+            end)
+        end)
+        UIS.InputEnded:Connect(function(input)
+            if input.KeyCode == Enum.KeyCode.F1 then f1Held = false end
+        end)
+    end)
+    pcall(function()
+        task.spawn(function()
+            local last = false
+            while not _G.FE_Unloaded do
+                local down = false
+                pcall(function() down = iskeypressed(0x70) end)
+                if not down then
+                    pcall(function() down = UIS:IsKeyDown(Enum.KeyCode.F1) end)
+                end
+                if down and not last then
+                    menuOpen = not menuOpen
+                    pcall(function()
+                        if WinRef and WinRef.SetOpen then WinRef:SetOpen(menuOpen) end
+                    end)
+                end
+                last = down
+                task.wait(0.03)
+            end
+        end)
+    end)
     pcall(function() Lib:Notify("BF Hub", "Loaded", 3, "success") end)
 end)
 print("[BF Hub] Loaded")

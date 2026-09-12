@@ -16,11 +16,11 @@ local SEA3_ID_A = 7449423635
 local SEA3_ID_B = 100117331123089
 local currentPlaceId = game.PlaceId
 
-
 local function isSea1() return currentPlaceId == SEA1_ID or currentPlaceId == SEA1_ID_B end
 local function isSea2() return currentPlaceId == SEA2_ID or currentPlaceId == SEA2_ID_B end
 local function isSea3() return currentPlaceId == SEA3_ID_A or currentPlaceId == SEA3_ID_B end
 local SEA_NAMES = {
+    espColors = {},
     [SEA1_ID] = "First Sea", [SEA1_ID_B] = "First Sea",
     [SEA2_ID] = "Second Sea", [SEA2_ID_B] = "Second Sea",
     [SEA3_ID_A] = "Third Sea", [SEA3_ID_B] = "Third Sea",
@@ -56,6 +56,9 @@ VK.space=0x20; VK.tab=0x09; VK.lshift=0xA0; VK.rshift=0xA1; VK.shift=0x10
 VK.lctrl=0xA2; VK.rctrl=0xA3; VK.ctrl=0x11; VK.alt=0x12
 VK.left=0x25; VK.up=0x26; VK.right=0x27; VK.down=0x28
 VK.home=0x24; VK["end"]=0x23; VK.insert=0x2D; VK.delete=0x2E
+local VK_NAME = {}
+for name,code in pairs(VK) do VK_NAME[code]=name end
+for i=1,12 do VK_NAME[0x6F+i]="f"..i end
 local ENUM_KEY = {}
 for i=1,12 do ENUM_KEY["f"..i] = Enum.KeyCode["F"..i] end
 for i=0,25 do
@@ -67,33 +70,19 @@ ENUM_KEY.left=Enum.KeyCode.Left; ENUM_KEY.right=Enum.KeyCode.Right
 ENUM_KEY.up=Enum.KeyCode.Up; ENUM_KEY.down=Enum.KeyCode.Down
 ENUM_KEY.insert=Enum.KeyCode.Insert; ENUM_KEY.delete=Enum.KeyCode.Delete
 ENUM_KEY.home=Enum.KeyCode.Home; ENUM_KEY["end"]=Enum.KeyCode.End
+local BindVK = {fish=nil, repair=nil, aura=nil, menu=0x70}
+local keywas = {}
 local function normKey(k)
     if k==nil then return nil end
     k = string.lower(tostring(k)):gsub("%s+","")
     if k=="" or k=="none" or k=="nil" then return nil end
-    -- LMB / MB1 cannot be a feature bind — treat as unbound (NONE)
+    k = k:gsub("^enum%.keycode%.",""):gsub("^keycode%.","")
     if k=="mb1" or k=="mb" or k=="mouse1" or k=="mousebutton1" or k=="button1"
         or k=="leftclick" or k=="left" or k=="lmb"
         or k:find("mousebutton1", 1, true) or k:find("userinputtype.mousebutton1", 1, true) then
         return nil
     end
     return k
-end
-local function isDown(key)
-    key = normKey(key)
-    if not key then return false end
-    local code = VK[key]
-    if code then
-        local d=false
-        pcall(function() d=iskeypressed(code) end)
-        if d then return true end
-    end
-    local ek = ENUM_KEY[key]
-    if ek then
-        local ok,d = pcall(function() return UIS:IsKeyDown(ek) end)
-        if ok and d then return true end
-    end
-    return false
 end
 local function isMouseBind(raw)
     if raw == nil then return false end
@@ -113,50 +102,107 @@ local function isMouseBind(raw)
 end
 local function forceBindNone(handle)
     if not handle then return end
-    pcall(function()
-        if handle.Set then
-            -- try common empty values so UI shows NONE instead of MB1
-            handle:Set(nil)
-            handle:Set("NONE")
-            handle:Set("None")
-            handle:Set("none")
-            handle:Set("")
+    local function apply()
+        pcall(function()
+            if handle.Set then
+                handle:Set(nil)
+                handle:Set("NONE")
+                handle:Set("None")
+                handle:Set("none")
+                handle:Set("")
+            end
+        end)
+    end
+    apply()
+    task.defer(apply)
+    task.delay(0.05, apply)
+    task.delay(0.15, apply)
+end
+local function toVK(v)
+    if v==nil or v==false then return nil end
+    if isMouseBind(v) then return nil end
+    if type(v)=="number" then
+        if v==0 then return nil end
+        return v
+    end
+    if typeof and typeof(v)=="EnumItem" then
+        local n = normKey(v.Name)
+        if n and VK[n] then return VK[n] end
+        if n and #n>=2 and n:sub(1,1)=="f" then
+            local num = tonumber(n:sub(2))
+            if num and num>=1 and num<=12 then return 0x6F+num end
         end
-    end)
+        return nil
+    end
+    if type(v)=="table" then
+        local raw = v.Key or v.key or v.KeyCode or v.keycode or v.Code or v.code or v[1] or v.Value or v.value or v.Name or v.Enum or v.UserInputType
+        if raw ~= nil and raw ~= v then return toVK(raw) end
+    end
+    local s = normKey(v)
+    if not s then return nil end
+    if VK[s] then return VK[s] end
+    if #s>=2 and s:sub(1,1)=="f" then
+        local num = tonumber(s:sub(2))
+        if num and num>=1 and num<=12 then return 0x6F+num end
+    end
+    return nil
+end
+local function setBindVK(id, v)
+    if isMouseBind(v) then BindVK[id]=nil; return nil end
+    local code = toVK(v)
+    BindVK[id] = code
+    return code
+end
+local function vkDown(code)
+    if not code then return false end
+    local d=false
+    pcall(function() d=iskeypressed(code) end)
+    return d==true
+end
+local function vkEdge(code)
+    if not code then return false end
+    local down = vkDown(code)
+    local edge = down and not keywas[code]
+    keywas[code] = down
+    return edge
+end
+local function isDown(key)
+    return vkDown(toVK(key))
 end
 local function getBindKey(handle)
     if not handle then return nil end
     local ok,v = pcall(function() return handle:Get() end)
     if not ok or v==nil or v==false then return nil end
-    if type(v)=="number" and v==0 then return nil end
-    local raw = v
-    if type(v)=="table" then
-        raw = v.Key or v.key or v[1] or v.Value or v.value or v.Name or v.Enum or v.UserInputType
+    if isMouseBind(v) then forceBindNone(handle); return nil end
+    local code = toVK(v)
+    if not code then return nil end
+    return VK_NAME[code] or normKey(v)
+end
+local function syncBindFromHandle(id, handle)
+    if not handle then return BindVK[id] end
+    local ok,v = pcall(function() return handle:Get() end)
+    if ok and v~=nil and v~=false then
+        if isMouseBind(v) then
+            forceBindNone(handle)
+            BindVK[id]=nil
+            return nil
+        end
+        local code = toVK(v)
+        if code then
+            BindVK[id]=code
+            return code
+        end
     end
-    if isMouseBind(raw) then
-        forceBindNone(handle)
-        return nil
-    end
-    local k = normKey(raw)
-    if k == nil and raw ~= nil and isMouseBind(raw) then
-        forceBindNone(handle)
-    end
-    return k
+    return BindVK[id]
 end
 local function sanitizeKeybindCallback(cb)
     return function(v)
-        if isMouseBind(v) then
-            return
-        end
-        if type(v) == "table" then
-            local raw = v.Key or v.key or v[1] or v.Value or v.value or v.Name
-            if isMouseBind(raw) then return end
-        end
+        if isMouseBind(v) then return end
         if cb then pcall(cb, v) end
     end
 end
+
 local K, H = {}, {}
--- Periodically clear MB1 from keybind UI so display stays NONE
 task.spawn(function()
     while not _G.FE_Unloaded do
         for _, handle in pairs(K) do
@@ -186,8 +232,12 @@ end
 local function setMyth(flag, value)
     if type(S)=="table" then S[flag]=value end
 end
-local FishConfig = { CastTarget=0.96, DeadZone=0.35, BiteTimeout=20, ResetDelay=2 }
-local FishState = {
+local FishConfig, FishState, FishStart, FishStop, RepStart, RepStop
+local AuraEnabled, aura, updateHUD, aura_ensureRemotes, AuraConfig
+local AuraTargetCount, AuraFirstTargetName, hudText
+do
+FishConfig = { CastTarget=0.96, DeadZone=0.35, BiteTimeout=20, ResetDelay=2 }
+FishState = {
     Running=false, IsHolding=false, CastComplete=false, FishDetected=false,
     ReelingStarted=false, FishCaught=0, LastCastTime=0, BiteClickTime=0,
 }
@@ -313,13 +363,13 @@ local function FishMainLoop()
         end
     end
 end
-local function FishStart()
+FishStart = function()
     if FishState.Running then return end
     FishState.Running=true; FishState.CastComplete=false; FishState.FishDetected=false
     FishState.ReelingStarted=false; FishState.LastCastTime=0; FishState.BiteClickTime=0
     task.spawn(FishMainLoop)
 end
-local function FishStop()
+FishStop = function()
     FishState.Running=false; FishRelease()
     print("[AutoFish] Stopped. Total:", FishState.FishCaught)
 end
@@ -360,14 +410,14 @@ local function RepMainLoop()
     end
     RepRelease()
 end
-local function RepStart()
+RepStart = function()
     if RepState.Running then return end
     RepState.Running=true; task.spawn(RepMainLoop)
 end
-local function RepStop()
+RepStop = function()
     RepState.Running=false; RepRelease()
 end
-local AuraConfig = {
+AuraConfig = {
     MAX_DISTANCE = 100,
     MIN_DISTANCE = 1,
     SESSION_ID = "32501259",
@@ -384,10 +434,10 @@ aura = {
     regHit = nil,
 }
 
-local AuraTargetCount = 0
-local AuraFirstTargetName = "None"
+AuraTargetCount = 0
+AuraFirstTargetName = "None"
 
-local hudText = Drawing.new("Text")
+hudText = Drawing.new("Text")
 hudText.Size = 18
 pcall(function() hudText.Font = Drawing.Fonts.SystemBold end)
 hudText.Color = Color3.fromRGB(255, 255, 255)
@@ -397,7 +447,7 @@ hudText.Position = Vector2.new(10, 50)
 hudText.Visible = false
 hudText.Text = "Targets: 0 | OFF"
 
-local function updateHUD()
+updateHUD = function()
     local on = aura.enabled == true
     local ok = pcall(function()
         hudText.Text = string.format("Targets: %d (%s) | %s", aura.targetCount or 0, tostring(aura.firstName or "None"), on and "ON" or "OFF")
@@ -462,7 +512,7 @@ local function aura_dumpNetOnce()
     end
 end
 
-local function aura_ensureRemotes()
+aura_ensureRemotes = function()
     if aura.regAtk and aura.regHit and aura.regAtk.Parent and aura.regHit.Parent then
         return true
     end
@@ -641,25 +691,33 @@ local ThirdSeaIslands={
 }
 local IslandsBySea={[SEA1_ID]=FirstSeaIslands,[SEA1_ID_B]=FirstSeaIslands,[SEA2_ID]=SecondSeaIslands,[SEA2_ID_B]=SecondSeaIslands,[SEA3_ID_A]=ThirdSeaIslands,[SEA3_ID_B]=ThirdSeaIslands}
 local Islands=IslandsBySea[currentPlaceId]
-if not Islands then
+if not Islands or #Islands==0 then
     if isSea3() then Islands=ThirdSeaIslands
     elseif isSea2() then Islands=SecondSeaIslands
     elseif isSea1() then Islands=FirstSeaIslands
-    else
-        Islands={}
-        for _,list in pairs(IslandsBySea) do for _,isl in ipairs(list) do table.insert(Islands,isl) end end
-    end
+    else Islands={} end
 end
 local function getIslandName(pos)
-    if not pos or not Islands or #Islands==0 then return "Unknown" end
+    if not pos then return "Unknown" end
+    local list = Islands
+    if not list or #list==0 then
+        if isSea3() then list=ThirdSeaIslands
+        elseif isSea2() then list=SecondSeaIslands
+        elseif isSea1() then list=FirstSeaIslands
+        else list={} end
+    end
+    if not list or #list==0 then return "Unknown" end
     local closest,minDist="Unknown",math.huge
     local p=Vector3.new(pos.X,0,pos.Z)
-    for _,island in ipairs(Islands) do
-        local ip=Vector3.new(island.Position.X,0,island.Position.Z)
-        local d=(p-ip).Magnitude
-        if d<minDist then minDist=d; closest=island.Name end
+    for _,island in ipairs(list) do
+        local ipos = island.Position or island.pos
+        if ipos then
+            local ip=Vector3.new(ipos.X,0,ipos.Z)
+            local d=(p-ip).Magnitude
+            if d<minDist then minDist=d; closest=island.Name or island.name or "Island" end
+        end
     end
-    if minDist>25000 then return "Sea" end
+    if minDist>18000 then return "Sea" end
     return closest
 end
 _G.FruitStatusDrawings=_G.FruitStatusDrawings or {}
@@ -760,36 +818,43 @@ local function updateESP()
         return
     end
     local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
-    for obj, data in pairs(_G.BerryESP or {}) do pcall(function() if data.Text then data.Text:Remove() end end) _G.BerryESP[obj]=nil end
-                for obj, data in pairs(_G.FruitESP) do
+    local fruitColor = Color3.fromRGB(0, 255, 120)
+    if type(S)=="table" and type(S.espColors)=="table" and S.espColors.fruit then
+        fruitColor = S.espColors.fruit
+    end
+    for obj, data in pairs(_G.FruitESP) do
         if not obj or not obj.Parent or not data.Handle or not data.Handle.Parent then
             removeESP(obj)
-            continue
-        end
-        local worldPos = data.Handle.Position + Vector3.new(0, 3.5, 0)
-        local ok, r1, r2 = pcall(WorldToScreen, worldPos)
-        if ok and r1 then
-            local x, y, onScreen
-            if type(r1) == "table" then
-                x, y, onScreen = r1.X, r1.Y, r1.OnScreen
-            else
-                x, y = r1.X, r1.Y
-                onScreen = r2
-            end
-            if onScreen == nil then onScreen = true end
-            if onScreen and x and y then
-                local distText = ""
-                if root then
-                    distText = " (" .. math.floor((root.Position - data.Handle.Position).Magnitude / 10) .. "m)"
+        else
+            local worldPos = data.Handle.Position + Vector3.new(0, 3.5, 0)
+            local ok, r1, r2 = pcall(WorldToScreen, worldPos)
+            if ok and r1 then
+                local x, y, onScreen
+                if typeof and typeof(r1) == "Vector2" then
+                    x, y = r1.X, r1.Y
+                    onScreen = r2
+                elseif type(r1) == "table" then
+                    x, y, onScreen = r1.X, r1.Y, r1.OnScreen
+                else
+                    x, y = r1.X, r1.Y
+                    onScreen = r2
                 end
-                data.Text.Text = tostring(data.Name or "Fruit") .. distText
-                data.Text.Position = Vector2.new(x, y)
-                data.Text.Visible = true
+                if onScreen == nil then onScreen = true end
+                if onScreen and x and y then
+                    local distText = ""
+                    if root then
+                        distText = " (" .. math.floor((root.Position - data.Handle.Position).Magnitude / 10) .. "m)"
+                    end
+                    data.Text.Text = tostring(data.Name or "Fruit") .. distText
+                    data.Text.Position = Vector2.new(x, y)
+                    data.Text.Color = fruitColor
+                    data.Text.Visible = true
+                else
+                    data.Text.Visible = false
+                end
             else
                 data.Text.Visible = false
             end
-        else
-            data.Text.Visible = false
         end
     end
 end
@@ -881,7 +946,7 @@ end
 
 local function rebuildBerryCache()
     local found = {}
-    for obj, data in pairs(_G.BerryESP) do
+    for obj, data in pairs(_G.BerryESP or {}) do
         if obj and obj.Parent then
             local pos = berryGetPos(obj)
             if pos then
@@ -894,6 +959,22 @@ local function rebuildBerryCache()
             end
         else
             removeBerryESP(obj)
+        end
+    end
+    if type(S)=="table" and type(S.berryEspLabels)=="table" then
+        for _, entry in pairs(S.berryEspLabels) do
+            local part = entry and entry.part
+            if part and part.Parent then
+                local pos = berryGetPos(part) or (part:IsA("BasePart") and part.Position)
+                if pos then
+                    found[#found + 1] = {
+                        Object = part,
+                        Position = pos,
+                        Name = entry.name or "Berry",
+                        Island = getIslandName(pos),
+                    }
+                end
+            end
         end
     end
     berryCache = found
@@ -909,7 +990,6 @@ local function tryRegisterBerry(obj)
     local bname = sphereToBerry[obj.Name]
     if not bname then return end
     if not (obj:IsA("BasePart") or obj:IsA("MeshPart") or obj:IsA("Part") or obj:IsA("UnionOperation")) then
-        -- still allow if named sphere under bush
         if not obj:IsA("Model") and not obj:IsA("Folder") then
             if typeof(obj) ~= "Instance" then return end
         end
@@ -918,30 +998,8 @@ local function tryRegisterBerry(obj)
 end
 
 local function berryFullScan()
-    _berryLastFullScan = os.clock()
-    local current = {}
-    local ok, descendants = pcall(function()
-        return Workspace:GetDescendants()
-    end)
-    if not ok or type(descendants) ~= "table" then
-        return
-    end
-    local step = 0
-    for _, obj in ipairs(descendants) do
-        local bname = sphereToBerry[obj.Name]
-        if bname then
-            current[obj] = true
-            createBerryESP(obj, bname)
-        end
-        step = step + 1
-        if step % 1500 == 0 then
-            task.wait()
-        end
-    end
-    for obj in pairs(_G.BerryESP) do
-        if not current[obj] then removeBerryESP(obj) end
-    end
-    rebuildBerryCache()
+    if not feEnabled("berryEsp") and not (S and S.berryEsp) then return end
+    pcall(buildBerryEspLabels)
 end
 
 local function berryUnhook()
@@ -958,16 +1016,13 @@ local function berryHook()
 end
 
 local function refreshBerries(force)
-    if not feEnabled("berryEsp") then
-        if next(_G.BerryESP) then clearAllBerryESP() end
+    if not feEnabled("berryEsp") and not (S and S.berryEsp) then
+        pcall(clearBerryEspLabels)
+        pcall(clearAllBerryESP)
         return
     end
-    local now = os.clock()
-    if force or _berryLastFullScan == 0 or (now - _berryLastFullScan) >= BERRY_FULLSCAN_SEC then
-        berryFullScan()
-    else
-        rebuildBerryCache()
-    end
+    if not (S and S.berryEsp) and not feEnabled("berryEsp") then return end
+    pcall(buildBerryEspLabels)
 end
 
 local function updateBerryESP()
@@ -1024,7 +1079,8 @@ local function teleportNearestBerry()
     if not root then return end
     rebuildBerryCache()
     if #berryCache == 0 then
-                berryFullScan()
+        berryFullScan()
+        rebuildBerryCache()
     end
     local best, bestDist = nil, math.huge
     for _, item in ipairs(berryCache) do
@@ -1033,15 +1089,10 @@ local function teleportNearestBerry()
             if d < bestDist then bestDist = d; best = item end
         end
     end
-    if not best or not best.Position then
-                return
-    end
+    if not best or not best.Position then return end
     local dest = best.Position + Vector3.new(0, 5, 0)
-    for _ = 1, 3 do
-        root.CFrame = CFrame.new(dest)
-        task.wait(0.08)
-    end
-    end
+    tweenTo(root, dest, S.FRUIT_SPEED or 210, function() return true end)
+end
 
 local dealerObject=nil
 local function refreshDealer()
@@ -1115,26 +1166,40 @@ task.spawn(function()
         
         local berryShown = 0
         if feEnabled("berryEsp") then
-            local bnames = {}
-            for _, item in ipairs(berryCache) do
-                bnames[#bnames+1] = item.Name .. " (" .. item.Island .. ")"
+            if (os.clock() - (_berryLastFullScan or 0)) > 1.5 then
+                _berryLastFullScan = os.clock()
+                pcall(rebuildBerryCache)
             end
-            berryShown = math.min(#bnames, BERRY_LINES)
+            local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+            local blist = {}
+            for _, item in ipairs(berryCache or {}) do
+                local meters = "--"
+                if root and item.Position then
+                    meters = tostring(math.floor((root.Position - item.Position).Magnitude / 10)) .. "m"
+                end
+                blist[#blist+1] = {
+                    text = tostring(item.Name or "Berry") .. " (" .. tostring(item.Island or "?") .. ") [" .. meters .. "]",
+                    dist = (root and item.Position) and (root.Position - item.Position).Magnitude or math.huge,
+                }
+            end
+            table.sort(blist, function(a,b) return a.dist < b.dist end)
+            berryShown = math.min(#blist, BERRY_LINES)
             for i = 1, BERRY_LINES do
                 if i <= berryShown then
-                    berryLines[i].Text = ((i == 1) and "Berries: " or "- ") .. bnames[i]
-                    berryLines[i].Color = Color3.fromRGB(255, 90, 90)
-                    berryLines[i].Visible = true
+                    berryLines[i].Text = ((i == 1) and "Berries: " or "- ") .. blist[i].text
+                    berryLines[i].Color = Color3.fromRGB(255, 90, 180)
+                    berryLines[i].Visible = show
                 else
                     berryLines[i].Text = ""
+                    berryLines[i].Visible = false
                 end
             end
-            if #bnames == 0 then
+            if #blist == 0 then
                 berryLines[1].Text = "Berries: NONE"
                 berryLines[1].Color = Color3.fromRGB(255, 90, 90)
-                berryLines[1].Visible = true
+                berryLines[1].Visible = show
                 berryShown = 1
-            elseif #bnames > BERRY_LINES then
+            elseif #blist > BERRY_LINES then
                 berryLines[BERRY_LINES].Text = berryLines[BERRY_LINES].Text .. " ..."
             end
         else
@@ -1153,6 +1218,7 @@ end)
 _pvpAuraEnabled = false
 _pvpAuraAltPart = false
 _pvpAuraMaxDist = 100
+end
 function notify(msg, title, dur)
     pcall(function()
         if LibRef and LibRef.Notify then
@@ -1259,7 +1325,7 @@ S = {
     dungeonAutoDoor = true,
     dungeonHitbox = false,
     dungeonM1 = true,
-    dungeonBuso = true,
+    dungeonBuso = false,
     dungeonHybrid = true,
     dungeonAutoEquip = true,
     dungeonWeapon = "Melee",
@@ -1725,19 +1791,40 @@ function buildEspLabels()
     end
 end
 function tweenTo(hrp, targetPos, speed, checkFn)
-    local startPos=hrp.Position
+    if not hrp or not targetPos then return false end
+    local okStart, startPos = pcall(function() return hrp.Position end)
+    if not okStart or not startPos then return false end
     local dx=targetPos.X-startPos.X; local dy=targetPos.Y-startPos.Y; local dz=targetPos.Z-startPos.Z
     local distance=math.sqrt(dx*dx+dy*dy+dz*dz)
-    if distance<0.1 then return end
-    local duration=distance/speed; local startTime=os.clock()
+    if distance<1 then
+        pcall(function()
+            hrp.CFrame = CFrame.new(targetPos)
+            hrp.Position = targetPos
+            hrp.AssemblyLinearVelocity = Vector3.new(0,0,0)
+            hrp.Velocity = Vector3.new(0,0,0)
+        end)
+        return true
+    end
+    speed = tonumber(speed) or 250
+    if speed < 50 then speed = 50 end
+    local duration = distance / speed
+    if duration < 0.05 then duration = 0.05 end
+    local startTime = os.clock()
     while true do
-        if not checkFn() then return end
-        local alpha=math.min((os.clock()-startTime)/duration,1)
-        hrp.Position=Vector3.new(startPos.X+dx*alpha, startPos.Y+dy*alpha, startPos.Z+dz*alpha)
-        hrp.Velocity=Vector3.new(0,0,0); hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
-        if alpha>=1 then break end
+        if checkFn and not checkFn() then return false end
+        if not hrp or not hrp.Parent then return false end
+        local alpha = math.min((os.clock() - startTime) / duration, 1)
+        local pos = Vector3.new(startPos.X+dx*alpha, startPos.Y+dy*alpha, startPos.Z+dz*alpha)
+        pcall(function()
+            hrp.CFrame = CFrame.new(pos)
+            hrp.Position = pos
+            hrp.AssemblyLinearVelocity = Vector3.new(0,0,0)
+            hrp.Velocity = Vector3.new(0,0,0)
+        end)
+        if alpha >= 1 then break end
         task.wait()
     end
+    return true
 end
 function isAlive(model)
     if not model or not model.Parent then return false end
@@ -1745,82 +1832,177 @@ function isAlive(model)
     if hum and hum.Health<=0 then return false end
     return true
 end
-function farmAttack(hrp, checkFn, enemyName)
-    local folder=game.Workspace:FindFirstChild("Enemies")
+
+function hardLockNpcCFrame(hrp, targetPos)
+    if not hrp or not targetPos then return end
+    pcall(function()
+        local currentCFrame = hrp.CFrame
+        local rx, ry, rz = currentCFrame:ToEulerAnglesXYZ()
+        hrp.CFrame = CFrame.new(targetPos.X, targetPos.Y, targetPos.Z) * CFrame.Angles(rx, ry, rz)
+    end)
+    pcall(function()
+        local velocity = hrp.Velocity
+        if velocity then
+            hrp.Velocity = Vector3.new(velocity.X, 0, velocity.Z)
+        end
+    end)
+    pcall(function()
+        local assemblyVelocity = hrp.AssemblyLinearVelocity
+        if assemblyVelocity then
+            hrp.AssemblyLinearVelocity = Vector3.new(assemblyVelocity.X, 0, assemblyVelocity.Z)
+        end
+    end)
+end
+
+function getNormalFarmOffsets()
+    local sanguine = false
+    local backpack = LocalPlayer:FindFirstChild("Backpack")
+    if backpack and backpack:FindFirstChild("Sanguine Art") then sanguine = true end
+    local char = LocalPlayer.Character
+    if char and char:FindFirstChild("Sanguine Art") then sanguine = true end
+    if S.customOffset then
+        return tonumber(S.customOffsetX) or 0,
+               tonumber(S.customOffsetY) or 23,
+               tonumber(S.customOffsetZ) or 0
+    end
+    if sanguine then return 0, 23, 10 end
+    return 0, 23, 0
+end
+
+function nearestMatchingEnemy(hrp, names)
+    local folder = Workspace:FindFirstChild("Enemies")
+    if not folder or not hrp or not names then return nil end
+    local allowed = {}
+    local fuzzy = {}
+    for _, name in ipairs(names) do
+        allowed[name] = true
+        fuzzy[#fuzzy+1] = string.lower(tostring(name))
+    end
+    local okPlayer, playerPos = pcall(function() return hrp.Position end)
+    if not okPlayer or not playerPos then return nil end
+    local best, bestDistance = nil, math.huge
+    for _, enemy in pairs(folder:GetChildren()) do
+        local okName, name = pcall(function() return enemy.Name end)
+        if okName and isAlive(enemy) then
+            local match = allowed[name] == true
+            if not match then
+                local ln = string.lower(tostring(name))
+                for _, f in ipairs(fuzzy) do
+                    if ln == f or string.find(ln, f, 1, true) or string.find(f, ln, 1, true) then
+                        match = true
+                        break
+                    end
+                end
+            end
+            if match then
+                local root = enemy:FindFirstChild("HumanoidRootPart") or enemy:FindFirstChildOfClass("BasePart")
+                local okPos, pos = pcall(function() return root and root.Position end)
+                if okPos and pos then
+                    local dx = pos.X - playerPos.X
+                    local dy = pos.Y - playerPos.Y
+                    local dz = pos.Z - playerPos.Z
+                    local distance = dx*dx + dy*dy + dz*dz
+                    if distance < bestDistance then
+                        best, bestDistance = name, distance
+                    end
+                end
+            end
+        end
+    end
+    return best
+end
+
+function farmAttack(hrp, checkFn, enemyName, useTween, maxDistance, attackFn, attackDelay)
+    local attackRange = maxDistance or 5000
+    local folder = Workspace:FindFirstChild("Enemies")
     if not folder then return end
-    local nearest, bestDist=nil, math.huge
+    local nearest, bestDist = nil, math.huge
     for _, model in pairs(folder:GetChildren()) do
         if model:IsA("Model") and isAlive(model) then
-            if not enemyName or model.Name==enemyName then
-                local root=model:FindFirstChild("HumanoidRootPart") or model:FindFirstChildOfClass("BasePart")
+            if not enemyName or model.Name == enemyName then
+                local root = model:FindFirstChild("HumanoidRootPart") or model:FindFirstChildOfClass("BasePart")
                 if root then
-                    local dx=root.Position.X-hrp.Position.X
-                    local dy=root.Position.Y-hrp.Position.Y
-                    local dz=root.Position.Z-hrp.Position.Z
-                    local d=math.sqrt(dx*dx+dy*dy+dz*dz)
-                    if d<bestDist and d<=5000 then bestDist=d; nearest=model end
+                    local dx = root.Position.X - hrp.Position.X
+                    local dy = root.Position.Y - hrp.Position.Y
+                    local dz = root.Position.Z - hrp.Position.Z
+                    local d = math.sqrt(dx*dx + dy*dy + dz*dz)
+                    if d < bestDist and d <= attackRange then
+                        bestDist = d
+                        nearest = model
+                    end
                 end
             end
         end
     end
     if not nearest then return end
     task.spawn(function()
-        while checkFn() and isAlive(nearest) do
-            local eh=nearest:FindFirstChild("HumanoidRootPart")
-            local hd=nearest:FindFirstChild("Head")
-            if eh then eh.CanCollide=false end
-            if hd then hd.CanCollide=false end
-            task.wait()
+        local expandedHead = nearest:FindFirstChild("Head")
+        local originalSize = nil
+        local originalCanCollide = nil
+        if expandedHead then
+            pcall(function()
+                originalSize = expandedHead.Size
+                originalCanCollide = expandedHead.CanCollide
+            end)
         end
-    end)
-    task.spawn(function()
         while checkFn() and isAlive(nearest) do
             if not S.remoteMode then
-                local head=nearest:FindFirstChild("Head")
-                if head then head.Size=Vector3.new(50,50,50) end
+                local size = S.bigHitbox and 200 or 50
+                expandedHead = nearest:FindFirstChild("Head") or expandedHead
+                if expandedHead then
+                    expandedHead.Size = Vector3.new(size, size, size)
+                    expandedHead.CanCollide = false
+                end
             end
             task.wait()
         end
-    end)
-    local lastClick=0
-    local function hasSanguineArt()
-        local bp=LocalPlayer:FindFirstChild("Backpack")
-        if bp then for _,i in pairs(bp:GetChildren()) do if i.Name=="Sanguine Art" then return true end end end
-        local char=LocalPlayer.Character
-        if char then for _,i in pairs(char:GetChildren()) do if i.Name=="Sanguine Art" then return true end end end
-        return false
-    end
-    while checkFn() and isAlive(nearest) do
-        local tr=nearest:FindFirstChild("HumanoidRootPart") or nearest:FindFirstChildOfClass("BasePart")
-        if tr then
-            local xOffset=hasSanguineArt() and 15 or 0
-            local ox = S.customOffset and S.customOffsetX or xOffset
-            local oy = S.customOffset and S.customOffsetY or 23
-            local oz = S.customOffset and S.customOffsetZ or 0
-            hrp.Position=Vector3.new(tr.Position.X+ox, tr.Position.Y+oy, tr.Position.Z+oz)
-            hrp.Velocity=Vector3.new(0,0,0); hrp.AssemblyLinearVelocity=Vector3.new(0,0,0)
+        if expandedHead and expandedHead.Parent and originalSize then
+            pcall(function()
+                expandedHead.Size = originalSize
+                if originalCanCollide ~= nil then expandedHead.CanCollide = originalCanCollide end
+            end)
         end
-        local now=os.clock()
-        if now-lastClick>=0.06 then mouse1click(); lastClick=now end
+    end)
+    local lastClick = 0
+    local hitDelay = attackDelay or 0.06
+    local reachedNpc = false
+    while checkFn() and isAlive(nearest) do
+        local tr = nearest:FindFirstChild("HumanoidRootPart") or nearest:FindFirstChildOfClass("BasePart")
+        if tr then
+            local ox, oy, oz = getNormalFarmOffsets()
+            local targetPos = Vector3.new(tr.Position.X + ox, tr.Position.Y + oy, tr.Position.Z + oz)
+            if useTween then
+                if not reachedNpc then
+                    tweenTo(hrp, targetPos, S.FARM_SPEED or 250, function() return checkFn() and isAlive(nearest) end)
+                    reachedNpc = true
+                else
+                    local dist = (hrp.Position - targetPos).Magnitude
+                    if dist > 8 then
+                        tweenTo(hrp, targetPos, S.FARM_SPEED or 250, function() return checkFn() and isAlive(nearest) end)
+                    else
+                        pcall(function()
+                            hrp.CFrame = CFrame.new(targetPos)
+                            hrp.AssemblyLinearVelocity = Vector3.new(0,0,0)
+                        end)
+                    end
+                end
+            else
+                tweenTo(hrp, targetPos, S.FARM_SPEED or 250, function() return checkFn() and isAlive(nearest) end)
+            end
+        end
+        local now = os.clock()
+        if now - lastClick >= hitDelay then
+            lastClick = now
+            if attackFn then
+                task.spawn(attackFn)
+            else
+                pcall(mouse1click)
+            end
+        end
         task.wait()
     end
 end
-local REMOTE_SESSION_ID = "32501259"
-local REMOTE_MAX_DIST   = 60
-local _remoteNet        = nil
-local _remoteRegAtk     = nil
-local _remoteRegHit     = nil
-local _lastRemoteFire   = 0
-local function ensureRemotes()
-    if _remoteRegAtk and _remoteRegHit then return true end
-    local net = game:GetService("ReplicatedStorage"):FindFirstChild("Modules")
-    if net then net = net:FindFirstChild("Net") end
-    if not net then return false end
-    _remoteNet    = net
-    _remoteRegAtk = net:FindFirstChild("RE/RegisterAttack")
-    _remoteRegHit = net:FindFirstChild("RE/RegisterHit")
-    return _remoteRegAtk ~= nil and _remoteRegHit ~= nil
-end
+
 function remoteAttack()
     if not ensureRemotes() then return end
     local char = LocalPlayer.Character
@@ -1868,7 +2050,7 @@ end
 task.spawn(function()
     local lastChestCount=0
     while true do
-        if S.autoFarming then
+        if S.autoFarmChest then
             local ChestModels=game.Workspace:FindFirstChild("ChestModels")
             if ChestModels then
                 local children=ChestModels:GetChildren()
@@ -1896,7 +2078,7 @@ task.spawn(function()
                             notify("Going to "..model.Name.." chest","laced.club",2)
                             local char=LocalPlayer.Character
                             local hrp=char and char:FindFirstChild("HumanoidRootPart")
-                            if hrp then tweenTo(hrp, Vector3.new(tp.Position.X,tp.Position.Y+3,tp.Position.Z), S.CHEST_SPEED, function() return S.autoFarming end) end
+                            if hrp then tweenTo(hrp, Vector3.new(tp.Position.X,tp.Position.Y+3,tp.Position.Z), S.CHEST_SPEED, function() return S.autoFarmChest end) end
                             S.chestIndex=S.chestIndex+1
                         else S.chestIndex=S.chestIndex+1 end
                     end
@@ -1907,30 +2089,91 @@ task.spawn(function()
     end
 end)
 task.spawn(function()
-    while true do
-        if S.autoFruits then
-            local char=LocalPlayer.Character
-            local hrp=char and char:FindFirstChild("HumanoidRootPart")
-            if hrp then
-                local bestPart, bestDist=nil, math.huge
-                for _, obj in pairs(game.Workspace:GetChildren()) do
-                    local ff=obj:FindFirstChild("Fruit")
-                    if ff then
-                        local fp=ff:FindFirstChild("Fruit")
-                        if fp and fp:IsA("BasePart") then
-                            local dx=fp.Position.X-hrp.Position.X; local dy=fp.Position.Y-hrp.Position.Y; local dz=fp.Position.Z-hrp.Position.Z
-                            local dist=math.sqrt(dx*dx+dy*dy+dz*dz)
-                            if dist<bestDist then bestDist=dist; bestPart=fp end
-                        end
-                    end
+    local function findNearestFruitPart(hrp)
+        if not hrp then return nil end
+        local bestPart, bestDist = nil, math.huge
+        local function consider(part)
+            if not part or not part.Parent then return end
+            local ok, pos = pcall(function() return part.Position end)
+            if not ok or not pos then return end
+            local dx = pos.X - hrp.Position.X
+            local dy = pos.Y - hrp.Position.Y
+            local dz = pos.Z - hrp.Position.Z
+            local dist = math.sqrt(dx*dx + dy*dy + dz*dz)
+            if dist < bestDist then
+                bestDist = dist
+                bestPart = part
+            end
+        end
+        pcall(function()
+            if type(refreshFruits) == "function" then refreshFruits() end
+        end)
+        if type(fruitCache) == "table" then
+            for _, item in ipairs(fruitCache) do
+                local obj = item.Object
+                local handle = obj and obj:FindFirstChild("Handle")
+                if handle then consider(handle) end
+            end
+        end
+        if type(_G.FruitESP) == "table" then
+            for obj, data in pairs(_G.FruitESP) do
+                if data and data.Handle then consider(data.Handle) end
+            end
+        end
+        for _, obj in pairs(Workspace:GetChildren()) do
+            local handle = nil
+            if obj:IsA("Tool") then
+                handle = obj:FindFirstChild("Handle")
+            elseif obj:IsA("Model") or obj:IsA("Folder") then
+                local ff = obj:FindFirstChild("Fruit")
+                if ff then
+                    handle = ff:FindFirstChild("Handle") or (ff:IsA("BasePart") and ff) or ff:FindFirstChildWhichIsA("BasePart")
                 end
-                if bestPart then
-                    notify("Farming fruit...","redacted",1)
-                    tweenTo(hrp, Vector3.new(bestPart.Position.X,bestPart.Position.Y+3,bestPart.Position.Z), S.FRUIT_SPEED, function() return S.autoFruits end)
+                if not handle then
+                    handle = obj:FindFirstChild("Handle")
                 end
             end
-            task.wait(1)
-        else task.wait(0.1) end
+            if handle and handle:IsA("BasePart") then
+                local n = tostring(obj.Name or ""):lower()
+                if n:find("fruit") or obj:IsA("Tool") or obj:FindFirstChild("Fruit") then
+                    consider(handle)
+                end
+            end
+        end
+        return bestPart
+    end
+    while not _G.FE_Unloaded do
+        if S.autoFruits then
+            local hrp = nil
+            pcall(function()
+                if getMyHrp then hrp = getMyHrp() end
+            end)
+            if not hrp then
+                local char = LocalPlayer.Character
+                hrp = char and char:FindFirstChild("HumanoidRootPart")
+            end
+            if hrp then
+                local bestPart = findNearestFruitPart(hrp)
+                if bestPart and bestPart.Parent then
+                    local ok, fruitPos = pcall(function() return bestPart.Position end)
+                    if ok and fruitPos then
+                        local target = Vector3.new(fruitPos.X, fruitPos.Y + 3, fruitPos.Z)
+                        tweenTo(hrp, target, S.FRUIT_SPEED or 210, function()
+                            return S.autoFruits == true and bestPart and bestPart.Parent
+                        end)
+                        task.wait(0.35)
+                    else
+                        task.wait(0.25)
+                    end
+                else
+                    task.wait(0.4)
+                end
+            else
+                task.wait(0.25)
+            end
+        else
+            task.wait(0.12)
+        end
     end
 end)
 task.spawn(function()
@@ -2323,7 +2566,7 @@ task.spawn(function()
         task.wait(0.5)
     end
 end)
-local function doPullLoop(flag, getPoint)
+function doPullLoop(flag, getPoint)
     task.spawn(function()
         while true do
             if flag() then
@@ -2871,9 +3114,6 @@ pcall(function()
         for _, d in pairs(dangerLevels) do table.insert(dangerLevelNames, d.name) end
     end
 end)
--- ============================================================
--- Haunted extras (myth4c / laced.club) — Fruit ESP + AutoFish stay ours
--- ============================================================
 local ExtraDraw = { flower={}, chest={}, boat={}, mirage={}, chamLast=0 }
 local BoatSeats = { names={}, map={} }
 local MATERIAL_MAP = {
@@ -2913,7 +3153,7 @@ local BOSS_NAMES = {}
 for _,n in ipairs(BOSS_NAMES_SEA1) do BOSS_NAMES[#BOSS_NAMES+1]=n end
 for _,n in ipairs(BOSS_NAMES_SEA2) do BOSS_NAMES[#BOSS_NAMES+1]=n end
 for _,n in ipairs(BOSS_NAMES_SEA3) do BOSS_NAMES[#BOSS_NAMES+1]=n end
-local function bossesForCurrentSea()
+function bossesForCurrentSea()
     if isSea1() then return BOSS_NAMES_SEA1 end
     if isSea2() then return BOSS_NAMES_SEA2 end
     if isSea3() then return BOSS_NAMES_SEA3 end
@@ -2931,7 +3171,7 @@ local GLITCH_KEYS = {
     {id="flame",       flag="flameF",       label="Flame F"},
 }
 
-local function extraClearGroup(group)
+function extraClearGroup(group)
     for key, entry in pairs(group) do
         pcall(function() if entry.label then entry.label:Remove() end end)
         if entry.lines then
@@ -2948,7 +3188,7 @@ function extraClearAllESP()
     pcall(clearChamBoxes)
 end
 
-local function extraMakeLabel(color)
+function extraMakeLabel(color)
     local t = Drawing.new("Text")
     t.Size = 14
     t.Center = true
@@ -2959,7 +3199,7 @@ local function extraMakeLabel(color)
     pcall(function() t.Font = Drawing.Fonts.Monospace end)
     return t
 end
-local function extraMakeLines(n, color)
+function extraMakeLines(n, color)
     local lines = {}
     for i = 1, n do
         local l = Drawing.new("Line")
@@ -2971,7 +3211,7 @@ local function extraMakeLines(n, color)
     end
     return lines
 end
-local function extraToScreen(pos)
+function extraToScreen(pos)
     local cam = Workspace.CurrentCamera
     if not cam or not pos then return nil, false end
     local ok, v, vis = pcall(function()
@@ -2981,11 +3221,11 @@ local function extraToScreen(pos)
     if not ok or not v then return nil, false end
     return Vector2.new(v.X, v.Y), vis and v.Z > 0
 end
-local function extraHideLines(lines)
+function extraHideLines(lines)
     if not lines then return end
     for _, l in pairs(lines) do l.Visible = false end
 end
-local function extraDrawAABB(lines, part)
+function extraDrawAABB(lines, part)
     if not lines or not part or not part.Parent then extraHideLines(lines); return end
     local cam = Workspace.CurrentCamera
     if not cam then extraHideLines(lines); return end
@@ -3021,7 +3261,7 @@ local function extraDrawAABB(lines, part)
         lines[i].Visible = true
     end
 end
-local function extraGetPart(obj)
+function extraGetPart(obj)
     if not obj then return nil end
     if obj:IsA("BasePart") then return obj end
     return obj:FindFirstChild("HumanoidRootPart")
@@ -3031,7 +3271,7 @@ local function extraGetPart(obj)
 end
 
 local enhancedComm = nil
-local function getCommF()
+function getCommF()
     if enhancedComm then
         local okParent, parent = pcall(function() return enhancedComm.Parent end)
         if okParent and parent then return enhancedComm end
@@ -3051,11 +3291,11 @@ local function getCommF()
     end
     return enhancedComm
 end
-local function getCommE()
+function getCommE()
     local remotes = ReplicatedStorage:FindFirstChild("Remotes")
     return remotes and remotes:FindFirstChild("CommE")
 end
-local function invokeCommF(...)
+function invokeCommF(...)
     local remote = getCommF()
     if not remote then return false end
     local args = {...}
@@ -3069,10 +3309,10 @@ local function invokeCommF(...)
     end
     return true
 end
-local function commF(...)
+function commF(...)
     invokeCommF(...)
 end
-local function tapKey(vk)
+function tapKey(vk)
     pcall(function()
         if keypress then
             keypress(vk)
@@ -3083,7 +3323,7 @@ local function tapKey(vk)
         end
     end)
 end
-local function toolEquipped(name)
+function toolEquipped(name)
     local char = LocalPlayer.Character
     if not char then return false end
     local t = char:FindFirstChildOfClass("Tool")
@@ -3091,7 +3331,7 @@ local function toolEquipped(name)
     if t.Name == name then return true end
     return string.find(t.Name, name, 1, true) ~= nil
 end
-local function findTool(name)
+function findTool(name)
     local char = LocalPlayer.Character
     if char then
         local t = char:FindFirstChild(name)
@@ -3110,7 +3350,7 @@ local function findTool(name)
     end
     return nil
 end
-local function getMyHrp()
+function getMyHrp()
     local char = LocalPlayer.Character
     return char and char:FindFirstChild("HumanoidRootPart")
 end
@@ -3154,12 +3394,12 @@ function runVelocityBoost(settings, enabledFn, horizontalOnly, lockedDirection)
     end
 end
 
-local function charHasTool(name)
+function charHasTool(name)
     local char = LocalPlayer and LocalPlayer.Character
     return char and char:FindFirstChild(name) ~= nil
 end
 
-local function mouse1Down()
+function mouse1Down()
     local d = false
     pcall(function()
         if ismouse1pressed then d = ismouse1pressed()
@@ -3168,7 +3408,6 @@ local function mouse1Down()
     return d
 end
 
--- Sanguine Z: only when SanguineArtZFire appears on HRP (not backpack)
 task.spawn(function()
     local wasZFire = false
     local boosting = false
@@ -3188,7 +3427,6 @@ task.spawn(function()
     end
 end)
 
--- Dragon Talon Z — tool must be IN HANDS (character child)
 task.spawn(function()
     local holdingZ = false
     local boosting = false
@@ -3213,7 +3451,6 @@ task.spawn(function()
     end
 end)
 
--- Yama Z
 task.spawn(function()
     local holdingZ = false
     local boosting = false
@@ -3238,7 +3475,6 @@ task.spawn(function()
     end
 end)
 
--- Tushita X
 task.spawn(function()
     local holdingX = false
     local boosting = false
@@ -3263,7 +3499,6 @@ task.spawn(function()
     end
 end)
 
--- Fox Lamp X
 task.spawn(function()
     local holdingX = false
     local boosting = false
@@ -3288,7 +3523,6 @@ task.spawn(function()
     end
 end)
 
--- Soul Guitar M1 (Q + M1 within 0.5s) — tool in hands only
 task.spawn(function()
     local wasQPressed = false
     local wasM1Pressed = false
@@ -3332,7 +3566,6 @@ task.spawn(function()
     end
 end)
 
--- Diamond M1 release — Diamond-Diamond in hands only
 task.spawn(function()
     local wasM1Pressed = false
     local boosting = false
@@ -3352,7 +3585,6 @@ task.spawn(function()
     end
 end)
 
--- Flame F
 task.spawn(function()
     local holdingF = false
     local boosting = false
@@ -3377,7 +3609,6 @@ task.spawn(function()
     end
 end)
 
--- R to X (only with Portal-Portal in hands)
 task.spawn(function()
     local holdingR = false
     while not _G.FE_Unloaded do
@@ -3404,7 +3635,6 @@ task.spawn(function()
     end
 end)
 
--- R to X then Z (Portal-Portal in hands)
 task.spawn(function()
     local holdingR = false
     while not _G.FE_Unloaded do
@@ -3437,7 +3667,6 @@ task.spawn(function()
     end
 end)
 
--- Flame R to C (Flame-Flame in hands)
 task.spawn(function()
     local holdingR = false
     while not _G.FE_Unloaded do
@@ -3464,12 +3693,6 @@ task.spawn(function()
     end
 end)
 
-
-
--- ============================================================
--- ESP from hauntedscripts blox fruits (chest/boat/flower/berry/mirage)
--- Fruit ESP remains our Features.esp implementation
--- ============================================================
 function clearChestEspLabels()
     for _,entry in pairs(S.chestEspLabels) do
         if entry and entry.label then entry.label.Visible=false end
@@ -3483,6 +3706,140 @@ function clearBerryEspLabels()
     end
     S.berryEspLabels={}
 end
+
+local berryScanRunning=false
+local BERRY_SCAN_BATCH=80
+local BERRY_DRAW_DISTANCE=10000
+local BERRY_DRAW_DISTANCE_SQ=BERRY_DRAW_DISTANCE*BERRY_DRAW_DISTANCE
+local BERRY_SPHERE_NAMES={}
+for _,berry in pairs(BERRIES or {}) do
+    if berry.sphere and berry.name then BERRY_SPHERE_NAMES[berry.sphere]=berry.name end
+end
+if not next(BERRY_SPHERE_NAMES) then
+    BERRY_SPHERE_NAMES={
+        ["Sphere.011"]="Green Toad Berry",
+        ["Sphere.022"]="Yellow Star Berry",
+        ["Sphere.007"]="Orange Berry",
+        ["Sphere.005"]="Red Cherry Berry",
+        ["Sphere.004"]="Purple Jelly Berry",
+        ["Sphere.008"]="Pink Pig Berry",
+        ["Sphere.018"]="Blue Icicle Berry",
+        ["Sphere.035"]="White Cloud Berry",
+    }
+end
+local function isBerryWorldObject(object)
+    local current=object
+    for _=1,64 do
+        if not current then return false end
+        local okInfo,parent,className=pcall(function()
+            return current.Parent,current.ClassName
+        end)
+        if not okInfo then return false end
+        if className=="Tool" then return false end
+        local okHumanoid,humanoid=pcall(function()
+            return current:FindFirstChildOfClass("Humanoid")
+        end)
+        if okHumanoid and humanoid then return false end
+        if parent==Workspace or parent==game.Workspace then return true end
+        current=parent
+    end
+    return false
+end
+function buildBerryEspLabels()
+    if berryScanRunning then return end
+    berryScanRunning=true
+    task.spawn(function()
+        local activeEntries={}
+        local activeKeys={}
+        local publishedKeys={}
+        local queue={}
+        local queueIndex=1
+        local processed=0
+        local char=LocalPlayer and LocalPlayer.Character or nil
+        local hrp=char and char:FindFirstChild("HumanoidRootPart") or nil
+        local okPlayer,playerPos=pcall(function() return hrp and hrp.Position end)
+        for _,published in pairs(S.berryEspLabels) do
+            if published and published.key then publishedKeys[published.key]=true end
+        end
+        local okRoots,roots=pcall(function() return Workspace:GetChildren() end)
+        if okRoots and roots then
+            for _,root in pairs(roots) do table.insert(queue,root) end
+        end
+        while S.berryEsp and queueIndex<=#queue do
+            local object=queue[queueIndex]
+            queueIndex=queueIndex+1
+            local okName,objectName=pcall(function() return object.Name end)
+            local berryName=okName and BERRY_SPHERE_NAMES[objectName] or nil
+            if berryName and isBerryWorldObject(object) then
+                local berryPart=object
+                local berryPos=getSafeFruitPosition(berryPart)
+                if not berryPos then
+                    local okPart,part=pcall(function()
+                        return object.PrimaryPart or object:FindFirstChildOfClass("BasePart")
+                    end)
+                    if okPart and part then
+                        berryPart=part
+                        berryPos=getSafeFruitPosition(berryPart)
+                    end
+                end
+                local inRange=berryPos~=nil
+                if inRange and okPlayer and playerPos then
+                    local dx=berryPos.X-playerPos.X
+                    local dy=berryPos.Y-playerPos.Y
+                    local dz=berryPos.Z-playerPos.Z
+                    inRange=(dx*dx+dy*dy+dz*dz)<=BERRY_DRAW_DISTANCE_SQ
+                end
+                if inRange then
+                    local key=getFruitInstanceKey(berryPart)
+                    local entry=S.berryEspLabelCache[key]
+                    if not entry then
+                        local label=Drawing.new("Text")
+                        label.Text=berryName
+                        label.Position=Vector2.new(0,0)
+                        label.Color=Color3.fromRGB(255, 70, 70)
+                        label.Size=14
+                        label.Outline=true
+                        label.Visible=false
+                        label.Center=true
+                        entry={label=label,part=berryPart,name=berryName,key=key}
+                        S.berryEspLabelCache[key]=entry
+                    else
+                        entry.part=berryPart
+                        entry.name=berryName
+                        entry.key=key
+                    end
+                    activeKeys[key]=true
+                    table.insert(activeEntries,entry)
+                    if not publishedKeys[key] then
+                        publishedKeys[key]=true
+                        table.insert(S.berryEspLabels,entry)
+                    end
+                end
+            end
+            local okChildren,children=pcall(function() return object:GetChildren() end)
+            if okChildren and children then
+                for _,child in pairs(children) do table.insert(queue,child) end
+            end
+            processed=processed+1
+            if processed>=BERRY_SCAN_BATCH then
+                processed=0
+                task.wait()
+            end
+        end
+        if S.berryEsp then
+            for key,entry in pairs(S.berryEspLabelCache) do
+                if not activeKeys[key] and entry.label then entry.label.Visible=false end
+            end
+            S.berryEspLabels=activeEntries
+        else
+            for _,entry in pairs(activeEntries) do
+                if entry.label then entry.label.Visible=false end
+            end
+        end
+        berryScanRunning=false
+    end)
+end
+
 
 function clearBoatEsp()
     for _,entry in pairs(S.boatEspEntries) do
@@ -3527,61 +3884,47 @@ function getFruitInstanceKey(part)
     return tostring(part)
 end
 
-local function trackedInstanceKey(instance)
+function trackedInstanceKey(instance)
     local okAddress, address=pcall(function() return instance and instance.Address end)
     if okAddress and address and address~=0 then return "addr:"..tostring(address) end
     return tostring(instance)
 end
 
-local function trackedSetChanged(snapshotName,current)
+function trackedSetChanged(snapshotName,current)
     S._espTrackSnapshots = S._espTrackSnapshots or {}
     local prev=S._espTrackSnapshots[snapshotName]
-    local changed=false
-    if type(prev)~="table" or #prev~=#current then
-        changed=true
-    else
-        for i=1,#current do
-            if prev[i]~=current[i] then changed=true; break end
-        end
-    end
     S._espTrackSnapshots[snapshotName]=current
-    return changed
+    if type(prev)~="table" then return true end
+    for key in pairs(current) do
+        if not prev[key] then return true end
+    end
+    for key in pairs(prev) do
+        if not current[key] then return true end
+    end
+    return false
 end
 
-local function trackedFolderChanged(snapshotName,folder)
-    local keys={}
+function trackedFolderChanged(snapshotName,folder)
+    local current={}
     if folder then
+        current["folder:"..trackedInstanceKey(folder)]=true
         local ok,children=pcall(function() return folder:GetChildren() end)
         if ok and children then
             for _,child in pairs(children) do
-                keys[#keys+1]=trackedInstanceKey(child)
+                current["child:"..trackedInstanceKey(child)]=true
             end
-            table.sort(keys)
         end
     end
-    return trackedSetChanged(snapshotName,keys)
+    return trackedSetChanged(snapshotName,current)
 end
 
-local function trackedFlowersChanged()
-    local keys={}
-    local ok,children=pcall(function() return Workspace:GetChildren() end)
-    if ok and children then
-        for _,obj in pairs(children) do
-            if obj.Name=="Flower1" or obj.Name=="Flower2" then
-                keys[#keys+1]=trackedInstanceKey(obj)
-            end
-        end
+function trackedFlowersChanged()
+    local current={}
+    for _,name in ipairs({"Flower1","Flower2"}) do
+        local flower=Workspace:FindFirstChild(name)
+        if flower then current[name..":"..trackedInstanceKey(flower)]=true end
     end
-    local map=Workspace:FindFirstChild("Map")
-    if map then
-        for _,obj in pairs(map:GetDescendants()) do
-            if obj.Name=="Flower1" or obj.Name=="Flower2" then
-                keys[#keys+1]=trackedInstanceKey(obj)
-            end
-        end
-    end
-    table.sort(keys)
-    return trackedSetChanged("flowers",keys)
+    return trackedSetChanged("flowers",current)
 end
 
 function buildChestEspLabels()
@@ -3627,13 +3970,13 @@ function buildChestEspLabels()
     end
 end
 
-local function getBoatEspKey(boat)
+function getBoatEspKey(boat)
     local okAddress,address=pcall(function() return boat and boat.Address end)
     if okAddress and address and address~=0 then return "boat:"..tostring(address) end
     return "boat:"..tostring(boat)
 end
 
-local function getBoatEspParts(boat)
+function getBoatEspParts(boat)
     local parts={}
     if not boat then return parts end
     local okDesc,desc=pcall(function() return boat:GetDescendants() end)
@@ -3645,7 +3988,7 @@ local function getBoatEspParts(boat)
     return parts
 end
 
-local function getBoatEspBounds(parts)
+function getBoatEspBounds(parts)
     local minX,minY,minZ=math.huge,math.huge,math.huge
     local maxX,maxY,maxZ=-math.huge,-math.huge,-math.huge
     local any=false
@@ -3727,7 +4070,7 @@ function buildBoatEsp()
     end
 end
 
-local function getFlowerEspKey(flowerName,flower)
+function getFlowerEspKey(flowerName,flower)
     return tostring(flowerName)..":"..trackedInstanceKey(flower)
 end
 
@@ -3743,84 +4086,68 @@ function buildFlowerEsp()
         {workspaceName="Flower1", label="Blue Flower", color=Color3.fromRGB(55,145,255)},
         {workspaceName="Flower2", label="Red Flower", color=Color3.fromRGB(255,65,65)},
     }
-    local function collectFlowers(root, list)
-        if not root then return end
-        local ok,children=pcall(function() return root:GetChildren() end)
-        if not ok or not children then return end
-        for _,obj in pairs(children) do
-            for _,target in pairs(targets) do
-                if obj.Name==target.workspaceName then list[#list+1]={obj=obj,target=target} end
-            end
-        end
-    end
-    local found={}
-    collectFlowers(Workspace, found)
-    local map=Workspace:FindFirstChild("Map")
-    if map then
-        local okd,desc=pcall(function() return map:GetDescendants() end)
-        if okd and desc then
-            for _,obj in pairs(desc) do
-                for _,target in pairs(targets) do
-                    if obj.Name==target.workspaceName then found[#found+1]={obj=obj,target=target} end
-                end
-            end
-        end
-    end
-    for _,item in pairs(found) do
-        local flower,target=item.obj,item.target
-        local parts={}
-        if flower:IsA("BasePart") then parts[1]=flower
-        else
-            local okd,desc=pcall(function() return flower:GetDescendants() end)
-            if okd and desc then
-                for _,d in pairs(desc) do
-                    if d:IsA("BasePart") then parts[#parts+1]=d end
-                end
-            end
-        end
-        if #parts>0 then
-            local anchor=parts[1]
-            local minX,minY,minZ,maxX,maxY,maxZ=getBoatEspBounds(parts)
-            local okAnchor,anchorPos=pcall(function() return anchor and anchor.Position end)
-            if anchor and minX and okAnchor and anchorPos then
-                local bounds={
-                    minX=minX-anchorPos.X,minY=minY-anchorPos.Y,minZ=minZ-anchorPos.Z,
-                    maxX=maxX-anchorPos.X,maxY=maxY-anchorPos.Y,maxZ=maxZ-anchorPos.Z,
-                }
-                local key=getFlowerEspKey(target.workspaceName,flower)
-                local entry=S.flowerEspCache[key]
-                if not entry then
-                    local lines={}
-                    for _=1,12 do
-                        local line=Drawing.new("Line")
-                        line.Color=target.color
-                        line.Thickness=2
-                        line.Visible=false
-                        line.ZIndex=10
-                        table.insert(lines,line)
+    for _,target in ipairs(targets) do
+        local flower=Workspace:FindFirstChild(target.workspaceName)
+        if flower then
+            local parts={}
+            if flower:IsA("BasePart") then
+                parts[1]=flower
+            else
+                local okPrimary,primary=pcall(function() return flower.PrimaryPart end)
+                if okPrimary and primary then parts[1]=primary end
+                if #parts==0 then
+                    local okc,ch=pcall(function() return flower:GetChildren() end)
+                    if okc and ch then
+                        for _,c in pairs(ch) do
+                            if c:IsA("BasePart") then parts[#parts+1]=c end
+                        end
                     end
-                    local label=Drawing.new("Text")
-                    label.Text=target.label
-                    label.Position=Vector2.new(0,0)
-                    label.Color=target.color
-                    label.Size=18
-                    label.Outline=true
-                    label.Center=true
-                    label.Font=Drawing.Fonts.Monospace
-                    label.Visible=false
-                    label.ZIndex=11
-                    entry={flower=flower,anchor=anchor,bounds=bounds,name=target.label,lines=lines,label=label}
-                    S.flowerEspCache[key]=entry
-                else
-                    entry.flower=flower
-                    entry.anchor=anchor
-                    entry.bounds=bounds
-                    entry.name=target.label
-                    entry.label.Text=target.label
-                    entry.label.Color=target.color
-                    for _,line in pairs(entry.lines) do line.Color=target.color end
                 end
-                table.insert(S.flowerEspEntries, entry)
+            end
+            if #parts>0 then
+                local anchor=parts[1]
+                local minX,minY,minZ,maxX,maxY,maxZ=getBoatEspBounds(parts)
+                local okAnchor,anchorPos=pcall(function() return anchor and anchor.Position end)
+                if anchor and minX and okAnchor and anchorPos then
+                    local bounds={
+                        minX=minX-anchorPos.X,minY=minY-anchorPos.Y,minZ=minZ-anchorPos.Z,
+                        maxX=maxX-anchorPos.X,maxY=maxY-anchorPos.Y,maxZ=maxZ-anchorPos.Z,
+                    }
+                    local key=getFlowerEspKey(target.workspaceName,flower)
+                    local entry=S.flowerEspCache[key]
+                    if not entry then
+                        local lines={}
+                        for _=1,12 do
+                            local line=Drawing.new("Line")
+                            line.Color=target.color
+                            line.Thickness=2
+                            line.Visible=false
+                            line.ZIndex=10
+                            table.insert(lines,line)
+                        end
+                        local label=Drawing.new("Text")
+                        label.Text=target.label
+                        label.Position=Vector2.new(0,0)
+                        label.Color=target.color
+                        label.Size=18
+                        label.Outline=true
+                        label.Center=true
+                        label.Font=Drawing.Fonts.Monospace
+                        label.Visible=false
+                        label.ZIndex=11
+                        entry={flower=flower,anchor=anchor,bounds=bounds,name=target.label,lines=lines,label=label}
+                        S.flowerEspCache[key]=entry
+                    else
+                        entry.flower=flower
+                        entry.anchor=anchor
+                        entry.bounds=bounds
+                        entry.name=target.label
+                        entry.label.Text=target.label
+                        entry.label.Color=target.color
+                        for _,line in pairs(entry.lines) do line.Color=target.color end
+                    end
+                    table.insert(S.flowerEspEntries, entry)
+                end
             end
         end
     end
@@ -3832,7 +4159,7 @@ local ESP_BOX_EDGES={
     {1,5},{2,6},{3,7},{4,8},
 }
 
-local function updateWorldBoxEntry(entry)
+function updateWorldBoxEntry(entry)
     local visible=false
     local okAnchor,anchorParent,anchorPos=pcall(function()
         return entry.anchor and entry.anchor.Parent, entry.anchor and entry.anchor.Position
@@ -3888,7 +4215,7 @@ local function updateWorldBoxEntry(entry)
     entry.label.Visible=visible
 end
 
-local function safeObjectPosition(object)
+function safeObjectPosition(object)
     if not object then return nil end
     local okPos,pos=pcall(function()
         if object:IsA("BasePart") then return object.Position end
@@ -3899,7 +4226,7 @@ local function safeObjectPosition(object)
     return nil
 end
 
-local function findMirageObject()
+function findMirageObject()
     local origin=Workspace:FindFirstChild("_WorldOrigin")
     local locations=origin and origin:FindFirstChild("Locations")
     local location=locations and locations:FindFirstChild("Mirage Island")
@@ -3908,7 +4235,7 @@ local function findMirageObject()
     return map and (map:FindFirstChild("MysticIsland") or map:FindFirstChild("Mirage Island")) or nil
 end
 
-local function updateMirageEsp()
+function updateMirageEsp()
     if not S.mirageEsp then clearMirageEsp(); return end
     if not S.mirageEspLabel then
         local label=Drawing.new("Text")
@@ -3943,7 +4270,6 @@ local function updateMirageEsp()
     S.mirageEspLabel.Visible=true
 end
 
--- ESP render loops (haunted)
 task.spawn(function()
     while not _G.FE_Unloaded do
         if S.chestEsp then
@@ -4000,7 +4326,57 @@ end)
 task.spawn(function()
     while not _G.FE_Unloaded do
         task.wait(1)
+        if S.berryEsp then pcall(buildBerryEspLabels) end
         if S.flowerEsp and trackedFlowersChanged() then buildFlowerEsp() end
+    end
+end)
+
+task.spawn(function()
+    while not _G.FE_Unloaded do
+        if S.berryEsp then
+            local char=LocalPlayer.Character
+            local hrp=char and char:FindFirstChild("HumanoidRootPart") or nil
+            local okPlayer,playerPos=pcall(function() return hrp and hrp.Position end)
+            for _,entry in pairs(S.berryEspLabels) do
+                local label=entry and entry.label or nil
+                local part=entry and entry.part or nil
+                local okParent,parent=pcall(function() return part and part.Parent end)
+                local okPos,pos=pcall(function() return part and part.Position end)
+                if label and okPlayer and playerPos and okParent and parent and okPos and pos then
+                    local meters = math.floor(math.sqrt(
+                        (pos.X-playerPos.X)*(pos.X-playerPos.X) +
+                        (pos.Y-playerPos.Y)*(pos.Y-playerPos.Y) +
+                        (pos.Z-playerPos.Z)*(pos.Z-playerPos.Z)
+                    ) / 10)
+                    label.Text = tostring(entry.name or "Berry") .. " (" .. meters .. "m)"
+                    label.Size = 14
+                    label.Outline = true
+                    label.Center = true
+                    label.Color = Color3.fromRGB(255, 70, 70)
+                    local okScreen, r1, r2 = pcall(WorldToScreen, pos + Vector3.new(0, 2.5, 0))
+                    local x, y, onScreen
+                    if okScreen and r1 then
+                        if typeof and typeof(r1) == "Vector2" then
+                            x, y, onScreen = r1.X, r1.Y, r2
+                        elseif type(r1) == "table" then
+                            x, y, onScreen = r1.X, r1.Y, r1.OnScreen
+                        else
+                            x, y, onScreen = r1.X, r1.Y, r2
+                        end
+                    end
+                    if onScreen == nil then onScreen = true end
+                    if okScreen and onScreen and x and y then
+                        label.Position = Vector2.new(x, y)
+                        label.Visible = true
+                    else
+                        label.Visible = false
+                    end
+                elseif label then
+                    label.Visible = false
+                end
+            end
+        end
+        task.wait()
     end
 end)
 
@@ -4018,8 +4394,6 @@ task.spawn(function()
     end
 end)
 
-
--- World checks (haunted — FindFirstChild only, no GetDescendants)
 function showEventStatus()
     local locations=nil
     pcall(function()
@@ -4032,7 +4406,6 @@ function showEventStatus()
     local frozen=locations and locations:FindFirstChild("Frozen Dimension")
     local kitsune=map and map:FindFirstChild("KitsuneIsland")
     local message="Mirage: "..(mirage and "YES" or "NO").." | Kitsune: "..(kitsune and "YES" or "NO").." | Prehistoric: "..(prehistoric and "YES" or "NO").." | Frozen: "..(frozen and "YES" or "NO")
-    -- status via notify only
     notify(message,"World Status",8)
 end
 
@@ -4047,11 +4420,9 @@ function showBossStatus()
     local message="Rip Indra: "..(present("rip_indra True Form","rip_indra") and "YES" or "NO")
         .." | Dough King: "..(present("Dough King") and "YES" or "NO")
         .." | Cake Prince: "..(present("Cake Prince") and "YES" or "NO")
-    -- status via notify only
     notify(message,"Boss Status",8)
 end
 
--- aliases used by older UI callbacks
 function checkEventIslands()
     showEventStatus()
 end
@@ -4059,7 +4430,6 @@ function checkImportantBosses()
     showBossStatus()
 end
 
--- Auto Haki + Race Ability
 task.spawn(function()
     while not _G.FE_Unloaded do
         if S.autoHaki then
@@ -4076,7 +4446,6 @@ task.spawn(function()
     end
 end)
 
--- Auto Stats (InvokeServer AddPoint — same as haunted)
 task.spawn(function()
     local statEntries = {
         {"autoStatMelee", "Melee"},
@@ -4086,17 +4455,35 @@ task.spawn(function()
         {"autoStatFruit", "Demon Fruit"},
     }
     while not _G.FE_Unloaded do
+        local active = {}
         for _, entry in ipairs(statEntries) do
-            if S[entry[1]] then
-                invokeCommF("AddPoint", entry[2], S.statAmount or 10)
+            if S[entry[1]] then active[#active+1] = entry end
+        end
+        if #active == 0 then
+            task.wait(0.5)
+        elseif #active == 1 then
+            local entry = active[1]
+            local amount = S.statAmount or 10
+            invokeCommF("AddPoint", entry[2], amount)
+            if entry[1] == "autoStatFruit" then
+                invokeCommF("AddPoint", "Blox Fruit", amount)
+            end
+            task.wait(0.15)
+        else
+            for _, entry in ipairs(active) do
+                if not S[entry[1]] then break end
+                local amount = S.statAmount or 10
+                invokeCommF("AddPoint", entry[2], amount)
+                if entry[1] == "autoStatFruit" then
+                    invokeCommF("AddPoint", "Blox Fruit", amount)
+                end
                 task.wait(0.12)
             end
+            task.wait(0.35)
         end
-        task.wait(0.5)
     end
 end)
 
--- Tween Ember (smooth, separate from instant TP)
 task.spawn(function()
     while not _G.FE_Unloaded do
         if S.tweenEmber then
@@ -4119,7 +4506,6 @@ task.spawn(function()
     end
 end)
 
--- Mirage tween + gear
 task.spawn(function()
     while not _G.FE_Unloaded do
         if S.autoMirageTween then
@@ -4161,7 +4547,6 @@ task.spawn(function()
     end
 end)
 
--- Auto mastery (chocolate + buddha)
 task.spawn(function()
     while not _G.FE_Unloaded do
         if S.autoMastery then
@@ -4187,30 +4572,19 @@ task.spawn(function()
     end
 end)
 
--- Material / Boss / Sea event farms (haunted-style)
+
 task.spawn(function()
     while not _G.FE_Unloaded do
         if S.autoBoss then
-            local hrp = getMyHrp()
+            local char = LocalPlayer.Character
+            local hrp = char and char:FindFirstChild("HumanoidRootPart")
             local target = S.bossTarget
-            local spawned = hrp and nearestNamedEnemy({target}) or nil
+            local spawned = hrp and nearestMatchingEnemy(hrp, {target}) or nil
             if hrp and spawned then
-                if S.remoteMode then
-                    while S.autoBoss and S.bossTarget == target and isAlive(spawned) do
-                        hrp = getMyHrp()
-                        local root = spawned:FindFirstChild("HumanoidRootPart") or spawned:FindFirstChildOfClass("BasePart")
-                        if not hrp or not root then break end
-                        hrp.Position = Vector3.new(root.Position.X, root.Position.Y + 30, root.Position.Z)
-                        hrp.Velocity = Vector3.new(0,0,0)
-                        hrp.AssemblyLinearVelocity = Vector3.new(0,0,0)
-                        pcall(remoteAttack)
-                        task.wait(0.05)
-                    end
-                else
-                    farmAttack(hrp, function()
-                        return S.autoBoss and S.bossTarget == target
-                    end, target)
-                end
+                local useRemote = S.remoteMode
+                farmAttack(hrp, function()
+                    return S.autoBoss and S.bossTarget == target and S.remoteMode == useRemote
+                end, spawned, true, 50000, useRemote and remoteAttack or nil, useRemote and 0.05 or 0.06)
             else
                 task.wait(0.35)
             end
@@ -4219,16 +4593,20 @@ task.spawn(function()
         end
     end
 end)
+
 task.spawn(function()
     while not _G.FE_Unloaded do
         if S.autoMaterial and not S.autoBoss then
-            local names = MATERIAL_MAP[S.materialTarget] or {S.materialTarget}
-            local hrp = getMyHrp()
-            local spawned = hrp and nearestNamedEnemy(names) or nil
-            if hrp and spawned then
+            local char = LocalPlayer.Character
+            local hrp = char and char:FindFirstChild("HumanoidRootPart")
+            local material = S.materialTarget
+            local names = (MATERIAL_MAP and MATERIAL_MAP[material]) or (MATERIAL_ENEMIES and MATERIAL_ENEMIES[material])
+            local target = hrp and names and nearestMatchingEnemy(hrp, names) or nil
+            if hrp and target then
+                local useRemote = S.remoteMode
                 farmAttack(hrp, function()
-                    return S.autoMaterial and not S.autoBoss
-                end, spawned.Name)
+                    return S.autoMaterial and not S.autoBoss and S.materialTarget == material and S.remoteMode == useRemote
+                end, target, true, 5000, useRemote and remoteAttack or nil, useRemote and 0.05 or 0.06)
             else
                 task.wait(0.35)
             end
@@ -4237,16 +4615,19 @@ task.spawn(function()
         end
     end
 end)
+
 task.spawn(function()
     while not _G.FE_Unloaded do
         if S.autoSeaEvent and not S.autoBoss then
-            local hrp = getMyHrp()
+            local char = LocalPlayer.Character
+            local hrp = char and char:FindFirstChild("HumanoidRootPart")
             local target = S.seaEventTarget
-            local spawned = hrp and nearestNamedEnemy({target}) or nil
+            local spawned = hrp and nearestMatchingEnemy(hrp, {target}) or nil
             if hrp and spawned then
+                local useRemote = S.remoteMode
                 farmAttack(hrp, function()
-                    return S.autoSeaEvent and S.seaEventTarget == target
-                end, target)
+                    return S.autoSeaEvent and not S.autoBoss and S.seaEventTarget == target and S.remoteMode == useRemote
+                end, spawned, true, 50000, useRemote and remoteAttack or nil, useRemote and 0.05 or 0.06)
             else
                 task.wait(0.35)
             end
@@ -4257,13 +4638,12 @@ task.spawn(function()
 end)
 
 
--- Boat seats (haunted method)
 local boatSeatOptions={"No boats found"}
 local boatSeatByLabel={}
 local lastBoatSeatSignature=""
 local boatSeatDropdownHandle=nil
 
-local function findBoatVehicleSeat(boat)
+function findBoatVehicleSeat(boat)
     if not boat then return nil end
     local okDirect,directSeat=pcall(function() return boat:FindFirstChildOfClass("VehicleSeat") end)
     if okDirect and directSeat then return directSeat end
@@ -4344,7 +4724,7 @@ function refreshBoatSeats()
     return boatSeatOptions
 end
 
-local function isUsingSelectedBoatSeat(seat,char,humanoid,hrp)
+function isUsingSelectedBoatSeat(seat,char,humanoid,hrp)
     local okOccupant,occupant=pcall(function() return seat.Occupant end)
     if okOccupant and occupant then
         if occupant==humanoid then return true end
@@ -4371,7 +4751,6 @@ task.spawn(function()
     end
 end)
 
--- Auto boat seat (haunted)
 task.spawn(function()
     while not _G.FE_Unloaded do
         if S.autoBoatSeat then
@@ -4395,7 +4774,6 @@ task.spawn(function()
     end
 end)
 
--- Switch weapon after picking a fruit
 task.spawn(function()
     while not _G.FE_Unloaded do
         if S.weaponAfterFruit then
@@ -4416,10 +4794,9 @@ task.spawn(function()
     end
 end)
 
--- ============================================================
--- Dungeon (2nd sea) — no Drawing GUI; controlled via Hub Dungeon tab
--- ============================================================
-local Dungeon = {
+local Dungeon, dungeonStop, dungeonAutoEquip
+do
+Dungeon = {
     target = nil,
     doorWaypoint = nil,
     doorStatus = "Door Not Ready",
@@ -4443,11 +4820,11 @@ local DUNGEON_SWORD_KW = {
     "sword","blade","katana","scythe","trident","dagger","cutlass",
 }
 
-local function dungeonActive()
+function dungeonActive()
     return S.dungeonEnabled == true and not _G.FE_Unloaded
 end
 
-local function dungeonIsSummon(obj)
+function dungeonIsSummon(obj)
     if not obj then return true end
     if obj:FindFirstChild("Summoner") or obj:FindFirstChild("Creator") or obj:FindFirstChild("Owner") then return true end
     local n = string.lower(obj.Name or "")
@@ -4457,7 +4834,7 @@ local function dungeonIsSummon(obj)
     return false
 end
 
-local function dungeonIsObjective(obj)
+function dungeonIsObjective(obj)
     if not obj or not obj.Parent or dungeonIsSummon(obj) then return false end
     local name = string.lower(obj.Name or "")
     local isProp = name == "prophitboxplaceholder"
@@ -4474,14 +4851,14 @@ local function dungeonIsObjective(obj)
     return root and hum and hum.Health > 0 and hum.MaxHealth < 50000
 end
 
-local function dungeonIsEnemy(mob)
+function dungeonIsEnemy(mob)
     if not mob or not mob.Parent or dungeonIsSummon(mob) then return false end
     local hum = mob:FindFirstChild("Humanoid")
     local root = mob:FindFirstChild("HumanoidRootPart") or mob:FindFirstChild("Head") or mob:FindFirstChildWhichIsA("BasePart")
     return hum and root and hum.Health > 0
 end
 
-local function dungeonMatchWeapon(tool, pref)
+function dungeonMatchWeapon(tool, pref)
     if not tool or tool.ClassName ~= "Tool" then return false end
     local name = string.lower(tool.Name)
     local list = (pref == "Sword") and DUNGEON_SWORD_KW or DUNGEON_MELEE_KW
@@ -4493,7 +4870,7 @@ local function dungeonMatchWeapon(tool, pref)
     return false
 end
 
-local function dungeonTriggerHotbar(slotNum)
+function dungeonTriggerHotbar(slotNum)
     local keyCode = 0x30 + slotNum
     pcall(function()
         if keyclick then keyclick(keyCode)
@@ -4503,7 +4880,7 @@ local function dungeonTriggerHotbar(slotNum)
     end)
 end
 
-local function dungeonAutoEquip()
+dungeonAutoEquip = function()
     if not S.dungeonAutoEquip then return end
     local char = LocalPlayer.Character
     if not char then return end
@@ -4532,7 +4909,7 @@ local function dungeonAutoEquip()
     end)
 end
 
-local function dungeonActivateBuso()
+function dungeonActivateBuso()
     if not S.dungeonBuso then return end
     local char = LocalPlayer.Character
     if not char then return end
@@ -4554,7 +4931,7 @@ local function dungeonActivateBuso()
     end)
 end
 
-local function dungeonGetIsland(myPos)
+function dungeonGetIsland(myPos)
     local dungeon = Workspace:FindFirstChild("Map") and Workspace.Map:FindFirstChild("Dungeon")
     if not dungeon then return nil, 0 end
     local bestIsland, bestNum, minDelta = nil, 0, 999999
@@ -4573,7 +4950,7 @@ local function dungeonGetIsland(myPos)
     return bestIsland, bestNum
 end
 
-local function dungeonCalcDoor(pPos)
+function dungeonCalcDoor(pPos)
     local currentIslandModel, currentIslandNum = dungeonGetIsland(pPos)
     Dungeon.floorName = "Island " .. tostring(currentIslandNum > 0 and currentIslandNum or "1")
     if currentIslandModel then
@@ -4597,14 +4974,14 @@ local function dungeonCalcDoor(pPos)
     return nil, "Door Not Ready"
 end
 
-local function dungeonRestoreHitboxes()
+function dungeonRestoreHitboxes()
     for part, originalSize in pairs(Dungeon.originalSizes) do
         if part and part.Parent then pcall(function() part.Size = originalSize end) end
     end
     Dungeon.originalSizes = {}
 end
 
-local function dungeonStop()
+dungeonStop = function()
     S.dungeonFloat = false
     Dungeon.target = nil
     Dungeon.doorWaypoint = nil
@@ -4615,7 +4992,6 @@ local function dungeonStop()
     dungeonRestoreHitboxes()
 end
 
--- scanner
 task.spawn(function()
     while not _G.FE_Unloaded do
         if dungeonActive() and S.dungeonFloat then
@@ -4674,7 +5050,6 @@ task.spawn(function()
     end
 end)
 
--- flight RenderStepped
 task.spawn(function()
     task.wait(1)
     if not RunService.RenderStepped then return end
@@ -4729,7 +5104,6 @@ task.spawn(function()
     end)
 end)
 
--- skills on objectives
 task.spawn(function()
     local keys = {0x5A, 0x58, 0x43, 0x56}
     while not _G.FE_Unloaded do
@@ -4751,7 +5125,6 @@ task.spawn(function()
     end
 end)
 
--- dungeon M1 (only hybrid)
 task.spawn(function()
     while not _G.FE_Unloaded do
         if dungeonActive() and S.dungeonM1 then
@@ -4797,12 +5170,10 @@ task.spawn(function()
     end
 end)
 
--- equip + buso
 task.spawn(function()
     while not _G.FE_Unloaded do
         if dungeonActive() then
             pcall(dungeonAutoEquip)
-            pcall(dungeonActivateBuso)
             task.wait(0.35)
         else
             task.wait(0.5)
@@ -4810,7 +5181,6 @@ task.spawn(function()
     end
 end)
 
--- hitbox expander
 task.spawn(function()
     local parts = {"HumanoidRootPart", "UpperTorso", "Torso", "Head", "LowerTorso"}
     while not _G.FE_Unloaded do
@@ -4844,8 +5214,7 @@ task.spawn(function()
     dungeonRestoreHitboxes()
 end)
 
-
-
+end
 
 task.spawn(function()
     local t0 = os.clock()
@@ -4853,26 +5222,7 @@ task.spawn(function()
         task.wait(0.1)
     end
     local okLib, Lib = pcall(function()
-        local src = game:HttpGet("https://raw.githubusercontent.com/neaxusxgod-png/INS-ui/main/uilib.min.lua")
-        src = src:gsub(
-            "Camera = workspace%.CurrentCamera",
-            "Camera = workspace.CurrentCamera\n" ..
-            "local function INS_SafeViewport()\n" ..
-            "  local c = workspace.CurrentCamera\n" ..
-            "  if c then Camera = c end\n" ..
-            "  c = Camera\n" ..
-            "  if c then\n" ..
-            "    local ok, vs = pcall(function() return c.ViewportSize end)\n" ..
-            "    if ok and vs then return vs end\n" ..
-            "  end\n" ..
-            "  return Vector2.new(1920, 1080)\n" ..
-            "end",
-            1
-        )
-        src = src:gsub("Camera%.ViewportSize", "INS_SafeViewport()")
-        local fn, err = loadstring(src)
-        if not fn then error(err or "INS-ui compile failed") end
-        return fn() or INSUI
+        return loadstring(game:HttpGet("https://raw.githubusercontent.com/neaxusxgod-png/INS-ui/main/uilib.min.lua"))() or INSUI
     end)
     if not okLib or type(Lib) ~= "table" then
         warn("[Hub] INS UI not loaded", Lib)
@@ -4881,11 +5231,10 @@ task.spawn(function()
     LibRef = Lib
     pcall(function()
         if Lib.SetKeybindOverlay then Lib:SetKeybindOverlay(false) end
-        if Lib.SetMenuKey then Lib:SetMenuKey("f1") end
+        if Lib.SetGameInput then Lib:SetGameInput("always") end
+        if Lib.SetSpotlight then Lib:SetSpotlight(true) end
     end)
-    pcall(function()
-        if Lib.SetMenuKey then Lib:SetMenuKey("f1") end
-    end)
+
     local win = Lib:CreateWindow({
         title = "BF Hub",
         subtitle = "Blox Fruits",
@@ -4897,403 +5246,357 @@ task.spawn(function()
         autoSave = true,
         configName = "default",
         configFolder = "BFHub",
+        startOpen = true,
+        smartFps = true,
+        gameInput = "always",
+        spotlight = true,
     })
     WinRef = win
     menuOpen = true
+    pcall(function() if win.SetMenuKey then win:SetMenuKey("f1") end end)
+    pcall(function() if Lib.SetGameInput then Lib:SetGameInput("always") end end)
+    pcall(function() if setrobloxinput then setrobloxinput(true) end end)
+
     local function tip(handle, text)
-        if handle and text then
-            pcall(function() handle:Tooltip(text) end)
-        end
+        if handle and text then pcall(function() handle:Tooltip(text) end) end
         return handle
     end
+    local function onMenuKey(v)
+        if isMouseBind(v) then
+            forceBindNone(K.menu)
+            setBindVK("menu", "f1")
+            pcall(function() if win.SetMenuKey then win:SetMenuKey("f1") end end)
+            pcall(function() if K.menu and K.menu.Set then K.menu:Set("f1") end end)
+            return
+        end
+        local code = setBindVK("menu", v)
+        local name = (code and VK_NAME[code]) or (type(v)=="string" and string.lower(tostring(v))) or "f1"
+        name = tostring(name):gsub("%s+", "")
+        pcall(function() if win.SetMenuKey then win:SetMenuKey(name) end end)
+        pcall(function() if Lib.SetMenuKey then Lib:SetMenuKey(name) end end)
+    end
+    local function setEspColor(which, c)
+        S.espColors = S.espColors or {}
+        S.espColors[which] = c
+    end
+    local function getEspColor(which, fallback)
+        S.espColors = S.espColors or {}
+        return S.espColors[which] or fallback
+    end
+
     Lib:Category("VISUALS")
     local espTab = win:Tab("ESP", "eye")
-    local espSec = espTab:Section("Main", "Left")
-    H.master = tip(espSec:Toggle("Enabled", true, function(on) Features.master = on end, "master switch for overlays"), "master switch for overlays")
-    espSec:Divider("Toggles")
-    H.esp = tip(espSec:Toggle("Fruit ESP", true, function(on) Features.esp = on end, "labels above fruits"), "labels above fruits")
+    local panelSub = espTab:Sub("Panel", "monitor")
+    local panelSec = panelSub:Section("Server Panel", "Left")
+    tip(panelSec:Toggle("Panel", true, function(on)
+        Features.panel = on
+    end), "SERVER STATUS panel")
+    tip(panelSec:Slider("Panel X", panelPosX or 50, 1, 0, 1920, "px", function(v)
+        panelPosX = v
+        pcall(function() layoutPanel(panelShown or 0, 0) end)
+    end), "panel X")
+    tip(panelSec:Slider("Panel Y", panelPosY or 400, 1, 0, 1080, "px", function(v)
+        panelPosY = v
+        pcall(function() layoutPanel(panelShown or 0, 0) end)
+    end), "panel Y")
+    tip(panelSec:Slider("Text size", panelTextSize or 13, 1, 8, 24, "px", function(v)
+        panelTextSize = v
+        pcall(applyPanelSize)
+        pcall(function() layoutPanel(panelShown or 0, 0) end)
+    end), "panel text size")
+    local espWorld = espTab:Sub("ESP", "eye")
+    local espSec = espWorld:Section("Toggles", "Left")
+    H.master = tip(espSec:Toggle("Enabled", true, function(on) Features.master = on end), "master")
+    H.esp = tip(espSec:Toggle("Fruit ESP", true, function(on) Features.esp = on end), "fruit labels")
     H.berryEsp = tip(espSec:Toggle("Berry ESP", false, function(on)
         Features.berryEsp = on
-        if not on then
-            clearAllBerryESP()
-        else
-            task.spawn(function()
-                refreshBerries(true)
-            end)
-        end
-    end, "berry spheres on bushes (red)"), "berry spheres on bushes (red)")
+        setMyth("berryEsp", on)
+        if on then pcall(buildBerryEspLabels) else pcall(clearBerryEspLabels); pcall(clearAllBerryESP) end
+    end), "berries")
     tip(espSec:Toggle("Flower ESP", false, function(v)
         setMyth("flowerEsp", v)
         if v then pcall(buildFlowerEsp) else pcall(clearFlowerEsp) end
-    end, "Shows a label and a 3d box around all flowers, 2ND SEA"), "Shows a label and a 3d box around all flowers, 2ND SEA")
+    end), "flowers")
     tip(espSec:Toggle("Chest ESP", false, function(v)
         setMyth("chestEsp", v)
         if v then pcall(buildChestEspLabels) else pcall(clearChestEspLabels) end
-    end, "Shows a text label on every spawned chest"), "Shows a text label on every spawned chest")
+    end), "chests")
     tip(espSec:Toggle("Boat ESP", false, function(v)
         setMyth("boatEsp", v)
         if v then pcall(buildBoatEsp) else pcall(clearBoatEsp) end
-    end, "Draws a full 3D box around each on-screen boat"), "Draws a full 3D box around each on-screen boat")
+    end), "boats")
     tip(espSec:Toggle("Mirage ESP", false, function(v)
         setMyth("mirageEsp", v)
         if not v then pcall(clearMirageEsp) end
-    end, "Shows the Mirage Island location"), "Shows the Mirage Island location")
-    H.panel = tip(espSec:Toggle("Status Panel", true, function(on) Features.panel = on end, "server status overlay"), "server status overlay")
-    local panelTab = win:Tab("Panel", "map")
-    local posSec = panelTab:Section("Position", "Left")
-    tip(posSec:Slider("Panel X", 50, 50, 0, 3000, "", function(v) panelPosX = v; layoutPanel(panelShown, 0) end), "horizontal position of status panel")
-    tip(posSec:Slider("Panel Y", 400, 20, 0, 1500, "", function(v) panelPosY = v; layoutPanel(panelShown, 0) end), "vertical position of status panel")
-    local styleSec = panelTab:Section("Style", "Right")
-    tip(styleSec:Slider("Text size", 13, 1, 10, 22, "", function(v) panelTextSize = v; applyPanelSize() end), "status panel text size")
-    Lib:Category("FARMING")
-    local farmTab = win:Tab("Farm", "sword")
-    local farmSec = farmTab:Section("Farming", "Left")
-    tip(farmSec:Toggle("Auto Farm Nearest", false, function(v) setMyth("autoFarmNearest", v) end, "Farms the nearest enemy (load chests/enemies first!)"), "Farms the nearest enemy (load chests/enemies first!)")
-    tip(farmSec:Toggle("Remote Mode (60 studs)", false, function(v) setMyth("remoteMode", v) end, "Use RegisterHit remotes instead of mouse clicks (60 studs)"), "Use RegisterHit remotes instead of mouse clicks (60 studs)")
-    tip(farmSec:Toggle("Auto Farm Chest", false, function(v)
-        setMyth("autoFarming", v)
-        if type(S) == "table" and v then S.chestIndex = 1 end
-    end, "Tween between chest models"), "Tween between chest models")
-    tip(farmSec:Toggle("Auto Farm Fruits", false, function(v) setMyth("autoFruits", v) end, "Tween to nearest spawned fruit"), "Tween to nearest spawned fruit")
-    tip(farmSec:Toggle("Auto TP To Fruit", false, function(v) setMyth("autoTpFruit", v) end, "Instant teleport on top of nearest fruit"), "Instant teleport on top of nearest fruit")
-    local npcSec = farmTab:Section("NPC Farm", "Right")
-    tip(npcSec:Toggle("Auto NPC Farm", false, function(v) setMyth("autoNpcFarm", v) end, "Go to selected NPC Island and farm NPCs there"), "Go to selected NPC Island and farm NPCs there")
-    local isleOpts = {}
-    if type(islandNames) == "table" and #islandNames > 0 then
-        for _, n in ipairs(islandNames) do isleOpts[#isleOpts + 1] = n end
-    elseif type(islandList) == "table" then
-        for _, isle in pairs(islandList) do isleOpts[#isleOpts + 1] = isle.name end
-    end
-    if #isleOpts == 0 then
-        isleOpts = {"Tiki2", "Tiki1", "Port", "Hydra1", "Hydra2", "Hydra3", "GreatTree1", "GreatTree2", "HauntedCastle", "IceCream", "CakeLand", "Chocolate", "Peanut", "Mansion", "TurtleCenter2", "TurtleCenter1", "TurtleEntrance"}
-    end
-    local defaultIsle = isleOpts[1]
-    local ddIsle = npcSec:Dropdown("NPC Island", { defaultIsle }, isleOpts, false, function(v)
-        local name = v
-        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
-        name = tostring(name)
-        if type(islandList) ~= "table" then return end
-        for i, isle in pairs(islandList) do
-            if isle.name == name then
-                setMyth("selectedIsland", i)
-                break
-            end
-        end
-    end)
-    tip(ddIsle, "Select which island to farm NPCs on")
-    pcall(function()
-        if ddIsle and ddIsle.UpdateChoices then ddIsle:UpdateChoices(isleOpts) end
-        if ddIsle and ddIsle.Set then ddIsle:Set({ defaultIsle }) end
-    end)
-    tip(npcSec:Toggle("Auto Farm Level", false, function(v) setMyth("autoFarmLevel", v) end, "Farms mobs based on your current level (quest giver must be nearby)"), "Farms mobs based on your current level (quest giver must be nearby)")
-    local offSec = farmTab:Section("Custom NPC Offset", "Left")
-    tip(offSec:Toggle("Custom NPC Offset", false, function(v) setMyth("customOffset", v) end, "Use custom XYZ offset when positioning on NPCs"), "Use custom XYZ offset when positioning on NPCs")
-    tip(offSec:Slider("Offset X", 0, 1, -100, 100, "", function(v) setMyth("customOffsetX", v) end), "X offset from enemy position")
-    tip(offSec:Slider("Offset Y", 23, 1, -100, 100, "", function(v) setMyth("customOffsetY", v) end), "Y offset from enemy position")
-    tip(offSec:Slider("Offset Z", 0, 1, -100, 100, "", function(v) setMyth("customOffsetZ", v) end), "Z offset from enemy position")
-    local bossSec = farmTab:Section("Boss / Material / Sea", "Right")
-    tip(bossSec:Toggle("Auto Mastery", false, function(v) setMyth("autoMastery", v) end, "Goto Chocolate Island and use Buddha transformation"), "Goto Chocolate Island and use Buddha transformation")
-    tip(bossSec:Toggle("Auto Farm Material", false, function(v) setMyth("autoMaterial", v) end, "Farms enemies that drop the selected material"), "Farms enemies that drop the selected material")
-    local ddMat = bossSec:Dropdown("Material", { S.materialTarget or MATERIAL_NAMES[1] }, MATERIAL_NAMES, false, function(v)
-        local name = v
-        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
-        setMyth("materialTarget", tostring(name))
-    end)
-    tip(ddMat, "Material to farm")
-    tip(bossSec:Toggle("Auto Farm Boss", false, function(v) setMyth("autoBoss", v) end, "Tweens to and farms the selected spawned boss"), "Tweens to and farms the selected spawned boss")
-    local seaBosses = bossesForCurrentSea()
-    local defaultBoss = S.bossTarget
-    local inSea = false
-    for _, n in ipairs(seaBosses) do if n == defaultBoss then inSea = true; break end end
-    if not inSea then defaultBoss = seaBosses[1] or BOSS_NAMES[1]; setMyth("bossTarget", defaultBoss) end
-    local ddBoss = bossSec:Dropdown("Boss", { defaultBoss }, seaBosses, false, function(v)
-        local name = v
-        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
-        setMyth("bossTarget", tostring(name))
-    end)
-    tip(ddBoss, "Bosses for current sea only (must be spawned/loaded)")
-    tip(bossSec:Toggle("Auto Farm Sea Target", false, function(v) setMyth("autoSeaEvent", v) end, "Tweens to and attacks the selected spawned sea enemy"), "Tweens to and attacks the selected spawned sea enemy")
-    local ddSea = bossSec:Dropdown("Sea Target", { S.seaEventTarget or SEA_EVENT_NAMES[1] }, SEA_EVENT_NAMES, false, function(v)
-        local name = v
-        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
-        setMyth("seaEventTarget", tostring(name))
-    end)
-    tip(ddSea, "Sea event enemy")
-    local statSec = farmTab:Section("Stats / Weapon", "Left")
-    tip(statSec:Toggle("Auto Melee", false, function(v) setMyth("autoStatMelee", v) end, "Spend points into Melee"), "Spend points into Melee")
-    tip(statSec:Toggle("Auto Defense", false, function(v) setMyth("autoStatDefense", v) end, "Spend points into Defense"), "Spend points into Defense")
-    tip(statSec:Toggle("Auto Sword", false, function(v) setMyth("autoStatSword", v) end, "Spend points into Sword"), "Spend points into Sword")
-    tip(statSec:Toggle("Auto Gun", false, function(v) setMyth("autoStatGun", v) end, "Spend points into Gun"), "Spend points into Gun")
-    tip(statSec:Toggle("Auto Fruit", false, function(v) setMyth("autoStatFruit", v) end, "Spend points into Demon Fruit"), "Spend points into Demon Fruit")
-    tip(statSec:Slider("Points Per Upgrade", S.statAmount or 10, 1, 1, 50, "", function(v) setMyth("statAmount", v) end), "Points per AddPoint call")
-    tip(statSec:Toggle("Weapon After Fruit", false, function(v) setMyth("weaponAfterFruit", v) end, "Switch to melee/sword after collecting a fruit"), "Switch to melee/sword after collecting a fruit")
-    tip(statSec:Toggle("Weapon: Melee (off=Sword)", true, function(v)
-        setMyth("weaponSlot", v and "Melee" or "Sword")
-    end, "ON = Melee slot1, OFF = Sword slot3"), "ON = Melee slot1, OFF = Sword slot3")
-    local speedSec = farmTab:Section("Tween Speeds", "Right")
-    tip(speedSec:Slider("Farm Speed", S.FARM_SPEED or 250, 10, 50, 1000, "", function(v)
-        setMyth("FARM_SPEED", v)
-        if type(AFL) == "table" then AFL.tweenSpeed = v end
-    end), "General farm tween speed")
-    tip(speedSec:Slider("Chest Speed", S.CHEST_SPEED or 310, 10, 50, 1000, "", function(v) setMyth("CHEST_SPEED", v) end), "Chest farm tween speed")
-    tip(speedSec:Slider("Fruit Speed", S.FRUIT_SPEED or 210, 10, 50, 1000, "", function(v) setMyth("FRUIT_SPEED", v) end), "Fruit farm tween speed")
-    tip(speedSec:Slider("NPC Speed", S.NPC_TWEEN_SPEED or 250, 10, 50, 1000, "", function(v) setMyth("NPC_TWEEN_SPEED", v) end), "NPC travel speed")
-    tip(speedSec:Slider("Raid Speed", S.RAID_SPEED or 200, 10, 50, 1000, "", function(v) setMyth("RAID_SPEED", v) end), "Raid island tween speed")
-    tip(speedSec:Slider("Mastery Speed", S.MASTERY_SPEED or 250, 10, 50, 1000, "", function(v) setMyth("MASTERY_SPEED", v) end), "Mastery tween speed")
+    end), "mirage")
+    local espCol = espWorld:Section("Fruit Color", "Right")
+    tip(espCol:Colorpicker("Fruit ESP color", getEspColor("fruit", Color3.fromRGB(0, 255, 120)), function(c)
+        setEspColor("fruit", c)
+    end), "only fruit label color")
+
     Lib:Category("COMBAT")
-    local combatTab = win:Tab("Combat", "crosshair")
-    local combatSec = combatTab:Section("Combat", "Left")
-    tip(combatSec:Toggle("Big Hitbox", false, function(v) setMyth("bigHitbox", v) end, "Enlarge enemy hitboxes while farming"), "Enlarge enemy hitboxes while farming")
-    tip(combatSec:Toggle("Pull Enemies", false, function(v) setMyth("pullEnemies", v) end, "Pull nearby enemies toward you"), "Pull nearby enemies toward you")
-    tip(combatSec:Toggle("Buddha Pull", false, function(v) setMyth("buddhaPull", v) end, "Buddha fruit pull variant"), "Buddha fruit pull variant")
-    tip(combatSec:Toggle("Auto Ken", false, function(v) setMyth("autoKen", v) end, "Auto Observation Haki"), "Auto Observation Haki")
-    tip(combatSec:Toggle("Auto Haki", false, function(v) setMyth("autoHaki", v) end, "Automatically keeps Armament Haki active"), "Automatically keeps Armament Haki active")
-    tip(combatSec:Toggle("Auto Race Ability", false, function(v) setMyth("autoRaceAbility", v) end, "Keeps sending the race ability activation remote"), "Keeps sending the race ability activation remote")
-    tip(combatSec:Toggle("Freeze Position", false, function(v) setMyth("freezePos", v) end, "Lock your character position"), "Lock your character position")
-    tip(combatSec:Toggle("Freeze Enemies", false, function(v) setMyth("freezeEnemies", v) end, "Freeze enemy positions"), "Freeze enemy positions")
-    tip(combatSec:Toggle("Auto TP Ember", false, function(v) setMyth("teleportEmber", v) end, "Teleport to Ember template"), "Teleport to Ember template")
-    tip(combatSec:Toggle("Auto Tween Dragon Ember", false, function(v) setMyth("tweenEmber", v) end, "Smooth tween to Workspace EmberTemplate objects"), "Smooth tween to Workspace EmberTemplate objects")
-    tip(combatSec:Toggle("Goto Kitsune Island", false, function(v) setMyth("teleportKitsune", v) end, "Teleport to Kitsune island"), "Teleport to Kitsune island")
-    local skillSec = combatTab:Section("Skill Combos", "Right")
-    tip(skillSec:Toggle("Flame R to C", false, function(v) setMyth("flameRToC", v) end, "FLAME: when you flashstep (R) = Flame C move"), "FLAME: when you flashstep (R) = Flame C move")
-    tip(skillSec:Toggle("R to X", false, function(v) setMyth("rToX", v) end, "Automatically taps X when you press R"), "Automatically taps X when you press R")
-    tip(skillSec:Toggle("R to X then Z", false, function(v) setMyth("rToXThenZ", v) end, "Taps X when you press R, waits 25ms, then taps Z"), "Taps X when you press R, waits 25ms, then taps Z")
-    local pullSec = combatTab:Section("Custom Pull", "Right")
-    tip(pullSec:Toggle("Custom Pull", false, function(v) setMyth("customPull", v) end, "Use custom pull offsets"), "Use custom pull offsets")
-    tip(pullSec:Slider("Pull X Offset", 0, 1, -100, 100, "", function(v) setMyth("customPullX", v) end), "Custom pull X")
-    tip(pullSec:Slider("Pull Y Offset", -10, 1, -100, 100, "", function(v) setMyth("customPullY", v) end), "Custom pull Y")
-    tip(pullSec:Slider("Pull Z Offset", 0, 1, -100, 100, "", function(v) setMyth("customPullZ", v) end), "Custom pull Z")
-    local m1Sec = combatTab:Section("M1 Aura", "Left")
+    local combatTab = win:Tab("Combat", "swords")
+    local auraSub = combatTab:Sub("Aura", "crosshair")
+    local m1Sec = auraSub:Section("M1 Aura", "Left")
     H.aura = tip(m1Sec:Toggle("M1 Aura", false, function(on)
-        Features.aura = on
         AuraEnabled = on
         aura.enabled = on == true
-        if on then
-            local ok = aura_ensureRemotes()
-        else
-        end
+        Features.aura = on
         updateHUD()
-    end, "crashable on Matcha"), "crashable on Matcha")
-    K.aura = m1Sec:Keybind("Aura key", nil, function(v)
-        if isMouseBind(v) then return end
+    end), "crashable on matcha")
+    K.aura_key = m1Sec:Keybind("Aura key", nil, function(v)
+        if isMouseBind(v) then forceBindNone(K.aura_key); setBindVK("aura", nil); return end
+        setBindVK("aura", v)
     end)
-    tip(m1Sec:Slider("M1 Range", 100, 5, 10, 500, "studs", function(v)
-        AuraConfig.MAX_DISTANCE = v
-        aura.maxDist = v
-    end), "Max distance to hit NPCs")
+    tip(m1Sec:Label("crashable on matcha"), "warning")
+    tip(m1Sec:Toggle("Big Hitbox", false, function(v) setMyth("bigHitbox", v) end), "expand hitbox")
+    tip(m1Sec:Toggle("Remote Mode", false, function(v) setMyth("remoteMode", v) end), "remote attacks")
+    local hakiSub = combatTab:Sub("Haki", "shield")
+    local hakiSec = hakiSub:Section("Auto", "Left")
+    tip(hakiSec:Toggle("Auto Haki", false, function(v) setMyth("autoHaki", v) end), "Buso")
+    tip(hakiSec:Toggle("Auto Ken", false, function(v) setMyth("autoKen", v) end), "Ken")
+    tip(hakiSec:Toggle("Auto Race Ability", false, function(v) setMyth("autoRaceAbility", v) end), "Race V")
+    local pullSub = combatTab:Sub("Pull", "magnet")
+    local pullSec = pullSub:Section("Enemy Pull", "Left")
+    tip(pullSec:Toggle("Pull Enemies", false, function(v) setMyth("pullEnemies", v) end), "pull under")
+    tip(pullSec:Toggle("Buddha Pull", false, function(v) setMyth("buddhaPull", v) end), "buddha")
+    tip(pullSec:Toggle("Custom Pull", false, function(v) setMyth("customPull", v) end), "custom")
+    tip(pullSec:Slider("Custom X", 0, 1, -50, 50, "", function(v) setMyth("customPullX", v) end), "X")
+    tip(pullSec:Slider("Custom Y", -10, 1, -50, 50, "", function(v) setMyth("customPullY", v) end), "Y")
+    tip(pullSec:Slider("Custom Z", 0, 1, -50, 50, "", function(v) setMyth("customPullZ", v) end), "Z")
+    local freezeSec = pullSub:Section("Freeze", "Right")
+    tip(freezeSec:Toggle("Freeze Position", false, function(v)
+        setMyth("freezePos", v)
+        if v then
+            local char = LocalPlayer.Character
+            local hrp = char and char:FindFirstChild("HumanoidRootPart")
+            if hrp then S.freezePosition = hrp.Position end
+        else
+            S.freezePosition = nil
+        end
+    end), "lock pos")
+    tip(freezeSec:Toggle("Freeze Enemies", false, function(v) setMyth("freezeEnemies", v) end), "freeze mobs")
 
+    Lib:Category("FARM")
+    local farmTab = win:Tab("Farm", "target")
+    local farmMain = farmTab:Sub("Main", "swords")
+    local farmSec = farmMain:Section("Farms", "Left")
+    tip(farmSec:Toggle("Auto Farm Level", false, function(v) setMyth("autoFarmLevel", v) end), "level")
+    tip(farmSec:Toggle("Auto Farm Nearest", false, function(v) setMyth("autoFarmNearest", v) end), "nearest")
+    tip(farmSec:Toggle("Auto Mastery", false, function(v) setMyth("autoMastery", v) end), "mastery")
+    tip(farmSec:Toggle("Auto NPC Farm", false, function(v) setMyth("autoNpcFarm", v) end), "npc")
+    tip(farmSec:Toggle("Auto Farm Chest", false, function(v)
+        setMyth("autoFarmChest", v)
+        setMyth("autoFarming", v)
+    end), "chests")
+    tip(farmSec:Dropdown("Chest Priority", {"Diamond, Gold, Silver"}, {
+        "Diamond, Gold, Silver",
+        "Gold, Diamond, Silver",
+        "Silver, Gold, Diamond",
+        "Diamond, Silver, Gold",
+    }, false, function(v)
+        local s = type(v)=="table" and v[1] or v
+        local parts = {}
+        for part in string.gmatch(tostring(s), "[^,]+") do
+            part = part:match("^%s*(.-)%s*$")
+            if part and part ~= "" then parts[#parts+1] = part end
+        end
+        if #parts > 0 then S.chestPriority = parts end
+    end), "chest order")
+    tip(farmSec:Toggle("Auto Fruits", false, function(v) setMyth("autoFruits", v) end), "fruits")
+    tip(farmSec:Toggle("Auto Sea Event", false, function(v) setMyth("autoSeaEvent", v) end), "sea event")
     pcall(function()
-        if m1Sec.Label then m1Sec:Label("  crashable on Matcha") end
+        local names = SEA_EVENT_NAMES or {"Shark","Terrorshark","Piranha"}
+        tip(farmSec:Dropdown("Sea Event Target", {S.seaEventTarget or names[1]}, names, false, function(v)
+            setMyth("seaEventTarget", type(v)=="table" and v[1] or v)
+        end), "event mob")
     end)
+    local farmBoss = farmTab:Sub("Boss / Mat", "crown")
+    local bossSec = farmBoss:Section("Boss", "Left")
+    tip(bossSec:Toggle("Auto Boss", false, function(v) setMyth("autoBoss", v) end), "boss")
+    pcall(function()
+        local names = BOSS_NAMES or {"The Gorilla King"}
+        tip(bossSec:Dropdown("Boss Target", {S.bossTarget or names[1]}, names, false, function(v)
+            setMyth("bossTarget", type(v)=="table" and v[1] or v)
+        end), "boss")
+    end)
+    local matSec = farmBoss:Section("Material", "Right")
+    tip(matSec:Toggle("Auto Material", false, function(v) setMyth("autoMaterial", v) end), "mats")
+    pcall(function()
+        local names = MATERIAL_NAMES or {"Leather + Scrap Metal"}
+        tip(matSec:Dropdown("Material Target", {S.materialTarget or names[1]}, names, false, function(v)
+            setMyth("materialTarget", type(v)=="table" and v[1] or v)
+        end), "mat")
+    end)
+    local statsSub = farmTab:Sub("Stats", "gauge")
+    local statsSec = statsSub:Section("Auto Stats", "Left")
+    tip(statsSec:Toggle("Melee", false, function(v) setMyth("autoStatMelee", v) end), "melee")
+    tip(statsSec:Toggle("Defense", false, function(v) setMyth("autoStatDefense", v) end), "def")
+    tip(statsSec:Toggle("Sword", false, function(v) setMyth("autoStatSword", v) end), "sword")
+    tip(statsSec:Toggle("Gun", false, function(v) setMyth("autoStatGun", v) end), "gun")
+    tip(statsSec:Toggle("Fruit", false, function(v) setMyth("autoStatFruit", v) end), "fruit")
+    tip(statsSec:Slider("Stat Amount", 10, 1, 1, 50, "", function(v) setMyth("statAmount", v) end), "points")
+    local tuneSub = farmTab:Sub("Tuning", "sliders")
+    local tuneSec = tuneSub:Section("Speed / Weapon", "Left")
+    tip(tuneSec:Slider("Tween Speed", 250, 10, 50, 600, "", function(v)
+        if AFL then AFL.tweenSpeed = v end
+        setMyth("FARM_SPEED", v)
+    end), "tween")
+    tip(tuneSec:Dropdown("Weapon Slot", {S.weaponSlot or "Melee"}, {"Melee", "Sword"}, false, function(v)
+        setMyth("weaponSlot", type(v)=="table" and v[1] or v)
+    end), "weapon")
+    tip(tuneSec:Toggle("Custom Offset", false, function(v) setMyth("customOffset", v) end), "offset")
+    tip(tuneSec:Slider("Offset X", S.customOffsetX or 0, 1, -50, 50, "", function(v) setMyth("customOffsetX", v) end), "X")
+    tip(tuneSec:Slider("Offset Y", S.customOffsetY or 23, 1, -10, 80, "", function(v) setMyth("customOffsetY", v) end), "Y")
+    tip(tuneSec:Slider("Offset Z", S.customOffsetZ or 0, 1, -50, 50, "", function(v) setMyth("customOffsetZ", v) end), "Z")
+
+    Lib:Category("GLITCH")
     local glitchTab = win:Tab("Glitch", "zap")
-    local glitchSec = glitchTab:Section("Velocity Boosts", "Left")
-    tip(glitchSec:Toggle("Sanguine Z Boost", false, function(v) setMyth("sanguineZ", v) end, "Boosts current velocity during Sanguine Art Z"), "Boosts current velocity during Sanguine Art Z")
-    tip(glitchSec:Toggle("Dragon Talon Z Boost", false, function(v) setMyth("dragonTalonZ", v) end, "Boosts current velocity after pressing Z"), "Boosts current velocity after pressing Z")
-    tip(glitchSec:Toggle("Yama Z Boost", false, function(v) setMyth("yamaZ", v) end, "Boosts current velocity after pressing Z"), "Boosts current velocity after pressing Z")
-    tip(glitchSec:Toggle("Tushita X Boost", false, function(v) setMyth("tushitaX", v) end, "Boosts current velocity after pressing X"), "Boosts current velocity after pressing X")
-    tip(glitchSec:Toggle("Fox Lamp X Boost", false, function(v) setMyth("foxLampX", v) end, "Boosts current velocity after pressing X"), "Boosts current velocity after pressing X")
-    tip(glitchSec:Toggle("Soul Guitar M1", false, function(v) setMyth("soulGuitarM1", v) end, "Boosts after Q + M1 within 0.5 seconds"), "Boosts after Q + M1 within 0.5 seconds")
-    tip(glitchSec:Toggle("Diamond M1", false, function(v) setMyth("diamondM1", v) end, "Sanguine-style boost when M1 is released with Diamond-Diamond equipped"), "Sanguine-style boost when M1 is released with Diamond-Diamond equipped")
-    tip(glitchSec:Toggle("Flame F Boost", false, function(v) setMyth("flameF", v) end, "Boosts current velocity after pressing F"), "Boosts current velocity after pressing F")
-    local glitchTuneSec = glitchTab:Section("Glitch Sliders", "Right")
-    local glitchTuneOpts = {"sanguine","dragonTalon","yama","tushita","foxLamp","soulGuitar","diamond","flame"}
-    local glitchSliderHandles = {speed=nil, delay=nil, duration=nil}
-    local function currentGlitchProfile()
-        local key = S.glitchTune or "sanguine"
-        return S.glitchSettings[key] or S.glitchSettings.sanguine
+    local gBoost = glitchTab:Sub("Boosts", "zap")
+    local glitchSec = gBoost:Section("Enable", "Left")
+    tip(glitchSec:Toggle("Sanguine Z", false, function(v) setMyth("sanguineZ", v) end), "Z")
+    tip(glitchSec:Toggle("Dragon Talon Z", false, function(v) setMyth("dragonTalonZ", v) end), "Z")
+    tip(glitchSec:Toggle("Yama Z", false, function(v) setMyth("yamaZ", v) end), "Z")
+    tip(glitchSec:Toggle("Tushita X", false, function(v) setMyth("tushitaX", v) end), "X")
+    tip(glitchSec:Toggle("Fox Lamp X", false, function(v) setMyth("foxLampX", v) end), "X")
+    tip(glitchSec:Toggle("Soul Guitar M1", false, function(v) setMyth("soulGuitarM1", v) end), "Q+M1")
+    tip(glitchSec:Toggle("Diamond M1", false, function(v) setMyth("diamondM1", v) end), "M1")
+    tip(glitchSec:Toggle("Flame F", false, function(v) setMyth("flameF", v) end), "F")
+    local gTune = glitchTab:Sub("Tune", "sliders")
+    local function addGlitchProfile(sec, key, label)
+        local g = (S.glitchSettings and S.glitchSettings[key]) or {speed=500, delay=0.1, duration=0.3}
+        sec:Divider(label)
+        tip(sec:Slider(label.." Speed", g.speed or 500, 10, 50, 1500, "", function(v)
+            if S.glitchSettings and S.glitchSettings[key] then S.glitchSettings[key].speed = v end
+        end), "speed")
+        tip(sec:Slider(label.." Delay", math.floor(((g.delay or 0.1)*100)+0.5), 1, 0, 100, "x0.01s", function(v)
+            if S.glitchSettings and S.glitchSettings[key] then S.glitchSettings[key].delay = v/100 end
+        end), "delay")
+        tip(sec:Slider(label.." Duration", math.floor(((g.duration or 0.3)*100)+0.5), 1, 1, 100, "x0.01s", function(v)
+            if S.glitchSettings and S.glitchSettings[key] then S.glitchSettings[key].duration = v/100 end
+        end), "duration")
     end
-    local function syncGlitchSliders()
-        local g = currentGlitchProfile()
-        if not g then return end
-        pcall(function()
-            if glitchSliderHandles.speed and glitchSliderHandles.speed.Set then glitchSliderHandles.speed:Set(g.speed or 500) end
-            if glitchSliderHandles.delay and glitchSliderHandles.delay.Set then glitchSliderHandles.delay:Set(math.floor((g.delay or 0.1)*100 + 0.5)) end
-            if glitchSliderHandles.duration and glitchSliderHandles.duration.Set then glitchSliderHandles.duration:Set(math.floor((g.duration or 0.3)*100 + 0.5)) end
-        end)
-    end
-    local ddGlitch = glitchTuneSec:Dropdown("Glitch Target", { S.glitchTune or "sanguine" }, glitchTuneOpts, false, function(v)
-        local name = v
-        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
-        setMyth("glitchTune", tostring(name))
-        syncGlitchSliders()
-    end)
-    tip(ddGlitch, "Which glitch the sliders edit (each has its own speed/delay/duration)")
-    glitchSliderHandles.speed = glitchTuneSec:Slider("Speed", (S.glitchSettings[S.glitchTune or "sanguine"] or {}).speed or 500, 10, 100, 1500, "", function(v)
-        local g = currentGlitchProfile()
-        if g then g.speed = v end
-    end)
-    tip(glitchSliderHandles.speed, "Velocity boost speed for selected glitch only")
-    glitchSliderHandles.delay = glitchTuneSec:Slider("Start Delay", math.floor(((S.glitchSettings[S.glitchTune or "sanguine"] or {}).delay or 0.1)*100 + 0.5), 1, 0, 50, "x0.01s", function(v)
-        local g = currentGlitchProfile()
-        if g then g.delay = v / 100 end
-    end)
-    tip(glitchSliderHandles.delay, "Delay before boost starts (selected glitch only)")
-    glitchSliderHandles.duration = glitchTuneSec:Slider("Duration", math.floor(((S.glitchSettings[S.glitchTune or "sanguine"] or {}).duration or 0.3)*100 + 0.5), 1, 5, 100, "x0.01s", function(v)
-        local g = currentGlitchProfile()
-        if g then g.duration = v / 100 end
-    end)
-    tip(glitchSliderHandles.duration, "How long the boost lasts (selected glitch only)")
+    local gLeft = gTune:Section("Sanguine / Talon / Yama / Tushita", "Left")
+    addGlitchProfile(gLeft, "sanguine", "Sanguine")
+    addGlitchProfile(gLeft, "dragonTalon", "DragonTalon")
+    addGlitchProfile(gLeft, "yama", "Yama")
+    addGlitchProfile(gLeft, "tushita", "Tushita")
+    local gRight = gTune:Section("Fox / Guitar / Diamond / Flame", "Right")
+    addGlitchProfile(gRight, "foxLamp", "FoxLamp")
+    addGlitchProfile(gRight, "soulGuitar", "SoulGuitar")
+    addGlitchProfile(gRight, "diamond", "Diamond")
+    addGlitchProfile(gRight, "flame", "Flame")
+
     Lib:Category("SEA")
     local seaTab = win:Tab("Sea", "globe")
-    local seaSec = seaTab:Section("Boat", "Left")
-    tip(seaSec:Toggle("Boat Fly", false, function(v) setMyth("boatFlyEnabled", v) end, "Fly the boat with WASD / X / Shift"), "Fly the boat with WASD / X / Shift")
-    tip(seaSec:Slider("Fly Speed", 5, 1, 1, 50, "", function(v) setMyth("boatFlySpeed", v) end), "Boat fly speed")
-    local dOpts = {}
-    if type(dangerLevelNames) == "table" and #dangerLevelNames > 0 then
-        for _, n in ipairs(dangerLevelNames) do dOpts[#dOpts + 1] = n end
-    elseif type(dangerLevels) == "table" then
-        for _, d in pairs(dangerLevels) do dOpts[#dOpts + 1] = d.name end
-    end
-    if #dOpts == 0 then
-        dOpts = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6"}
-    end
-    local defaultDanger = dOpts[1]
-    local ddDanger = seaSec:Dropdown("Danger Level", { defaultDanger }, dOpts, false, function(v)
-        local name = v
-        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
-        name = tostring(name)
-        if type(dangerLevels) ~= "table" then return end
-        for _, d in pairs(dangerLevels) do
-            if d.name == name then
-                setMyth("boatTweening", false)
-                task.wait(0.05)
-                task.spawn(function()
-                    if type(boatTweenTo) == "function" then
-                        boatTweenTo(d.pos)
-                    end
-                end)
-                break
-            end
-        end
-    end)
-    tip(ddDanger, "Fly boat to selected danger level")
-    pcall(function()
-        if ddDanger and ddDanger.UpdateChoices then ddDanger:UpdateChoices(dOpts) end
-        if ddDanger and ddDanger.Set then ddDanger:Set({ defaultDanger }) end
-    end)
-    tip(seaSec:Button("Stop Boat", function()
-        setMyth("boatTweening", false)
-    end), "Stop current boat tween")
-    local seatSec = seaTab:Section("Boat Seat", "Right")
-    tip(seatSec:Toggle("Auto Go To Seat", false, function(v)
-        setMyth("autoBoatSeat", v)
-        if v then pcall(refreshBoatSeats) end
-        notify(v and "Auto Boat Seat ON!" or "Auto Boat Seat OFF!", "Sea", 2)
-    end, "Teleports to the selected seat until you are sitting"), "Teleports to the selected seat until you are sitting")
-    pcall(refreshBoatSeats)
+    local boatSub = seaTab:Sub("Boat", "ship")
+    local seaSec = boatSub:Section("Fly / Seat", "Left")
+    tip(seaSec:Toggle("Boat Fly", false, function(v) setMyth("boatFlyEnabled", v) end), "WASD")
+    tip(seaSec:Slider("Boat Fly Speed", 120, 5, 20, 400, "", function(v) setMyth("boatFlySpeed", v) end), "speed")
+    tip(seaSec:Toggle("Auto Boat Seat", false, function(v) setMyth("autoBoatSeat", v) end), "auto seat")
+    local seatSec = boatSub:Section("Seats", "Right")
     local seatOpts = boatSeatOptions or {"No boats found"}
-    local ddSeat = seatSec:Dropdown("Boat Seat", { seatOpts[1] }, seatOpts, false, function(v)
-        local name = v
-        if type(v) == "table" then name = v[1] or v.Value or tostring(v) end
-        name = tostring(name)
+    local ddSeat = seatSec:Dropdown("Boat Seat", {seatOpts[1] or "No boats found"}, seatOpts, false, function(v)
+        local name = type(v)=="table" and v[1] or v
         S.selectedBoatSeatLabel = name
-        S.selectedBoatSeat = boatSeatByLabel[name]
+        if boatSeatByLabel then S.selectedBoatSeat = boatSeatByLabel[name] end
     end)
     boatSeatDropdownHandle = ddSeat
-    tip(ddSeat, "Select a spawned boat seat")
     tip(seatSec:Button("Refresh Boat Seats", function()
-        lastBoatSeatSignature = "" -- force UI update
+        lastBoatSeatSignature = ""
         local names = refreshBoatSeats() or boatSeatOptions
         notify("Seats: " .. tostring(#names), "Sea", 2)
-    end), "Rescan Workspace.Boats now")
-    local raidSec = seaTab:Section("Games", "Right")
-    tip(raidSec:Toggle("Auto Raid", false, function(v) setMyth("autoRaid", v) end, "Scans for RaidMap, teleports to center and pulls enemies"), "Scans for RaidMap, teleports to center and pulls enemies")
-    tip(raidSec:Toggle("Tween to Mirage", false, function(v) setMyth("autoMirageTween", v) end, "Tweens above Mirage Island when it exists"), "Tweens above Mirage Island when it exists")
-    tip(raidSec:Toggle("Collect Mirage Gear", false, function(v) setMyth("autoMirageGear", v) end, "Finds and tweens to the visible Mirage gear"), "Finds and tweens to the visible Mirage gear")
-    local worldSec = seaTab:Section("World Checks", "Left")
-    tip(worldSec:Button("Check Event Islands", function()
-        task.spawn(showEventStatus)
-    end), "Mirage / Kitsune / Prehistoric / Frozen")
-    tip(worldSec:Button("Check Important Bosses", function()
-        task.spawn(showBossStatus)
-    end), "Rip Indra / Dough King / Cake Prince")
-    Lib:Category("PVP")
-    local pvpTab = win:Tab("PvP", "skull")
-    local pvpSec = pvpTab:Section("Pull / Aura", "Left")
-    tip(pvpSec:Toggle("Escape (risky)", false, function(v) setMyth("voidPull", v) end, "Sends you to Y=100000"), "Sends you to Y=100000")
-    tip(pvpSec:Toggle("Go Back Down (risky)", false, function(v) setMyth("skyPull", v) end, "Brings you back to Y=100"), "Brings you back to Y=100")
-    tip(pvpSec:Toggle("PvP Aura", false, function(v) _pvpAuraEnabled = v end, "Fires RegisterHit on the nearest player"), "Fires RegisterHit on the nearest player")
-    tip(pvpSec:Toggle("PvP Farm Loop", false, function(v) setMyth("pvpFarmLoop", v) end, "Tween to nearest enemy player and farm"), "Tween to nearest enemy player and farm")
-    tip(pvpSec:Toggle("Use ModelHitbox", false, function(v) _pvpAuraAltPart = v end, "Toggle between Head and ModelHitbox hit part"), "Toggle between Head and ModelHitbox hit part")
-    tip(pvpSec:Slider("PvP Range", 100, 10, 10, 300, "studs", function(v) _pvpAuraMaxDist = v end), "Max distance to target players")
-    Lib:Category("AUTOMATION")
-    local fishTab = win:Tab("Fish", "zap")
-    local fishSec = fishTab:Section("Auto Fish", "Left")
+        pcall(function() if ddSeat and ddSeat.UpdateChoices then ddSeat:UpdateChoices(names) end end)
+    end), "rescan")
+    local eventsSub = seaTab:Sub("Events", "flag")
+    local raidSec = eventsSub:Section("Raid / Mirage", "Left")
+    tip(raidSec:Toggle("Auto Raid", false, function(v) setMyth("autoRaid", v) end), "raid")
+    tip(raidSec:Toggle("Tween to Mirage", false, function(v) setMyth("autoMirageTween", v) end), "mirage")
+    tip(raidSec:Toggle("Collect Mirage Gear", false, function(v) setMyth("autoMirageGear", v) end), "gear")
+    local worldSec = eventsSub:Section("Checks", "Right")
+    tip(worldSec:Button("Check Event Islands", function() task.spawn(showEventStatus) end), "events")
+    tip(worldSec:Button("Check Important Bosses", function() task.spawn(showBossStatus) end), "bosses")
+    local fishSub = seaTab:Sub("Fish", "zap")
+    local fishSec = fishSub:Section("Auto Fish", "Left")
     H.fish = tip(fishSec:Toggle("Auto Fish", false, function(on)
         Features.fish = on
         if on then FishStart() else FishStop() end
-    end, "Automatically casts, detects bite, reels (treasure priority)"), "Automatically casts, detects bite, reels (treasure priority)")
+    end), "cast / bite / reel")
     K.fish = fishSec:Keybind("Fish key", nil, function(v)
-        if isMouseBind(v) then return end
+        if isMouseBind(v) then forceBindNone(K.fish); setBindVK("fish", nil); return end
+        setBindVK("fish", v)
     end)
-    local fishTune = fishTab:Section("Tuning", "Right")
-    tip(fishTune:Slider("Cast power", FishConfig.CastTarget * 100, 1, 50, 100, "%", function(v) FishConfig.CastTarget = v / 100 end), "Release cast when bar reaches this fill")
-    tip(fishTune:Slider("Reel dead zone", FishConfig.DeadZone * 100, 1, 0, 200, "%", function(v) FishConfig.DeadZone = v / 100 end), "Hold/release threshold vs fish/treasure")
-    tip(fishTune:Slider("Bite timeout", FishConfig.BiteTimeout, 1, 5, 60, "s", function(v) FishConfig.BiteTimeout = v end), "Reset if no bite within this time")
-    local repairTab = win:Tab("Repair", "cog")
-    local repairSec = repairTab:Section("Auto Repair", "Left")
+    local fishTune = fishSub:Section("Tuning", "Right")
+    tip(fishTune:Slider("Cast power", FishConfig.CastTarget * 100, 1, 50, 100, "%", function(v) FishConfig.CastTarget = v / 100 end), "cast")
+    tip(fishTune:Slider("Reel dead zone", FishConfig.DeadZone * 100, 1, 0, 200, "%", function(v) FishConfig.DeadZone = v / 100 end), "dead zone")
+    tip(fishTune:Slider("Bite timeout", FishConfig.BiteTimeout, 1, 5, 60, "s", function(v) FishConfig.BiteTimeout = v end), "timeout")
+    local repairSub = seaTab:Sub("Repair", "cog")
+    local repairSec = repairSub:Section("Auto Repair", "Left")
     H.repair = tip(repairSec:Toggle("Auto Repair", false, function(on)
         Features.repair = on
         if on then RepStart() else RepStop() end
-    end, "Auto hold/release ship repair minigame on green zone"), "Auto hold/release ship repair minigame on green zone")
+    end), "repair minigame")
     K.repair = repairSec:Keybind("Repair key", nil, function(v)
-        if isMouseBind(v) then return end
+        if isMouseBind(v) then forceBindNone(K.repair); setBindVK("repair", nil); return end
+        setBindVK("repair", v)
     end)
+
+    Lib:Category("PVP")
+    local pvpTab = win:Tab("PvP", "skull")
+    local pvpPull = pvpTab:Sub("Escape", "skull")
+    local pvpSec = pvpPull:Section("Void / Sky", "Left")
+    tip(pvpSec:Toggle("Escape (risky)", false, function(v) setMyth("voidPull", v) end), "Y=100000")
+    tip(pvpSec:Toggle("Go Back Down (risky)", false, function(v) setMyth("skyPull", v) end), "Y=100")
+    local pvpAura = pvpTab:Sub("Aura", "crosshair")
+    local pvpAuraSec = pvpAura:Section("Player Aura", "Left")
+    tip(pvpAuraSec:Toggle("PvP Aura", false, function(v) _pvpAuraEnabled = v end), "RegisterHit")
+    tip(pvpAuraSec:Toggle("PvP Farm Loop", false, function(v) setMyth("pvpFarmLoop", v) end), "farm nearest player")
+    tip(pvpAuraSec:Toggle("Use ModelHitbox", false, function(v) _pvpAuraAltPart = v end), "hit part")
+    tip(pvpAuraSec:Slider("PvP Range", 100, 10, 10, 300, "studs", function(v) _pvpAuraMaxDist = v end), "range")
+
+    Lib:Category("DUNGEON")
+    local dungeonTab = win:Tab("Dungeon", "map")
+    local dMainSub = dungeonTab:Sub("Main", "map")
+    local dMain = dMainSub:Section("Dungeon Farm", "Left")
+    tip(dMain:Toggle("Enable Dungeon", false, function(v)
+        setMyth("dungeonEnabled", v)
+        if not v then setMyth("dungeonFloat", false); Dungeon.target = nil end
+    end), "enable")
+    tip(dMain:Toggle("Magnet / Float", false, function(v)
+        setMyth("dungeonFloat", v)
+        if not v then Dungeon.target = nil end
+    end), "float")
+    tip(dMain:Toggle("Smart Door Path", true, function(v) setMyth("dungeonAutoDoor", v) end), "door")
+    tip(dMain:Toggle("Destroy Vents First", true, function(v) setMyth("dungeonDestroyObj", v) end), "vents")
+    tip(dMain:Toggle("Skills on Vents", true, function(v) setMyth("dungeonUseMoves", v) end), "skills")
+    tip(dMain:Toggle("Dungeon Hitbox", false, function(v) setMyth("dungeonHitbox", v) end), "hitbox")
+    local dCombatSub = dungeonTab:Sub("Combat", "swords")
+    local dCombat = dCombatSub:Section("Combat", "Left")
+    tip(dCombat:Toggle("Dungeon M1 Aura", true, function(v) setMyth("dungeonM1", v) end), "m1")
+    tip(dCombat:Toggle("Auto Equip", true, function(v) setMyth("dungeonAutoEquip", v) end), "equip")
+    tip(dCombat:Toggle("Weapon: Melee (off=Sword)", true, function(v)
+        setMyth("dungeonWeapon", v and "Melee" or "Sword")
+    end), "weapon")
+    tip(dCombat:Slider("M1 Radius", 60, 5, 20, 120, "studs", function(v) setMyth("dungeonM1Radius", v) end), "radius")
+    tip(dCombat:Slider("Flight Speed", 250, 50, 100, 750, "", function(v) setMyth("dungeonFlightSpeed", v) end), "speed")
+    tip(dCombat:Slider("Hover Height", 12, 1, 5, 30, "studs", function(v) setMyth("dungeonFloatHeight", v) end), "height")
+    tip(dCombat:Slider("Hitbox Size", 50, 5, 10, 120, "", function(v) setMyth("dungeonHitboxSize", v) end), "size")
+
     win:AddSettingsTab("gear")
     pcall(function()
         local menuSec = win:SettingsSection("Menu Bind", "Right")
         if menuSec then
-            K.menu = menuSec:Keybind("Menu key", "F1", function(v)
-            if isMouseBind(v) then return end
-        end)
+            K.menu = menuSec:Keybind("Menu key", "f1", function(v) onMenuKey(v) end)
+            setBindVK("menu", "f1")
+            pcall(function() if K.menu and K.menu.Set then K.menu:Set("f1") end end)
         end
     end)
     if not K.menu then
         local sTab = win:Tab("Settings", "gear")
-        local sSec = sTab:Section("Menu", "Left")
-        K.menu = sSec:Keybind("Menu key", "F1", function(v)
-            if isMouseBind(v) then return end
-        end)
+        local sSec = sTab:Section("Menu Bind", "Left")
+        K.menu = sSec:Keybind("Menu key", "f1", function(v) onMenuKey(v) end)
+        setBindVK("menu", "f1")
     end
-    pcall(function()
-        if K.menu and K.menu.Set then K.menu:Set("F1") end
-    end)
-    if WinRef and WinRef.SetMenuKey then
-        pcall(function() WinRef:SetMenuKey("f1") end)
-    end
-    if LibRef and LibRef.SetMenuKey then
-        pcall(function() LibRef:SetMenuKey("f1") end)
-    end
-    
-    local dungeonTab = win:Tab("Dungeon", "map")
-    local dMain = dungeonTab:Section("Dungeon Farm", "Left")
-    tip(dMain:Toggle("Enable Dungeon", false, function(v)
-        setMyth("dungeonEnabled", v)
-        if not v then
-            setMyth("dungeonFloat", false)
-            Dungeon.target = nil
-        end
-    end, "Master switch for 2nd sea dungeon module"), "Master switch for 2nd sea dungeon module")
-    tip(dMain:Toggle("Magnet / Float", false, function(v)
-        setMyth("dungeonFloat", v)
-        if not v then Dungeon.target = nil end
-    end, "Tween above target (vents/mobs)"), "Tween above target (vents/mobs)")
-    tip(dMain:Toggle("Smart Door Path", true, function(v) setMyth("dungeonAutoDoor", v) end, "Fly to exit teleporter when island clear"), "Fly to exit teleporter when island clear")
-    tip(dMain:Toggle("Destroy Vents First", true, function(v) setMyth("dungeonDestroyObj", v) end, "Priority: vents/shrines over mobs"), "Priority: vents/shrines over mobs")
-    tip(dMain:Toggle("Skills on Vents Z/X/C/V", true, function(v) setMyth("dungeonUseMoves", v) end, "Spam skills while on objective"), "Spam skills while on objective")
-    tip(dMain:Toggle("Dungeon Hitbox", false, function(v) setMyth("dungeonHitbox", v) end, "Expand enemy/objective hitboxes in dungeon"), "Expand enemy/objective hitboxes in dungeon")
-    local dCombat = dungeonTab:Section("Combat", "Right")
-    tip(dCombat:Toggle("Dungeon M1 Aura", true, function(v) setMyth("dungeonM1", v) end, "RegisterAttack/Hit in dungeon (Matcha hybrid/remotes)"), "RegisterAttack/Hit in dungeon")
-    tip(dCombat:Toggle("Auto Buso", true, function(v) setMyth("dungeonBuso", v) end, "Auto Buso Haki"), "Auto Buso Haki")
-    tip(dCombat:Toggle("Auto Equip", true, function(v) setMyth("dungeonAutoEquip", v) end, "Keep melee/sword equipped"), "Keep melee/sword equipped")
-    tip(dCombat:Toggle("Weapon: Melee (off=Sword)", true, function(v)
-        setMyth("dungeonWeapon", v and "Melee" or "Sword")
-    end, "ON = Melee slot1, OFF = Sword slot3"), "ON = Melee slot1, OFF = Sword slot3")
-    tip(dCombat:Slider("M1 Radius", 60, 5, 20, 120, "studs", function(v) setMyth("dungeonM1Radius", v) end), "Dungeon M1 reach")
-    tip(dCombat:Slider("Flight Speed", 250, 50, 100, 750, "", function(v) setMyth("dungeonFlightSpeed", v) end), "Tween speed")
-    tip(dCombat:Slider("Hover Height", 12, 1, 5, 30, "studs", function(v) setMyth("dungeonFloatHeight", v) end), "Height above target")
-    tip(dCombat:Slider("Hitbox Size", 50, 5, 10, 120, "", function(v) setMyth("dungeonHitboxSize", v) end), "Expanded hitbox size")
-
 
     local unloadSec = win:Tab("Unload", "trash"):Section("Danger", "Full")
     unloadSec:Button("Unload Hub", function()
@@ -5303,7 +5606,7 @@ task.spawn(function()
             confirm = "Unload",
             onConfirm = function()
                 _G.FE_Unloaded = true
-                FishStop(); RepStop(); AuraEnabled = false
+                pcall(FishStop); pcall(RepStop); AuraEnabled = false
                 pcall(dungeonStop)
                 if type(S) == "table" then
                     for k, v in pairs(S) do
@@ -5313,9 +5616,9 @@ task.spawn(function()
                 _pvpAuraEnabled = false
                 if espConn then pcall(function() espConn:Disconnect() end) end
                 pcall(berryUnhook)
-                for _, d in pairs(_G.FruitStatusDrawings) do pcall(function() d:Remove() end) end
+                for _, d in pairs(_G.FruitStatusDrawings or {}) do pcall(function() d:Remove() end) end
                 _G.FruitStatusDrawings = {}
-                for obj, data in pairs(_G.FruitESP) do
+                for obj, data in pairs(_G.FruitESP or {}) do
                     pcall(function() data.Text:Remove() end)
                     _G.FruitESP[obj] = nil
                 end
@@ -5324,112 +5627,73 @@ task.spawn(function()
                 pcall(clearFlowerEsp)
                 pcall(clearMirageEsp)
                 pcall(clearBerryEspLabels)
+                pcall(clearAllBerryESP)
                 pcall(clearChamBoxes)
                 pcall(clearEspLabels)
                 pcall(mouse1release)
+                pcall(function() if setrobloxinput then setrobloxinput(true) end end)
                 pcall(function() Lib:Destroy() end)
             end,
         })
     end):SetRisk()
+
     task.spawn(function()
         while not _G.FE_Unloaded do
-            do
-                local key = getBindKey(K.menu)
-                if not key then key = "f1" end
-                local down = isDown(key) or isDown("f1")
-                if key ~= "f1" then
-                    down = isDown(key)
+            for _, handle in pairs(K) do
+                if handle then
+                    local ok, v = pcall(function() return handle:Get() end)
+                    if ok and isMouseBind(v) then forceBindNone(handle) end
                 end
-                if down and not lastDown.menu then
-                    menuOpen = not menuOpen
-                    pcall(function()
-                        if WinRef and WinRef.SetOpen then
-                            WinRef:SetOpen(menuOpen)
-                        elseif LibRef and LibRef.SetOpen then
-                            LibRef:SetOpen(menuOpen)
-                        elseif WinRef and WinRef.SetVisible then
-                            WinRef:SetVisible(menuOpen)
-                        end
-                    end)
-                end
-                lastDown.menu = down
             end
-            do
-                local key = getBindKey(K.fish)
-                local down = key ~= nil and isDown(key)
-                if down and not lastDown.fish then
-                    toggleFeature("fish", function(on) if on then FishStart() else FishStop() end end)
-                end
-                lastDown.fish = down
+            task.wait(0.25)
+        end
+    end)
+
+    task.spawn(function()
+        while not _G.FE_Unloaded do
+            local fishCode = syncBindFromHandle("fish", K.fish)
+            local repairCode = syncBindFromHandle("repair", K.repair)
+            local auraCode = syncBindFromHandle("aura", K.aura_key) or syncBindFromHandle("aura", K.aura)
+            if vkEdge(fishCode) then
+                toggleFeature("fish", function(on) if on then FishStart() else FishStop() end end)
             end
-            do
-                local key = getBindKey(K.repair)
-                local down = key ~= nil and isDown(key)
-                if down and not lastDown.repair then
-                    toggleFeature("repair", function(on) if on then RepStart() else RepStop() end end)
-                end
-                lastDown.repair = down
+            if vkEdge(repairCode) then
+                toggleFeature("repair", function(on) if on then RepStart() else RepStop() end end)
             end
-            do
-                local key = getBindKey(K.aura)
-                local down = key ~= nil and isDown(key)
-                if down and not lastDown.aura then
-                    toggleFeature("aura", function(on)
-                        AuraEnabled = on
-                        aura.enabled = on == true
-                        updateHUD()
-                    end)
-                end
-                lastDown.aura = down
+            if vkEdge(auraCode) then
+                toggleFeature("aura", function(on)
+                    AuraEnabled = on
+                    aura.enabled = on == true
+                    Features.aura = on
+                    updateHUD()
+                    if H.aura and H.aura.Set then pcall(function() H.aura:Set(on) end) end
+                end)
             end
             task.wait(0.03)
         end
     end)
-    pcall(function()
-        if Lib.SetKeybindOverlay then Lib:SetKeybindOverlay(false) end
-        if Lib.SetMenuKey then Lib:SetMenuKey("f1") end
-        if WinRef and WinRef.SetMenuKey then WinRef:SetMenuKey("f1") end
-    end)
-    pcall(function()
-        local f1Held = false
-        UIS.InputBegan:Connect(function(input, gp)
-            if input.KeyCode ~= Enum.KeyCode.F1 then return end
-            if f1Held then return end
-            f1Held = true
-            menuOpen = not menuOpen
-            pcall(function()
-                if WinRef then
-                    if WinRef.SetOpen then WinRef:SetOpen(menuOpen)
-                    elseif WinRef.Toggle then WinRef:Toggle()
-                    end
-                end
-                if LibRef and LibRef.SetOpen then LibRef:SetOpen(menuOpen) end
-            end)
-        end)
-        UIS.InputEnded:Connect(function(input)
-            if input.KeyCode == Enum.KeyCode.F1 then f1Held = false end
-        end)
-    end)
-    pcall(function()
-        task.spawn(function()
-            local last = false
-            while not _G.FE_Unloaded do
-                local down = false
-                pcall(function() down = iskeypressed(0x70) end)
-                if not down then
-                    pcall(function() down = UIS:IsKeyDown(Enum.KeyCode.F1) end)
-                end
-                if down and not last then
-                    menuOpen = not menuOpen
-                    pcall(function()
-                        if WinRef and WinRef.SetOpen then WinRef:SetOpen(menuOpen) end
-                    end)
-                end
-                last = down
-                task.wait(0.03)
+
+    task.spawn(function()
+        local lastMenu = false
+        while not _G.FE_Unloaded do
+            local code = syncBindFromHandle("menu", K.menu) or BindVK.menu or 0x70
+            local down = false
+            pcall(function() down = iskeypressed(code) == true end)
+            if down and not lastMenu then
+                local open = true
+                pcall(function() if win.IsOpen then open = win:IsOpen() end end)
+                open = not open
+                menuOpen = open
+                pcall(function() if win.SetOpen then win:SetOpen(open) end end)
+                pcall(function() if Lib.SetGameInput then Lib:SetGameInput("always") end end)
+                pcall(function() if setrobloxinput then setrobloxinput(true) end end)
             end
-        end)
+            lastMenu = down
+            task.wait(0.03)
+        end
     end)
+
+    pcall(function() if setrobloxinput then setrobloxinput(true) end end)
     pcall(function() Lib:Notify("BF Hub", "Loaded", 3, "success") end)
 end)
 print("[BF Hub] Loaded")

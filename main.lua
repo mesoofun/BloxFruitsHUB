@@ -898,6 +898,29 @@ local BERRIES = {
 local sphereToBerry = {}
 for _, b in ipairs(BERRIES) do sphereToBerry[b.sphere] = b.name end
 
+local function getBerryColor(name)
+    local n = string.lower(tostring(name or ""))
+    if n:find("green", 1, true) or n:find("toad", 1, true) then
+        return Color3.fromRGB(80, 255, 100)
+    elseif n:find("yellow", 1, true) or n:find("star", 1, true) then
+        return Color3.fromRGB(255, 230, 60)
+    elseif n:find("orange", 1, true) then
+        return Color3.fromRGB(255, 150, 40)
+    elseif n:find("red", 1, true) or n:find("cherry", 1, true) then
+        return Color3.fromRGB(255, 70, 70)
+    elseif n:find("purple", 1, true) or n:find("jelly", 1, true) then
+        return Color3.fromRGB(200, 80, 255)
+    elseif n:find("pink", 1, true) or n:find("pig", 1, true) then
+        return Color3.fromRGB(255, 90, 180)
+    elseif n:find("blue", 1, true) or n:find("icicle", 1, true) then
+        return Color3.fromRGB(80, 180, 255)
+    elseif n:find("white", 1, true) or n:find("cloud", 1, true) then
+        return Color3.fromRGB(240, 240, 240)
+    end
+    return Color3.fromRGB(255, 70, 70)
+end
+
+
 local BERRY_FULLSCAN_SEC = 12
 local BERRY_ESP_MAX = 50
 local _berryLastFullScan = 0
@@ -931,8 +954,9 @@ local function createBerryESP(obj, name)
     local text = Drawing.new("Text")
     text.Text = name
     text.Size = 14
-    text.Color = Color3.fromRGB(255, 70, 70)
+    text.Color = getBerryColor(name)
     text.Center = true
+    text.Outline = true
     text.Outline = true
     text.Visible = false
     _G.BerryESP[obj] = { Text = text, Name = name, Obj = obj }
@@ -1061,7 +1085,10 @@ local function updateBerryESP()
                         end
                         data.Text.Text = tostring(data.Name or "Berry") .. distText
                         data.Text.Position = Vector2.new(x, y)
-                        data.Text.Color = Color3.fromRGB(255, 70, 70)
+                        data.Text.Color = getBerryColor(data.Name)
+                        data.Text.Size = 14
+                        data.Text.Outline = true
+                        data.Text.Center = true
                         data.Text.Visible = true
                     else
                         data.Text.Visible = false
@@ -1166,20 +1193,24 @@ task.spawn(function()
         
         local berryShown = 0
         if feEnabled("berryEsp") then
-            if (os.clock() - (_berryLastFullScan or 0)) > 1.5 then
+            if (os.clock() - (_berryLastFullScan or 0)) >= 1.5 then
                 _berryLastFullScan = os.clock()
-                pcall(rebuildBerryCache)
+                pcall(lightBerryScan)
             end
-            local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+            pcall(rebuildBerryCache)
+            local rootB = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
             local blist = {}
             for _, item in ipairs(berryCache or {}) do
                 local meters = "--"
-                if root and item.Position then
-                    meters = tostring(math.floor((root.Position - item.Position).Magnitude / 10)) .. "m"
+                local dist = math.huge
+                if rootB and item.Position then
+                    dist = (rootB.Position - item.Position).Magnitude
+                    meters = tostring(math.floor(dist / 10)) .. "m"
                 end
                 blist[#blist+1] = {
                     text = tostring(item.Name or "Berry") .. " (" .. tostring(item.Island or "?") .. ") [" .. meters .. "]",
-                    dist = (root and item.Position) and (root.Position - item.Position).Magnitude or math.huge,
+                    dist = dist,
+                    color = getBerryColor(item.Name),
                 }
             end
             table.sort(blist, function(a,b) return a.dist < b.dist end)
@@ -1187,7 +1218,7 @@ task.spawn(function()
             for i = 1, BERRY_LINES do
                 if i <= berryShown then
                     berryLines[i].Text = ((i == 1) and "Berries: " or "- ") .. blist[i].text
-                    berryLines[i].Color = Color3.fromRGB(255, 90, 180)
+                    berryLines[i].Color = blist[i].color or Color3.fromRGB(255, 90, 180)
                     berryLines[i].Visible = show
                 else
                     berryLines[i].Text = ""
@@ -1339,8 +1370,8 @@ S = {
     customPullX    = 0,
     customPullY    = -10,
     customPullZ    = 0,
-    boatFlySpeed   = 5,
-    FARM_SPEED     = 250,
+    boatFlySpeed   = 120,
+    FARM_SPEED     = 320,
     CHEST_SPEED    = 310,
     FRUIT_SPEED    = 210,
     NPC_TWEEN_SPEED = 250,
@@ -1708,24 +1739,37 @@ end
 task.spawn(function()
     while true do
         if not S.boatFlyEnabled or S.boatTweening then
-            task.wait(0.15)
-            continue
+            task.wait(0.2)
+        else
+            local boat = getBoat()
+            local primary = boat and boat.PrimaryPart
+            if not boat or not primary then
+                task.wait(0.2)
+            else
+                local fwd, right = getBoatCameraVectors()
+                local speed = tonumber(S.boatFlySpeed) or 120
+                if speed < 1 then speed = 1 end
+                local mx, my, mz = 0, 0, 0
+                if iskeypressed(0x57) then mx = mx + fwd.X * speed; mz = mz + fwd.Z * speed end
+                if iskeypressed(0x53) then mx = mx - fwd.X * speed; mz = mz - fwd.Z * speed end
+                if iskeypressed(0x44) then mx = mx + right.X * speed; mz = mz + right.Z * speed end
+                if iskeypressed(0x41) then mx = mx - right.X * speed; mz = mz - right.Z * speed end
+                if iskeypressed(0x58) then my = my + speed end
+                if iskeypressed(0x10) then my = my - speed end
+                pcall(function()
+                    primary.Velocity = Vector3.new(0, 0, 0)
+                    primary.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+                    if mx ~= 0 or my ~= 0 or mz ~= 0 then
+                        primary.Position = Vector3.new(
+                            primary.Position.X + mx,
+                            primary.Position.Y + my,
+                            primary.Position.Z + mz
+                        )
+                    end
+                end)
+                task.wait(0.05)
+            end
         end
-        local boat=getBoat(); if not boat then continue end
-        local primary=boat.PrimaryPart; if not primary then continue end
-        local fwd, right=getBoatCameraVectors()
-        local mx, my, mz=0,0,0
-        if iskeypressed(0x57) then mx=mx+fwd.X*S.boatFlySpeed;   mz=mz+fwd.Z*S.boatFlySpeed   end
-        if iskeypressed(0x53) then mx=mx-fwd.X*S.boatFlySpeed;   mz=mz-fwd.Z*S.boatFlySpeed   end
-        if iskeypressed(0x44) then mx=mx+right.X*S.boatFlySpeed; mz=mz+right.Z*S.boatFlySpeed end
-        if iskeypressed(0x41) then mx=mx-right.X*S.boatFlySpeed; mz=mz-right.Z*S.boatFlySpeed end
-        if iskeypressed(0x58) then my=my+S.boatFlySpeed end
-        if iskeypressed(0x10) then my=my-S.boatFlySpeed end
-        primary.Velocity=Vector3.new(0,0,0)
-        primary.AssemblyLinearVelocity=Vector3.new(0,0,0)
-        primary.AssemblyLinearVelocity=Vector3.new(0,0,0)
-        primary.Position=Vector3.new(primary.Position.X+mx, primary.Position.Y+my, primary.Position.Z+mz)
-        task.wait(0.1)
     end
 end)
 function clearEspLabels()
@@ -1790,42 +1834,49 @@ function buildEspLabels()
         end
     end
 end
+local TWEEN_STEP_TIME = 0.01
 function tweenTo(hrp, targetPos, speed, checkFn)
-    if not hrp or not targetPos then return false end
+    if not hrp or not targetPos then return end
     local okStart, startPos = pcall(function() return hrp.Position end)
-    if not okStart or not startPos then return false end
-    local dx=targetPos.X-startPos.X; local dy=targetPos.Y-startPos.Y; local dz=targetPos.Z-startPos.Z
-    local distance=math.sqrt(dx*dx+dy*dy+dz*dz)
-    if distance<1 then
+    if not okStart or not startPos then return end
+    local rotationCF = nil
+    pcall(function()
+        local rx, ry, rz = hrp.CFrame:ToEulerAnglesXYZ()
+        rotationCF = CFrame.Angles(rx, ry, rz)
+    end)
+    local dx = targetPos.X - startPos.X
+    local dy = targetPos.Y - startPos.Y
+    local dz = targetPos.Z - startPos.Z
+    local distance = math.sqrt(dx*dx + dy*dy + dz*dz)
+    if distance <= 1 then
         pcall(function()
-            hrp.CFrame = CFrame.new(targetPos)
-            hrp.Position = targetPos
-            hrp.AssemblyLinearVelocity = Vector3.new(0,0,0)
-            hrp.Velocity = Vector3.new(0,0,0)
+            local positionCF = CFrame.new(targetPos.X, targetPos.Y, targetPos.Z)
+            hrp.CFrame = rotationCF and (positionCF * rotationCF) or positionCF
         end)
-        return true
+        return
     end
-    speed = tonumber(speed) or 250
-    if speed < 50 then speed = 50 end
-    local duration = distance / speed
-    if duration < 0.05 then duration = 0.05 end
+    local moveSpeed = tonumber(speed) or (S and S.FARM_SPEED) or 320
+    if moveSpeed <= 0 then moveSpeed = 320 end
+    local duration = distance / moveSpeed
     local startTime = os.clock()
     while true do
-        if checkFn and not checkFn() then return false end
-        if not hrp or not hrp.Parent then return false end
+        if checkFn and not checkFn() then return end
+        local okParent, parent = pcall(function() return hrp.Parent end)
+        if not okParent or not parent then return end
         local alpha = math.min((os.clock() - startTime) / duration, 1)
-        local pos = Vector3.new(startPos.X+dx*alpha, startPos.Y+dy*alpha, startPos.Z+dz*alpha)
-        pcall(function()
-            hrp.CFrame = CFrame.new(pos)
-            hrp.Position = pos
-            hrp.AssemblyLinearVelocity = Vector3.new(0,0,0)
-            hrp.Velocity = Vector3.new(0,0,0)
+        local newX = startPos.X + dx * alpha
+        local newY = startPos.Y + dy * alpha
+        local newZ = startPos.Z + dz * alpha
+        local okMove = pcall(function()
+            local positionCF = CFrame.new(newX, newY, newZ)
+            hrp.CFrame = rotationCF and (positionCF * rotationCF) or positionCF
         end)
+        if not okMove then return end
         if alpha >= 1 then break end
-        task.wait()
+        task.wait(TWEEN_STEP_TIME)
     end
-    return true
 end
+
 function isAlive(model)
     if not model or not model.Parent then return false end
     local hum=model:FindFirstChildOfClass("Humanoid")
@@ -1967,27 +2018,17 @@ function farmAttack(hrp, checkFn, enemyName, useTween, maxDistance, attackFn, at
     local hitDelay = attackDelay or 0.06
     local reachedNpc = false
     while checkFn() and isAlive(nearest) do
+        hrp = getMyHrp and getMyHrp() or hrp
+        if not hrp then break end
         local tr = nearest:FindFirstChild("HumanoidRootPart") or nearest:FindFirstChildOfClass("BasePart")
         if tr then
             local ox, oy, oz = getNormalFarmOffsets()
             local targetPos = Vector3.new(tr.Position.X + ox, tr.Position.Y + oy, tr.Position.Z + oz)
-            if useTween then
-                if not reachedNpc then
-                    tweenTo(hrp, targetPos, S.FARM_SPEED or 250, function() return checkFn() and isAlive(nearest) end)
-                    reachedNpc = true
-                else
-                    local dist = (hrp.Position - targetPos).Magnitude
-                    if dist > 8 then
-                        tweenTo(hrp, targetPos, S.FARM_SPEED or 250, function() return checkFn() and isAlive(nearest) end)
-                    else
-                        pcall(function()
-                            hrp.CFrame = CFrame.new(targetPos)
-                            hrp.AssemblyLinearVelocity = Vector3.new(0,0,0)
-                        end)
-                    end
-                end
+            if useTween and not reachedNpc then
+                tweenTo(hrp, targetPos, S.FARM_SPEED or 320, function() return checkFn() and isAlive(nearest) end)
+                reachedNpc = true
             else
-                tweenTo(hrp, targetPos, S.FARM_SPEED or 250, function() return checkFn() and isAlive(nearest) end)
+                hardLockNpcCFrame(hrp, targetPos)
             end
         end
         local now = os.clock()
@@ -3131,6 +3172,7 @@ local MATERIAL_MAP = {
     ["Gunpowder"] = {"Pistol Billionaire"},
     ["Mini Tusk"] = {"Mythological Pirate"},
 }
+MATERIAL_ENEMIES = MATERIAL_MAP
 local MATERIAL_NAMES = {
     "Leather + Scrap Metal","Angel Wings","Magma Ore","Fish Tail","Radioactive Material",
     "Ectoplasm","Mystic Droplet","Vampire Fang","Demonic Wisp","Conjured Cocoa",
@@ -3700,144 +3742,128 @@ function clearChestEspLabels()
     S.chestEspLabels={}
 end
 
+
 function clearBerryEspLabels()
-    for _,entry in pairs(S.berryEspLabels) do
-        if entry and entry.label then entry.label.Visible=false end
+    if type(S) == "table" then
+        for _, entry in pairs(S.berryEspLabels or {}) do
+            if entry and entry.label then
+                pcall(function() entry.label.Visible = false end)
+                pcall(function() entry.label:Remove() end)
+            end
+        end
+        S.berryEspLabels = {}
+        for key, entry in pairs(S.berryEspLabelCache or {}) do
+            if entry and entry.label then
+                pcall(function() entry.label.Visible = false end)
+                pcall(function() entry.label:Remove() end)
+            end
+            S.berryEspLabelCache[key] = nil
+        end
+        S.berryEspLabelCache = {}
     end
-    S.berryEspLabels={}
+    for obj in pairs(_G.BerryESP or {}) do
+        pcall(removeBerryESP, obj)
+    end
+    berryCache = {}
 end
 
-local berryScanRunning=false
-local BERRY_SCAN_BATCH=80
-local BERRY_DRAW_DISTANCE=10000
-local BERRY_DRAW_DISTANCE_SQ=BERRY_DRAW_DISTANCE*BERRY_DRAW_DISTANCE
-local BERRY_SPHERE_NAMES={}
-for _,berry in pairs(BERRIES or {}) do
-    if berry.sphere and berry.name then BERRY_SPHERE_NAMES[berry.sphere]=berry.name end
+local berryScanRunning = false
+local BERRY_SCAN_INTERVAL = 1.5
+local BERRY_MAX_LABELS = 40
+local BERRY_SCAN_BATCH = 150
+local BERRY_MAX_NODES = 3500
+local _lastBerryScanClock = 0
+local BERRY_SPHERE_NAMES = {}
+for _, berry in pairs(BERRIES or {}) do
+    if berry.sphere and berry.name then
+        BERRY_SPHERE_NAMES[berry.sphere] = berry.name
+    end
 end
 if not next(BERRY_SPHERE_NAMES) then
-    BERRY_SPHERE_NAMES={
-        ["Sphere.011"]="Green Toad Berry",
-        ["Sphere.022"]="Yellow Star Berry",
-        ["Sphere.007"]="Orange Berry",
-        ["Sphere.005"]="Red Cherry Berry",
-        ["Sphere.004"]="Purple Jelly Berry",
-        ["Sphere.008"]="Pink Pig Berry",
-        ["Sphere.018"]="Blue Icicle Berry",
-        ["Sphere.035"]="White Cloud Berry",
+    BERRY_SPHERE_NAMES = {
+        ["Sphere.011"] = "Green Toad Berry",
+        ["Sphere.022"] = "Yellow Star Berry",
+        ["Sphere.007"] = "Orange Berry",
+        ["Sphere.005"] = "Red Cherry Berry",
+        ["Sphere.004"] = "Purple Jelly Berry",
+        ["Sphere.008"] = "Pink Pig Berry",
+        ["Sphere.018"] = "Blue Icicle Berry",
+        ["Sphere.035"] = "White Cloud Berry",
     }
 end
-local function isBerryWorldObject(object)
-    local current=object
-    for _=1,64 do
-        if not current then return false end
-        local okInfo,parent,className=pcall(function()
-            return current.Parent,current.ClassName
-        end)
-        if not okInfo then return false end
-        if className=="Tool" then return false end
-        local okHumanoid,humanoid=pcall(function()
-            return current:FindFirstChildOfClass("Humanoid")
-        end)
-        if okHumanoid and humanoid then return false end
-        if parent==Workspace or parent==game.Workspace then return true end
-        current=parent
-    end
-    return false
-end
-function buildBerryEspLabels()
+
+function lightBerryScan()
     if berryScanRunning then return end
-    berryScanRunning=true
+    if not ((S and S.berryEsp) or feEnabled("berryEsp")) then return end
+    local now = os.clock()
+    if now - (_lastBerryScanClock or 0) < BERRY_SCAN_INTERVAL then return end
+    _lastBerryScanClock = now
+    berryScanRunning = true
     task.spawn(function()
-        local activeEntries={}
-        local activeKeys={}
-        local publishedKeys={}
-        local queue={}
-        local queueIndex=1
-        local processed=0
-        local char=LocalPlayer and LocalPlayer.Character or nil
-        local hrp=char and char:FindFirstChild("HumanoidRootPart") or nil
-        local okPlayer,playerPos=pcall(function() return hrp and hrp.Position end)
-        for _,published in pairs(S.berryEspLabels) do
-            if published and published.key then publishedKeys[published.key]=true end
-        end
-        local okRoots,roots=pcall(function() return Workspace:GetChildren() end)
-        if okRoots and roots then
-            for _,root in pairs(roots) do table.insert(queue,root) end
-        end
-        while S.berryEsp and queueIndex<=#queue do
-            local object=queue[queueIndex]
-            queueIndex=queueIndex+1
-            local okName,objectName=pcall(function() return object.Name end)
-            local berryName=okName and BERRY_SPHERE_NAMES[objectName] or nil
-            if berryName and isBerryWorldObject(object) then
-                local berryPart=object
-                local berryPos=getSafeFruitPosition(berryPart)
-                if not berryPos then
-                    local okPart,part=pcall(function()
-                        return object.PrimaryPart or object:FindFirstChildOfClass("BasePart")
+        local found = {}
+        local queue = {Workspace}
+        local processed = 0
+        while #queue > 0 and processed < BERRY_MAX_NODES and #found < BERRY_MAX_LABELS do
+            if not ((S and S.berryEsp) or feEnabled("berryEsp")) then break end
+            local object = table.remove(queue, 1)
+            processed = processed + 1
+            if object then
+                local okName, name = pcall(function() return object.Name end)
+                local bname = okName and (BERRY_SPHERE_NAMES[name] or sphereToBerry[name]) or nil
+                if bname then
+                    local isPart = false
+                    pcall(function()
+                        isPart = object:IsA("BasePart") or object:IsA("MeshPart") or object:IsA("Part")
                     end)
-                    if okPart and part then
-                        berryPart=part
-                        berryPos=getSafeFruitPosition(berryPart)
+                    if isPart then
+                        local pos = berryGetPos(object)
+                        if pos then
+                            found[#found + 1] = {
+                                Object = object,
+                                Position = pos,
+                                Name = bname,
+                                Island = getIslandName(pos),
+                            }
+                        end
                     end
                 end
-                local inRange=berryPos~=nil
-                if inRange and okPlayer and playerPos then
-                    local dx=berryPos.X-playerPos.X
-                    local dy=berryPos.Y-playerPos.Y
-                    local dz=berryPos.Z-playerPos.Z
-                    inRange=(dx*dx+dy*dy+dz*dz)<=BERRY_DRAW_DISTANCE_SQ
-                end
-                if inRange then
-                    local key=getFruitInstanceKey(berryPart)
-                    local entry=S.berryEspLabelCache[key]
-                    if not entry then
-                        local label=Drawing.new("Text")
-                        label.Text=berryName
-                        label.Position=Vector2.new(0,0)
-                        label.Color=Color3.fromRGB(255, 70, 70)
-                        label.Size=14
-                        label.Outline=true
-                        label.Visible=false
-                        label.Center=true
-                        entry={label=label,part=berryPart,name=berryName,key=key}
-                        S.berryEspLabelCache[key]=entry
-                    else
-                        entry.part=berryPart
-                        entry.name=berryName
-                        entry.key=key
-                    end
-                    activeKeys[key]=true
-                    table.insert(activeEntries,entry)
-                    if not publishedKeys[key] then
-                        publishedKeys[key]=true
-                        table.insert(S.berryEspLabels,entry)
+                if #found < BERRY_MAX_LABELS then
+                    local okCh, children = pcall(function() return object:GetChildren() end)
+                    if okCh and children then
+                        for i = 1, #children do
+                            queue[#queue + 1] = children[i]
+                        end
                     end
                 end
             end
-            local okChildren,children=pcall(function() return object:GetChildren() end)
-            if okChildren and children then
-                for _,child in pairs(children) do table.insert(queue,child) end
-            end
-            processed=processed+1
-            if processed>=BERRY_SCAN_BATCH then
-                processed=0
+            if processed % BERRY_SCAN_BATCH == 0 then
                 task.wait()
             end
         end
-        if S.berryEsp then
-            for key,entry in pairs(S.berryEspLabelCache) do
-                if not activeKeys[key] and entry.label then entry.label.Visible=false end
-            end
-            S.berryEspLabels=activeEntries
-        else
-            for _,entry in pairs(activeEntries) do
-                if entry.label then entry.label.Visible=false end
+        local active = {}
+        for _, item in ipairs(found) do
+            local obj = item.Object
+            if obj and obj.Parent then
+                if not _G.BerryESP[obj] then
+                    createBerryESP(obj, item.Name)
+                else
+                    _G.BerryESP[obj].Name = item.Name
+                end
+                active[obj] = true
             end
         end
-        berryScanRunning=false
+        for obj in pairs(_G.BerryESP) do
+            if not active[obj] then
+                removeBerryESP(obj)
+            end
+        end
+        berryCache = found
+        berryScanRunning = false
     end)
+end
+
+function buildBerryEspLabels()
+    lightBerryScan()
 end
 
 
@@ -4325,15 +4351,17 @@ end)
 
 task.spawn(function()
     while not _G.FE_Unloaded do
-        task.wait(1)
-        if S.berryEsp then pcall(buildBerryEspLabels) end
+        task.wait(1.5)
+        if S.berryEsp or feEnabled("berryEsp") then
+            pcall(lightBerryScan)
+        end
         if S.flowerEsp and trackedFlowersChanged() then buildFlowerEsp() end
     end
 end)
 
 task.spawn(function()
     while not _G.FE_Unloaded do
-        if S.berryEsp then
+        if S.berryEsp and type(S.berryEspLabels)=="table" and next(S.berryEspLabels) then
             local char=LocalPlayer.Character
             local hrp=char and char:FindFirstChild("HumanoidRootPart") or nil
             local okPlayer,playerPos=pcall(function() return hrp and hrp.Position end)
@@ -4352,7 +4380,7 @@ task.spawn(function()
                     label.Size = 14
                     label.Outline = true
                     label.Center = true
-                    label.Color = Color3.fromRGB(255, 70, 70)
+                    label.Color = getBerryColor(entry.name)
                     local okScreen, r1, r2 = pcall(WorldToScreen, pos + Vector3.new(0, 2.5, 0))
                     local x, y, onScreen
                     if okScreen and r1 then
@@ -4573,6 +4601,35 @@ task.spawn(function()
 end)
 
 
+function materialWaitPosition(material)
+    if not AFL or not AFL.waitPositions then return nil end
+    local sea = AFL.currentSea or (isSea1() and 1) or (isSea2() and 2) or (isSea3() and 3) or 1
+    local w = AFL.waitPositions
+    if material == "Angel Wings" then return w.SkyIsland3 end
+    if material == "Radioactive Material" then return w.Factory2 end
+    if material == "Ectoplasm" then return w.HauntedShip2 end
+    if material == "Mystic Droplet" then return w.Wano2 end
+    if material == "Vampire Fang" then return w.Graveyard2 end
+    if material == "Demonic Wisp" then return w.HauntedCastle2 or w.HauntedShip2 end
+    if material == "Conjured Cocoa" then return w.Chocolate2 or w.Chocolate1 or w.IceCream end
+    if material == "Dragon Scale" then return w.Hydra2 or w.Hydra1 end
+    if material == "Gunpowder" then return w.Port2 or w.Port1 end
+    if material == "Mini Tusk" then return w.TurtleCenter1 or w.TurtleCenter2 end
+    if material == "Magma Ore" then
+        return sea == 1 and (w.MagmaIsland2 or w.MagmaIsland1) or (w.HotSide2 or w.HotSide1)
+    end
+    if material == "Fish Tail" then
+        return sea == 1 and (w.UnderWaterIsland2 or w.UnderWaterIsland1) or (w.Tiki2Quest1 or w.Tiki1)
+    end
+    if material == "Leather + Scrap Metal" then
+        if sea == 1 then return w.PirateVillage2 or w.PirateVillage1 end
+        if sea == 2 then return w.RoseKingdom2 or w.RoseKingdom1 or w.GreenZone2 end
+        return w.TurtleEntrance2 or w.TurtleEntrance1 or w.TurtleCenter1
+    end
+    return nil
+end
+
+
 task.spawn(function()
     while not _G.FE_Unloaded do
         if S.autoBoss then
@@ -4607,6 +4664,14 @@ task.spawn(function()
                 farmAttack(hrp, function()
                     return S.autoMaterial and not S.autoBoss and S.materialTarget == material and S.remoteMode == useRemote
                 end, target, true, 5000, useRemote and remoteAttack or nil, useRemote and 0.05 or 0.06)
+            elseif hrp then
+                local waitPos = materialWaitPosition(material)
+                if waitPos then
+                    tweenTo(hrp, waitPos, S.FARM_SPEED or 320, function()
+                        return S.autoMaterial and not S.autoBoss and S.materialTarget == material
+                    end)
+                end
+                task.wait(0.35)
             else
                 task.wait(0.35)
             end
@@ -4636,6 +4701,7 @@ task.spawn(function()
         end
     end
 end)
+
 
 
 local boatSeatOptions={"No boats found"}
@@ -5311,7 +5377,14 @@ task.spawn(function()
     H.berryEsp = tip(espSec:Toggle("Berry ESP", false, function(on)
         Features.berryEsp = on
         setMyth("berryEsp", on)
-        if on then pcall(buildBerryEspLabels) else pcall(clearBerryEspLabels); pcall(clearAllBerryESP) end
+        if on then
+            _lastBerryScanClock = 0
+            pcall(lightBerryScan)
+        else
+            pcall(clearBerryEspLabels)
+            pcall(clearAllBerryESP)
+            berryCache = {}
+        end
     end), "berries")
     tip(espSec:Toggle("Flower ESP", false, function(v)
         setMyth("flowerEsp", v)
@@ -5438,7 +5511,7 @@ task.spawn(function()
     tip(statsSec:Slider("Stat Amount", 10, 1, 1, 50, "", function(v) setMyth("statAmount", v) end), "points")
     local tuneSub = farmTab:Sub("Tuning", "sliders")
     local tuneSec = tuneSub:Section("Speed / Weapon", "Left")
-    tip(tuneSec:Slider("Tween Speed", 250, 10, 50, 600, "", function(v)
+    tip(tuneSec:Slider("Tween Speed", 320, 10, 50, 600, "", function(v)
         if AFL then AFL.tweenSpeed = v end
         setMyth("FARM_SPEED", v)
     end), "tween")
@@ -5492,7 +5565,22 @@ task.spawn(function()
     local boatSub = seaTab:Sub("Boat", "ship")
     local seaSec = boatSub:Section("Fly / Seat", "Left")
     tip(seaSec:Toggle("Boat Fly", false, function(v) setMyth("boatFlyEnabled", v) end), "WASD")
-    tip(seaSec:Slider("Boat Fly Speed", 120, 5, 20, 400, "", function(v) setMyth("boatFlySpeed", v) end), "speed")
+    local boatSpeedSlider
+    boatSpeedSlider = tip(seaSec:Slider("Boat Fly Speed", 120, 5, 20, 400, "", function(v)
+        setMyth("boatFlySpeed", v)
+    end), "drag or type below")
+    tip(seaSec:Textbox("Boat Speed (20-400)", "120", function(text)
+        local n = tonumber(text)
+        if not n then return end
+        if n < 20 then n = 20 end
+        if n > 400 then n = 400 end
+        n = math.floor(n + 0.5)
+        setMyth("boatFlySpeed", n)
+        pcall(function()
+            if boatSpeedSlider and boatSpeedSlider.Set then boatSpeedSlider:Set(n) end
+            if boatSpeedSlider and boatSpeedSlider.SetValue then boatSpeedSlider:SetValue(n) end
+        end)
+    end), "type exact speed")
     tip(seaSec:Toggle("Auto Boat Seat", false, function(v) setMyth("autoBoatSeat", v) end), "auto seat")
     local seatSec = boatSub:Section("Seats", "Right")
     local seatOpts = boatSeatOptions or {"No boats found"}
